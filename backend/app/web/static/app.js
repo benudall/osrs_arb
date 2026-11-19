@@ -215,7 +215,7 @@ const COLS = [
     tip: 'Skill level required for this recipe.' },
   { key: 'xp', label: 'XP', sortable: true,
     tip: 'Experience gained per craft, from the OSRS wiki (0 = service actions like tanning, or the (unf) step of a potion).' },
-  { key: 'cost', label: 'Cost', sortable: true,
+  { key: 'cost', label: 'Craft', sortable: true,
     tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning).' },
   { key: 'buy', label: 'Buy', sortable: true,
     tip: 'Grand Exchange buy price of the product, per unit.' },
@@ -226,11 +226,11 @@ const COLS = [
   { key: 'ha', label: 'HA', sortable: true,
     tip: 'High Level Alchemy payout = floor(60% x static value).' },
   { key: 'ha_net', label: 'HA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = HA - Cost - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = HA - min(Craft, Buy) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'la', label: 'LA', sortable: true,
     tip: 'Low Level Alchemy payout = floor(40% x static value).' },
   { key: 'la_net', label: 'LA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = LA - Cost - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = LA - min(Craft, Buy) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'best_net', label: 'Best Net', sortable: true,
     tip: 'Best route per craft = max(Sell Net, HA Net, LA Net).' },
   { key: 'volume', label: 'Vol/5m', sortable: true,
@@ -244,7 +244,10 @@ const alchNet = (r, frac) => {
   const a = alch(r, frac);
   const fee = meta && meta.alchemy_cost;
   if (a == null || fee == null) return null;
-  return a - r.cost - fee;
+  // product in hand via cheapest route: craft it, or buy it on GE
+  let base = r.cost;
+  if (r.product.buy != null && r.product.buy < base) base = r.product.buy;
+  return a - base - fee;
 };
 const bestNet = (r) => {
   const cands = [r.net];
@@ -438,7 +441,11 @@ function renderTable() {
     const bN = bestNet(r);
     // struck = not the best route this row; best stays clean
     const netCls = (v) => `${v > 0 ? 'pos' : 'neg'}${v < bN ? ' strike' : ''}`;
-    tr.append(num(r.level), num(r.xp), num(r.cost, 'gp'), num(r.product.buy, 'gp'), num(r.gross, 'gp'),
+    // struck = the higher of Craft vs Buy (unpicked acquisition)
+    const pBuy = r.product.buy;
+    const craftCls = 'gp' + (pBuy != null && pBuy < r.cost ? ' strike' : '');
+    const buyCls = 'gp' + (pBuy != null && pBuy > r.cost ? ' strike' : '');
+    tr.append(num(r.level), num(r.xp), num(r.cost, craftCls), num(pBuy, buyCls), num(r.gross, 'gp'),
       num(r.net, netCls(r.net)),
       num(alch(r, 0.6), 'gp'),
       num(haN, haN == null ? null : netCls(haN)),
