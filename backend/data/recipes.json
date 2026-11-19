@@ -6,6 +6,7 @@
       "id": "bronze_bar",
       "skill": "smithing",
       "level": 1,
+      "xp": 6.2,
       "members": false,
       "product": {
         "item": "Bronze bar",
@@ -26,6 +27,7 @@
       "id": "iron_bar",
       "skill": "smithing",
       "level": 15,
+      "xp": 12.5,
       "members": false,
       "product": {
         "item": "Iron bar",
@@ -43,6 +45,7 @@
       "id": "silver_bar",
       "skill": "smithing",
       "level": 20,
+      "xp": 13.7,
       "members": false,
       "product": {
         "item": "Silver bar",
@@ -59,6 +62,7 @@
       "id": "steel_bar",
       "skill": "smithing",
       "level": 30,
+      "xp": 17.5,
       "members": false,
       "product": {
         "item": "Steel bar",
@@ -79,6 +83,7 @@
       "id": "gold_bar",
       "skill": "smithing",
       "level": 40,
+      "xp": 22.5,
       "members": false,
       "product": {
         "item": "Gold bar",
@@ -95,6 +100,7 @@
       "id": "mithril_bar",
       "skill": "smithing",
       "level": 50,
+      "xp": 30.0,
       "members": false,
       "product": {
         "item": "Mithril bar",
@@ -115,6 +121,7 @@
       "id": "adamant_bar",
       "skill": "smithing",
       "level": 70,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Adamantite bar",
@@ -135,6 +142,7 @@
       "id": "rune_bar",
       "skill": "smithing",
       "level": 85,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Runite bar",
@@ -155,6 +163,7 @@
       "id": "bronze_arrowtips",
       "skill": "smithing",
       "level": 5,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze arrowtips",
@@ -171,6 +180,7 @@
       "id": "iron_arrowtips",
       "skill": "smithing",
       "level": 20,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron arrowtips",
@@ -187,6 +197,7 @@
       "id": "steel_arrowtips",
       "skill": "smithing",
       "level": 35,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Steel arrowtips",
@@ -203,6 +214,7 @@
       "id": "mithril_arrowtips",
       "skill": "smithing",
       "level": 55,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril arrowtips",
@@ -219,6 +231,7 @@
       "id": "adamant_arrowtips",
       "skill": "smithing",
       "level": 75,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Adamant arrowtips",
@@ -235,6 +248,7 @@
       "id": "rune_arrowtips",
       "skill": "smithing",
       "level": 90,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Rune arrowtips",
@@ -251,6 +265,7 @@
       "id": "cannonball",
       "skill": "smithing",
       "level": 35,
+      "xp": 25.6,
       "members": true,
       "product": {
         "item": "Steel cannonball",
@@ -268,6 +283,7 @@
       "id": "cook_shrimp",
       "skill": "cooking",
       "level": 1,
+      "xp": 30.0,
       "members": false,
       "product": {
         "item": "Shrimps",
@@ -285,6 +301,7 @@
       "id": "cook_sardine",
       "skill": "cooking",
       "level": 1,
+      "xp": 40.0,
       "members": false,
       "product": {
         "item": "Sardine",
@@ -302,6 +319,7 @@
       "id": "cook_anchovies",
       "skill": "cooking",
       "level": 1,
+      "xp": 30.0,
       "members": false,
       "product": {
         "item": "Anchovies",
@@ -319,6 +337,7 @@
       "id": "cook_herring",
       "skill": "cooking",
       "level": 5,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Herring",
@@ -336,6 +355,7 @@
       "id": "cook_trout",
       "skill": "cooking",
       "level": 15,
+      "xp": 70.0,
       "members": false,
       "product": {
         "item": "Trout",
@@ -352,6 +372,7 @@
       "id": "cook_salmon",
       "skill": "cooking",
       "level": 25,
+      "xp": 90.0,
       "members": false,
       "product": {
         "item": "Salmon",
@@ -368,6 +389,7 @@
       "id": "cook_tuna",
       "skill": "cooking",
       "level": 30,
+      "xp": 100.0,
       "members": false,
       "product": {
         "item": "Tuna",
@@ -384,6 +406,7 @@
       "id": "cook_lobster",
       "skill": "cooking",
       "level": 40,
+      "xp": 120.0,
       "members": false,
       "product": {
         "item": "Lobster",
@@ -400,6 +423,7 @@
       "id": "cook_swordfish",
       "skill": "cooking",
       "level": 45,
+      "xp": 140.0,
       "members": false,
       "product": {
         "item": "Swordfish",
@@ -416,6 +440,7 @@
       "id": "jug_of_wine",
       "skill": "cooking",
       "level": 35,
+      "xp": 200.0,
       "members": false,
       "product": {
         "item": "Jug of wine",
@@ -437,6 +462,7 @@
       "id": "leather",
       "skill": "crafting",
       "level": 1,
+      "xp": 0,
       "members": false,
       "product": {
         "item": "Leather",
@@ -455,6 +481,7 @@
       "id": "hard_leather",
       "skill": "crafting",
       "level": 1,
+      "xp": 0,
       "members": false,
       "product": {
         "item": "Hard leather",
@@ -473,6 +500,7 @@
       "id": "soda_ash",
       "skill": "crafting",
       "level": 1,
+      "xp": 0,
       "members": true,
       "product": {
         "item": "Soda ash",
@@ -490,6 +518,7 @@
       "id": "molten_glass",
       "skill": "crafting",
       "level": 1,
+      "xp": 20.0,
       "members": true,
       "product": {
         "item": "Molten glass",
@@ -511,6 +540,7 @@
       "id": "bowstring",
       "skill": "crafting",
       "level": 10,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Bow string",
@@ -528,6 +558,7 @@
       "id": "green_dleather",
       "skill": "crafting",
       "level": 57,
+      "xp": 0,
       "members": true,
       "product": {
         "item": "Green dragon leather",
@@ -546,6 +577,7 @@
       "id": "green_vamb",
       "skill": "crafting",
       "level": 57,
+      "xp": 62.0,
       "members": true,
       "product": {
         "item": "Green d'hide vambraces",
@@ -563,6 +595,7 @@
       "id": "green_chaps",
       "skill": "crafting",
       "level": 60,
+      "xp": 124.0,
       "members": true,
       "product": {
         "item": "Green d'hide chaps",
@@ -580,6 +613,7 @@
       "id": "green_body",
       "skill": "crafting",
       "level": 63,
+      "xp": 186.0,
       "members": true,
       "product": {
         "item": "Green d'hide body",
@@ -597,6 +631,7 @@
       "id": "blue_dleather",
       "skill": "crafting",
       "level": 66,
+      "xp": 0,
       "members": true,
       "product": {
         "item": "Blue dragon leather",
@@ -615,6 +650,7 @@
       "id": "blue_vamb",
       "skill": "crafting",
       "level": 66,
+      "xp": 70.0,
       "members": true,
       "product": {
         "item": "Blue d'hide vambraces",
@@ -632,6 +668,7 @@
       "id": "blue_chaps",
       "skill": "crafting",
       "level": 68,
+      "xp": 140.0,
       "members": true,
       "product": {
         "item": "Blue d'hide chaps",
@@ -649,6 +686,7 @@
       "id": "blue_body",
       "skill": "crafting",
       "level": 71,
+      "xp": 210.0,
       "members": true,
       "product": {
         "item": "Blue d'hide body",
@@ -666,6 +704,7 @@
       "id": "sapphire_ring",
       "skill": "crafting",
       "level": 20,
+      "xp": 40.0,
       "members": false,
       "product": {
         "item": "Sapphire ring",
@@ -687,6 +726,7 @@
       "id": "sapphire_necklace",
       "skill": "crafting",
       "level": 22,
+      "xp": 55.0,
       "members": false,
       "product": {
         "item": "Sapphire necklace",
@@ -708,6 +748,7 @@
       "id": "sapphire_amulet_u",
       "skill": "crafting",
       "level": 24,
+      "xp": 65.0,
       "members": false,
       "product": {
         "item": "Sapphire amulet (u)",
@@ -729,6 +770,7 @@
       "id": "sapphire_amulet",
       "skill": "crafting",
       "level": 24,
+      "xp": 4.0,
       "members": false,
       "product": {
         "item": "Sapphire amulet",
@@ -749,6 +791,7 @@
       "id": "arrow_shaft",
       "skill": "fletching",
       "level": 1,
+      "xp": 5.0,
       "members": true,
       "product": {
         "item": "Arrow shaft",
@@ -766,6 +809,7 @@
       "id": "headless_arrow",
       "skill": "fletching",
       "level": 1,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Headless arrow",
@@ -786,6 +830,7 @@
       "id": "bronze_arrow",
       "skill": "fletching",
       "level": 1,
+      "xp": 19.5,
       "members": true,
       "product": {
         "item": "Bronze arrow",
@@ -806,6 +851,7 @@
       "id": "iron_arrow",
       "skill": "fletching",
       "level": 15,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Iron arrow",
@@ -826,6 +872,7 @@
       "id": "steel_arrow",
       "skill": "fletching",
       "level": 30,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Steel arrow",
@@ -846,6 +893,7 @@
       "id": "mithril_arrow",
       "skill": "fletching",
       "level": 45,
+      "xp": 112.5,
       "members": true,
       "product": {
         "item": "Mithril arrow",
@@ -866,6 +914,7 @@
       "id": "adamant_arrow",
       "skill": "fletching",
       "level": 60,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Adamant arrow",
@@ -886,6 +935,7 @@
       "id": "rune_arrow",
       "skill": "fletching",
       "level": 75,
+      "xp": 187.5,
       "members": true,
       "product": {
         "item": "Rune arrow",
@@ -906,6 +956,7 @@
       "id": "shortbow_u",
       "skill": "fletching",
       "level": 5,
+      "xp": 5.0,
       "members": true,
       "product": {
         "item": "Shortbow (u)",
@@ -922,6 +973,7 @@
       "id": "longbow_u",
       "skill": "fletching",
       "level": 10,
+      "xp": 10.0,
       "members": true,
       "product": {
         "item": "Longbow (u)",
@@ -938,6 +990,7 @@
       "id": "oak_shortbow_u",
       "skill": "fletching",
       "level": 20,
+      "xp": 16.5,
       "members": true,
       "product": {
         "item": "Oak shortbow (u)",
@@ -954,6 +1007,7 @@
       "id": "oak_longbow_u",
       "skill": "fletching",
       "level": 25,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Oak longbow (u)",
@@ -970,6 +1024,7 @@
       "id": "willow_shortbow_u",
       "skill": "fletching",
       "level": 35,
+      "xp": 33.3,
       "members": true,
       "product": {
         "item": "Willow shortbow (u)",
@@ -986,6 +1041,7 @@
       "id": "willow_longbow_u",
       "skill": "fletching",
       "level": 40,
+      "xp": 41.5,
       "members": true,
       "product": {
         "item": "Willow longbow (u)",
@@ -1002,6 +1058,7 @@
       "id": "maple_shortbow_u",
       "skill": "fletching",
       "level": 50,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Maple shortbow (u)",
@@ -1018,6 +1075,7 @@
       "id": "maple_longbow_u",
       "skill": "fletching",
       "level": 55,
+      "xp": 58.3,
       "members": true,
       "product": {
         "item": "Maple longbow (u)",
@@ -1034,6 +1092,7 @@
       "id": "yew_shortbow_u",
       "skill": "fletching",
       "level": 65,
+      "xp": 67.5,
       "members": true,
       "product": {
         "item": "Yew shortbow (u)",
@@ -1050,6 +1109,7 @@
       "id": "yew_longbow_u",
       "skill": "fletching",
       "level": 70,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Yew longbow (u)",
@@ -1066,6 +1126,7 @@
       "id": "magic_shortbow_u",
       "skill": "fletching",
       "level": 80,
+      "xp": 83.3,
       "members": true,
       "product": {
         "item": "Magic shortbow (u)",
@@ -1082,6 +1143,7 @@
       "id": "magic_longbow_u",
       "skill": "fletching",
       "level": 85,
+      "xp": 91.5,
       "members": true,
       "product": {
         "item": "Magic longbow (u)",
@@ -1098,6 +1160,7 @@
       "id": "string_shortbow",
       "skill": "fletching",
       "level": 5,
+      "xp": 5.0,
       "members": true,
       "product": {
         "item": "Shortbow",
@@ -1118,6 +1181,7 @@
       "id": "string_longbow",
       "skill": "fletching",
       "level": 10,
+      "xp": 10.0,
       "members": true,
       "product": {
         "item": "Longbow",
@@ -1138,6 +1202,7 @@
       "id": "string_oak_shortbow",
       "skill": "fletching",
       "level": 20,
+      "xp": 16.5,
       "members": true,
       "product": {
         "item": "Oak shortbow",
@@ -1158,6 +1223,7 @@
       "id": "string_oak_longbow",
       "skill": "fletching",
       "level": 25,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Oak longbow",
@@ -1178,6 +1244,7 @@
       "id": "string_willow_shortbow",
       "skill": "fletching",
       "level": 35,
+      "xp": 33.2,
       "members": true,
       "product": {
         "item": "Willow shortbow",
@@ -1198,6 +1265,7 @@
       "id": "string_willow_longbow",
       "skill": "fletching",
       "level": 40,
+      "xp": 41.5,
       "members": true,
       "product": {
         "item": "Willow longbow",
@@ -1218,6 +1286,7 @@
       "id": "string_maple_shortbow",
       "skill": "fletching",
       "level": 50,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Maple shortbow",
@@ -1238,6 +1307,7 @@
       "id": "string_maple_longbow",
       "skill": "fletching",
       "level": 55,
+      "xp": 58.2,
       "members": true,
       "product": {
         "item": "Maple longbow",
@@ -1258,6 +1328,7 @@
       "id": "string_yew_shortbow",
       "skill": "fletching",
       "level": 65,
+      "xp": 67.5,
       "members": true,
       "product": {
         "item": "Yew shortbow",
@@ -1278,6 +1349,7 @@
       "id": "string_yew_longbow",
       "skill": "fletching",
       "level": 70,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Yew longbow",
@@ -1298,6 +1370,7 @@
       "id": "string_magic_shortbow",
       "skill": "fletching",
       "level": 80,
+      "xp": 83.3,
       "members": true,
       "product": {
         "item": "Magic shortbow",
@@ -1318,6 +1391,7 @@
       "id": "string_magic_longbow",
       "skill": "fletching",
       "level": 85,
+      "xp": 91.5,
       "members": true,
       "product": {
         "item": "Magic longbow",
@@ -1338,6 +1412,7 @@
       "id": "enchant_sapphire_ring",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Ring of recoil",
@@ -1358,6 +1433,7 @@
       "id": "enchant_sapphire_amulet",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": false,
       "product": {
         "item": "Amulet of magic",
@@ -1378,6 +1454,7 @@
       "id": "enchant_emerald_ring",
       "skill": "magic",
       "level": 27,
+      "xp": 37.0,
       "members": true,
       "product": {
         "item": "Ring of dueling(8)",
@@ -1398,6 +1475,7 @@
       "id": "enchant_emerald_amulet",
       "skill": "magic",
       "level": 27,
+      "xp": 37.0,
       "members": false,
       "product": {
         "item": "Amulet of defence",
@@ -1418,6 +1496,7 @@
       "id": "enchant_ruby_ring",
       "skill": "magic",
       "level": 49,
+      "xp": 59.0,
       "members": false,
       "product": {
         "item": "Ring of forging",
@@ -1438,6 +1517,7 @@
       "id": "enchant_ruby_amulet",
       "skill": "magic",
       "level": 49,
+      "xp": 59.0,
       "members": false,
       "product": {
         "item": "Amulet of strength",
@@ -1458,6 +1538,7 @@
       "id": "lead_bar",
       "skill": "smithing",
       "level": 25,
+      "xp": 15.5,
       "members": true,
       "product": {
         "item": "Lead bar",
@@ -1477,6 +1558,7 @@
       "id": "cupronickel_bar",
       "skill": "smithing",
       "level": 74,
+      "xp": 42.0,
       "members": true,
       "product": {
         "item": "Cupronickel bar",
@@ -1500,6 +1582,7 @@
       "id": "bronze_dagger",
       "skill": "smithing",
       "level": 1,
+      "xp": 12.5,
       "members": false,
       "product": {
         "item": "Bronze dagger",
@@ -1519,6 +1602,7 @@
       "id": "bronze_axe",
       "skill": "smithing",
       "level": 1,
+      "xp": 12.5,
       "members": false,
       "product": {
         "item": "Bronze axe",
@@ -1538,6 +1622,7 @@
       "id": "bronze_mace",
       "skill": "smithing",
       "level": 2,
+      "xp": 12.5,
       "members": false,
       "product": {
         "item": "Bronze mace",
@@ -1557,6 +1642,7 @@
       "id": "bronze_med_helm",
       "skill": "smithing",
       "level": 3,
+      "xp": 12.5,
       "members": false,
       "product": {
         "item": "Bronze med helm",
@@ -1576,6 +1662,7 @@
       "id": "bronze_bolts_unf",
       "skill": "smithing",
       "level": 3,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze bolts (unf)",
@@ -1595,6 +1682,7 @@
       "id": "bronze_shortsword",
       "skill": "smithing",
       "level": 4,
+      "xp": 12.5,
       "members": false,
       "product": {
         "item": "Bronze shortsword",
@@ -1614,6 +1702,7 @@
       "id": "bronze_dart_tip",
       "skill": "smithing",
       "level": 4,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze dart tip",
@@ -1633,6 +1722,7 @@
       "id": "bronze_wire",
       "skill": "smithing",
       "level": 4,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze wire",
@@ -1652,6 +1742,7 @@
       "id": "bronze_nails",
       "skill": "smithing",
       "level": 4,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze nails",
@@ -1671,6 +1762,7 @@
       "id": "bronze_scimitar",
       "skill": "smithing",
       "level": 5,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Bronze scimitar",
@@ -1690,6 +1782,7 @@
       "id": "bronze_spear",
       "skill": "smithing",
       "level": 5,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Bronze spear",
@@ -1709,6 +1802,7 @@
       "id": "bronze_hasta",
       "skill": "smithing",
       "level": 5,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Bronze hasta",
@@ -1728,6 +1822,7 @@
       "id": "bronze_cannonball",
       "skill": "smithing",
       "level": 5,
+      "xp": 8.8,
       "members": true,
       "product": {
         "item": "Bronze cannonball",
@@ -1747,6 +1842,7 @@
       "id": "bronze_limbs",
       "skill": "smithing",
       "level": 6,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze limbs",
@@ -1766,6 +1862,7 @@
       "id": "bronze_longsword",
       "skill": "smithing",
       "level": 6,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Bronze longsword",
@@ -1785,6 +1882,7 @@
       "id": "bronze_javelin_tips",
       "skill": "smithing",
       "level": 6,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze javelin tips",
@@ -1804,6 +1902,7 @@
       "id": "bronze_full_helm",
       "skill": "smithing",
       "level": 7,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Bronze full helm",
@@ -1823,6 +1922,7 @@
       "id": "bronze_knife",
       "skill": "smithing",
       "level": 7,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Bronze knife",
@@ -1842,6 +1942,7 @@
       "id": "bronze_sq_shield",
       "skill": "smithing",
       "level": 8,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Bronze sq shield",
@@ -1861,6 +1962,7 @@
       "id": "bronze_warhammer",
       "skill": "smithing",
       "level": 9,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Bronze warhammer",
@@ -1880,6 +1982,7 @@
       "id": "bronze_battleaxe",
       "skill": "smithing",
       "level": 10,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Bronze battleaxe",
@@ -1899,6 +2002,7 @@
       "id": "bronze_keel_parts",
       "skill": "smithing",
       "level": 10,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Bronze keel parts",
@@ -1918,6 +2022,7 @@
       "id": "bronze_chainbody",
       "skill": "smithing",
       "level": 11,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Bronze chainbody",
@@ -1937,6 +2042,7 @@
       "id": "bronze_kiteshield",
       "skill": "smithing",
       "level": 12,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Bronze kiteshield",
@@ -1956,6 +2062,7 @@
       "id": "bronze_claws",
       "skill": "smithing",
       "level": 13,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Bronze claws",
@@ -1975,6 +2082,7 @@
       "id": "bronze_2h_sword",
       "skill": "smithing",
       "level": 14,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Bronze 2h sword",
@@ -1994,6 +2102,7 @@
       "id": "bronze_platelegs",
       "skill": "smithing",
       "level": 16,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Bronze platelegs",
@@ -2013,6 +2122,7 @@
       "id": "bronze_plateskirt",
       "skill": "smithing",
       "level": 16,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Bronze plateskirt",
@@ -2032,6 +2142,7 @@
       "id": "bronze_platebody",
       "skill": "smithing",
       "level": 18,
+      "xp": 62.5,
       "members": false,
       "product": {
         "item": "Bronze platebody",
@@ -2051,6 +2162,7 @@
       "id": "iron_dagger",
       "skill": "smithing",
       "level": 15,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Iron dagger",
@@ -2070,6 +2182,7 @@
       "id": "iron_axe",
       "skill": "smithing",
       "level": 16,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Iron axe",
@@ -2089,6 +2202,7 @@
       "id": "iron_mace",
       "skill": "smithing",
       "level": 17,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Iron mace",
@@ -2108,6 +2222,7 @@
       "id": "iron_spit",
       "skill": "smithing",
       "level": 17,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron spit",
@@ -2127,6 +2242,7 @@
       "id": "iron_med_helm",
       "skill": "smithing",
       "level": 18,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Iron med helm",
@@ -2146,6 +2262,7 @@
       "id": "iron_bolts_unf",
       "skill": "smithing",
       "level": 18,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron bolts (unf)",
@@ -2165,6 +2282,7 @@
       "id": "iron_shortsword",
       "skill": "smithing",
       "level": 19,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Iron shortsword",
@@ -2184,6 +2302,7 @@
       "id": "iron_dart_tip",
       "skill": "smithing",
       "level": 19,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron dart tip",
@@ -2203,6 +2322,7 @@
       "id": "iron_nails",
       "skill": "smithing",
       "level": 19,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron nails",
@@ -2222,6 +2342,7 @@
       "id": "iron_scimitar",
       "skill": "smithing",
       "level": 20,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Iron scimitar",
@@ -2241,6 +2362,7 @@
       "id": "iron_spear",
       "skill": "smithing",
       "level": 20,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Iron spear",
@@ -2260,6 +2382,7 @@
       "id": "iron_hasta",
       "skill": "smithing",
       "level": 20,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Iron hasta",
@@ -2279,6 +2402,7 @@
       "id": "iron_cannonball",
       "skill": "smithing",
       "level": 20,
+      "xp": 17.2,
       "members": true,
       "product": {
         "item": "Iron cannonball",
@@ -2298,6 +2422,7 @@
       "id": "iron_longsword",
       "skill": "smithing",
       "level": 21,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Iron longsword",
@@ -2317,6 +2442,7 @@
       "id": "iron_javelin_tips",
       "skill": "smithing",
       "level": 21,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron javelin tips",
@@ -2336,6 +2462,7 @@
       "id": "iron_full_helm",
       "skill": "smithing",
       "level": 22,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Iron full helm",
@@ -2355,6 +2482,7 @@
       "id": "iron_knife",
       "skill": "smithing",
       "level": 22,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron knife",
@@ -2374,6 +2502,7 @@
       "id": "iron_keel_parts",
       "skill": "smithing",
       "level": 22,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Iron keel parts",
@@ -2393,6 +2522,7 @@
       "id": "iron_sq_shield",
       "skill": "smithing",
       "level": 23,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Iron sq shield",
@@ -2412,6 +2542,7 @@
       "id": "iron_limbs",
       "skill": "smithing",
       "level": 23,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Iron limbs",
@@ -2431,6 +2562,7 @@
       "id": "iron_warhammer",
       "skill": "smithing",
       "level": 24,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Iron warhammer",
@@ -2450,6 +2582,7 @@
       "id": "iron_battleaxe",
       "skill": "smithing",
       "level": 25,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Iron battleaxe",
@@ -2469,6 +2602,7 @@
       "id": "iron_chainbody",
       "skill": "smithing",
       "level": 26,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Iron chainbody",
@@ -2488,6 +2622,7 @@
       "id": "oil_lantern_frame",
       "skill": "smithing",
       "level": 26,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Oil lantern frame",
@@ -2507,6 +2642,7 @@
       "id": "iron_kiteshield",
       "skill": "smithing",
       "level": 27,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Iron kiteshield",
@@ -2526,6 +2662,7 @@
       "id": "iron_claws",
       "skill": "smithing",
       "level": 28,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Iron claws",
@@ -2545,6 +2682,7 @@
       "id": "iron_2h_sword",
       "skill": "smithing",
       "level": 29,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Iron 2h sword",
@@ -2564,6 +2702,7 @@
       "id": "iron_platelegs",
       "skill": "smithing",
       "level": 31,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Iron platelegs",
@@ -2583,6 +2722,7 @@
       "id": "iron_plateskirt",
       "skill": "smithing",
       "level": 31,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Iron plateskirt",
@@ -2602,6 +2742,7 @@
       "id": "iron_platebody",
       "skill": "smithing",
       "level": 33,
+      "xp": 125.0,
       "members": false,
       "product": {
         "item": "Iron platebody",
@@ -2621,6 +2762,7 @@
       "id": "steel_dagger",
       "skill": "smithing",
       "level": 30,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Steel dagger",
@@ -2640,6 +2782,7 @@
       "id": "steel_axe",
       "skill": "smithing",
       "level": 31,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Steel axe",
@@ -2659,6 +2802,7 @@
       "id": "steel_mace",
       "skill": "smithing",
       "level": 32,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Steel mace",
@@ -2678,6 +2822,7 @@
       "id": "steel_med_helm",
       "skill": "smithing",
       "level": 33,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Steel med helm",
@@ -2697,6 +2842,7 @@
       "id": "steel_bolts_unf",
       "skill": "smithing",
       "level": 33,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Steel bolts (unf)",
@@ -2716,6 +2862,7 @@
       "id": "steel_shortsword",
       "skill": "smithing",
       "level": 34,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Steel shortsword",
@@ -2735,6 +2882,7 @@
       "id": "steel_nails",
       "skill": "smithing",
       "level": 34,
+      "xp": 37.5,
       "members": false,
       "product": {
         "item": "Steel nails",
@@ -2754,6 +2902,7 @@
       "id": "chain",
       "skill": "smithing",
       "level": 34,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Chain",
@@ -2773,6 +2922,7 @@
       "id": "steel_dart_tip",
       "skill": "smithing",
       "level": 34,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Steel dart tip",
@@ -2792,6 +2942,7 @@
       "id": "steel_scimitar",
       "skill": "smithing",
       "level": 35,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Steel scimitar",
@@ -2811,6 +2962,7 @@
       "id": "steel_spear",
       "skill": "smithing",
       "level": 35,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Steel spear",
@@ -2830,6 +2982,7 @@
       "id": "steel_hasta",
       "skill": "smithing",
       "level": 35,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Steel hasta",
@@ -2849,6 +3002,7 @@
       "id": "steel_limbs",
       "skill": "smithing",
       "level": 36,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Steel limbs",
@@ -2868,6 +3022,7 @@
       "id": "steel_longsword",
       "skill": "smithing",
       "level": 36,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Steel longsword",
@@ -2887,6 +3042,7 @@
       "id": "steel_javelin_tips",
       "skill": "smithing",
       "level": 36,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Steel javelin tips",
@@ -2906,6 +3062,7 @@
       "id": "steel_studs",
       "skill": "smithing",
       "level": 36,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Steel studs",
@@ -2925,6 +3082,7 @@
       "id": "steel_full_helm",
       "skill": "smithing",
       "level": 37,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Steel full helm",
@@ -2944,6 +3102,7 @@
       "id": "steel_knife",
       "skill": "smithing",
       "level": 37,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Steel knife",
@@ -2963,6 +3122,7 @@
       "id": "steel_sq_shield",
       "skill": "smithing",
       "level": 38,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Steel sq shield",
@@ -2982,6 +3142,7 @@
       "id": "steel_keel_parts",
       "skill": "smithing",
       "level": 38,
+      "xp": 187.5,
       "members": true,
       "product": {
         "item": "Steel keel parts",
@@ -3001,6 +3162,7 @@
       "id": "steel_warhammer",
       "skill": "smithing",
       "level": 39,
+      "xp": 112.5,
       "members": false,
       "product": {
         "item": "Steel warhammer",
@@ -3020,6 +3182,7 @@
       "id": "steel_battleaxe",
       "skill": "smithing",
       "level": 40,
+      "xp": 112.5,
       "members": false,
       "product": {
         "item": "Steel battleaxe",
@@ -3039,6 +3202,7 @@
       "id": "steel_chainbody",
       "skill": "smithing",
       "level": 41,
+      "xp": 112.5,
       "members": false,
       "product": {
         "item": "Steel chainbody",
@@ -3058,6 +3222,7 @@
       "id": "steel_kiteshield",
       "skill": "smithing",
       "level": 42,
+      "xp": 112.5,
       "members": false,
       "product": {
         "item": "Steel kiteshield",
@@ -3077,6 +3242,7 @@
       "id": "steel_claws",
       "skill": "smithing",
       "level": 43,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Steel claws",
@@ -3096,6 +3262,7 @@
       "id": "steel_2h_sword",
       "skill": "smithing",
       "level": 44,
+      "xp": 112.5,
       "members": false,
       "product": {
         "item": "Steel 2h sword",
@@ -3115,6 +3282,7 @@
       "id": "steel_platelegs",
       "skill": "smithing",
       "level": 46,
+      "xp": 112.5,
       "members": false,
       "product": {
         "item": "Steel platelegs",
@@ -3134,6 +3302,7 @@
       "id": "steel_plateskirt",
       "skill": "smithing",
       "level": 46,
+      "xp": 112.5,
       "members": false,
       "product": {
         "item": "Steel plateskirt",
@@ -3153,6 +3322,7 @@
       "id": "steel_platebody",
       "skill": "smithing",
       "level": 48,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Steel platebody",
@@ -3172,6 +3342,7 @@
       "id": "bullseye_lantern_unf",
       "skill": "smithing",
       "level": 49,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Bullseye lantern (unf)",
@@ -3191,6 +3362,7 @@
       "id": "mithril_dagger",
       "skill": "smithing",
       "level": 50,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Mithril dagger",
@@ -3210,6 +3382,7 @@
       "id": "mithril_axe",
       "skill": "smithing",
       "level": 51,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Mithril axe",
@@ -3229,6 +3402,7 @@
       "id": "mithril_mace",
       "skill": "smithing",
       "level": 52,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Mithril mace",
@@ -3248,6 +3422,7 @@
       "id": "mithril_med_helm",
       "skill": "smithing",
       "level": 53,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Mithril med helm",
@@ -3267,6 +3442,7 @@
       "id": "mithril_bolts_unf",
       "skill": "smithing",
       "level": 53,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril bolts (unf)",
@@ -3286,6 +3462,7 @@
       "id": "mithril_shortsword",
       "skill": "smithing",
       "level": 54,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Mithril shortsword",
@@ -3305,6 +3482,7 @@
       "id": "mithril_nails",
       "skill": "smithing",
       "level": 54,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril nails",
@@ -3324,6 +3502,7 @@
       "id": "mithril_dart_tip",
       "skill": "smithing",
       "level": 54,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril dart tip",
@@ -3343,6 +3522,7 @@
       "id": "mithril_cannonball",
       "skill": "smithing",
       "level": 55,
+      "xp": 34.0,
       "members": true,
       "product": {
         "item": "Mithril cannonball",
@@ -3362,6 +3542,7 @@
       "id": "mithril_scimitar",
       "skill": "smithing",
       "level": 55,
+      "xp": 100.0,
       "members": false,
       "product": {
         "item": "Mithril scimitar",
@@ -3381,6 +3562,7 @@
       "id": "mithril_spear",
       "skill": "smithing",
       "level": 55,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Mithril spear",
@@ -3400,6 +3582,7 @@
       "id": "mithril_hasta",
       "skill": "smithing",
       "level": 55,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Mithril hasta",
@@ -3419,6 +3602,7 @@
       "id": "mithril_limbs",
       "skill": "smithing",
       "level": 56,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril limbs",
@@ -3438,6 +3622,7 @@
       "id": "mithril_longsword",
       "skill": "smithing",
       "level": 56,
+      "xp": 100.0,
       "members": false,
       "product": {
         "item": "Mithril longsword",
@@ -3457,6 +3642,7 @@
       "id": "mithril_javelin_tips",
       "skill": "smithing",
       "level": 56,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril javelin tips",
@@ -3476,6 +3662,7 @@
       "id": "mithril_keel_parts",
       "skill": "smithing",
       "level": 56,
+      "xp": 250.0,
       "members": true,
       "product": {
         "item": "Mithril keel parts",
@@ -3495,6 +3682,7 @@
       "id": "mithril_full_helm",
       "skill": "smithing",
       "level": 57,
+      "xp": 100.0,
       "members": false,
       "product": {
         "item": "Mithril full helm",
@@ -3514,6 +3702,7 @@
       "id": "mithril_knife",
       "skill": "smithing",
       "level": 57,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril knife",
@@ -3533,6 +3722,7 @@
       "id": "mithril_sq_shield",
       "skill": "smithing",
       "level": 58,
+      "xp": 100.0,
       "members": false,
       "product": {
         "item": "Mithril sq shield",
@@ -3552,6 +3742,7 @@
       "id": "mithril_warhammer",
       "skill": "smithing",
       "level": 59,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Mithril warhammer",
@@ -3571,6 +3762,7 @@
       "id": "mith_grapple_tip",
       "skill": "smithing",
       "level": 59,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mith grapple tip",
@@ -3590,6 +3782,7 @@
       "id": "mithril_battleaxe",
       "skill": "smithing",
       "level": 60,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Mithril battleaxe",
@@ -3609,6 +3802,7 @@
       "id": "mithril_chainbody",
       "skill": "smithing",
       "level": 61,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Mithril chainbody",
@@ -3628,6 +3822,7 @@
       "id": "mithril_kiteshield",
       "skill": "smithing",
       "level": 62,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Mithril kiteshield",
@@ -3647,6 +3842,7 @@
       "id": "mithril_claws",
       "skill": "smithing",
       "level": 63,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Mithril claws",
@@ -3666,6 +3862,7 @@
       "id": "mithril_2h_sword",
       "skill": "smithing",
       "level": 64,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Mithril 2h sword",
@@ -3685,6 +3882,7 @@
       "id": "mithril_platelegs",
       "skill": "smithing",
       "level": 66,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Mithril platelegs",
@@ -3704,6 +3902,7 @@
       "id": "mithril_plateskirt",
       "skill": "smithing",
       "level": 66,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Mithril plateskirt",
@@ -3723,6 +3922,7 @@
       "id": "mithril_platebody",
       "skill": "smithing",
       "level": 68,
+      "xp": 250.0,
       "members": false,
       "product": {
         "item": "Mithril platebody",
@@ -3742,6 +3942,7 @@
       "id": "adamant_dagger",
       "skill": "smithing",
       "level": 70,
+      "xp": 62.5,
       "members": false,
       "product": {
         "item": "Adamant dagger",
@@ -3761,6 +3962,7 @@
       "id": "adamant_axe",
       "skill": "smithing",
       "level": 71,
+      "xp": 62.5,
       "members": false,
       "product": {
         "item": "Adamant axe",
@@ -3780,6 +3982,7 @@
       "id": "adamant_mace",
       "skill": "smithing",
       "level": 72,
+      "xp": 62.5,
       "members": false,
       "product": {
         "item": "Adamant mace",
@@ -3799,6 +4002,7 @@
       "id": "adamant_med_helm",
       "skill": "smithing",
       "level": 73,
+      "xp": 62.5,
       "members": false,
       "product": {
         "item": "Adamant med helm",
@@ -3818,6 +4022,7 @@
       "id": "adamant_bolts_unf",
       "skill": "smithing",
       "level": 73,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Adamant bolts(unf)",
@@ -3837,6 +4042,7 @@
       "id": "adamant_shortsword",
       "skill": "smithing",
       "level": 74,
+      "xp": 62.5,
       "members": false,
       "product": {
         "item": "Adamant shortsword",
@@ -3856,6 +4062,7 @@
       "id": "adamantite_nails",
       "skill": "smithing",
       "level": 74,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Adamantite nails",
@@ -3875,6 +4082,7 @@
       "id": "adamant_keel_parts",
       "skill": "smithing",
       "level": 74,
+      "xp": 312.5,
       "members": true,
       "product": {
         "item": "Adamant keel parts",
@@ -3894,6 +4102,7 @@
       "id": "adamant_dart_tip",
       "skill": "smithing",
       "level": 74,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Adamant dart tip",
@@ -3913,6 +4122,7 @@
       "id": "adamant_scimitar",
       "skill": "smithing",
       "level": 75,
+      "xp": 125.0,
       "members": false,
       "product": {
         "item": "Adamant scimitar",
@@ -3932,6 +4142,7 @@
       "id": "adamant_spear",
       "skill": "smithing",
       "level": 75,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Adamant spear",
@@ -3951,6 +4162,7 @@
       "id": "adamant_hasta",
       "skill": "smithing",
       "level": 75,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Adamant hasta",
@@ -3970,6 +4182,7 @@
       "id": "adamant_cannonball",
       "skill": "smithing",
       "level": 75,
+      "xp": 42.4,
       "members": true,
       "product": {
         "item": "Adamant cannonball",
@@ -3989,6 +4202,7 @@
       "id": "adamantite_limbs",
       "skill": "smithing",
       "level": 76,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Adamantite limbs",
@@ -4008,6 +4222,7 @@
       "id": "adamant_longsword",
       "skill": "smithing",
       "level": 76,
+      "xp": 125.0,
       "members": false,
       "product": {
         "item": "Adamant longsword",
@@ -4027,6 +4242,7 @@
       "id": "adamant_javelin_tips",
       "skill": "smithing",
       "level": 76,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Adamant javelin tips",
@@ -4046,6 +4262,7 @@
       "id": "adamant_full_helm",
       "skill": "smithing",
       "level": 77,
+      "xp": 125.0,
       "members": false,
       "product": {
         "item": "Adamant full helm",
@@ -4065,6 +4282,7 @@
       "id": "adamant_knife",
       "skill": "smithing",
       "level": 77,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Adamant knife",
@@ -4084,6 +4302,7 @@
       "id": "adamant_sq_shield",
       "skill": "smithing",
       "level": 78,
+      "xp": 125.0,
       "members": false,
       "product": {
         "item": "Adamant sq shield",
@@ -4103,6 +4322,7 @@
       "id": "adamant_warhammer",
       "skill": "smithing",
       "level": 79,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Adamant warhammer",
@@ -4122,6 +4342,7 @@
       "id": "adamant_battleaxe",
       "skill": "smithing",
       "level": 80,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Adamant battleaxe",
@@ -4141,6 +4362,7 @@
       "id": "adamant_chainbody",
       "skill": "smithing",
       "level": 81,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Adamant chainbody",
@@ -4160,6 +4382,7 @@
       "id": "adamant_kiteshield",
       "skill": "smithing",
       "level": 82,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Adamant kiteshield",
@@ -4179,6 +4402,7 @@
       "id": "adamant_claws",
       "skill": "smithing",
       "level": 83,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Adamant claws",
@@ -4198,6 +4422,7 @@
       "id": "adamant_2h_sword",
       "skill": "smithing",
       "level": 84,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Adamant 2h sword",
@@ -4217,6 +4442,7 @@
       "id": "adamant_platelegs",
       "skill": "smithing",
       "level": 86,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Adamant platelegs",
@@ -4236,6 +4462,7 @@
       "id": "adamant_plateskirt",
       "skill": "smithing",
       "level": 86,
+      "xp": 187.5,
       "members": false,
       "product": {
         "item": "Adamant plateskirt",
@@ -4255,6 +4482,7 @@
       "id": "adamant_platebody",
       "skill": "smithing",
       "level": 88,
+      "xp": 312.5,
       "members": false,
       "product": {
         "item": "Adamant platebody",
@@ -4274,6 +4502,7 @@
       "id": "rune_dagger",
       "skill": "smithing",
       "level": 85,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Rune dagger",
@@ -4293,6 +4522,7 @@
       "id": "rune_axe",
       "skill": "smithing",
       "level": 86,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Rune axe",
@@ -4312,6 +4542,7 @@
       "id": "rune_keel_parts",
       "skill": "smithing",
       "level": 86,
+      "xp": 375.0,
       "members": true,
       "product": {
         "item": "Rune keel parts",
@@ -4331,6 +4562,7 @@
       "id": "rune_mace",
       "skill": "smithing",
       "level": 87,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Rune mace",
@@ -4350,6 +4582,7 @@
       "id": "rune_med_helm",
       "skill": "smithing",
       "level": 88,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Rune med helm",
@@ -4369,6 +4602,7 @@
       "id": "runite_bolts_unf",
       "skill": "smithing",
       "level": 88,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Runite bolts (unf)",
@@ -4388,6 +4622,7 @@
       "id": "rune_shortsword",
       "skill": "smithing",
       "level": 89,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Rune shortsword",
@@ -4407,6 +4642,7 @@
       "id": "rune_nails",
       "skill": "smithing",
       "level": 89,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Rune nails",
@@ -4426,6 +4662,7 @@
       "id": "rune_dart_tip",
       "skill": "smithing",
       "level": 89,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Rune dart tip",
@@ -4445,6 +4682,7 @@
       "id": "rune_scimitar",
       "skill": "smithing",
       "level": 90,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Rune scimitar",
@@ -4464,6 +4702,7 @@
       "id": "rune_spear",
       "skill": "smithing",
       "level": 90,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Rune spear",
@@ -4483,6 +4722,7 @@
       "id": "rune_hasta",
       "skill": "smithing",
       "level": 90,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Rune hasta",
@@ -4502,6 +4742,7 @@
       "id": "rune_cannonball",
       "skill": "smithing",
       "level": 90,
+      "xp": 50.8,
       "members": true,
       "product": {
         "item": "Rune cannonball",
@@ -4521,6 +4762,7 @@
       "id": "runite_limbs",
       "skill": "smithing",
       "level": 91,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Runite limbs",
@@ -4540,6 +4782,7 @@
       "id": "rune_longsword",
       "skill": "smithing",
       "level": 91,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Rune longsword",
@@ -4559,6 +4802,7 @@
       "id": "rune_javelin_tips",
       "skill": "smithing",
       "level": 91,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Rune javelin tips",
@@ -4578,6 +4822,7 @@
       "id": "rune_full_helm",
       "skill": "smithing",
       "level": 92,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Rune full helm",
@@ -4597,6 +4842,7 @@
       "id": "rune_knife",
       "skill": "smithing",
       "level": 92,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Rune knife",
@@ -4616,6 +4862,7 @@
       "id": "rune_sq_shield",
       "skill": "smithing",
       "level": 93,
+      "xp": 150.0,
       "members": false,
       "product": {
         "item": "Rune sq shield",
@@ -4635,6 +4882,7 @@
       "id": "rune_warhammer",
       "skill": "smithing",
       "level": 94,
+      "xp": 225.0,
       "members": false,
       "product": {
         "item": "Rune warhammer",
@@ -4654,6 +4902,7 @@
       "id": "rune_battleaxe",
       "skill": "smithing",
       "level": 95,
+      "xp": 225.0,
       "members": false,
       "product": {
         "item": "Rune battleaxe",
@@ -4673,6 +4922,7 @@
       "id": "rune_chainbody",
       "skill": "smithing",
       "level": 96,
+      "xp": 225.0,
       "members": false,
       "product": {
         "item": "Rune chainbody",
@@ -4692,6 +4942,7 @@
       "id": "rune_kiteshield",
       "skill": "smithing",
       "level": 97,
+      "xp": 225.0,
       "members": false,
       "product": {
         "item": "Rune kiteshield",
@@ -4711,6 +4962,7 @@
       "id": "rune_claws",
       "skill": "smithing",
       "level": 98,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Rune claws",
@@ -4730,6 +4982,7 @@
       "id": "rune_2h_sword",
       "skill": "smithing",
       "level": 99,
+      "xp": 225.0,
       "members": false,
       "product": {
         "item": "Rune 2h sword",
@@ -4749,6 +5002,7 @@
       "id": "rune_platelegs",
       "skill": "smithing",
       "level": 99,
+      "xp": 225.0,
       "members": false,
       "product": {
         "item": "Rune platelegs",
@@ -4768,6 +5022,7 @@
       "id": "rune_plateskirt",
       "skill": "smithing",
       "level": 99,
+      "xp": 225.0,
       "members": false,
       "product": {
         "item": "Rune plateskirt",
@@ -4787,6 +5042,7 @@
       "id": "rune_platebody",
       "skill": "smithing",
       "level": 99,
+      "xp": 375.0,
       "members": false,
       "product": {
         "item": "Rune platebody",
@@ -4806,6 +5062,7 @@
       "id": "cooked_meat",
       "skill": "cooking",
       "level": 1,
+      "xp": 30.0,
       "members": false,
       "product": {
         "item": "Cooked meat",
@@ -4829,6 +5086,7 @@
       "id": "sinew",
       "skill": "cooking",
       "level": 1,
+      "xp": 3.0,
       "members": true,
       "product": {
         "item": "Sinew",
@@ -4848,6 +5106,7 @@
       "id": "cooked_chicken",
       "skill": "cooking",
       "level": 1,
+      "xp": 30.0,
       "members": false,
       "product": {
         "item": "Cooked chicken",
@@ -4871,6 +5130,7 @@
       "id": "cooked_rabbit",
       "skill": "cooking",
       "level": 1,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Cooked rabbit",
@@ -4894,6 +5154,7 @@
       "id": "ugthanki_meat",
       "skill": "cooking",
       "level": 1,
+      "xp": 40.0,
       "members": true,
       "product": {
         "item": "Ugthanki meat",
@@ -4913,6 +5174,7 @@
       "id": "mackerel",
       "skill": "cooking",
       "level": 10,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Mackerel",
@@ -4932,6 +5194,7 @@
       "id": "cod",
       "skill": "cooking",
       "level": 18,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Cod",
@@ -4951,6 +5214,7 @@
       "id": "pike",
       "skill": "cooking",
       "level": 20,
+      "xp": 80.0,
       "members": false,
       "product": {
         "item": "Pike",
@@ -4970,6 +5234,7 @@
       "id": "red_crab_meat",
       "skill": "cooking",
       "level": 21,
+      "xp": 85.0,
       "members": true,
       "product": {
         "item": "Red crab meat",
@@ -4989,6 +5254,7 @@
       "id": "rainbow_fish",
       "skill": "cooking",
       "level": 35,
+      "xp": 110.0,
       "members": true,
       "product": {
         "item": "Rainbow fish",
@@ -5008,6 +5274,7 @@
       "id": "cave_eel",
       "skill": "cooking",
       "level": 38,
+      "xp": 115.0,
       "members": true,
       "product": {
         "item": "Cave eel",
@@ -5027,6 +5294,7 @@
       "id": "bass",
       "skill": "cooking",
       "level": 43,
+      "xp": 130.0,
       "members": true,
       "product": {
         "item": "Bass",
@@ -5046,6 +5314,7 @@
       "id": "blue_crab_meat",
       "skill": "cooking",
       "level": 48,
+      "xp": 145.0,
       "members": true,
       "product": {
         "item": "Blue crab meat",
@@ -5065,6 +5334,7 @@
       "id": "swordtip_squid",
       "skill": "cooking",
       "level": 56,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Swordtip squid",
@@ -5084,6 +5354,7 @@
       "id": "monkfish",
       "skill": "cooking",
       "level": 62,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Monkfish",
@@ -5103,6 +5374,7 @@
       "id": "giant_krill",
       "skill": "cooking",
       "level": 69,
+      "xp": 177.5,
       "members": true,
       "product": {
         "item": "Giant krill",
@@ -5122,6 +5394,7 @@
       "id": "jumbo_squid",
       "skill": "cooking",
       "level": 71,
+      "xp": 180.0,
       "members": true,
       "product": {
         "item": "Jumbo squid",
@@ -5141,6 +5414,7 @@
       "id": "haddock",
       "skill": "cooking",
       "level": 73,
+      "xp": 180.0,
       "members": true,
       "product": {
         "item": "Haddock",
@@ -5160,6 +5434,7 @@
       "id": "rainbow_crab_meat",
       "skill": "cooking",
       "level": 77,
+      "xp": 200.0,
       "members": true,
       "product": {
         "item": "Rainbow crab meat",
@@ -5179,6 +5454,7 @@
       "id": "yellowfin",
       "skill": "cooking",
       "level": 79,
+      "xp": 200.0,
       "members": true,
       "product": {
         "item": "Yellowfin",
@@ -5198,6 +5474,7 @@
       "id": "shark",
       "skill": "cooking",
       "level": 80,
+      "xp": 210.0,
       "members": true,
       "product": {
         "item": "Shark",
@@ -5217,6 +5494,7 @@
       "id": "sea_turtle",
       "skill": "cooking",
       "level": 82,
+      "xp": 211.3,
       "members": true,
       "product": {
         "item": "Sea turtle",
@@ -5236,6 +5514,7 @@
       "id": "halibut",
       "skill": "cooking",
       "level": 83,
+      "xp": 212.5,
       "members": true,
       "product": {
         "item": "Halibut",
@@ -5255,6 +5534,7 @@
       "id": "anglerfish",
       "skill": "cooking",
       "level": 84,
+      "xp": 230.0,
       "members": true,
       "product": {
         "item": "Anglerfish",
@@ -5274,6 +5554,7 @@
       "id": "bluefin",
       "skill": "cooking",
       "level": 87,
+      "xp": 215.0,
       "members": true,
       "product": {
         "item": "Bluefin",
@@ -5293,6 +5574,7 @@
       "id": "dark_crab",
       "skill": "cooking",
       "level": 90,
+      "xp": 215.0,
       "members": true,
       "product": {
         "item": "Dark crab",
@@ -5312,6 +5594,7 @@
       "id": "manta_ray",
       "skill": "cooking",
       "level": 91,
+      "xp": 216.3,
       "members": true,
       "product": {
         "item": "Manta ray",
@@ -5331,6 +5614,7 @@
       "id": "marlin",
       "skill": "cooking",
       "level": 91,
+      "xp": 225.0,
       "members": true,
       "product": {
         "item": "Marlin",
@@ -5350,6 +5634,7 @@
       "id": "mud_pie",
       "skill": "cooking",
       "level": 29,
+      "xp": 128.0,
       "members": true,
       "product": {
         "item": "Mud pie",
@@ -5369,6 +5654,7 @@
       "id": "garden_pie",
       "skill": "cooking",
       "level": 34,
+      "xp": 138.0,
       "members": true,
       "product": {
         "item": "Garden pie",
@@ -5388,6 +5674,7 @@
       "id": "fish_pie",
       "skill": "cooking",
       "level": 47,
+      "xp": 164.0,
       "members": true,
       "product": {
         "item": "Fish pie",
@@ -5407,6 +5694,7 @@
       "id": "admiral_pie",
       "skill": "cooking",
       "level": 70,
+      "xp": 210.0,
       "members": true,
       "product": {
         "item": "Admiral pie",
@@ -5426,6 +5714,7 @@
       "id": "wild_pie",
       "skill": "cooking",
       "level": 85,
+      "xp": 240.0,
       "members": true,
       "product": {
         "item": "Wild pie",
@@ -5445,6 +5734,7 @@
       "id": "summer_pie",
       "skill": "cooking",
       "level": 95,
+      "xp": 260.0,
       "members": true,
       "product": {
         "item": "Summer pie",
@@ -5464,6 +5754,7 @@
       "id": "ball_of_wool",
       "skill": "crafting",
       "level": 1,
+      "xp": 2.5,
       "members": false,
       "product": {
         "item": "Ball of wool",
@@ -5483,6 +5774,7 @@
       "id": "linen_yarn",
       "skill": "crafting",
       "level": 12,
+      "xp": 16.0,
       "members": true,
       "product": {
         "item": "Linen yarn",
@@ -5502,6 +5794,7 @@
       "id": "magic_string",
       "skill": "crafting",
       "level": 19,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Magic string",
@@ -5521,6 +5814,7 @@
       "id": "rope",
       "skill": "crafting",
       "level": 30,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Rope",
@@ -5540,6 +5834,7 @@
       "id": "hemp_yarn",
       "skill": "crafting",
       "level": 39,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Hemp yarn",
@@ -5559,6 +5854,7 @@
       "id": "cotton_yarn",
       "skill": "crafting",
       "level": 73,
+      "xp": 105.0,
       "members": true,
       "product": {
         "item": "Cotton yarn",
@@ -5578,6 +5874,7 @@
       "id": "bolt_of_linen",
       "skill": "crafting",
       "level": 12,
+      "xp": 20.0,
       "members": true,
       "product": {
         "item": "Bolt of linen",
@@ -5597,6 +5894,7 @@
       "id": "empty_sack",
       "skill": "crafting",
       "level": 21,
+      "xp": 38.0,
       "members": true,
       "product": {
         "item": "Empty sack",
@@ -5616,6 +5914,7 @@
       "id": "drift_net",
       "skill": "crafting",
       "level": 26,
+      "xp": 55.0,
       "members": true,
       "product": {
         "item": "Drift net",
@@ -5635,6 +5934,7 @@
       "id": "basket",
       "skill": "crafting",
       "level": 36,
+      "xp": 56.0,
       "members": true,
       "product": {
         "item": "Basket",
@@ -5654,6 +5954,7 @@
       "id": "bolt_of_canvas",
       "skill": "crafting",
       "level": 39,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Bolt of canvas",
@@ -5673,6 +5974,7 @@
       "id": "bolt_of_cotton",
       "skill": "crafting",
       "level": 73,
+      "xp": 132.0,
       "members": true,
       "product": {
         "item": "Bolt of cotton",
@@ -5692,6 +5994,7 @@
       "id": "leather_gloves",
       "skill": "crafting",
       "level": 1,
+      "xp": 13.8,
       "members": false,
       "product": {
         "item": "Leather gloves",
@@ -5711,6 +6014,7 @@
       "id": "leather_boots",
       "skill": "crafting",
       "level": 7,
+      "xp": 16.3,
       "members": false,
       "product": {
         "item": "Leather boots",
@@ -5730,6 +6034,7 @@
       "id": "leather_cowl",
       "skill": "crafting",
       "level": 9,
+      "xp": 18.5,
       "members": false,
       "product": {
         "item": "Leather cowl",
@@ -5749,6 +6054,7 @@
       "id": "leather_vambraces",
       "skill": "crafting",
       "level": 11,
+      "xp": 22.0,
       "members": false,
       "product": {
         "item": "Leather vambraces",
@@ -5768,6 +6074,7 @@
       "id": "leather_body",
       "skill": "crafting",
       "level": 14,
+      "xp": 25.0,
       "members": false,
       "product": {
         "item": "Leather body",
@@ -5787,6 +6094,7 @@
       "id": "leather_chaps",
       "skill": "crafting",
       "level": 18,
+      "xp": 27.0,
       "members": false,
       "product": {
         "item": "Leather chaps",
@@ -5806,6 +6114,7 @@
       "id": "hardleather_body",
       "skill": "crafting",
       "level": 28,
+      "xp": 35.0,
       "members": false,
       "product": {
         "item": "Hardleather body",
@@ -5825,6 +6134,7 @@
       "id": "coif",
       "skill": "crafting",
       "level": 38,
+      "xp": 37.0,
       "members": false,
       "product": {
         "item": "Coif",
@@ -5844,6 +6154,7 @@
       "id": "hard_leather_shield",
       "skill": "crafting",
       "level": 41,
+      "xp": 70.0,
       "members": true,
       "product": {
         "item": "Hard leather shield",
@@ -5873,6 +6184,7 @@
       "id": "studded_body",
       "skill": "crafting",
       "level": 41,
+      "xp": 40.0,
       "members": true,
       "product": {
         "item": "Studded body",
@@ -5896,6 +6208,7 @@
       "id": "studded_chaps",
       "skill": "crafting",
       "level": 44,
+      "xp": 42.0,
       "members": true,
       "product": {
         "item": "Studded chaps",
@@ -5919,6 +6232,7 @@
       "id": "green_d_hide_shield",
       "skill": "crafting",
       "level": 62,
+      "xp": 124.0,
       "members": true,
       "product": {
         "item": "Green d'hide shield",
@@ -5948,6 +6262,7 @@
       "id": "blue_d_hide_shield",
       "skill": "crafting",
       "level": 69,
+      "xp": 140.0,
       "members": true,
       "product": {
         "item": "Blue d'hide shield",
@@ -5977,6 +6292,7 @@
       "id": "red_d_hide_vambraces",
       "skill": "crafting",
       "level": 73,
+      "xp": 78.0,
       "members": true,
       "product": {
         "item": "Red d'hide vambraces",
@@ -5996,6 +6312,7 @@
       "id": "red_d_hide_chaps",
       "skill": "crafting",
       "level": 75,
+      "xp": 156.0,
       "members": true,
       "product": {
         "item": "Red d'hide chaps",
@@ -6015,6 +6332,7 @@
       "id": "red_d_hide_shield",
       "skill": "crafting",
       "level": 76,
+      "xp": 156.0,
       "members": true,
       "product": {
         "item": "Red d'hide shield",
@@ -6044,6 +6362,7 @@
       "id": "red_d_hide_body",
       "skill": "crafting",
       "level": 77,
+      "xp": 234.0,
       "members": true,
       "product": {
         "item": "Red d'hide body",
@@ -6063,6 +6382,7 @@
       "id": "black_d_hide_vambraces",
       "skill": "crafting",
       "level": 79,
+      "xp": 86.0,
       "members": true,
       "product": {
         "item": "Black d'hide vambraces",
@@ -6082,6 +6402,7 @@
       "id": "black_d_hide_chaps",
       "skill": "crafting",
       "level": 82,
+      "xp": 172.0,
       "members": true,
       "product": {
         "item": "Black d'hide chaps",
@@ -6101,6 +6422,7 @@
       "id": "black_d_hide_shield",
       "skill": "crafting",
       "level": 83,
+      "xp": 172.0,
       "members": true,
       "product": {
         "item": "Black d'hide shield",
@@ -6130,6 +6452,7 @@
       "id": "black_d_hide_body",
       "skill": "crafting",
       "level": 84,
+      "xp": 258.0,
       "members": true,
       "product": {
         "item": "Black d'hide body",
@@ -6149,6 +6472,7 @@
       "id": "snakeskin_boots",
       "skill": "crafting",
       "level": 45,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Snakeskin boots",
@@ -6168,6 +6492,7 @@
       "id": "snakeskin_vambraces",
       "skill": "crafting",
       "level": 47,
+      "xp": 35.0,
       "members": true,
       "product": {
         "item": "Snakeskin vambraces",
@@ -6187,6 +6512,7 @@
       "id": "snakeskin_bandana",
       "skill": "crafting",
       "level": 48,
+      "xp": 45.0,
       "members": true,
       "product": {
         "item": "Snakeskin bandana",
@@ -6206,6 +6532,7 @@
       "id": "snakeskin_chaps",
       "skill": "crafting",
       "level": 51,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Snakeskin chaps",
@@ -6225,6 +6552,7 @@
       "id": "snakeskin_body",
       "skill": "crafting",
       "level": 53,
+      "xp": 55.0,
       "members": true,
       "product": {
         "item": "Snakeskin body",
@@ -6244,6 +6572,7 @@
       "id": "snakeskin_shield",
       "skill": "crafting",
       "level": 56,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Snakeskin shield",
@@ -6271,6 +6600,7 @@
       "id": "yak_hide_armour_legs",
       "skill": "crafting",
       "level": 43,
+      "xp": 32.0,
       "members": true,
       "product": {
         "item": "Yak-hide armour (legs)",
@@ -6290,6 +6620,7 @@
       "id": "yak_hide_armour_top",
       "skill": "crafting",
       "level": 46,
+      "xp": 32.0,
       "members": true,
       "product": {
         "item": "Yak-hide armour (top)",
@@ -6309,6 +6640,7 @@
       "id": "pointed_blood_n_tar_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Pointed blood'n'tar snelm",
@@ -6328,6 +6660,7 @@
       "id": "blood_n_tar_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Blood'n'tar snelm",
@@ -6347,6 +6680,7 @@
       "id": "broken_bark_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Broken bark snelm",
@@ -6366,6 +6700,7 @@
       "id": "pointed_bruise_blue_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Pointed bruise blue snelm",
@@ -6385,6 +6720,7 @@
       "id": "bruise_blue_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Bruise blue snelm",
@@ -6404,6 +6740,7 @@
       "id": "pointed_myre_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Pointed myre snelm",
@@ -6423,6 +6760,7 @@
       "id": "myre_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Myre snelm",
@@ -6442,6 +6780,7 @@
       "id": "pointed_ochre_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Pointed ochre snelm",
@@ -6461,6 +6800,7 @@
       "id": "ochre_snelm",
       "skill": "crafting",
       "level": 15,
+      "xp": 32.5,
       "members": true,
       "product": {
         "item": "Ochre snelm",
@@ -6480,6 +6820,7 @@
       "id": "xerician_hat",
       "skill": "crafting",
       "level": 14,
+      "xp": 66.0,
       "members": true,
       "product": {
         "item": "Xerician hat",
@@ -6499,6 +6840,7 @@
       "id": "xerician_robe",
       "skill": "crafting",
       "level": 17,
+      "xp": 88.0,
       "members": true,
       "product": {
         "item": "Xerician robe",
@@ -6518,6 +6860,7 @@
       "id": "xerician_top",
       "skill": "crafting",
       "level": 22,
+      "xp": 110.0,
       "members": true,
       "product": {
         "item": "Xerician top",
@@ -6537,6 +6880,7 @@
       "id": "splitbark_gauntlets",
       "skill": "crafting",
       "level": 60,
+      "xp": 62.0,
       "members": true,
       "product": {
         "item": "Splitbark gauntlets",
@@ -6560,6 +6904,7 @@
       "id": "splitbark_boots",
       "skill": "crafting",
       "level": 60,
+      "xp": 62.0,
       "members": true,
       "product": {
         "item": "Splitbark boots",
@@ -6583,6 +6928,7 @@
       "id": "splitbark_helm",
       "skill": "crafting",
       "level": 61,
+      "xp": 124.0,
       "members": true,
       "product": {
         "item": "Splitbark helm",
@@ -6606,6 +6952,7 @@
       "id": "splitbark_legs",
       "skill": "crafting",
       "level": 62,
+      "xp": 186.0,
       "members": true,
       "product": {
         "item": "Splitbark legs",
@@ -6629,6 +6976,7 @@
       "id": "splitbark_body",
       "skill": "crafting",
       "level": 62,
+      "xp": 248.0,
       "members": true,
       "product": {
         "item": "Splitbark body",
@@ -6652,6 +7000,7 @@
       "id": "mixed_hide_cape",
       "skill": "crafting",
       "level": 68,
+      "xp": 62.0,
       "members": true,
       "product": {
         "item": "Mixed hide cape",
@@ -6675,6 +7024,7 @@
       "id": "mixed_hide_boots",
       "skill": "crafting",
       "level": 69,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Mixed hide boots",
@@ -6698,6 +7048,7 @@
       "id": "mixed_hide_legs",
       "skill": "crafting",
       "level": 71,
+      "xp": 210.0,
       "members": true,
       "product": {
         "item": "Mixed hide legs",
@@ -6721,6 +7072,7 @@
       "id": "mixed_hide_top",
       "skill": "crafting",
       "level": 72,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Mixed hide top",
@@ -6744,6 +7096,7 @@
       "id": "hueycoatl_hide_vambraces",
       "skill": "crafting",
       "level": 76,
+      "xp": 95.0,
       "members": true,
       "product": {
         "item": "Hueycoatl hide vambraces",
@@ -6763,6 +7116,7 @@
       "id": "hueycoatl_hide_coif",
       "skill": "crafting",
       "level": 76,
+      "xp": 190.0,
       "members": true,
       "product": {
         "item": "Hueycoatl hide coif",
@@ -6782,6 +7136,7 @@
       "id": "hueycoatl_hide_chaps",
       "skill": "crafting",
       "level": 77,
+      "xp": 190.0,
       "members": true,
       "product": {
         "item": "Hueycoatl hide chaps",
@@ -6801,6 +7156,7 @@
       "id": "hueycoatl_hide_body",
       "skill": "crafting",
       "level": 78,
+      "xp": 285.0,
       "members": true,
       "product": {
         "item": "Hueycoatl hide body",
@@ -6820,6 +7176,7 @@
       "id": "beer_glass",
       "skill": "crafting",
       "level": 1,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Beer glass",
@@ -6839,6 +7196,7 @@
       "id": "empty_candle_lantern",
       "skill": "crafting",
       "level": 4,
+      "xp": 19.0,
       "members": true,
       "product": {
         "item": "Empty candle lantern",
@@ -6858,6 +7216,7 @@
       "id": "empty_oil_lamp",
       "skill": "crafting",
       "level": 12,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Empty oil lamp",
@@ -6877,6 +7236,7 @@
       "id": "oil_lantern",
       "skill": "crafting",
       "level": 26,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Oil lantern",
@@ -6900,6 +7260,7 @@
       "id": "vial",
       "skill": "crafting",
       "level": 33,
+      "xp": 35.0,
       "members": true,
       "product": {
         "item": "Vial",
@@ -6919,6 +7280,7 @@
       "id": "unpowered_orb",
       "skill": "crafting",
       "level": 46,
+      "xp": 52.5,
       "members": true,
       "product": {
         "item": "Unpowered orb",
@@ -6938,6 +7300,7 @@
       "id": "lantern_lens",
       "skill": "crafting",
       "level": 49,
+      "xp": 55.0,
       "members": true,
       "product": {
         "item": "Lantern lens",
@@ -6957,6 +7320,7 @@
       "id": "opal",
       "skill": "crafting",
       "level": 1,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Opal",
@@ -6976,6 +7340,7 @@
       "id": "jade",
       "skill": "crafting",
       "level": 13,
+      "xp": 20.0,
       "members": true,
       "product": {
         "item": "Jade",
@@ -6995,6 +7360,7 @@
       "id": "red_topaz",
       "skill": "crafting",
       "level": 16,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Red topaz",
@@ -7014,6 +7380,7 @@
       "id": "sapphire",
       "skill": "crafting",
       "level": 20,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Sapphire",
@@ -7033,6 +7400,7 @@
       "id": "emerald",
       "skill": "crafting",
       "level": 27,
+      "xp": 67.5,
       "members": false,
       "product": {
         "item": "Emerald",
@@ -7052,6 +7420,7 @@
       "id": "ruby",
       "skill": "crafting",
       "level": 34,
+      "xp": 85.0,
       "members": false,
       "product": {
         "item": "Ruby",
@@ -7071,6 +7440,7 @@
       "id": "diamond",
       "skill": "crafting",
       "level": 43,
+      "xp": 107.5,
       "members": false,
       "product": {
         "item": "Diamond",
@@ -7090,6 +7460,7 @@
       "id": "dragonstone",
       "skill": "crafting",
       "level": 55,
+      "xp": 137.5,
       "members": true,
       "product": {
         "item": "Dragonstone",
@@ -7109,6 +7480,7 @@
       "id": "onyx",
       "skill": "crafting",
       "level": 67,
+      "xp": 167.5,
       "members": true,
       "product": {
         "item": "Onyx",
@@ -7128,6 +7500,7 @@
       "id": "zenyte",
       "skill": "crafting",
       "level": 89,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Zenyte",
@@ -7147,6 +7520,7 @@
       "id": "opal_ring",
       "skill": "crafting",
       "level": 1,
+      "xp": 10.0,
       "members": true,
       "product": {
         "item": "Opal ring",
@@ -7170,6 +7544,7 @@
       "id": "opal_necklace",
       "skill": "crafting",
       "level": 16,
+      "xp": 35.0,
       "members": true,
       "product": {
         "item": "Opal necklace",
@@ -7193,6 +7568,7 @@
       "id": "opal_bracelet",
       "skill": "crafting",
       "level": 22,
+      "xp": 45.0,
       "members": true,
       "product": {
         "item": "Opal bracelet",
@@ -7216,6 +7592,7 @@
       "id": "opal_amulet_u",
       "skill": "crafting",
       "level": 27,
+      "xp": 55.0,
       "members": true,
       "product": {
         "item": "Opal amulet (u)",
@@ -7239,6 +7616,7 @@
       "id": "jade_ring",
       "skill": "crafting",
       "level": 13,
+      "xp": 32.0,
       "members": true,
       "product": {
         "item": "Jade ring",
@@ -7262,6 +7640,7 @@
       "id": "jade_necklace",
       "skill": "crafting",
       "level": 25,
+      "xp": 54.0,
       "members": true,
       "product": {
         "item": "Jade necklace",
@@ -7285,6 +7664,7 @@
       "id": "jade_bracelet",
       "skill": "crafting",
       "level": 29,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Jade bracelet",
@@ -7308,6 +7688,7 @@
       "id": "jade_amulet_u",
       "skill": "crafting",
       "level": 34,
+      "xp": 70.0,
       "members": true,
       "product": {
         "item": "Jade amulet (u)",
@@ -7331,6 +7712,7 @@
       "id": "topaz_ring",
       "skill": "crafting",
       "level": 16,
+      "xp": 35.0,
       "members": true,
       "product": {
         "item": "Topaz ring",
@@ -7354,6 +7736,7 @@
       "id": "topaz_necklace",
       "skill": "crafting",
       "level": 32,
+      "xp": 70.0,
       "members": true,
       "product": {
         "item": "Topaz necklace",
@@ -7377,6 +7760,7 @@
       "id": "topaz_bracelet",
       "skill": "crafting",
       "level": 38,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Topaz bracelet",
@@ -7400,6 +7784,7 @@
       "id": "topaz_amulet_u",
       "skill": "crafting",
       "level": 45,
+      "xp": 80.0,
       "members": true,
       "product": {
         "item": "Topaz amulet (u)",
@@ -7423,6 +7808,7 @@
       "id": "gold_ring",
       "skill": "crafting",
       "level": 5,
+      "xp": 15.0,
       "members": false,
       "product": {
         "item": "Gold ring",
@@ -7442,6 +7828,7 @@
       "id": "gold_necklace",
       "skill": "crafting",
       "level": 6,
+      "xp": 20.0,
       "members": false,
       "product": {
         "item": "Gold necklace",
@@ -7461,6 +7848,7 @@
       "id": "gold_bracelet",
       "skill": "crafting",
       "level": 7,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Gold bracelet",
@@ -7480,6 +7868,7 @@
       "id": "gold_amulet_u",
       "skill": "crafting",
       "level": 8,
+      "xp": 30.0,
       "members": false,
       "product": {
         "item": "Gold amulet (u)",
@@ -7499,6 +7888,7 @@
       "id": "sapphire_bracelet",
       "skill": "crafting",
       "level": 23,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Sapphire bracelet",
@@ -7522,6 +7912,7 @@
       "id": "emerald_ring",
       "skill": "crafting",
       "level": 27,
+      "xp": 55.0,
       "members": false,
       "product": {
         "item": "Emerald ring",
@@ -7545,6 +7936,7 @@
       "id": "emerald_necklace",
       "skill": "crafting",
       "level": 29,
+      "xp": 60.0,
       "members": false,
       "product": {
         "item": "Emerald necklace",
@@ -7568,6 +7960,7 @@
       "id": "emerald_bracelet",
       "skill": "crafting",
       "level": 30,
+      "xp": 65.0,
       "members": true,
       "product": {
         "item": "Emerald bracelet",
@@ -7591,6 +7984,7 @@
       "id": "emerald_amulet_u",
       "skill": "crafting",
       "level": 31,
+      "xp": 70.0,
       "members": false,
       "product": {
         "item": "Emerald amulet (u)",
@@ -7614,6 +8008,7 @@
       "id": "ruby_ring",
       "skill": "crafting",
       "level": 34,
+      "xp": 70.0,
       "members": false,
       "product": {
         "item": "Ruby ring",
@@ -7637,6 +8032,7 @@
       "id": "ruby_necklace",
       "skill": "crafting",
       "level": 40,
+      "xp": 75.0,
       "members": false,
       "product": {
         "item": "Ruby necklace",
@@ -7660,6 +8056,7 @@
       "id": "ruby_bracelet",
       "skill": "crafting",
       "level": 42,
+      "xp": 80.0,
       "members": true,
       "product": {
         "item": "Ruby bracelet",
@@ -7683,6 +8080,7 @@
       "id": "gold_tiara",
       "skill": "crafting",
       "level": 42,
+      "xp": 35.0,
       "members": true,
       "product": {
         "item": "Gold tiara",
@@ -7702,6 +8100,7 @@
       "id": "ruby_amulet_u",
       "skill": "crafting",
       "level": 50,
+      "xp": 85.0,
       "members": false,
       "product": {
         "item": "Ruby amulet (u)",
@@ -7725,6 +8124,7 @@
       "id": "diamond_ring",
       "skill": "crafting",
       "level": 43,
+      "xp": 85.0,
       "members": false,
       "product": {
         "item": "Diamond ring",
@@ -7748,6 +8148,7 @@
       "id": "diamond_necklace",
       "skill": "crafting",
       "level": 56,
+      "xp": 90.0,
       "members": false,
       "product": {
         "item": "Diamond necklace",
@@ -7771,6 +8172,7 @@
       "id": "diamond_bracelet",
       "skill": "crafting",
       "level": 58,
+      "xp": 95.0,
       "members": true,
       "product": {
         "item": "Diamond bracelet",
@@ -7794,6 +8196,7 @@
       "id": "diamond_amulet_u",
       "skill": "crafting",
       "level": 70,
+      "xp": 100.0,
       "members": false,
       "product": {
         "item": "Diamond amulet (u)",
@@ -7817,6 +8220,7 @@
       "id": "dragonstone_ring",
       "skill": "crafting",
       "level": 55,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Dragonstone ring",
@@ -7840,6 +8244,7 @@
       "id": "dragon_necklace",
       "skill": "crafting",
       "level": 72,
+      "xp": 105.0,
       "members": true,
       "product": {
         "item": "Dragon necklace",
@@ -7863,6 +8268,7 @@
       "id": "dragonstone_bracelet",
       "skill": "crafting",
       "level": 74,
+      "xp": 110.0,
       "members": true,
       "product": {
         "item": "Dragonstone bracelet",
@@ -7886,6 +8292,7 @@
       "id": "dragonstone_amulet_u",
       "skill": "crafting",
       "level": 80,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Dragonstone amulet (u)",
@@ -7909,6 +8316,7 @@
       "id": "onyx_ring",
       "skill": "crafting",
       "level": 67,
+      "xp": 115.0,
       "members": true,
       "product": {
         "item": "Onyx ring",
@@ -7932,6 +8340,7 @@
       "id": "onyx_necklace",
       "skill": "crafting",
       "level": 82,
+      "xp": 120.0,
       "members": true,
       "product": {
         "item": "Onyx necklace",
@@ -7955,6 +8364,7 @@
       "id": "onyx_bracelet",
       "skill": "crafting",
       "level": 84,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Onyx bracelet",
@@ -7978,6 +8388,7 @@
       "id": "onyx_amulet_u",
       "skill": "crafting",
       "level": 90,
+      "xp": 165.0,
       "members": true,
       "product": {
         "item": "Onyx amulet (u)",
@@ -8001,6 +8412,7 @@
       "id": "zenyte_ring",
       "skill": "crafting",
       "level": 89,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Zenyte ring",
@@ -8024,6 +8436,7 @@
       "id": "zenyte_necklace",
       "skill": "crafting",
       "level": 92,
+      "xp": 165.0,
       "members": true,
       "product": {
         "item": "Zenyte necklace",
@@ -8047,6 +8460,7 @@
       "id": "zenyte_bracelet",
       "skill": "crafting",
       "level": 95,
+      "xp": 180.0,
       "members": true,
       "product": {
         "item": "Zenyte bracelet",
@@ -8070,6 +8484,7 @@
       "id": "zenyte_amulet_u",
       "skill": "crafting",
       "level": 98,
+      "xp": 200.0,
       "members": true,
       "product": {
         "item": "Zenyte amulet (u)",
@@ -8093,6 +8508,7 @@
       "id": "silver_sickle",
       "skill": "crafting",
       "level": 18,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Silver sickle",
@@ -8112,6 +8528,7 @@
       "id": "silver_bolts_unf",
       "skill": "crafting",
       "level": 21,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Silver bolts (unf)",
@@ -8131,6 +8548,7 @@
       "id": "water_battlestaff",
       "skill": "crafting",
       "level": 54,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Water battlestaff",
@@ -8154,6 +8572,7 @@
       "id": "earth_battlestaff",
       "skill": "crafting",
       "level": 58,
+      "xp": 112.5,
       "members": true,
       "product": {
         "item": "Earth battlestaff",
@@ -8177,6 +8596,7 @@
       "id": "fire_battlestaff",
       "skill": "crafting",
       "level": 62,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Fire battlestaff",
@@ -8200,6 +8620,7 @@
       "id": "air_battlestaff",
       "skill": "crafting",
       "level": 66,
+      "xp": 137.5,
       "members": true,
       "product": {
         "item": "Air battlestaff",
@@ -8223,6 +8644,7 @@
       "id": "amethyst_bolt_tips",
       "skill": "crafting",
       "level": 83,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Amethyst bolt tips",
@@ -8242,6 +8664,7 @@
       "id": "amethyst_arrowtips",
       "skill": "crafting",
       "level": 85,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Amethyst arrowtips",
@@ -8261,6 +8684,7 @@
       "id": "amethyst_javelin_tips",
       "skill": "crafting",
       "level": 87,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Amethyst javelin tips",
@@ -8280,6 +8704,7 @@
       "id": "amethyst_dart_tip",
       "skill": "crafting",
       "level": 89,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Amethyst dart tip",
@@ -8299,6 +8724,7 @@
       "id": "unstrung_symbol",
       "skill": "crafting",
       "level": 16,
+      "xp": 50.0,
       "members": false,
       "product": {
         "item": "Unstrung symbol",
@@ -8318,6 +8744,7 @@
       "id": "unstrung_emblem",
       "skill": "crafting",
       "level": 17,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Unstrung emblem",
@@ -8337,6 +8764,7 @@
       "id": "tiara",
       "skill": "crafting",
       "level": 23,
+      "xp": 52.5,
       "members": false,
       "product": {
         "item": "Tiara",
@@ -8356,6 +8784,7 @@
       "id": "bird_house",
       "skill": "crafting",
       "level": 5,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Bird house",
@@ -8379,6 +8808,7 @@
       "id": "oak_bird_house",
       "skill": "crafting",
       "level": 15,
+      "xp": 20.0,
       "members": true,
       "product": {
         "item": "Oak bird house",
@@ -8402,6 +8832,7 @@
       "id": "willow_bird_house",
       "skill": "crafting",
       "level": 25,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Willow bird house",
@@ -8425,6 +8856,7 @@
       "id": "teak_bird_house",
       "skill": "crafting",
       "level": 35,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Teak bird house",
@@ -8448,6 +8880,7 @@
       "id": "maple_bird_house",
       "skill": "crafting",
       "level": 45,
+      "xp": 35.0,
       "members": true,
       "product": {
         "item": "Maple bird house",
@@ -8471,6 +8904,7 @@
       "id": "mahogany_bird_house",
       "skill": "crafting",
       "level": 50,
+      "xp": 40.0,
       "members": true,
       "product": {
         "item": "Mahogany bird house",
@@ -8494,6 +8928,7 @@
       "id": "yew_bird_house",
       "skill": "crafting",
       "level": 60,
+      "xp": 45.0,
       "members": true,
       "product": {
         "item": "Yew bird house",
@@ -8517,6 +8952,7 @@
       "id": "magic_bird_house",
       "skill": "crafting",
       "level": 75,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Magic bird house",
@@ -8540,6 +8976,7 @@
       "id": "redwood_bird_house",
       "skill": "crafting",
       "level": 90,
+      "xp": 55.0,
       "members": true,
       "product": {
         "item": "Redwood bird house",
@@ -8563,6 +9000,7 @@
       "id": "unstrung_comp_bow",
       "skill": "fletching",
       "level": 30,
+      "xp": 45.0,
       "members": true,
       "product": {
         "item": "Unstrung comp bow",
@@ -8586,6 +9024,7 @@
       "id": "comp_ogre_bow",
       "skill": "fletching",
       "level": 30,
+      "xp": 45.0,
       "members": true,
       "product": {
         "item": "Comp ogre bow",
@@ -8609,6 +9048,7 @@
       "id": "wooden_stock",
       "skill": "fletching",
       "level": 9,
+      "xp": 6.0,
       "members": true,
       "product": {
         "item": "Wooden stock",
@@ -8628,6 +9068,7 @@
       "id": "oak_stock",
       "skill": "fletching",
       "level": 24,
+      "xp": 16.0,
       "members": true,
       "product": {
         "item": "Oak stock",
@@ -8647,6 +9088,7 @@
       "id": "willow_stock",
       "skill": "fletching",
       "level": 39,
+      "xp": 22.0,
       "members": true,
       "product": {
         "item": "Willow stock",
@@ -8666,6 +9108,7 @@
       "id": "teak_stock",
       "skill": "fletching",
       "level": 46,
+      "xp": 27.0,
       "members": true,
       "product": {
         "item": "Teak stock",
@@ -8685,6 +9128,7 @@
       "id": "maple_stock",
       "skill": "fletching",
       "level": 54,
+      "xp": 32.0,
       "members": true,
       "product": {
         "item": "Maple stock",
@@ -8704,6 +9148,7 @@
       "id": "mahogany_stock",
       "skill": "fletching",
       "level": 61,
+      "xp": 41.0,
       "members": true,
       "product": {
         "item": "Mahogany stock",
@@ -8723,6 +9168,7 @@
       "id": "yew_stock",
       "skill": "fletching",
       "level": 69,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Yew stock",
@@ -8742,6 +9188,7 @@
       "id": "magic_stock",
       "skill": "fletching",
       "level": 78,
+      "xp": 70.0,
       "members": true,
       "product": {
         "item": "Magic stock",
@@ -8761,6 +9208,7 @@
       "id": "hunters_sunlight_crossbow",
       "skill": "fletching",
       "level": 74,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Hunters' sunlight crossbow",
@@ -8784,6 +9232,7 @@
       "id": "incomplete_light_ballista",
       "skill": "fletching",
       "level": 47,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Incomplete light ballista",
@@ -8807,6 +9256,7 @@
       "id": "incomplete_heavy_ballista",
       "skill": "fletching",
       "level": 72,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Incomplete heavy ballista",
@@ -8830,6 +9280,7 @@
       "id": "battlestaff",
       "skill": "fletching",
       "level": 40,
+      "xp": 80.0,
       "members": true,
       "product": {
         "item": "Battlestaff",
@@ -8849,6 +9300,7 @@
       "id": "redwood_hiking_staff",
       "skill": "fletching",
       "level": 90,
+      "xp": 10.5,
       "members": true,
       "product": {
         "item": "Redwood hiking staff",
@@ -8868,6 +9320,7 @@
       "id": "oak_shield",
       "skill": "fletching",
       "level": 27,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Oak shield",
@@ -8887,6 +9340,7 @@
       "id": "willow_shield",
       "skill": "fletching",
       "level": 42,
+      "xp": 83.0,
       "members": true,
       "product": {
         "item": "Willow shield",
@@ -8906,6 +9360,7 @@
       "id": "maple_shield",
       "skill": "fletching",
       "level": 57,
+      "xp": 116.5,
       "members": true,
       "product": {
         "item": "Maple shield",
@@ -8925,6 +9380,7 @@
       "id": "yew_shield",
       "skill": "fletching",
       "level": 72,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Yew shield",
@@ -8944,6 +9400,7 @@
       "id": "magic_shield",
       "skill": "fletching",
       "level": 87,
+      "xp": 183.0,
       "members": true,
       "product": {
         "item": "Magic shield",
@@ -8963,6 +9420,7 @@
       "id": "redwood_shield",
       "skill": "fletching",
       "level": 92,
+      "xp": 216.0,
       "members": true,
       "product": {
         "item": "Redwood shield",
@@ -8982,6 +9440,7 @@
       "id": "amethyst_arrow",
       "skill": "fletching",
       "level": 82,
+      "xp": 202.5,
       "members": true,
       "product": {
         "item": "Amethyst arrow",
@@ -9005,6 +9464,7 @@
       "id": "dragon_arrow",
       "skill": "fletching",
       "level": 90,
+      "xp": 225.0,
       "members": true,
       "product": {
         "item": "Dragon arrow",
@@ -9028,6 +9488,7 @@
       "id": "ogre_arrow_shaft",
       "skill": "fletching",
       "level": 5,
+      "xp": 6.4,
       "members": true,
       "product": {
         "item": "Ogre arrow shaft",
@@ -9047,6 +9508,7 @@
       "id": "flighted_ogre_arrow",
       "skill": "fletching",
       "level": 5,
+      "xp": 5.4,
       "members": true,
       "product": {
         "item": "Flighted ogre arrow",
@@ -9070,6 +9532,7 @@
       "id": "wolfbone_arrowtips",
       "skill": "fletching",
       "level": 5,
+      "xp": 10.0,
       "members": true,
       "product": {
         "item": "Wolfbone arrowtips",
@@ -9089,6 +9552,7 @@
       "id": "ogre_arrow",
       "skill": "fletching",
       "level": 5,
+      "xp": 6.0,
       "members": true,
       "product": {
         "item": "Ogre arrow",
@@ -9112,6 +9576,7 @@
       "id": "bronze_brutal",
       "skill": "fletching",
       "level": 7,
+      "xp": 8.4,
       "members": true,
       "product": {
         "item": "Bronze brutal",
@@ -9135,6 +9600,7 @@
       "id": "iron_brutal",
       "skill": "fletching",
       "level": 18,
+      "xp": 15.6,
       "members": true,
       "product": {
         "item": "Iron brutal",
@@ -9158,6 +9624,7 @@
       "id": "steel_brutal",
       "skill": "fletching",
       "level": 33,
+      "xp": 30.6,
       "members": true,
       "product": {
         "item": "Steel brutal",
@@ -9181,6 +9648,7 @@
       "id": "black_brutal",
       "skill": "fletching",
       "level": 38,
+      "xp": 39.0,
       "members": true,
       "product": {
         "item": "Black brutal",
@@ -9204,6 +9672,7 @@
       "id": "mithril_brutal",
       "skill": "fletching",
       "level": 49,
+      "xp": 45.0,
       "members": true,
       "product": {
         "item": "Mithril brutal",
@@ -9227,6 +9696,7 @@
       "id": "adamant_brutal",
       "skill": "fletching",
       "level": 62,
+      "xp": 61.2,
       "members": true,
       "product": {
         "item": "Adamant brutal",
@@ -9250,6 +9720,7 @@
       "id": "rune_brutal",
       "skill": "fletching",
       "level": 77,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Rune brutal",
@@ -9273,6 +9744,7 @@
       "id": "bronze_bolts",
       "skill": "fletching",
       "level": 9,
+      "xp": 5.0,
       "members": true,
       "product": {
         "item": "Bronze bolts",
@@ -9296,6 +9768,7 @@
       "id": "iron_bolts",
       "skill": "fletching",
       "level": 39,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Iron bolts",
@@ -9319,6 +9792,7 @@
       "id": "silver_bolts",
       "skill": "fletching",
       "level": 43,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Silver bolts",
@@ -9342,6 +9816,7 @@
       "id": "steel_bolts",
       "skill": "fletching",
       "level": 46,
+      "xp": 35.0,
       "members": true,
       "product": {
         "item": "Steel bolts",
@@ -9365,6 +9840,7 @@
       "id": "mithril_bolts",
       "skill": "fletching",
       "level": 54,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Mithril bolts",
@@ -9388,6 +9864,7 @@
       "id": "broad_bolts",
       "skill": "fletching",
       "level": 55,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Broad bolts",
@@ -9411,6 +9888,7 @@
       "id": "adamant_bolts",
       "skill": "fletching",
       "level": 61,
+      "xp": 70.0,
       "members": true,
       "product": {
         "item": "Adamant bolts",
@@ -9434,6 +9912,7 @@
       "id": "runite_bolts",
       "skill": "fletching",
       "level": 69,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Runite bolts",
@@ -9457,6 +9936,7 @@
       "id": "dragon_bolts",
       "skill": "fletching",
       "level": 84,
+      "xp": 120.0,
       "members": true,
       "product": {
         "item": "Dragon bolts",
@@ -9480,6 +9960,7 @@
       "id": "opal_bolts",
       "skill": "fletching",
       "level": 11,
+      "xp": 16.0,
       "members": true,
       "product": {
         "item": "Opal bolts",
@@ -9503,6 +9984,7 @@
       "id": "pearl_bolts",
       "skill": "fletching",
       "level": 41,
+      "xp": 32.0,
       "members": true,
       "product": {
         "item": "Pearl bolts",
@@ -9526,6 +10008,7 @@
       "id": "topaz_bolts",
       "skill": "fletching",
       "level": 48,
+      "xp": 39.0,
       "members": true,
       "product": {
         "item": "Topaz bolts",
@@ -9549,6 +10032,7 @@
       "id": "barbed_bolts",
       "skill": "fletching",
       "level": 51,
+      "xp": 95.0,
       "members": true,
       "product": {
         "item": "Barbed bolts",
@@ -9572,6 +10056,7 @@
       "id": "sapphire_bolts",
       "skill": "fletching",
       "level": 56,
+      "xp": 47.0,
       "members": true,
       "product": {
         "item": "Sapphire bolts",
@@ -9595,6 +10080,7 @@
       "id": "emerald_bolts",
       "skill": "fletching",
       "level": 58,
+      "xp": 55.0,
       "members": true,
       "product": {
         "item": "Emerald bolts",
@@ -9618,6 +10104,7 @@
       "id": "ruby_bolts",
       "skill": "fletching",
       "level": 63,
+      "xp": 63.0,
       "members": true,
       "product": {
         "item": "Ruby bolts",
@@ -9641,6 +10128,7 @@
       "id": "diamond_bolts",
       "skill": "fletching",
       "level": 65,
+      "xp": 70.0,
       "members": true,
       "product": {
         "item": "Diamond bolts",
@@ -9664,6 +10152,7 @@
       "id": "dragonstone_bolts",
       "skill": "fletching",
       "level": 71,
+      "xp": 82.0,
       "members": true,
       "product": {
         "item": "Dragonstone bolts",
@@ -9687,6 +10176,7 @@
       "id": "onyx_bolts",
       "skill": "fletching",
       "level": 73,
+      "xp": 94.0,
       "members": true,
       "product": {
         "item": "Onyx bolts",
@@ -9710,6 +10200,7 @@
       "id": "amethyst_broad_bolts",
       "skill": "fletching",
       "level": 76,
+      "xp": 106.0,
       "members": true,
       "product": {
         "item": "Amethyst broad bolts",
@@ -9733,6 +10224,7 @@
       "id": "opal_dragon_bolts",
       "skill": "fletching",
       "level": 84,
+      "xp": 16.0,
       "members": true,
       "product": {
         "item": "Opal dragon bolts",
@@ -9756,6 +10248,7 @@
       "id": "opal_bolt_tips",
       "skill": "fletching",
       "level": 11,
+      "xp": 1.5,
       "members": true,
       "product": {
         "item": "Opal bolt tips",
@@ -9775,6 +10268,7 @@
       "id": "jade_bolt_tips",
       "skill": "fletching",
       "level": 26,
+      "xp": 2.0,
       "members": true,
       "product": {
         "item": "Jade bolt tips",
@@ -9794,6 +10288,7 @@
       "id": "pearl_bolt_tips",
       "skill": "fletching",
       "level": 41,
+      "xp": 3.2,
       "members": true,
       "product": {
         "item": "Pearl bolt tips",
@@ -9813,6 +10308,7 @@
       "id": "topaz_bolt_tips",
       "skill": "fletching",
       "level": 48,
+      "xp": 3.9,
       "members": true,
       "product": {
         "item": "Topaz bolt tips",
@@ -9832,6 +10328,7 @@
       "id": "sapphire_bolt_tips",
       "skill": "fletching",
       "level": 56,
+      "xp": 4.0,
       "members": true,
       "product": {
         "item": "Sapphire bolt tips",
@@ -9851,6 +10348,7 @@
       "id": "emerald_bolt_tips",
       "skill": "fletching",
       "level": 58,
+      "xp": 5.5,
       "members": true,
       "product": {
         "item": "Emerald bolt tips",
@@ -9870,6 +10368,7 @@
       "id": "ruby_bolt_tips",
       "skill": "fletching",
       "level": 63,
+      "xp": 6.3,
       "members": true,
       "product": {
         "item": "Ruby bolt tips",
@@ -9889,6 +10388,7 @@
       "id": "diamond_bolt_tips",
       "skill": "fletching",
       "level": 65,
+      "xp": 7.0,
       "members": true,
       "product": {
         "item": "Diamond bolt tips",
@@ -9908,6 +10408,7 @@
       "id": "dragonstone_bolt_tips",
       "skill": "fletching",
       "level": 71,
+      "xp": 8.2,
       "members": true,
       "product": {
         "item": "Dragonstone bolt tips",
@@ -9927,6 +10428,7 @@
       "id": "onyx_bolt_tips",
       "skill": "fletching",
       "level": 73,
+      "xp": 9.4,
       "members": true,
       "product": {
         "item": "Onyx bolt tips",
@@ -9946,6 +10448,7 @@
       "id": "kebbit_bolts",
       "skill": "fletching",
       "level": 32,
+      "xp": 5.8,
       "members": true,
       "product": {
         "item": "Kebbit bolts",
@@ -9965,6 +10468,7 @@
       "id": "long_kebbit_bolts",
       "skill": "fletching",
       "level": 42,
+      "xp": 7.9,
       "members": true,
       "product": {
         "item": "Long kebbit bolts",
@@ -9984,6 +10488,7 @@
       "id": "sunlight_antler_bolts",
       "skill": "fletching",
       "level": 62,
+      "xp": 10.0,
       "members": true,
       "product": {
         "item": "Sunlight antler bolts",
@@ -10003,6 +10508,7 @@
       "id": "moonlight_antler_bolts",
       "skill": "fletching",
       "level": 72,
+      "xp": 12.1,
       "members": true,
       "product": {
         "item": "Moonlight antler bolts",
@@ -10022,6 +10528,7 @@
       "id": "atlatl_dart",
       "skill": "fletching",
       "level": 74,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Atlatl dart",
@@ -10045,6 +10552,7 @@
       "id": "mith_grapple_unf",
       "skill": "fletching",
       "level": 59,
+      "xp": 11.0,
       "members": true,
       "product": {
         "item": "Mith grapple (unf)",
@@ -10068,6 +10576,7 @@
       "id": "mith_grapple",
       "skill": "fletching",
       "level": 1,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Mith grapple",
@@ -10091,6 +10600,7 @@
       "id": "bronze_dart",
       "skill": "fletching",
       "level": 10,
+      "xp": 18.0,
       "members": true,
       "product": {
         "item": "Bronze dart",
@@ -10114,6 +10624,7 @@
       "id": "iron_dart",
       "skill": "fletching",
       "level": 22,
+      "xp": 38.0,
       "members": true,
       "product": {
         "item": "Iron dart",
@@ -10137,6 +10648,7 @@
       "id": "steel_dart",
       "skill": "fletching",
       "level": 37,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Steel dart",
@@ -10160,6 +10672,7 @@
       "id": "mithril_dart",
       "skill": "fletching",
       "level": 52,
+      "xp": 112.0,
       "members": true,
       "product": {
         "item": "Mithril dart",
@@ -10183,6 +10696,7 @@
       "id": "adamant_dart",
       "skill": "fletching",
       "level": 67,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Adamant dart",
@@ -10206,6 +10720,7 @@
       "id": "rune_dart",
       "skill": "fletching",
       "level": 81,
+      "xp": 188.0,
       "members": true,
       "product": {
         "item": "Rune dart",
@@ -10229,6 +10744,7 @@
       "id": "amethyst_dart",
       "skill": "fletching",
       "level": 90,
+      "xp": 210.0,
       "members": true,
       "product": {
         "item": "Amethyst dart",
@@ -10252,6 +10768,7 @@
       "id": "dragon_dart",
       "skill": "fletching",
       "level": 95,
+      "xp": 250.0,
       "members": true,
       "product": {
         "item": "Dragon dart",
@@ -10275,6 +10792,7 @@
       "id": "hunter_s_spear",
       "skill": "fletching",
       "level": 60,
+      "xp": 9.5,
       "members": true,
       "product": {
         "item": "Hunter's spear",
@@ -10302,6 +10820,7 @@
       "id": "bronze_javelin",
       "skill": "fletching",
       "level": 3,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Bronze javelin",
@@ -10325,6 +10844,7 @@
       "id": "iron_javelin",
       "skill": "fletching",
       "level": 17,
+      "xp": 30.0,
       "members": true,
       "product": {
         "item": "Iron javelin",
@@ -10348,6 +10868,7 @@
       "id": "steel_javelin",
       "skill": "fletching",
       "level": 32,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Steel javelin",
@@ -10371,6 +10892,7 @@
       "id": "mithril_javelin",
       "skill": "fletching",
       "level": 47,
+      "xp": 120.0,
       "members": true,
       "product": {
         "item": "Mithril javelin",
@@ -10394,6 +10916,7 @@
       "id": "adamant_javelin",
       "skill": "fletching",
       "level": 62,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Adamant javelin",
@@ -10417,6 +10940,7 @@
       "id": "rune_javelin",
       "skill": "fletching",
       "level": 77,
+      "xp": 187.5,
       "members": true,
       "product": {
         "item": "Rune javelin",
@@ -10440,6 +10964,7 @@
       "id": "amethyst_javelin",
       "skill": "fletching",
       "level": 84,
+      "xp": 202.5,
       "members": true,
       "product": {
         "item": "Amethyst javelin",
@@ -10463,6 +10988,7 @@
       "id": "dragon_javelin",
       "skill": "fletching",
       "level": 92,
+      "xp": 225.0,
       "members": true,
       "product": {
         "item": "Dragon javelin",
@@ -10486,6 +11012,7 @@
       "id": "guam_leaf",
       "skill": "herblore",
       "level": 3,
+      "xp": 2.5,
       "members": true,
       "product": {
         "item": "Guam leaf",
@@ -10505,6 +11032,7 @@
       "id": "guam_potion_unf",
       "skill": "herblore",
       "level": 3,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Guam potion (unf)",
@@ -10528,6 +11056,7 @@
       "id": "marrentill",
       "skill": "herblore",
       "level": 5,
+      "xp": 3.8,
       "members": true,
       "product": {
         "item": "Marrentill",
@@ -10547,6 +11076,7 @@
       "id": "marrentill_potion_unf",
       "skill": "herblore",
       "level": 5,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Marrentill potion (unf)",
@@ -10570,6 +11100,7 @@
       "id": "tarromin",
       "skill": "herblore",
       "level": 11,
+      "xp": 5.0,
       "members": true,
       "product": {
         "item": "Tarromin",
@@ -10589,6 +11120,7 @@
       "id": "tarromin_potion_unf",
       "skill": "herblore",
       "level": 12,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Tarromin potion (unf)",
@@ -10612,6 +11144,7 @@
       "id": "harralander",
       "skill": "herblore",
       "level": 20,
+      "xp": 6.3,
       "members": true,
       "product": {
         "item": "Harralander",
@@ -10631,6 +11164,7 @@
       "id": "harralander_potion_unf",
       "skill": "herblore",
       "level": 22,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Harralander potion (unf)",
@@ -10654,6 +11188,7 @@
       "id": "ranarr_weed",
       "skill": "herblore",
       "level": 25,
+      "xp": 7.5,
       "members": true,
       "product": {
         "item": "Ranarr weed",
@@ -10673,6 +11208,7 @@
       "id": "ranarr_potion_unf",
       "skill": "herblore",
       "level": 30,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Ranarr potion (unf)",
@@ -10696,6 +11232,7 @@
       "id": "toadflax",
       "skill": "herblore",
       "level": 30,
+      "xp": 8.0,
       "members": true,
       "product": {
         "item": "Toadflax",
@@ -10715,6 +11252,7 @@
       "id": "toadflax_potion_unf",
       "skill": "herblore",
       "level": 34,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Toadflax potion (unf)",
@@ -10738,6 +11276,7 @@
       "id": "irit_leaf",
       "skill": "herblore",
       "level": 40,
+      "xp": 8.8,
       "members": true,
       "product": {
         "item": "Irit leaf",
@@ -10757,6 +11296,7 @@
       "id": "irit_potion_unf",
       "skill": "herblore",
       "level": 45,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Irit potion (unf)",
@@ -10780,6 +11320,7 @@
       "id": "avantoe",
       "skill": "herblore",
       "level": 48,
+      "xp": 10.0,
       "members": true,
       "product": {
         "item": "Avantoe",
@@ -10799,6 +11340,7 @@
       "id": "avantoe_potion_unf",
       "skill": "herblore",
       "level": 50,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Avantoe potion (unf)",
@@ -10822,6 +11364,7 @@
       "id": "kwuarm",
       "skill": "herblore",
       "level": 54,
+      "xp": 11.3,
       "members": true,
       "product": {
         "item": "Kwuarm",
@@ -10841,6 +11384,7 @@
       "id": "kwuarm_potion_unf",
       "skill": "herblore",
       "level": 55,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Kwuarm potion (unf)",
@@ -10864,6 +11408,7 @@
       "id": "huasca",
       "skill": "herblore",
       "level": 58,
+      "xp": 11.8,
       "members": true,
       "product": {
         "item": "Huasca",
@@ -10883,6 +11428,7 @@
       "id": "huasca_potion_unf",
       "skill": "herblore",
       "level": 58,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Huasca potion (unf)",
@@ -10906,6 +11452,7 @@
       "id": "snapdragon",
       "skill": "herblore",
       "level": 59,
+      "xp": 11.8,
       "members": true,
       "product": {
         "item": "Snapdragon",
@@ -10925,6 +11472,7 @@
       "id": "snapdragon_potion_unf",
       "skill": "herblore",
       "level": 63,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Snapdragon potion (unf)",
@@ -10948,6 +11496,7 @@
       "id": "cadantine",
       "skill": "herblore",
       "level": 65,
+      "xp": 12.5,
       "members": true,
       "product": {
         "item": "Cadantine",
@@ -10967,6 +11516,7 @@
       "id": "cadantine_potion_unf",
       "skill": "herblore",
       "level": 66,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Cadantine potion (unf)",
@@ -10990,6 +11540,7 @@
       "id": "lantadyme",
       "skill": "herblore",
       "level": 67,
+      "xp": 13.1,
       "members": true,
       "product": {
         "item": "Lantadyme",
@@ -11009,6 +11560,7 @@
       "id": "lantadyme_potion_unf",
       "skill": "herblore",
       "level": 69,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Lantadyme potion (unf)",
@@ -11032,6 +11584,7 @@
       "id": "dwarf_weed",
       "skill": "herblore",
       "level": 70,
+      "xp": 13.8,
       "members": true,
       "product": {
         "item": "Dwarf weed",
@@ -11051,6 +11604,7 @@
       "id": "dwarf_weed_potion_unf",
       "skill": "herblore",
       "level": 72,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Dwarf weed potion (unf)",
@@ -11074,6 +11628,7 @@
       "id": "torstol",
       "skill": "herblore",
       "level": 75,
+      "xp": 15.0,
       "members": true,
       "product": {
         "item": "Torstol",
@@ -11093,6 +11648,7 @@
       "id": "torstol_potion_unf",
       "skill": "herblore",
       "level": 78,
+      "xp": 0.0,
       "members": true,
       "product": {
         "item": "Torstol potion (unf)",
@@ -11116,6 +11672,7 @@
       "id": "attack_potion_3",
       "skill": "herblore",
       "level": 3,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Attack potion(3)",
@@ -11143,6 +11700,7 @@
       "id": "antipoison_3",
       "skill": "herblore",
       "level": 5,
+      "xp": 37.5,
       "members": true,
       "product": {
         "item": "Antipoison(3)",
@@ -11170,6 +11728,7 @@
       "id": "strength_potion_3",
       "skill": "herblore",
       "level": 12,
+      "xp": 50.0,
       "members": true,
       "product": {
         "item": "Strength potion(3)",
@@ -11197,6 +11756,7 @@
       "id": "guthix_rest_3",
       "skill": "herblore",
       "level": 18,
+      "xp": 59.0,
       "members": true,
       "product": {
         "item": "Guthix rest(3)",
@@ -11228,6 +11788,7 @@
       "id": "compost_potion_3",
       "skill": "herblore",
       "level": 22,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Compost potion(3)",
@@ -11255,6 +11816,7 @@
       "id": "restore_potion_3",
       "skill": "herblore",
       "level": 22,
+      "xp": 62.5,
       "members": true,
       "product": {
         "item": "Restore potion(3)",
@@ -11282,6 +11844,7 @@
       "id": "guthix_balance_3",
       "skill": "herblore",
       "level": 22,
+      "xp": 25.0,
       "members": true,
       "product": {
         "item": "Guthix balance(3)",
@@ -11309,6 +11872,7 @@
       "id": "energy_potion_3",
       "skill": "herblore",
       "level": 26,
+      "xp": 67.5,
       "members": true,
       "product": {
         "item": "Energy potion(3)",
@@ -11336,6 +11900,7 @@
       "id": "defence_potion_3",
       "skill": "herblore",
       "level": 30,
+      "xp": 75.0,
       "members": true,
       "product": {
         "item": "Defence potion(3)",
@@ -11363,6 +11928,7 @@
       "id": "agility_potion_3",
       "skill": "herblore",
       "level": 34,
+      "xp": 80.0,
       "members": true,
       "product": {
         "item": "Agility potion(3)",
@@ -11390,6 +11956,7 @@
       "id": "combat_potion_3",
       "skill": "herblore",
       "level": 36,
+      "xp": 84.0,
       "members": true,
       "product": {
         "item": "Combat potion(3)",
@@ -11417,6 +11984,7 @@
       "id": "prayer_potion_3",
       "skill": "herblore",
       "level": 38,
+      "xp": 87.5,
       "members": true,
       "product": {
         "item": "Prayer potion(3)",
@@ -11444,6 +12012,7 @@
       "id": "super_attack_3",
       "skill": "herblore",
       "level": 45,
+      "xp": 100.0,
       "members": true,
       "product": {
         "item": "Super attack(3)",
@@ -11471,6 +12040,7 @@
       "id": "superantipoison_3",
       "skill": "herblore",
       "level": 48,
+      "xp": 106.3,
       "members": true,
       "product": {
         "item": "Superantipoison(3)",
@@ -11498,6 +12068,7 @@
       "id": "fishing_potion_3",
       "skill": "herblore",
       "level": 50,
+      "xp": 112.5,
       "members": true,
       "product": {
         "item": "Fishing potion(3)",
@@ -11525,6 +12096,7 @@
       "id": "super_energy_3",
       "skill": "herblore",
       "level": 52,
+      "xp": 117.5,
       "members": true,
       "product": {
         "item": "Super energy(3)",
@@ -11552,6 +12124,7 @@
       "id": "hunter_potion_3",
       "skill": "herblore",
       "level": 53,
+      "xp": 120.0,
       "members": true,
       "product": {
         "item": "Hunter potion(3)",
@@ -11579,6 +12152,7 @@
       "id": "goading_potion_3",
       "skill": "herblore",
       "level": 54,
+      "xp": 132.0,
       "members": true,
       "product": {
         "item": "Goading potion(3)",
@@ -11606,6 +12180,7 @@
       "id": "super_strength_3",
       "skill": "herblore",
       "level": 55,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Super strength(3)",
@@ -11633,6 +12208,7 @@
       "id": "haemostatic_poultice",
       "skill": "herblore",
       "level": 56,
+      "xp": 27.0,
       "members": true,
       "product": {
         "item": "Haemostatic poultice",
@@ -11660,6 +12236,7 @@
       "id": "prayer_regeneration_potion_3",
       "skill": "herblore",
       "level": 58,
+      "xp": 132.0,
       "members": true,
       "product": {
         "item": "Prayer regeneration potion(3)",
@@ -11687,6 +12264,7 @@
       "id": "weapon_poison",
       "skill": "herblore",
       "level": 60,
+      "xp": 137.5,
       "members": true,
       "product": {
         "item": "Weapon poison",
@@ -11714,6 +12292,7 @@
       "id": "super_fishing_potion_3",
       "skill": "herblore",
       "level": 62,
+      "xp": 140.5,
       "members": true,
       "product": {
         "item": "Super fishing potion(3)",
@@ -11741,6 +12320,7 @@
       "id": "super_restore_3",
       "skill": "herblore",
       "level": 63,
+      "xp": 142.5,
       "members": true,
       "product": {
         "item": "Super restore(3)",
@@ -11768,6 +12348,7 @@
       "id": "extreme_energy_potion_3",
       "skill": "herblore",
       "level": 66,
+      "xp": 63.0,
       "members": true,
       "product": {
         "item": "Extreme energy potion(3)",
@@ -11791,6 +12372,7 @@
       "id": "super_defence_3",
       "skill": "herblore",
       "level": 66,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Super defence(3)",
@@ -11818,6 +12400,7 @@
       "id": "super_hunter_potion_3",
       "skill": "herblore",
       "level": 67,
+      "xp": 154.0,
       "members": true,
       "product": {
         "item": "Super hunter potion(3)",
@@ -11845,6 +12428,7 @@
       "id": "antidote_3",
       "skill": "herblore",
       "level": 68,
+      "xp": 155.0,
       "members": true,
       "product": {
         "item": "Antidote+(3)",
@@ -11872,6 +12456,7 @@
       "id": "antifire_potion_3",
       "skill": "herblore",
       "level": 69,
+      "xp": 157.5,
       "members": true,
       "product": {
         "item": "Antifire potion(3)",
@@ -11899,6 +12484,7 @@
       "id": "ranging_potion_3",
       "skill": "herblore",
       "level": 72,
+      "xp": 162.5,
       "members": true,
       "product": {
         "item": "Ranging potion(3)",
@@ -11926,6 +12512,7 @@
       "id": "magic_potion_3",
       "skill": "herblore",
       "level": 76,
+      "xp": 172.5,
       "members": true,
       "product": {
         "item": "Magic potion(3)",
@@ -11953,6 +12540,7 @@
       "id": "stamina_potion_3",
       "skill": "herblore",
       "level": 77,
+      "xp": 76.5,
       "members": true,
       "product": {
         "item": "Stamina potion(3)",
@@ -11976,6 +12564,7 @@
       "id": "zamorak_brew_3",
       "skill": "herblore",
       "level": 78,
+      "xp": 175.0,
       "members": true,
       "product": {
         "item": "Zamorak brew(3)",
@@ -12003,6 +12592,7 @@
       "id": "antidote_3_2",
       "skill": "herblore",
       "level": 79,
+      "xp": 177.5,
       "members": true,
       "product": {
         "item": "Antidote++(3)",
@@ -12030,6 +12620,7 @@
       "id": "bastion_potion_3",
       "skill": "herblore",
       "level": 80,
+      "xp": 155.0,
       "members": true,
       "product": {
         "item": "Bastion potion(3)",
@@ -12057,6 +12648,7 @@
       "id": "battlemage_potion_3",
       "skill": "herblore",
       "level": 80,
+      "xp": 155.0,
       "members": true,
       "product": {
         "item": "Battlemage potion(3)",
@@ -12084,6 +12676,7 @@
       "id": "saradomin_brew_3",
       "skill": "herblore",
       "level": 81,
+      "xp": 180.0,
       "members": true,
       "product": {
         "item": "Saradomin brew(3)",
@@ -12111,6 +12704,7 @@
       "id": "extended_antifire_3",
       "skill": "herblore",
       "level": 84,
+      "xp": 82.5,
       "members": true,
       "product": {
         "item": "Extended antifire(3)",
@@ -12134,6 +12728,7 @@
       "id": "ancient_brew_3",
       "skill": "herblore",
       "level": 85,
+      "xp": 190.0,
       "members": true,
       "product": {
         "item": "Ancient brew(3)",
@@ -12161,6 +12756,7 @@
       "id": "extended_stamina_potion_3",
       "skill": "herblore",
       "level": 85,
+      "xp": 82.5,
       "members": true,
       "product": {
         "item": "Extended stamina potion(3)",
@@ -12184,6 +12780,7 @@
       "id": "anti_venom_3",
       "skill": "herblore",
       "level": 87,
+      "xp": 90.0,
       "members": true,
       "product": {
         "item": "Anti-venom(3)",
@@ -12207,6 +12804,7 @@
       "id": "menaphite_remedy_3",
       "skill": "herblore",
       "level": 88,
+      "xp": 200.0,
       "members": true,
       "product": {
         "item": "Menaphite remedy(3)",
@@ -12234,6 +12832,7 @@
       "id": "armadyl_brew_3",
       "skill": "herblore",
       "level": 89,
+      "xp": 205.0,
       "members": true,
       "product": {
         "item": "Armadyl brew(3)",
@@ -12261,6 +12860,7 @@
       "id": "super_combat_potion_3",
       "skill": "herblore",
       "level": 90,
+      "xp": 150.0,
       "members": true,
       "product": {
         "item": "Super combat potion(3)",
@@ -12292,6 +12892,7 @@
       "id": "forgotten_brew_3",
       "skill": "herblore",
       "level": 91,
+      "xp": 108.0,
       "members": true,
       "product": {
         "item": "Forgotten brew(3)",
@@ -12315,6 +12916,7 @@
       "id": "super_antifire_potion_3",
       "skill": "herblore",
       "level": 92,
+      "xp": 130.0,
       "members": true,
       "product": {
         "item": "Super antifire potion(3)",
@@ -12338,6 +12940,7 @@
       "id": "anti_venom_3_2",
       "skill": "herblore",
       "level": 94,
+      "xp": 125.0,
       "members": true,
       "product": {
         "item": "Anti-venom+(3)",
@@ -12361,6 +12964,7 @@
       "id": "extended_anti_venom_3",
       "skill": "herblore",
       "level": 94,
+      "xp": 60.0,
       "members": true,
       "product": {
         "item": "Extended anti-venom+(3)",
@@ -12384,6 +12988,7 @@
       "id": "extended_super_antifire_3",
       "skill": "herblore",
       "level": 98,
+      "xp": 120.0,
       "members": true,
       "product": {
         "item": "Extended super antifire(3)",
@@ -12407,6 +13012,7 @@
       "id": "anti_odour_salt",
       "skill": "herblore",
       "level": 49,
+      "xp": 11.0,
       "members": true,
       "product": {
         "item": "Anti-odour salt",
@@ -12430,6 +13036,7 @@
       "id": "bracelet_of_clay",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Bracelet of clay",
@@ -12453,6 +13060,7 @@
       "id": "games_necklace_8",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Games necklace(8)",
@@ -12476,6 +13084,7 @@
       "id": "ring_of_pursuit",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Ring of pursuit",
@@ -12499,6 +13108,7 @@
       "id": "expeditious_bracelet",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Expeditious bracelet",
@@ -12522,6 +13132,7 @@
       "id": "dodgy_necklace",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Dodgy necklace",
@@ -12545,6 +13156,7 @@
       "id": "amulet_of_bounty",
       "skill": "magic",
       "level": 7,
+      "xp": 17.5,
       "members": true,
       "product": {
         "item": "Amulet of bounty",
@@ -12568,6 +13180,7 @@
       "id": "binding_necklace",
       "skill": "magic",
       "level": 27,
+      "xp": 37.0,
       "members": true,
       "product": {
         "item": "Binding necklace",
@@ -12591,6 +13204,7 @@
       "id": "castle_wars_bracelet_3",
       "skill": "magic",
       "level": 27,
+      "xp": 37.0,
       "members": true,
       "product": {
         "item": "Castle wars bracelet(3)",
@@ -12614,6 +13228,7 @@
       "id": "ring_of_returning_5",
       "skill": "magic",
       "level": 27,
+      "xp": 37.0,
       "members": true,
       "product": {
         "item": "Ring of returning(5)",
@@ -12637,6 +13252,7 @@
       "id": "flamtaer_bracelet",
       "skill": "magic",
       "level": 27,
+      "xp": 37.0,
       "members": true,
       "product": {
         "item": "Flamtaer bracelet",
@@ -12660,6 +13276,7 @@
       "id": "amulet_of_chemistry",
       "skill": "magic",
       "level": 27,
+      "xp": 37.0,
       "members": true,
       "product": {
         "item": "Amulet of chemistry",
@@ -12683,6 +13300,7 @@
       "id": "inoculation_bracelet",
       "skill": "magic",
       "level": 49,
+      "xp": 59.0,
       "members": true,
       "product": {
         "item": "Inoculation bracelet",
@@ -12706,6 +13324,7 @@
       "id": "efaritay_s_aid",
       "skill": "magic",
       "level": 49,
+      "xp": 59.0,
       "members": true,
       "product": {
         "item": "Efaritay's aid",
@@ -12729,6 +13348,7 @@
       "id": "bracelet_of_slaughter",
       "skill": "magic",
       "level": 49,
+      "xp": 59.0,
       "members": true,
       "product": {
         "item": "Bracelet of slaughter",
@@ -12752,6 +13372,7 @@
       "id": "necklace_of_faith",
       "skill": "magic",
       "level": 49,
+      "xp": 59.0,
       "members": true,
       "product": {
         "item": "Necklace of faith",
@@ -12775,6 +13396,7 @@
       "id": "burning_amulet_5",
       "skill": "magic",
       "level": 49,
+      "xp": 59.0,
       "members": true,
       "product": {
         "item": "Burning amulet(5)",
@@ -12798,6 +13420,7 @@
       "id": "ring_of_life",
       "skill": "magic",
       "level": 57,
+      "xp": 67.0,
       "members": true,
       "product": {
         "item": "Ring of life",
@@ -12821,6 +13444,7 @@
       "id": "phoenix_necklace",
       "skill": "magic",
       "level": 57,
+      "xp": 67.0,
       "members": true,
       "product": {
         "item": "Phoenix necklace",
@@ -12844,6 +13468,7 @@
       "id": "abyssal_bracelet_5",
       "skill": "magic",
       "level": 57,
+      "xp": 67.0,
       "members": true,
       "product": {
         "item": "Abyssal bracelet(5)",
@@ -12867,6 +13492,7 @@
       "id": "amulet_of_power",
       "skill": "magic",
       "level": 57,
+      "xp": 67.0,
       "members": false,
       "product": {
         "item": "Amulet of power",
@@ -12890,6 +13516,7 @@
       "id": "ring_of_stone",
       "skill": "magic",
       "level": 87,
+      "xp": 97.0,
       "members": true,
       "product": {
         "item": "Ring of stone",
@@ -12913,6 +13540,7 @@
       "id": "berserker_necklace",
       "skill": "magic",
       "level": 87,
+      "xp": 97.0,
       "members": true,
       "product": {
         "item": "Berserker necklace",
@@ -12936,6 +13564,7 @@
       "id": "regen_bracelet",
       "skill": "magic",
       "level": 87,
+      "xp": 97.0,
       "members": true,
       "product": {
         "item": "Regen bracelet",
@@ -12959,6 +13588,7 @@
       "id": "amulet_of_fury",
       "skill": "magic",
       "level": 87,
+      "xp": 97.0,
       "members": true,
       "product": {
         "item": "Amulet of fury",
@@ -12982,6 +13612,7 @@
       "id": "ring_of_suffering",
       "skill": "magic",
       "level": 93,
+      "xp": 110.0,
       "members": true,
       "product": {
         "item": "Ring of suffering",
@@ -13005,6 +13636,7 @@
       "id": "necklace_of_anguish",
       "skill": "magic",
       "level": 93,
+      "xp": 110.0,
       "members": true,
       "product": {
         "item": "Necklace of anguish",
@@ -13028,6 +13660,7 @@
       "id": "tormented_bracelet",
       "skill": "magic",
       "level": 93,
+      "xp": 110.0,
       "members": true,
       "product": {
         "item": "Tormented bracelet",
@@ -13051,6 +13684,7 @@
       "id": "amulet_of_torture",
       "skill": "magic",
       "level": 93,
+      "xp": 110.0,
       "members": true,
       "product": {
         "item": "Amulet of torture",

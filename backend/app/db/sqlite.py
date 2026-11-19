@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS recipes (
   id TEXT PRIMARY KEY,
   skill TEXT NOT NULL,
   level INTEGER NOT NULL,
+  xp REAL NOT NULL DEFAULT 0,
   members INTEGER NOT NULL,
   product_item_id INTEGER NOT NULL,
   product_qty INTEGER NOT NULL,
@@ -55,7 +56,7 @@ class Database:
         with self._lock:
             self._conn.execute("PRAGMA journal_mode=WAL")
             self._conn.executescript(SCHEMA)
-            for col in ("tools_json TEXT", "facilities_json TEXT"):
+            for col in ("tools_json TEXT", "facilities_json TEXT", "xp REAL NOT NULL DEFAULT 0"):
                 try:
                     self._conn.execute(f"ALTER TABLE recipes ADD COLUMN {col}")
                 except sqlite3.OperationalError:

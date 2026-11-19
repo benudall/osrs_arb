@@ -208,6 +208,8 @@ const COLS = [
     tip: 'Skill used to craft the product.' },
   { key: 'level', label: 'Lvl', sortable: true,
     tip: 'Skill level required for this recipe.' },
+  { key: 'xp', label: 'XP', sortable: true,
+    tip: 'Experience gained per craft, from the OSRS wiki (0 = service actions like tanning, or the (unf) step of a potion).' },
   { key: 'cost', label: 'Cost', sortable: true,
     tip: 'Total buy cost per craft = sum of material price x qty, plus fees (e.g. tanning).' },
   { key: 'gross', label: 'Gross', sortable: true,
@@ -378,7 +380,7 @@ function renderTable() {
       td.textContent = fmt(v);
       return td;
     };
-    tr.append(num(r.level), num(r.cost, 'gp'), num(r.gross, 'gp'), num(r.net, r.net > 0 ? 'pos' : 'neg'));
+    tr.append(num(r.level), num(r.xp), num(r.cost, 'gp'), num(r.gross, 'gp'), num(r.net, r.net > 0 ? 'pos' : 'neg'));
     const pct = document.createElement('td');
     if (r.net_pct !== null) {
       pct.className = r.net_pct > 0 ? 'pos' : 'neg';

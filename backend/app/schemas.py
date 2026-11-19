@@ -46,6 +46,7 @@ class RecipeRow(BaseModel):
     recipe_id: str
     skill: str
     level: int
+    xp: float
     members: bool
     product: ProductRow
     materials: list[MaterialRow]

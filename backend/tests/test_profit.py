@@ -34,6 +34,7 @@ ITEMS = {
 
 RECIPE = {
     "id": "cannonball", "skill": "smithing", "level": 35, "members": True,
+    "xp": 25.6,
     "product": {"item_id": 4, "qty": 4},
     "materials": [{"item_id": 3, "qty": 1}],
     "fee": 0, "note": None,
@@ -60,6 +61,7 @@ def test_conservative_mode():
     store = FakeStore({3: {"high": 200, "low": 180}, 4: {"high": 250, "low": 220}})
     row = profit.evaluate_recipe(RECIPE, ITEMS, store, mode="conservative")
     # buy bar @ 200, sell 4 balls @ 220 each
+    assert row["xp"] == 25.6
     assert row["cost"] == 200
     assert row["gross"] == 880
     assert row["tax"] == profit.ge_tax(220) * 4

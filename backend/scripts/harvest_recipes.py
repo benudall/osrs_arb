@@ -504,6 +504,20 @@ def main():
             continue
         print(f"{page_title}: {len(got)} recipes")
         all_recipes.extend(got)
+    # Preserve curated fields from an existing file (xp, fee, note, tools,
+    # facilities) - the wiki harvest carries name/level/materials only.
+    try:
+        with open(OUT_PATH, encoding="utf-8") as f:
+            keep = {r["id"]: r for r in json.load(f).get("recipes", [])}
+        for r in all_recipes:
+            o = keep.get(r["id"]) or keep.get(r.get("name"))
+            if not o:
+                continue
+            for k in ("xp", "fee", "note", "tools", "facilities"):
+                if o.get(k) is not None and r.get(k) is None:
+                    r[k] = o[k]
+    except Exception:
+        pass
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump({"source": "wiki skill guide pages", "recipes": all_recipes}, f, indent=1)
     print(f"total {len(all_recipes)} -> {OUT_PATH}")

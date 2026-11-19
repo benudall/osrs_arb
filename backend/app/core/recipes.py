@@ -10,7 +10,7 @@ from ..db import dao
 
 log = logging.getLogger(__name__)
 
-REQUIRED_KEYS = {"id", "skill", "level", "members", "product", "materials"}
+REQUIRED_KEYS = {"id", "skill", "level", "members", "product", "materials", "xp"}
 
 
 def load_recipe_file(path) -> list[dict]:
@@ -38,6 +38,10 @@ def validate(raw: list[dict]) -> tuple[list[dict], list[str]]:
         seen_ids.add(r["id"])
         if not isinstance(r["level"], int) or not (1 <= r["level"] <= 99):
             errors.append(f"{rid}: level must be int 1-99")
+            continue
+        xp = r["xp"]
+        if isinstance(xp, bool) or not isinstance(xp, (int, float)) or xp < 0:
+            errors.append(f"{rid}: xp must be a number >= 0 (OSRS wiki value per craft)")
             continue
         if not r["product"].get("item") or not isinstance(r["product"].get("qty"), int) or r["product"]["qty"] < 1:
             errors.append(f"{rid}: bad product")
@@ -128,6 +132,7 @@ def resolve_names(raw: list[dict], name_to_id: dict) -> tuple[list[dict], list[s
             "id": r["id"],
             "skill": r["skill"],
             "level": r["level"],
+            "xp": r["xp"],
             "members": bool(r["members"]),
             "product": product,
             "materials": materials,
