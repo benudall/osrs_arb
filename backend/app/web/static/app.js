@@ -270,9 +270,9 @@ function renderHead() {
 }
 
 function detailHtml(r) {
-  const sect = (label) => `<tr class="sect"><td colspan="8">${label}</td></tr>`;
+  const sect = (label) => `<tr class="sect"><td colspan="9">${label}</td></tr>`;
   const val = (v, strike) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="gp${strike ? ' strike' : ''}">${fmt(v)}</span>`);
-  const row = (name, craftEach, buyEach, craftTotal, buyTotal, sellEach, sellTotal, tax) => {
+  const row = (name, craftEach, buyEach, craftTotal, buyTotal, sellEach, sellTotal, tax, stock = null) => {
     const hasCraft = craftEach !== null && craftEach !== undefined;
     const craftHigher = hasCraft && buyEach !== null && buyEach !== undefined && craftEach > buyEach;
     return `<tr><td>${name}</td>` +
@@ -280,11 +280,12 @@ function detailHtml(r) {
       `<td>${val(craftTotal, craftHigher)}</td>` +
       `<td>${val(buyEach, hasCraft && !craftHigher)}</td>` +
       `<td>${val(buyTotal, hasCraft && !craftHigher)}</td>` +
-      `<td>${val(sellEach)}</td><td>${val(sellTotal)}</td><td>${val(tax)}</td></tr>`;
+      `<td>${val(sellEach)}</td><td>${val(sellTotal)}</td><td>${val(tax)}</td><td>${val(stock)}</td></tr>`;
   };
   const lines = [];
 
-  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th></tr></thead><tbody>');
+  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
+    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock @ price</th></tr></thead><tbody>');
 
   if (r.tools && r.tools.length) {
     lines.push(sect('Tools'));
@@ -308,7 +309,7 @@ function detailHtml(r) {
     if (!buyStruck) matsBuyTotal += m.price * m.qty;        // buy total: only non-struck buy options
     if (hasCraft && !craftStruck) matsCraftTotal += m.craft * m.qty;  // craft total: only non-struck craft options
     const name = `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name)}`;
-    lines.push(row(name, m.craft, m.price, hasCraft ? m.craft * m.qty : null, m.price * m.qty, null, null, null));
+    lines.push(row(name, m.craft, m.price, hasCraft ? m.craft * m.qty : null, m.price * m.qty, null, null, null, m.vol ?? null));
   }
   if (r.materials.length > 1) {
     lines.push(row('<b>Materials total</b>', null, null, matsCraftTotal || null, matsBuyTotal || null, null, null, null));
@@ -316,7 +317,7 @@ function detailHtml(r) {
   lines.push(sect('Product'));
   const prodName = `${r.product.qty > 1 ? r.product.qty + '× ' : ''}${itemLinks(r.product.id, r.product.name)}`;
   const sellEach = Math.round(r.gross / r.product.qty);
-  lines.push(row(prodName, null, null, null, null, sellEach, r.gross, r.tax));
+  lines.push(row(prodName, null, null, null, null, sellEach, r.gross, r.tax, r.product.vol ?? null));
   lines.push('</tbody></table>');
   if (r.note) lines.push(`<div class="note">⚠ ${esc(r.note)}</div>`);
   return lines.join('');
