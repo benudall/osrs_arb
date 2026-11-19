@@ -20,6 +20,7 @@ class MaterialRow(BaseModel):
     vol: int
     sell: int | None
     sell_tax: int
+    craft: int | None
 
 
 class ProductRow(BaseModel):

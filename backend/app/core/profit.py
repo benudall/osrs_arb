@@ -27,7 +27,8 @@ def _side(price_resolved, mode: str, kind: str):
     return value, stale, source, v, vsrc
 
 
-def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservative") -> dict | None:
+def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservative",
+                    craft_costs: dict | None = None) -> dict | None:
     """Compute one recipe row. Returns None if any needed price is missing.
 
     recipe: {id, skill, level, members, product: {item_id, qty},
@@ -71,6 +72,7 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
             "vol": buy_vol,
             "sell": mat_sell,
             "sell_tax": ge_tax(mat_sell) if mat_sell is not None else 0,
+            "craft": round(craft_costs[m["item_id"]]) if craft_costs and m["item_id"] in craft_costs else None,
         })
         cost += buy_price * m["qty"]
         # how many crafts per 5m does this material's buy-side volume support?

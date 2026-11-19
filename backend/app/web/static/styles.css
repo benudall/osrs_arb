@@ -170,6 +170,17 @@ button:disabled { opacity: 0.5; cursor: default; }
 }
 .item-icon:hover img { opacity: 1; }
 
+/* detail table: numbers right-aligned, struck-out = more expensive acquisition */
+.detail-table td .gp, .detail-table td .dim {
+  display: inline-block;
+  min-width: 100%;
+  text-align: right;
+}
+.gp.strike {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
 .pos { color: var(--pos); }
 .neg { color: var(--neg); }
 .error { color: var(--neg); font-size: 13px; }

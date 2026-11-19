@@ -70,6 +70,18 @@ def recipes(
     item_map = dao.get_item_map(db)
     all_recipes = dao.get_recipes(db)
 
+    # craft cost per unit for every craftable item (cheapest recipe) —
+    # lets the detail table show what a material would cost to make instead of buy
+    craft_costs = {}
+    for r in all_recipes:
+        row = profit.evaluate_recipe(r, item_map, store, mode=mode)
+        if row is None or row["product"]["qty"] < 1:
+            continue
+        per_unit = row["cost"] / row["product"]["qty"]
+        pid = r["product"]["item_id"]
+        if pid not in craft_costs or per_unit < craft_costs[pid]:
+            craft_costs[pid] = per_unit
+
     rows, skipped = [], 0
     for r in all_recipes:
         if skill_filter and r["skill"] not in skill_filter:
@@ -79,7 +91,7 @@ def recipes(
             continue
         if f2p_only and r["members"]:
             continue
-        row = profit.evaluate_recipe(r, item_map, store, mode=mode)
+        row = profit.evaluate_recipe(r, item_map, store, mode=mode, craft_costs=craft_costs)
         if row is None:
             skipped += 1
             continue

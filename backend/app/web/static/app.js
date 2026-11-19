@@ -263,39 +263,47 @@ function renderHead() {
 }
 
 function detailHtml(r) {
-  const money = (v) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="gp">${fmt(v)}</span>`);
-  const sect = (label) => `<tr class="sect"><td colspan="6">${label}</td></tr>`;
-  const row = (name, buyEach, sellEach, buyTotal, sellTotal, tax) =>
-    `<tr><td>${name}</td><td>${money(buyEach)}</td><td>${money(sellEach)}</td><td>${money(buyTotal)}</td><td>${money(sellTotal)}</td><td>${money(tax)}</td></tr>`;
+  const sect = (label) => `<tr class="sect"><td colspan="8">${label}</td></tr>`;
+  const val = (v, strike) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="gp${strike ? ' strike' : ''}">${fmt(v)}</span>`);
+  const row = (name, craftEach, buyEach, craftTotal, buyTotal, sellEach, sellTotal, tax) => {
+    const hasCraft = craftEach !== null && craftEach !== undefined;
+    const craftHigher = hasCraft && buyEach !== null && buyEach !== undefined && craftEach > buyEach;
+    return `<tr><td>${name}</td>` +
+      `<td>${val(craftEach, craftHigher)}</td>` +
+      `<td>${val(craftTotal, craftHigher)}</td>` +
+      `<td>${val(buyEach, hasCraft && !craftHigher)}</td>` +
+      `<td>${val(buyTotal, hasCraft && !craftHigher)}</td>` +
+      `<td>${val(sellEach)}</td><td>${val(sellTotal)}</td><td>${val(tax)}</td></tr>`;
+  };
   const lines = [];
 
-  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Buy each</th><th>Sell each</th><th>Buy total</th><th>Sell total</th><th>Tax</th></tr></thead><tbody>');
+  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th></tr></thead><tbody>');
 
   if (r.tools && r.tools.length) {
     lines.push(sect('Tools'));
     for (const t of r.tools) {
       const name = t.id !== null && t.id !== undefined ? itemLinks(t.id, t.name) : esc(t.name);
-      lines.push(row(name, t.buy, null, t.buy, null, null));
+      lines.push(row(name, null, t.buy, null, t.buy, null, null, null));
     }
   }
   if (r.facilities && r.facilities.length) {
     lines.push(sect('Facilities'));
-    for (const f of r.facilities) lines.push(row(esc(f), null, null, null, null, null));
+    for (const f of r.facilities) lines.push(row(esc(f), null, null, null, null, null, null, null));
   }
   lines.push(sect('Materials'));
   let matsBuyTotal = 0;
   for (const m of r.materials) {
     matsBuyTotal += m.price * m.qty;
     const name = `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name)}`;
-    lines.push(row(name, m.price, null, m.price * m.qty, null, null));
+    lines.push(row(name, m.craft, m.price, m.craft !== null && m.craft !== undefined ? m.craft * m.qty : null, m.price * m.qty, null, null, null));
   }
   if (r.materials.length > 1) {
-    lines.push(row('<b>Materials total</b>', null, null, matsBuyTotal, null, null));
+    lines.push(row('<b>Materials total</b>', null, null, null, matsBuyTotal, null, null, null));
   }
   lines.push(sect('Product'));
   const prodName = `${r.product.qty > 1 ? r.product.qty + '× ' : ''}${itemLinks(r.product.id, r.product.name)}`;
   const sellEach = Math.round(r.gross / r.product.qty);
-  lines.push(row(prodName, null, sellEach, null, r.gross, r.tax));
+  lines.push(row(prodName, null, null, null, null, sellEach, r.gross, r.tax));
   lines.push('</tbody></table>');
   if (r.note) lines.push(`<div class="note">⚠ ${esc(r.note)}</div>`);
   return lines.join('');
