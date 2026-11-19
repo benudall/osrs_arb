@@ -59,6 +59,7 @@ def recipes(
     mode: str = Query("conservative"),
     f2p_only: bool = Query(False),
     min_volume: int = Query(0, ge=0),
+    profitable_only: bool = Query(False),
 ):
     if mode not in MODES:
         raise HTTPException(400, f"mode must be one of {MODES}")
@@ -96,6 +97,9 @@ def recipes(
             skipped += 1
             continue
         if row["volume"] < min_volume:
+            skipped += 1
+            continue
+        if profitable_only and row["net"] <= 0:
             skipped += 1
             continue
         rows.append(row)

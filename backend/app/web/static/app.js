@@ -7,6 +7,7 @@ const state = {
   skillFilter: {},   // skill -> bool (include in table; default true)
   mode: 'conservative',
   f2pOnly: false,
+  profitableOnly: false,
   filterLevels: true,
   minVolume: 0,
   playerName: '',
@@ -156,6 +157,7 @@ function buildQuery() {
   }
   p.set('mode', state.mode);
   if (state.f2pOnly) p.set('f2p_only', 'true');
+  if (state.profitableOnly) p.set('profitable_only', 'true');
   if (state.filterLevels) {
     const levels = Object.entries(state.levels)
       .map(([k, v]) => [k, parseInt(v, 10)])
@@ -432,6 +434,7 @@ $('tbody').addEventListener('click', (e) => {
 
 $('mode').addEventListener('change', (e) => { state.mode = e.target.value; saveState(); scheduleLoad(); });
 $('f2pOnly').addEventListener('change', (e) => { state.f2pOnly = e.target.checked; saveState(); scheduleLoad(); });
+$('profitableOnly').addEventListener('change', (e) => { state.profitableOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('filterLevels').addEventListener('change', (e) => { state.filterLevels = e.target.checked; saveState(); scheduleLoad(); });
 $('minVolume').addEventListener('input', (e) => {
   state.minVolume = Math.max(0, parseInt(e.target.value, 10) || 0);
@@ -449,6 +452,7 @@ async function init() {
   loadState();
   $('mode').value = state.mode;
   $('f2pOnly').checked = state.f2pOnly;
+  $('profitableOnly').checked = state.profitableOnly;
   $('filterLevels').checked = state.filterLevels;
   $('minVolume').value = state.minVolume;
   $('player').value = state.playerName;
