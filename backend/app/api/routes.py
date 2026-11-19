@@ -30,6 +30,27 @@ def skills(request: Request):
     return SkillsResponse(skills=[{"skill": r["skill"], "count": r["count"]} for r in rows])
 
 
+def _search_words(q: str | None) -> list[str]:
+    """q -> list of lowercase words to require; empty list = no search."""
+    if not q:
+        return []
+    return [w for w in q.lower().split() if w]
+
+
+def _row_matches(row: dict, words: list[str]) -> bool:
+    """Case-insensitive free-text match: every word must appear somewhere in
+    the product name, material names, skill, or recipe note."""
+    if not words:
+        return True
+    haystack = " ".join([
+        row["product"]["name"],
+        row["skill"],
+        " ".join(m["name"] for m in row["materials"]),
+        row["note"] or "",
+    ]).lower()
+    return all(w in haystack for w in words)
+
+
 def _parse_levels(raw: str | None) -> dict[str, int]:
     levels: dict[str, int] = {}
     if not raw:
@@ -60,6 +81,7 @@ def recipes(
     f2p_only: bool = Query(False),
     min_volume: int = Query(0, ge=0),
     profitable_only: bool = Query(False),
+    q: str | None = Query(None, description="free-text search: product name, materials, skill (all words must match somewhere)"),
 ):
     if mode not in MODES:
         raise HTTPException(400, f"mode must be one of {MODES}")
@@ -67,6 +89,7 @@ def recipes(
     store = request.app.state.store
     skill_filter = {s.strip().lower() for s in skills.split(",") if s.strip()} if skills else None
     level_map = _parse_levels(levels)
+    search_words = _search_words(q)
 
     item_map = dao.get_item_map(db)
     all_recipes = dao.get_recipes(db)
@@ -94,6 +117,9 @@ def recipes(
             continue
         row = profit.evaluate_recipe(r, item_map, store, mode=mode, craft_costs=craft_costs)
         if row is None:
+            skipped += 1
+            continue
+        if not _row_matches(row, search_words):
             skipped += 1
             continue
         if row["volume"] < min_volume:

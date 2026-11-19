@@ -63,6 +63,7 @@ Levels for harvested recipes come straight from the wiki tables.
 ## Features
 
 - Per-skill level inputs (persisted in localStorage, or fetched from hiscores by player name)
+- Free-text search (product / materials / skill, all words must match)
 - Conservative/optimistic margin modes, f2p filter, min-volume gate
 - Sortable table: product, materials, cost, gross, net, net%, volume, 4h count, member badge
 - Expandable row detail: per-material breakdown + tax + buy-limit math + recipe notes

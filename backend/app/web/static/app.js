@@ -11,6 +11,7 @@ const state = {
   filterLevels: true,
   minVolume: 0,
   playerName: '',
+  search: '',
 };
 
 let skills = [];
@@ -166,6 +167,8 @@ function buildQuery() {
     if (levels.length) p.set('levels', levels.join(','));
   }
   if (state.minVolume > 0) p.set('min_volume', String(state.minVolume));
+  const q = state.search.trim();
+  if (q) p.set('q', q);
   return p.toString();
 }
 
@@ -460,6 +463,7 @@ $('minVolume').addEventListener('input', (e) => {
   saveState();
   scheduleLoad();
 });
+$('search').addEventListener('input', (e) => { state.search = e.target.value; saveState(); scheduleLoad(); });
 $('refresh').addEventListener('click', loadData);
 $('fetchPlayer').addEventListener('click', fetchPlayer);
 $('player').addEventListener('keydown', (e) => { if (e.key === 'Enter') fetchPlayer(); });
@@ -475,6 +479,7 @@ async function init() {
   $('filterLevels').checked = state.filterLevels;
   $('minVolume').value = state.minVolume;
   $('player').value = state.playerName;
+  $('search').value = state.search;
 
   try {
     const [s, m] = await Promise.all([api('/api/skills'), api('/api/meta')]);
