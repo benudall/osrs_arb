@@ -217,9 +217,11 @@ const COLS = [
     tip: 'Experience gained per craft, from the OSRS wiki (0 = service actions like tanning, or the (unf) step of a potion).' },
   { key: 'cost', label: 'Cost', sortable: true,
     tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning).' },
-  { key: 'gross', label: 'GE', sortable: true,
+  { key: 'buy', label: 'Buy', sortable: true,
+    tip: 'Grand Exchange buy price of the product, per unit.' },
+  { key: 'gross', label: 'Sell', sortable: true,
     tip: 'Grand Exchange sell revenue per craft = GE sell price x product qty.' },
-  { key: 'net', label: 'GE Net', sortable: true,
+  { key: 'net', label: 'Sell Net', sortable: true,
     tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <=100 gp) - cost.' },
   { key: 'ha', label: 'HA', sortable: true,
     tip: 'High Level Alchemy payout = floor(60% x static value).' },
@@ -230,7 +232,7 @@ const COLS = [
   { key: 'la_net', label: 'LA Net', sortable: true,
     tip: 'Alchemy-route profit per craft = LA - Cost - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'best_net', label: 'Best Net', sortable: true,
-    tip: 'Best route per craft = max(GE Net, HA Net, LA Net).' },
+    tip: 'Best route per craft = max(Sell Net, HA Net, LA Net).' },
   { key: 'volume', label: 'Vol/5m', sortable: true,
     tip: '5-minute trade volume of the scarcest item: product sell volume vs each material buy volume / qty. Low = profit you cannot actually move.' },
   { key: 'max_crafts_4h', label: '4h count', sortable: true,
@@ -254,6 +256,7 @@ const bestNet = (r) => {
 
 function cellValue(r, key) {
   if (key === 'product') return r.product.name;
+  if (key === 'buy') return r.product.buy;
   if (key === 'ha') return alch(r, 0.6);
   if (key === 'la') return alch(r, 0.4);
   if (key === 'ha_net') return alchNet(r, 0.6);
@@ -265,16 +268,11 @@ function cellValue(r, key) {
 function renderMeta() {
   if (!meta) return;
   const bits = [
-    `${meta.item_count.toLocaleString()} items`,
-    `${meta.recipes_total} recipes`,
+    meta.alchemy_cost == null
+      ? 'alchemy cost (Nature rune): —'
+      : `alchemy cost (Nature rune): ${meta.alchemy_cost.toLocaleString()} gp`,
     'prices updated ' + (meta.last_refresh ? new Date(meta.last_refresh * 1000).toLocaleTimeString() : '—'),
   ];
-  bits.push(meta.alchemy_cost == null
-    ? 'alchemy cost (Nature rune): —'
-    : `alchemy cost (Nature rune): ${meta.alchemy_cost.toLocaleString()} gp`);
-  if (meta.skipped_no_price > 0) {
-    bits.push(`${meta.skipped_no_price} filtered out (no price / below volume)`);
-  }
   $('meta').textContent = bits.join(' · ');
 
   const best = rows.length ? Math.max(...rows.map((r) => bestNet(r))) : 0;
@@ -440,7 +438,7 @@ function renderTable() {
     const bN = bestNet(r);
     // struck = not the best route this row; best stays clean
     const netCls = (v) => `${v > 0 ? 'pos' : 'neg'}${v < bN ? ' strike' : ''}`;
-    tr.append(num(r.level), num(r.xp), num(r.cost, 'gp'), num(r.gross, 'gp'),
+    tr.append(num(r.level), num(r.xp), num(r.cost, 'gp'), num(r.product.buy, 'gp'), num(r.gross, 'gp'),
       num(r.net, netCls(r.net)),
       num(alch(r, 0.6), 'gp'),
       num(haN, haN == null ? null : netCls(haN)),
