@@ -62,6 +62,9 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         mat_sell, _, _, _, _ = _side(res, mode, "sell")
         if buy_price is None:
             return None
+        craft_unit = round(craft_costs[m["item_id"]]) if craft_costs and m["item_id"] in craft_costs else None
+        # cheapest acquisition for this material: buy at GE price, or craft it if that is cheaper
+        chosen = craft_unit if craft_unit is not None and craft_unit < buy_price else buy_price
         materials.append({
             "id": m["item_id"],
             "name": info["name"],
@@ -72,9 +75,9 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
             "vol": buy_vol,
             "sell": mat_sell,
             "sell_tax": ge_tax(mat_sell) if mat_sell is not None else 0,
-            "craft": round(craft_costs[m["item_id"]]) if craft_costs and m["item_id"] in craft_costs else None,
+            "craft": craft_unit,
         })
-        cost += buy_price * m["qty"]
+        cost += chosen * m["qty"]
         # how many crafts per 5m does this material's buy-side volume support?
         supported = buy_vol / m["qty"]
         min_mat_vol = supported if min_mat_vol is None else min(min_mat_vol, supported)

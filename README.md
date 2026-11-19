@@ -72,6 +72,8 @@ Levels for harvested recipes come straight from the wiki tables.
 
 - `high` = price buyers pay (you buy materials at `high`), `low` = price sellers get.
   Conservative mode = buy `high` / sell `low` (all instant). Optimistic = the reverse.
+- Cost/Net use the **cheapest acquisition** per material — buy it, or craft it if that is
+  cheaper (⚒ in the materials column). `cost` = Σ cheapest-per-material × qty + fees, `net` = gross − tax − cost.
 - GE tax 2% (exempt ≤ 100 gp, cap 5 m/item) — `backend/app/config.py`.
 - Buy limits cap real profit: `count` column = max crafts per 4 h, `net_4h` in row detail.
 - Volume gate (5 m trade volume of the scarcest ingredient) hides illiquid "ghost profits".

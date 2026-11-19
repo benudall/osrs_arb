@@ -203,7 +203,7 @@ const COLS = [
   { key: 'product', label: 'Product', sortable: true,
     tip: 'Item crafted. Name links to its price page on the wiki.' },
   { key: 'materials', label: 'Materials', sortable: false,
-    tip: 'Items bought per craft, with the current buy-side price in gp.' },
+    tip: 'Materials per craft, each at its cheapest acquisition price in gp (bought, or crafted if cheaper — ⚒ = crafted).' },
   { key: 'members', label: '★', sortable: false,
     tip: 'Gold star = Members recipe, silver star = Free-to-play.' },
   { key: 'skill', label: 'Skill', sortable: true,
@@ -213,7 +213,7 @@ const COLS = [
   { key: 'xp', label: 'XP', sortable: true,
     tip: 'Experience gained per craft, from the OSRS wiki (0 = service actions like tanning, or the (unf) step of a potion).' },
   { key: 'cost', label: 'Cost', sortable: true,
-    tip: 'Total buy cost per craft = sum of material price x qty, plus fees (e.g. tanning).' },
+    tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning).' },
   { key: 'gross', label: 'Gross', sortable: true,
     tip: 'Sell revenue per craft = sell price x product qty.' },
   { key: 'net', label: 'Net', sortable: true,
@@ -296,13 +296,19 @@ function detailHtml(r) {
   }
   lines.push(sect('Materials'));
   let matsBuyTotal = 0;
+  let matsCraftTotal = 0;
   for (const m of r.materials) {
-    matsBuyTotal += m.price * m.qty;
+    // struck = the more expensive acquisition (row() strikes craft when craft>buy, buy when craft<=buy & craft exists)
+    const hasCraft = m.craft !== null && m.craft !== undefined;
+    const craftStruck = hasCraft && m.craft > m.price;
+    const buyStruck = hasCraft && !craftStruck;
+    if (!buyStruck) matsBuyTotal += m.price * m.qty;        // buy total: only non-struck buy options
+    if (hasCraft && !craftStruck) matsCraftTotal += m.craft * m.qty;  // craft total: only non-struck craft options
     const name = `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name)}`;
-    lines.push(row(name, m.craft, m.price, m.craft !== null && m.craft !== undefined ? m.craft * m.qty : null, m.price * m.qty, null, null, null));
+    lines.push(row(name, m.craft, m.price, hasCraft ? m.craft * m.qty : null, m.price * m.qty, null, null, null));
   }
   if (r.materials.length > 1) {
-    lines.push(row('<b>Materials total</b>', null, null, null, matsBuyTotal, null, null, null));
+    lines.push(row('<b>Materials total</b>', null, null, matsCraftTotal || null, matsBuyTotal || null, null, null, null));
   }
   lines.push(sect('Product'));
   const prodName = `${r.product.qty > 1 ? r.product.qty + '× ' : ''}${itemLinks(r.product.id, r.product.name)}`;
@@ -354,12 +360,25 @@ function renderTable() {
     }
     tr.append(tdP);
 
-    // materials
+    // materials — show cheapest acquisition per material (buy, or craft if cheaper)
+    const matDesc = (m) => {
+      const crafted = m.craft !== null && m.craft < m.price;
+      const eff = crafted ? m.craft : m.price;
+      return { eff, crafted };
+    };
     const tdM = document.createElement('td');
     tdM.innerHTML = r.materials
-      .map((m) => `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name)}<small> (${fmt(m.price)})</small>`)
+      .map((m) => {
+        const { eff, crafted } = matDesc(m);
+        const mark = crafted ? ' <span class="crafted" title="cheaper to craft than to buy">⚒</span>' : '';
+        return `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name)}<small> (${fmt(eff)}${mark})</small>`;
+      })
       .join(', ') + (r.fee > 0 ? `<small> +${fmt(r.fee)} fee</small>` : '');
-    tdM.title = r.materials.map((m) => `${m.qty}x ${m.name} @ ${fmt(m.price)}`).join(', ');
+    tdM.title = r.materials
+      .map((m) => {
+        const { eff, crafted } = matDesc(m);
+        return `${m.qty}x ${m.name} @ ${fmt(eff)} gp${crafted ? ' (crafted, cheaper than buying)' : ''}`;
+      }).join(', ');
     tr.append(tdM);
 
     // members star
