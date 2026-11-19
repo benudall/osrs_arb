@@ -154,8 +154,8 @@
     {
       "id": "bronze_arrowtips",
       "skill": "smithing",
-      "level": 1,
-      "members": false,
+      "level": 5,
+      "members": true,
       "product": {
         "item": "Bronze arrowtips",
         "qty": 15
@@ -170,8 +170,8 @@
     {
       "id": "iron_arrowtips",
       "skill": "smithing",
-      "level": 5,
-      "members": false,
+      "level": 20,
+      "members": true,
       "product": {
         "item": "Iron arrowtips",
         "qty": 15
@@ -186,8 +186,8 @@
     {
       "id": "steel_arrowtips",
       "skill": "smithing",
-      "level": 19,
-      "members": false,
+      "level": 35,
+      "members": true,
       "product": {
         "item": "Steel arrowtips",
         "qty": 15
@@ -202,8 +202,8 @@
     {
       "id": "mithril_arrowtips",
       "skill": "smithing",
-      "level": 33,
-      "members": false,
+      "level": 55,
+      "members": true,
       "product": {
         "item": "Mithril arrowtips",
         "qty": 15
@@ -218,8 +218,8 @@
     {
       "id": "adamant_arrowtips",
       "skill": "smithing",
-      "level": 48,
-      "members": false,
+      "level": 75,
+      "members": true,
       "product": {
         "item": "Adamant arrowtips",
         "qty": 15
@@ -234,8 +234,8 @@
     {
       "id": "rune_arrowtips",
       "skill": "smithing",
-      "level": 63,
-      "members": false,
+      "level": 90,
+      "members": true,
       "product": {
         "item": "Rune arrowtips",
         "qty": 15
@@ -416,7 +416,7 @@
       "id": "jug_of_wine",
       "skill": "cooking",
       "level": 35,
-      "members": true,
+      "members": false,
       "product": {
         "item": "Jug of wine",
         "qty": 1
@@ -805,7 +805,7 @@
     {
       "id": "iron_arrow",
       "skill": "fletching",
-      "level": 5,
+      "level": 15,
       "members": true,
       "product": {
         "item": "Iron arrow",
@@ -825,7 +825,7 @@
     {
       "id": "steel_arrow",
       "skill": "fletching",
-      "level": 15,
+      "level": 30,
       "members": true,
       "product": {
         "item": "Steel arrow",
@@ -845,7 +845,7 @@
     {
       "id": "mithril_arrow",
       "skill": "fletching",
-      "level": 30,
+      "level": 45,
       "members": true,
       "product": {
         "item": "Mithril arrow",
@@ -865,7 +865,7 @@
     {
       "id": "adamant_arrow",
       "skill": "fletching",
-      "level": 45,
+      "level": 60,
       "members": true,
       "product": {
         "item": "Adamant arrow",
@@ -885,7 +885,7 @@
     {
       "id": "rune_arrow",
       "skill": "fletching",
-      "level": 60,
+      "level": 75,
       "members": true,
       "product": {
         "item": "Rune arrow",
@@ -1065,7 +1065,7 @@
     {
       "id": "magic_shortbow_u",
       "skill": "fletching",
-      "level": 75,
+      "level": 80,
       "members": true,
       "product": {
         "item": "Magic shortbow (u)",
@@ -1081,7 +1081,7 @@
     {
       "id": "magic_longbow_u",
       "skill": "fletching",
-      "level": 80,
+      "level": 85,
       "members": true,
       "product": {
         "item": "Magic longbow (u)",
@@ -1297,7 +1297,7 @@
     {
       "id": "string_magic_shortbow",
       "skill": "fletching",
-      "level": 75,
+      "level": 80,
       "members": true,
       "product": {
         "item": "Magic shortbow",
@@ -1317,7 +1317,7 @@
     {
       "id": "string_magic_longbow",
       "skill": "fletching",
-      "level": 80,
+      "level": 85,
       "members": true,
       "product": {
         "item": "Magic longbow",
@@ -1355,30 +1355,10 @@
       ]
     },
     {
-      "id": "enchant_sapphire_necklace",
-      "skill": "magic",
-      "level": 7,
-      "members": true,
-      "product": {
-        "item": "Necklace of passage(5)",
-        "qty": 1
-      },
-      "materials": [
-        {
-          "item": "Sapphire necklace",
-          "qty": 1
-        },
-        {
-          "item": "Cosmic rune",
-          "qty": 1
-        }
-      ]
-    },
-    {
       "id": "enchant_sapphire_amulet",
       "skill": "magic",
       "level": 7,
-      "members": true,
+      "members": false,
       "product": {
         "item": "Amulet of magic",
         "qty": 1
@@ -1418,7 +1398,7 @@
       "id": "enchant_emerald_amulet",
       "skill": "magic",
       "level": 27,
-      "members": true,
+      "members": false,
       "product": {
         "item": "Amulet of defence",
         "qty": 1
@@ -1438,7 +1418,7 @@
       "id": "enchant_ruby_ring",
       "skill": "magic",
       "level": 49,
-      "members": true,
+      "members": false,
       "product": {
         "item": "Ring of forging",
         "qty": 1
@@ -1458,7 +1438,7 @@
       "id": "enchant_ruby_amulet",
       "skill": "magic",
       "level": 49,
-      "members": true,
+      "members": false,
       "product": {
         "item": "Amulet of strength",
         "qty": 1
@@ -5541,7 +5521,7 @@
       "id": "rope",
       "skill": "crafting",
       "level": 30,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Rope",
         "qty": 1
@@ -5893,7 +5873,7 @@
       "id": "studded_body",
       "skill": "crafting",
       "level": 41,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Studded body",
         "qty": 1
@@ -5916,7 +5896,7 @@
       "id": "studded_chaps",
       "skill": "crafting",
       "level": 44,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Studded chaps",
         "qty": 1
@@ -6840,7 +6820,7 @@
       "id": "beer_glass",
       "skill": "crafting",
       "level": 1,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Beer glass",
         "qty": 1
@@ -6920,7 +6900,7 @@
       "id": "vial",
       "skill": "crafting",
       "level": 33,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Vial",
         "qty": 1
@@ -9293,7 +9273,7 @@
       "id": "bronze_bolts",
       "skill": "fletching",
       "level": 9,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Bronze bolts",
         "qty": 1
@@ -11163,7 +11143,7 @@
       "id": "antipoison_3",
       "skill": "herblore",
       "level": 5,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Antipoison(3)",
         "qty": 1
@@ -11190,7 +11170,7 @@
       "id": "strength_potion_3",
       "skill": "herblore",
       "level": 12,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Strength potion(3)",
         "qty": 1
@@ -11329,7 +11309,7 @@
       "id": "energy_potion_3",
       "skill": "herblore",
       "level": 26,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Energy potion(3)",
         "qty": 1
@@ -12611,7 +12591,7 @@
       "id": "castle_wars_bracelet_3",
       "skill": "magic",
       "level": 27,
-      "members": false,
+      "members": true,
       "product": {
         "item": "Castle wars bracelet(3)",
         "qty": 1

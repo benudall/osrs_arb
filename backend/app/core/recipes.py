@@ -93,6 +93,21 @@ def infer_extras(skill, product_name, materials, fee):
     return tools, facilities
 
 
+def compute_members(product_item_id, materials, item_map):
+    """A recipe is members-only if the product is a members item or any
+    ingredient is a members item (e.g. steel arrowtips smithed from f2p
+    steel bars, rope from members-only hair). All six recipe skills here
+    (smithing/crafting/cooking/fletching/herblore/magic) are f2p skills;
+    membership is decided by the items, not the skill - e.g. jug of wine
+    and lvl-1 amulet/ring enchants are f2p."""
+    prod = item_map.get(product_item_id)
+    if prod and prod["members"]:
+        return True
+    return any(
+        (item_map.get(m["item_id"]) or {}).get("members", False) for m in materials
+    )
+
+
 def resolve_names(raw: list[dict], name_to_id: dict) -> tuple[list[dict], list[str]]:
     """Resolve item names to ids. Returns (resolved, unknown_names)."""
     resolved, unknown = [], set()
@@ -125,7 +140,10 @@ def resolve_names(raw: list[dict], name_to_id: dict) -> tuple[list[dict], list[s
 
 
 def seed(db, recipes_path) -> dict:
-    """Validate + resolve + write recipes to DB. Returns a report."""
+    """Validate + resolve + write recipes to DB. Returns a report.
+
+    The members flag in recipes.json is documentation only - the DB stores a
+    computed flag (product or any ingredient is a members item)."""
     raw = load_recipe_file(recipes_path)
     ok, struct_errors = validate(raw)
     for e in struct_errors:
@@ -133,7 +151,10 @@ def seed(db, recipes_path) -> dict:
     name_to_id = dao.get_name_to_id(db)
     if not name_to_id:
         raise RuntimeError("items table empty - fetch /mapping before seeding recipes")
+    item_map = dao.get_item_map(db)
     resolved, unknown = resolve_names(ok, name_to_id)
+    for r in resolved:
+        r["members"] = compute_members(r["product"]["item_id"], r["materials"], item_map)
     dao.replace_recipes(db, resolved)
     return {
         "total_in_file": len(raw),
