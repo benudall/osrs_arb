@@ -1,0 +1,182 @@
+:root {
+  color-scheme: dark;
+  --bg: #12141a;
+  --panel: #1a1d26;
+  --border: #2a2e3a;
+  --text: #d7dae2;
+  --muted: #8b90a0;
+  --pos: #4caf6e;
+  --neg: #e05d5d;
+  --warn: #d8b25c;
+  --gold: #e6b800;
+  --accent: #7aa2f7;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.app { max-width: 1200px; margin: 0 auto; padding: 16px; }
+
+header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+h1 { font-size: 20px; margin: 0; }
+h2 { font-size: 14px; margin: 0; }
+.meta { color: var(--muted); font-size: 12px; display: flex; gap: 6px; flex-wrap: wrap; }
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.player-fetch { display: flex; gap: 6px; }
+
+.level-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+.level-input { display: flex; flex-direction: column; gap: 2px; font-size: 12px; color: var(--muted); }
+.show-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  user-select: none;
+}
+
+input, select {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 13px;
+}
+input[type='checkbox'] { width: auto; }
+button {
+  background: var(--accent);
+  color: #10131a;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.5; cursor: default; }
+
+.controls { display: flex; gap: 14px; align-items: end; flex-wrap: wrap; margin-bottom: 12px; }
+.controls label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.controls .check { flex-direction: row; align-items: center; gap: 6px; }
+.controls input[type='number'] { width: 110px; }
+
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.recipe-table th, .recipe-table td {
+  padding: 7px 10px;
+  text-align: right;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.recipe-table th:first-child, .recipe-table td:first-child { text-align: left; }
+.recipe-table th { text-align: center; }
+.recipe-table td:nth-child(2) { text-align: left; white-space: normal; }
+.recipe-table thead th {
+  background: #20232e;
+  font-size: 12px;
+  color: var(--muted);
+  user-select: none;
+  position: sticky;
+  top: 0;
+}
+.recipe-table th.sortable { cursor: pointer; }
+.recipe-table th.sortable:hover { color: var(--text); }
+
+.main-row { cursor: pointer; }
+.main-row:hover { background: #20232e; }
+.main-row.expanded { background: #1e2130; }
+
+.detail-row td {
+  background: #171a23;
+  white-space: normal !important;
+  text-align: left !important;
+  font-size: 13px;
+  color: var(--muted);
+}
+.detail div { padding: 1px 0; }
+
+.detail-table {
+  width: fit-content;
+  max-width: 100%;
+  border-collapse: collapse;
+  margin: 4px 0;
+}
+.detail-table th, .detail-table td {
+  border: 1px solid var(--border);
+  padding: 4px 10px;
+  text-align: right;
+}
+.detail-table th:first-child, .detail-table td:first-child { text-align: left; }
+.detail-table thead th {
+  position: static;
+  background: #20232e;
+}
+.detail-table tr.sect td {
+  background: #232633;
+  color: var(--muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: left !important;
+}
+.detail-table tr.totals td {
+  background: #1e2130;
+  font-weight: 600;
+}
+.dim { color: var(--muted); }
+.note { color: var(--warn); }
+
+.badge {
+  display: inline-block;
+  margin-left: 6px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.badge.members { color: #e6b800; }
+
+.badge.f2p { color: #c0c4cc; }
+.skill-tag { color: var(--muted); }
+.stale { color: var(--warn); margin-left: 4px; cursor: help; }
+.recipe-table td:nth-child(2) small { color: var(--gold); }
+
+.item-icon { margin-left: 2px; text-decoration: none; }
+.item-icon img {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.12em;
+  opacity: 0.7;
+}
+.item-icon:hover img { opacity: 1; }
+
+.pos { color: var(--pos); }
+.neg { color: var(--neg); }
+.error { color: var(--neg); font-size: 13px; }
+.banner { padding: 8px 12px; background: #3a2226; border-radius: 6px; margin-bottom: 12px; }
+.hint { color: var(--muted); font-size: 12px; }
+.empty { text-align: center !important; color: var(--muted); padding: 24px !important; }
+footer { margin-top: 12px; }
+
+/* gp amounts in gold; net stays pos/neg; counts/levels/volumes stay default */
+.gp { color: var(--gold); }
