@@ -80,7 +80,6 @@ def recipes(
     mode: str = Query("conservative"),
     f2p_only: bool = Query(False),
     min_volume: int = Query(0, ge=0),
-    profitable_only: bool = Query(False),
     q: str | None = Query(None, description="free-text search: product name, materials, skill (all words must match somewhere)"),
 ):
     if mode not in MODES:
@@ -93,6 +92,14 @@ def recipes(
 
     item_map = dao.get_item_map(db)
     all_recipes = dao.get_recipes(db)
+
+    # alchemy spells need a Nature rune: its current instant-buy price
+    alchemy_cost = None
+    nature_id = dao.get_name_to_id(db).get("Nature rune")
+    if nature_id:
+        res = store.resolve(nature_id)
+        if res:
+            alchemy_cost = res["high"][0]
 
     # craft cost per unit for every craftable item (cheapest recipe) —
     # lets the detail table show what a material would cost to make instead of buy
@@ -125,9 +132,6 @@ def recipes(
         if row["volume"] < min_volume:
             skipped += 1
             continue
-        if profitable_only and row["net"] <= 0:
-            skipped += 1
-            continue
         rows.append(row)
 
     return RecipesResponse(
@@ -137,6 +141,7 @@ def recipes(
             "item_count": len(item_map),
             "recipes_total": len(all_recipes),
             "skipped_no_price": skipped,
+            "alchemy_cost": alchemy_cost,
         },
     )
 

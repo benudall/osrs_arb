@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS items (
   members INTEGER NOT NULL,
   buy_limit INTEGER,
   highalch INTEGER,
+  value INTEGER,
   updated_at TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_items_name ON items(name);
@@ -61,6 +62,10 @@ class Database:
                     self._conn.execute(f"ALTER TABLE recipes ADD COLUMN {col}")
                 except sqlite3.OperationalError:
                     pass  # column already exists
+            try:
+                self._conn.execute("ALTER TABLE items ADD COLUMN value INTEGER")
+            except sqlite3.OperationalError:
+                pass  # column already exists
             self._conn.commit()
 
     def execute(self, sql, params=()):

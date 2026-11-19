@@ -33,7 +33,7 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
 
     recipe: {id, skill, level, members, product: {item_id, qty},
              materials: [{item_id, qty}], fee, note}
-    item_map: {item_id: {name, members, buy_limit}}
+    item_map: {item_id: {name, members, buy_limit, value}}
     store: PriceStore
     """
     prod_info = item_map.get(recipe["product"]["item_id"])
@@ -132,6 +132,7 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
             "qty": recipe["product"]["qty"],
             "price": sell_price,
             "buy": prod_buy,
+            "value": prod_info.get("value"),
             "stale": sell_stale,
             "source": sell_src,
             "vol": sell_vol,

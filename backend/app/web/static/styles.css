@@ -181,6 +181,10 @@ button:disabled { opacity: 0.5; cursor: default; }
   text-decoration: line-through;
   opacity: 0.55;
 }
+td.strike {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
 
 .pos { color: var(--pos); }
 .neg { color: var(--neg); }

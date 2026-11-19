@@ -29,6 +29,7 @@ class ProductRow(BaseModel):
     qty: int
     price: int
     buy: int | None
+    value: int | None
     stale: bool
     source: str | None
     vol: int
@@ -70,6 +71,7 @@ class RecipesMeta(BaseModel):
     item_count: int
     recipes_total: int
     skipped_no_price: int
+    alchemy_cost: int | None
 
 
 class RecipesResponse(BaseModel):

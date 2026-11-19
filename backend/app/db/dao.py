@@ -3,13 +3,13 @@ import time
 
 
 def replace_items(db, mapping):
-    """mapping: list of {id, name, members, limit, highalch, ...} from /mapping."""
+    """mapping: list of {id, name, members, limit, highalch, value, ...} from /mapping."""
     now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     db.execute("DELETE FROM items")
     db.executemany(
-        "INSERT INTO items (id, name, members, buy_limit, highalch, updated_at) VALUES (?,?,?,?,?,?)",
+        "INSERT INTO items (id, name, members, buy_limit, highalch, value, updated_at) VALUES (?,?,?,?,?,?,?)",
         [
-            (int(m["id"]), m["name"], 1 if m.get("members") else 0, m.get("limit"), m.get("highalch"), now)
+            (int(m["id"]), m["name"], 1 if m.get("members") else 0, m.get("limit"), m.get("highalch"), m.get("value"), now)
             for m in mapping
         ],
     )
@@ -33,8 +33,9 @@ def get_item_map(db):
             "name": r["name"],
             "members": bool(r["members"]),
             "buy_limit": r["buy_limit"],
+            "value": r["value"],
         }
-        for r in db.query("SELECT id, name, members, buy_limit FROM items")
+        for r in db.query("SELECT id, name, members, buy_limit, value FROM items")
     }
 
 
