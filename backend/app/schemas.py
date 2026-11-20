@@ -72,6 +72,7 @@ class RecipesMeta(BaseModel):
     recipes_total: int
     skipped_no_price: int
     alchemy_cost: int | None
+    nature_rune_id: int | None
 
 
 class RecipesResponse(BaseModel):

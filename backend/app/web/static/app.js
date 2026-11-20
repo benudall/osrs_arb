@@ -8,6 +8,7 @@ const state = {
   mode: 'conservative',
   f2pOnly: false,
   profitableOnly: false,
+  acq: 'any',
   filterLevels: true,
   minVolume: 0,
   playerName: '',
@@ -191,7 +192,16 @@ async function loadData() {
     const res = await api(`/api/recipes?${buildQuery()}`);
     meta = res.meta;
     // best-net filter runs client-side: HA/LA nets need the live alchemy cost
-    rows = state.profitableOnly ? res.rows.filter((r) => bestNet(r) > 0) : res.rows;
+    let out = res.rows;
+    if (state.profitableOnly) out = out.filter((r) => bestNet(r) > 0);
+    if (state.acq !== 'any') {
+      out = out.filter((r) => {
+        const b = r.product.buy;
+        if (b == null) return false;
+        return state.acq === 'craft' ? r.cost < b : b < r.cost;
+      });
+    }
+    rows = out;
     renderMeta();
     renderTable();
   } catch (e) {
@@ -212,7 +222,7 @@ const COLS = [
   { key: 'skill', label: 'Skill', sortable: true,
     tip: 'Skill used to craft the product.' },
   { key: 'level', label: 'Lvl', sortable: true,
-    tip: 'Skill level required for this recipe.' },
+    tip: 'Skill level required for this recipe. Struck = requirement is above your set player/filter level for that skill.' },
   { key: 'xp', label: 'XP', sortable: true,
     tip: 'Experience gained per craft, from the OSRS wiki (0 = service actions like tanning, or the (unf) step of a potion).' },
   { key: 'cost', label: 'Craft', sortable: true,
@@ -270,13 +280,14 @@ function cellValue(r, key) {
 
 function renderMeta() {
   if (!meta) return;
+  const natureLink = meta.nature_rune_id ? itemLinks(meta.nature_rune_id, 'Nature rune') : 'Nature rune';
   const bits = [
     meta.alchemy_cost == null
-      ? 'alchemy cost (Nature rune): —'
-      : `alchemy cost (Nature rune): ${meta.alchemy_cost.toLocaleString()} gp`,
+      ? `alchemy cost (${natureLink}): —`
+      : `alchemy cost (${natureLink}): <span class="gp">${meta.alchemy_cost.toLocaleString()} gp</span>`,
     'prices updated ' + (meta.last_refresh ? new Date(meta.last_refresh * 1000).toLocaleTimeString() : '—'),
   ];
-  $('meta').textContent = bits.join(' · ');
+  $('meta').innerHTML = bits.join(' · ');
 
   const best = rows.length ? Math.max(...rows.map((r) => bestNet(r))) : 0;
   $('status').textContent = rows.length
@@ -425,10 +436,12 @@ function renderTable() {
     tdB.append(badge);
     tr.append(tdB);
 
-    // skill required + level needed
+    // skill required + level needed; struck = requirement above your player/filter level
     const tdS = document.createElement('td');
     tdS.textContent = r.skill;
     tr.append(tdS);
+    const plv = parseInt(state.levels[String(r.skill).toLowerCase()], 10);
+    const lvlCls = Number.isFinite(plv) && r.level > plv ? 'strike' : null;
 
     const num = (v, cls) => {
       const td = document.createElement('td');
@@ -445,7 +458,7 @@ function renderTable() {
     const pBuy = r.product.buy;
     const craftCls = 'gp' + (pBuy != null && pBuy < r.cost ? ' strike' : '');
     const buyCls = 'gp' + (pBuy != null && pBuy > r.cost ? ' strike' : '');
-    tr.append(num(r.level), num(r.xp), num(r.cost, craftCls), num(pBuy, buyCls), num(r.gross, 'gp'),
+    tr.append(num(r.level, lvlCls), num(r.xp), num(r.cost, craftCls), num(pBuy, buyCls), num(r.gross, 'gp'),
       num(r.net, netCls(r.net)),
       num(alch(r, 0.6), 'gp'),
       num(haN, haN == null ? null : netCls(haN)),
@@ -496,6 +509,7 @@ $('tbody').addEventListener('click', (e) => {
 $('mode').addEventListener('change', (e) => { state.mode = e.target.value; saveState(); scheduleLoad(); });
 $('f2pOnly').addEventListener('change', (e) => { state.f2pOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('profitableOnly').addEventListener('change', (e) => { state.profitableOnly = e.target.checked; saveState(); scheduleLoad(); });
+$('acqFilter').addEventListener('change', (e) => { state.acq = e.target.value; saveState(); scheduleLoad(); });
 $('filterLevels').addEventListener('change', (e) => { state.filterLevels = e.target.checked; saveState(); scheduleLoad(); });
 $('minVolume').addEventListener('input', (e) => {
   state.minVolume = Math.max(0, parseInt(e.target.value, 10) || 0);
@@ -515,6 +529,7 @@ async function init() {
   $('mode').value = state.mode;
   $('f2pOnly').checked = state.f2pOnly;
   $('profitableOnly').checked = state.profitableOnly;
+  $('acqFilter').value = state.acq;
   $('filterLevels').checked = state.filterLevels;
   $('minVolume').value = state.minVolume;
   $('player').value = state.playerName;

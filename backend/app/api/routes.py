@@ -142,6 +142,7 @@ def recipes(
             "recipes_total": len(all_recipes),
             "skipped_no_price": skipped,
             "alchemy_cost": alchemy_cost,
+            "nature_rune_id": nature_id,
         },
     )
 

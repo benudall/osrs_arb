@@ -74,15 +74,15 @@ button:disabled { opacity: 0.5; cursor: default; }
 .controls label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
 .controls .check { flex-direction: row; align-items: center; gap: 6px; }
 .controls input[type='number'] { width: 110px; }
-.controls input[type='text'] { width: 220px; }
+.controls input[type='text'], .controls input[type='search'] { width: 220px; }
 
 .recipe-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 8px;
-  overflow: hidden;
 }
 .recipe-table th, .recipe-table td {
   padding: 7px 10px;
@@ -100,7 +100,12 @@ button:disabled { opacity: 0.5; cursor: default; }
   user-select: none;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
+.recipe-table thead th:first-child { border-top-left-radius: 7px; }
+.recipe-table thead th:last-child { border-top-right-radius: 7px; }
+.recipe-table tbody tr:last-child td:first-child { border-bottom-left-radius: 7px; }
+.recipe-table tbody tr:last-child td:last-child { border-bottom-right-radius: 7px; }
 .recipe-table th.sortable { cursor: pointer; }
 .recipe-table th.sortable:hover { color: var(--text); }
 
