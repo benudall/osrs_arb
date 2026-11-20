@@ -135,6 +135,7 @@ button:disabled { opacity: 0.5; cursor: default; }
 }
 .detail-table th {
   text-align: center;
+  padding: 0px 5px;
 }
 .detail-table th:first-child, .detail-table td:first-child { text-align: left; }
 .detail-table thead th {
