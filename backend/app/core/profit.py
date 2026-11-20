@@ -68,6 +68,7 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         materials.append({
             "id": m["item_id"],
             "name": info["name"],
+            "image_url": info.get("image_url"),
             "qty": m["qty"],
             "price": buy_price,
             "stale": buy_stale,
@@ -111,8 +112,10 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
 
     tools_out = []
     for t in recipe.get("tools") or []:
-        entry = {"id": t.get("item_id"), "name": t.get("name"), "buy": None, "sell": None, "tax": 0}
+        entry = {"id": t.get("item_id"), "name": t.get("name"), "image_url": None, "buy": None, "sell": None, "tax": 0}
         if entry["id"] and entry["id"] in item_map:
+            info = item_map[entry["id"]]
+            entry["image_url"] = info.get("image_url")
             res = store.resolve(entry["id"])
             if res:
                 entry["buy"] = res["high"][0]
@@ -129,6 +132,7 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         "product": {
             "id": prod_info["id"],
             "name": prod_info["name"],
+            "image_url": prod_info.get("image_url"),
             "qty": recipe["product"]["qty"],
             "price": sell_price,
             "buy": prod_buy,

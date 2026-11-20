@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS items (
   buy_limit INTEGER,
   highalch INTEGER,
   value INTEGER,
+  image_url TEXT,
   updated_at TEXT NOT NULL
 );
 CREATE INDEX IF NOT EXISTS idx_items_name ON items(name);
@@ -64,6 +65,10 @@ class Database:
                     pass  # column already exists
             try:
                 self._conn.execute("ALTER TABLE items ADD COLUMN value INTEGER")
+            except sqlite3.OperationalError:
+                pass  # column already exists
+            try:
+                self._conn.execute("ALTER TABLE items ADD COLUMN image_url TEXT")
             except sqlite3.OperationalError:
                 pass  # column already exists
             self._conn.commit()

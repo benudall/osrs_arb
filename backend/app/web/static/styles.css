@@ -22,7 +22,7 @@ body {
   font-size: 14px;
 }
 
-.app { max-width: 1200px; margin: 0 auto; padding: 16px; }
+.app { margin: 0 auto; padding: 8px; }
 
 header { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
 h1 { font-size: 20px; margin: 0; }
@@ -85,12 +85,12 @@ button:disabled { opacity: 0.5; cursor: default; }
   border-radius: 8px;
 }
 .recipe-table th, .recipe-table td {
-  padding: 7px 10px;
+  padding: 0;
   text-align: right;
   border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
-.recipe-table th:first-child, .recipe-table td:first-child { text-align: left; }
+.recipe-table td:first-child { text-align: left; }
 .recipe-table th { text-align: center; }
 .recipe-table td:nth-child(2) { text-align: left; white-space: normal; }
 .recipe-table thead th {
@@ -130,8 +130,11 @@ button:disabled { opacity: 0.5; cursor: default; }
 }
 .detail-table th, .detail-table td {
   border: 1px solid var(--border);
-  padding: 4px 10px;
+  padding: 0;
   text-align: right;
+}
+.detail-table th {
+  text-align: center;
 }
 .detail-table th:first-child, .detail-table td:first-child { text-align: left; }
 .detail-table thead th {
@@ -155,7 +158,6 @@ button:disabled { opacity: 0.5; cursor: default; }
 
 .badge {
   display: inline-block;
-  margin-left: 6px;
   font-size: 14px;
   line-height: 1;
 }
@@ -167,6 +169,77 @@ button:disabled { opacity: 0.5; cursor: default; }
 .stale { color: var(--warn); margin-left: 4px; cursor: help; }
 .recipe-table td:nth-child(2) small { color: var(--gold); }
 
+.material-item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.material-qty {
+  width: 32px;
+  flex-shrink: 0;
+  font-size: 11px;
+  text-align: right;
+}
+.material-item small {
+  margin-left: 4px;
+}
+.material-fee {
+  margin-top: 2px;
+}
+
+.item-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.item-popover {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 4px 8px;
+  z-index: 10;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.item-popover::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  display: block;
+}
+
+.item-wrapper:hover .item-popover {
+  display: flex;
+  gap: 12px;
+}
+
+.item-popover a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: 500;
+}
+
+.item-popover a:hover {
+  text-decoration: underline;
+}
+
+.item-popover img {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
 .item-icon { margin-left: 2px; text-decoration: none; }
 .item-icon img {
   width: 1em;
@@ -175,6 +248,7 @@ button:disabled { opacity: 0.5; cursor: default; }
   opacity: 0.7;
 }
 .item-icon:hover img { opacity: 1; }
+
 
 /* detail table: numbers right-aligned, struck-out = more expensive acquisition */
 .detail-table td .gp, .detail-table td .dim {
@@ -201,4 +275,3 @@ footer { margin-top: 12px; }
 
 /* gp amounts in gold; net stays pos/neg; counts/levels/volumes stay default */
 .gp { color: var(--gold); }
-.crafted { color: var(--accent); cursor: help; }

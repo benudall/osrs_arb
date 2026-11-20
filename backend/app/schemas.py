@@ -13,6 +13,7 @@ class SkillsResponse(BaseModel):
 class MaterialRow(BaseModel):
     id: int
     name: str
+    image_url: str | None
     qty: int
     price: int
     stale: bool
@@ -26,6 +27,7 @@ class MaterialRow(BaseModel):
 class ProductRow(BaseModel):
     id: int
     name: str
+    image_url: str | None
     qty: int
     price: int
     buy: int | None
@@ -38,6 +40,7 @@ class ProductRow(BaseModel):
 class ToolRow(BaseModel):
     id: int | None
     name: str
+    image_url: str | None
     buy: int | None
     sell: int | None
     tax: int

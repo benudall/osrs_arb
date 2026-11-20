@@ -10,6 +10,11 @@ no node, no npm, no build step.
 - Prices: OSRS Wiki Real-time Prices API (needs a descriptive User-Agent — set it in `backend/app/config.py`)
 - Recipes: curated in `backend/data/recipes.json` (item names; resolved to ids at seed)
 
+## Resources
+
+- **[OSRS Wiki Real-time Prices API](https://prices.runescape.wiki/api/v1/osrs)**: Used for real-time item price data and market volume.
+- **[OSRS Hiscores API](https://services.runescape.com/m=hiscore_oldschool/index_lite.json)**: Used to fetch player skill levels for automatic recipe filtering.
+
 ## Setup
 
 One command (or double-click `start.bat`):

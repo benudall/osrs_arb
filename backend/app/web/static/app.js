@@ -35,11 +35,15 @@ function iconLink(href, src, title) {
     `<img src="${src}" alt="" width="13" height="13"></a>`;
 }
 
-function itemLinks(id, name) {
-  let html = esc(name);
+function itemLinks(id, name, imageUrl) {
+  let html = '';
+  if (imageUrl) {
+    html += `<img src="${imageUrl}" alt="" width="20" height="20" style="vertical-align: middle; margin-right: 4px;">`;
+  }
   if (id !== null && id !== undefined) {
-    html += iconLink(PRICES_ITEM_URL + id, PRICES_FAVICON, 'GE prices');
-    html += iconLink(WIKI_ITEM_URL + encodeURIComponent(name).replace(/%20/g, '_'), WIKI_FAVICON, 'OSRS Wiki');
+    html += `<span class="item-wrapper">${esc(name)}<span class="item-popover"><a href="${PRICES_ITEM_URL}${id}" target="_blank" rel="noopener"><img src="${PRICES_FAVICON}" alt=""> Prices</a><a href="${WIKI_ITEM_URL}${encodeURIComponent(name).replace(/%20/g, '_')}" target="_blank" rel="noopener"><img src="${WIKI_FAVICON}" alt=""> Wiki</a></span></span>`;
+  } else {
+    html += `<span class="item-wrapper">${esc(name)}</span>`;
   }
   return html;
 }
@@ -280,7 +284,7 @@ function cellValue(r, key) {
 
 function renderMeta() {
   if (!meta) return;
-  const natureLink = meta.nature_rune_id ? itemLinks(meta.nature_rune_id, 'Nature rune') : 'Nature rune';
+  const natureLink = meta.nature_rune_id ? itemLinks(meta.nature_rune_id, 'Nature rune', null) : 'Nature rune';
   const bits = [
     meta.alchemy_cost == null
       ? `alchemy cost (${natureLink}): —`
@@ -301,6 +305,7 @@ function renderHead() {
     const th = document.createElement('th');
     th.textContent = c.label;
     if (c.tip) th.title = c.tip;
+    if (c.key === 'skill') th.style.textAlign = 'center';
     if (c.sortable) {
       th.className = 'sortable';
       th.dataset.key = c.key;
@@ -327,12 +332,12 @@ function detailHtml(r) {
   const lines = [];
 
   lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
-    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock @ price</th></tr></thead><tbody>');
+    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock @ price</th></tr></thead><tbody');
 
   if (r.tools && r.tools.length) {
     lines.push(sect('Tools'));
     for (const t of r.tools) {
-      const name = t.id !== null && t.id !== undefined ? itemLinks(t.id, t.name) : esc(t.name);
+      const name = t.id !== null && t.id !== undefined ? itemLinks(t.id, t.name, t.image_url) : esc(t.name);
       lines.push(row(name, null, t.buy, null, t.buy, null, null, null));
     }
   }
@@ -350,14 +355,14 @@ function detailHtml(r) {
     const buyStruck = hasCraft && !craftStruck;
     if (!buyStruck) matsBuyTotal += m.price * m.qty;        // buy total: only non-struck buy options
     if (hasCraft && !craftStruck) matsCraftTotal += m.craft * m.qty;  // craft total: only non-struck craft options
-    const name = `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name)}`;
+    const name = `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name, m.image_url)}`;
     lines.push(row(name, m.craft, m.price, hasCraft ? m.craft * m.qty : null, m.price * m.qty, null, null, null, m.vol ?? null));
   }
   if (r.materials.length > 1) {
     lines.push(row('<b>Materials total</b>', null, null, matsCraftTotal || null, matsBuyTotal || null, null, null, null));
   }
   lines.push(sect('Product'));
-  const prodName = `${r.product.qty > 1 ? r.product.qty + '× ' : ''}${itemLinks(r.product.id, r.product.name)}`;
+  const prodName = `${r.product.qty > 1 ? r.product.qty + '× ' : ''}${itemLinks(r.product.id, r.product.name, r.product.image_url)}`;
   const sellEach = Math.round(r.gross / r.product.qty);
   lines.push(row(prodName, null, null, null, null, sellEach, r.gross, r.tax, r.product.vol ?? null));
   lines.push('</tbody></table>');
@@ -395,7 +400,7 @@ function renderTable() {
     // product
     const tdP = document.createElement('td');
     const b = document.createElement('b');
-    b.innerHTML = itemLinks(r.product.id, r.product.name);
+    b.innerHTML = itemLinks(r.product.id, r.product.name, r.product.image_url);
     tdP.append(b);
     if (r.product.stale) {
       const st = document.createElement('span');
@@ -416,15 +421,15 @@ function renderTable() {
     tdM.innerHTML = r.materials
       .map((m) => {
         const { eff, crafted } = matDesc(m);
-        const mark = crafted ? ' <span class="crafted" title="cheaper to craft than to buy">⚒</span>' : '';
-        return `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name)}<small> (${fmt(eff)}${mark})</small>`;
+        const qty = m.qty > 1 ? m.qty + '× ' : '';
+        return `<div class="material-item"><span class="material-qty">${qty}</span>${itemLinks(m.id, m.name, m.image_url)}<small> (${fmt(eff)})</small></div>`;
       })
-      .join(', ') + (r.fee > 0 ? `<small> +${fmt(r.fee)} fee</small>` : '');
+      .join('') + (r.fee > 0 ? `<div class="material-fee"><small> +${fmt(r.fee)} fee</small></div>` : '');
     tdM.title = r.materials
       .map((m) => {
         const { eff, crafted } = matDesc(m);
         return `${m.qty}x ${m.name} @ ${fmt(eff)} gp${crafted ? ' (crafted, cheaper than buying)' : ''}`;
-      }).join(', ');
+      }).join('\n');
     tr.append(tdM);
 
     // members star
@@ -438,7 +443,16 @@ function renderTable() {
 
     // skill required + level needed; struck = requirement above your player/filter level
     const tdS = document.createElement('td');
-    tdS.textContent = r.skill;
+    const shortNames = {
+      'cooking': 'cook',
+      'crafting': 'craft',
+      'fletching': 'fletch',
+      'herblore': 'herb',
+      'magic': 'magic',
+      'smithing': 'smith'
+    };
+    tdS.textContent = shortNames[r.skill.toLowerCase()] ?? r.skill;
+    tdS.style.textAlign = 'center';
     tr.append(tdS);
     const plv = parseInt(state.levels[String(r.skill).toLowerCase()], 10);
     const lvlCls = Number.isFinite(plv) && r.level > plv ? 'strike' : null;
