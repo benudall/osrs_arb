@@ -179,6 +179,7 @@ def get_recipes(db):
         r["materials"] = json.loads(r.pop("materials_json"))
         r["tools"] = json.loads(r.pop("tools_json") or "[]")
         r["facilities"] = json.loads(r.pop("facilities_json") or "[]")
+        r["extra_skills"] = json.loads(r.pop("extra_skills_json") or "[]")
     return rows
 
 
@@ -186,14 +187,15 @@ def replace_recipes(db, recipes):
     """recipes: resolved dicts with product_item_id, materials [{item_id, qty}], fee, note."""
     db.execute("DELETE FROM recipes")
     db.executemany(
-        "INSERT INTO recipes (id, skill, level, xp, members, product_item_id, product_qty, materials_json, fee, note, tools_json, facilities_json) "
-        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?)",
+        "INSERT INTO recipes (id, skill, level, xp, members, product_item_id, product_qty, materials_json, fee, note, tools_json, facilities_json, extra_skills_json) "
+        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
         [
             (
                 r["id"], r["skill"], r["level"], r.get("xp", 0), 1 if r["members"] else 0,
                 r["product"]["item_id"], r["product"]["qty"],
                 json.dumps(r["materials"]), r.get("fee", 0), r.get("note"),
                 json.dumps(r.get("tools") or []), json.dumps(r.get("facilities") or []),
+                json.dumps(r.get("extra_skills") or []),
             )
             for r in recipes
         ],

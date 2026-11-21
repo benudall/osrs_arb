@@ -51,6 +51,17 @@ def validate(raw: list[dict]) -> tuple[list[dict], list[str]]:
         ):
             errors.append(f"{rid}: bad materials")
             continue
+        if "extra_skills" in r:
+            if not isinstance(r["extra_skills"], list):
+                errors.append(f"{rid}: extra_skills must be a list")
+                continue
+            for es in r["extra_skills"]:
+                if not isinstance(es, dict) or "skill" not in es or "level" not in es:
+                    errors.append(f"{rid}: extra_skills elements must be dicts with 'skill' and 'level'")
+                    continue
+                if not isinstance(es["level"], int) or not (1 <= es["level"] <= 99):
+                    errors.append(f"{rid}: extra_skill level must be int 1-99")
+                    continue
         ok.append(r)
     return ok, errors
 
@@ -132,6 +143,7 @@ def resolve_names(raw: list[dict], name_to_id: dict) -> tuple[list[dict], list[s
             "id": r["id"],
             "skill": r["skill"],
             "level": r["level"],
+            "extra_skills": r.get("extra_skills", []),
             "xp": r["xp"],
             "members": bool(r["members"]),
             "product": product,

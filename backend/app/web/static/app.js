@@ -443,6 +443,7 @@ function renderTable() {
 
     // skill required + level needed; struck = requirement above your player/filter level
     const tdS = document.createElement('td');
+    const tdL = document.createElement('td');
     const shortNames = {
       'cooking': 'cook',
       'crafting': 'craft',
@@ -451,11 +452,8 @@ function renderTable() {
       'magic': 'magic',
       'smithing': 'smith'
     };
-    tdS.textContent = shortNames[r.skill.toLowerCase()] ?? r.skill;
     tdS.style.textAlign = 'center';
-    tr.append(tdS);
-    const plv = parseInt(state.levels[String(r.skill).toLowerCase()], 10);
-    const lvlCls = Number.isFinite(plv) && r.level > plv ? 'strike' : null;
+    tdL.style.textAlign = 'center';
 
     const num = (v, cls) => {
       const td = document.createElement('td');
@@ -463,6 +461,28 @@ function renderTable() {
       td.textContent = fmt(v);
       return td;
     };
+
+    const addSkillRow = (skillName, level, playerLevel) => {
+      const sDiv = document.createElement('div');
+      sDiv.textContent = shortNames[skillName.toLowerCase()] ?? skillName;
+      tdS.append(sDiv);
+
+      const lDiv = document.createElement('div');
+      lDiv.textContent = fmt(level);
+      if (Number.isFinite(playerLevel) && level > playerLevel) {
+        lDiv.classList.add('strike');
+      }
+      tdL.append(lDiv);
+    };
+
+    addSkillRow(r.skill, r.level, parseInt(state.levels[String(r.skill).toLowerCase()], 10));
+    if (r.extra_skills) {
+      for (const es of r.extra_skills) {
+        addSkillRow(es.skill, es.level, parseInt(state.levels[String(es.skill).toLowerCase()], 10));
+      }
+    }
+
+    tr.append(tdS, tdL);
     const haN = alchNet(r, 0.6);
     const laN = alchNet(r, 0.4);
     const bN = bestNet(r);
@@ -472,7 +492,7 @@ function renderTable() {
     const pBuy = r.product.buy;
     const craftCls = 'gp' + (pBuy != null && pBuy < r.cost ? ' strike' : '');
     const buyCls = 'gp' + (pBuy != null && pBuy > r.cost ? ' strike' : '');
-    tr.append(num(r.level, lvlCls), num(r.xp), num(r.cost, craftCls), num(pBuy, buyCls), num(r.gross, 'gp'),
+    tr.append(num(r.xp), num(r.cost, craftCls), num(pBuy, buyCls), num(r.gross, 'gp'),
       num(r.net, netCls(r.net)),
       num(alch(r, 0.6), 'gp'),
       num(haN, haN == null ? null : netCls(haN)),

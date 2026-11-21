@@ -13703,6 +13703,137 @@
       "fee": 0,
       "note": null,
       "tools": []
+    },
+    {
+      "id": "superheat_bronze_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 1 }
+      ],
+      "xp": 0,
+      "members": false,
+      "product": {
+        "item": "Bronze bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Copper ore", "qty": 1 },
+        { "item": "Tin ore", "qty": 1 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
+    },
+    {
+      "id": "superheat_iron_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 15 }
+      ],
+      "xp": 0,
+      "members": false,
+      "product": {
+        "item": "Iron bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Iron ore", "qty": 1 },
+        { "item": "Coal", "qty": 2 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
+    },
+    {
+      "id": "superheat_silver_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 20 }
+      ],
+      "xp": 0,
+      "members": false,
+      "product": {
+        "item": "Silver bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Silver ore", "qty": 1 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
+    },
+    {
+      "id": "superheat_gold_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 40 }
+      ],
+      "xp": 0,
+      "members": false,
+      "product": {
+        "item": "Gold bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Gold ore", "qty": 1 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
+    },
+    {
+      "id": "superheat_mithril_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 50 }
+      ],
+      "xp": 0,
+      "members": true,
+      "product": {
+        "item": "Mithril bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Mithril ore", "qty": 1 },
+        { "item": "Coal", "qty": 4 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
+    },
+    {
+      "id": "superheat_adamant_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 70 }
+      ],
+      "xp": 0,
+      "members": true,
+      "product": {
+        "item": "Adamantite bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Adamantite ore", "qty": 1 },
+        { "item": "Coal", "qty": 6 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
+    },
+    {
+      "id": "superheat_runite_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 85 }
+      ],
+      "xp": 0,
+      "members": true,
+      "product": {
+        "item": "Runite bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Runite ore", "qty": 1 },
+        { "item": "Coal", "qty": 8 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
     }
   ]
 }

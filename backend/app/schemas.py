@@ -46,10 +46,16 @@ class ToolRow(BaseModel):
     tax: int
 
 
+class ExtraSkill(BaseModel):
+    skill: str
+    level: int
+
+
 class RecipeRow(BaseModel):
     recipe_id: str
     skill: str
     level: int
+    extra_skills: list[ExtraSkill] = []
     xp: float
     members: bool
     product: ProductRow

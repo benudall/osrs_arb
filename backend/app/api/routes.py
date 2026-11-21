@@ -38,16 +38,11 @@ def _search_words(q: str | None) -> list[str]:
 
 
 def _row_matches(row: dict, words: list[str]) -> bool:
-    """Case-insensitive free-text match: every word must appear somewhere in
-    the product name, material names, skill, or recipe note."""
+    """Case-insensitive free-text match: every word must appear in the
+    product name."""
     if not words:
         return True
-    haystack = " ".join([
-        row["product"]["name"],
-        row["skill"],
-        " ".join(m["name"] for m in row["materials"]),
-        row["note"] or "",
-    ]).lower()
+    haystack = row["product"]["name"].lower()
     return all(w in haystack for w in words)
 
 
@@ -80,7 +75,7 @@ def recipes(
     mode: str = Query("conservative"),
     f2p_only: bool = Query(False),
     min_volume: int = Query(0, ge=0),
-    q: str | None = Query(None, description="free-text search: product name, materials, skill (all words must match somewhere)"),
+    q: str | None = Query(None, description="free-text search: product name only (all words must match)"),
 ):
     if mode not in MODES:
         raise HTTPException(400, f"mode must be one of {MODES}")
@@ -115,13 +110,23 @@ def recipes(
 
     rows, skipped = [], 0
     for r in all_recipes:
-        if skill_filter and r["skill"] not in skill_filter:
-            continue
+        if skill_filter:
+            if r["skill"] not in skill_filter and not any(es["skill"] in skill_filter for es in r.get("extra_skills", [])):
+                continue
+        
+        # Check primary level
         lvl = level_map.get(r["skill"])
         if lvl is not None and r["level"] > lvl:
             continue
+        
+        # Check extra skills levels
+        extra_skills = r.get("extra_skills", [])
+        if any(level_map.get(es["skill"], 0) < es["level"] for es in extra_skills if es["skill"] in level_map):
+            continue
+
         if f2p_only and r["members"]:
             continue
+
         row = profit.evaluate_recipe(r, item_map, store, mode=mode, craft_costs=craft_costs)
         if row is None:
             skipped += 1

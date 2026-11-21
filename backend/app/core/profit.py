@@ -127,6 +127,7 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         "recipe_id": recipe["id"],
         "skill": recipe["skill"],
         "level": recipe["level"],
+        "extra_skills": recipe.get("extra_skills") or [],
         "xp": recipe.get("xp", 0),
         "members": recipe["members"],
         "product": {

@@ -58,7 +58,7 @@ class Database:
         with self._lock:
             self._conn.execute("PRAGMA journal_mode=WAL")
             self._conn.executescript(SCHEMA)
-            for col in ("tools_json TEXT", "facilities_json TEXT", "xp REAL NOT NULL DEFAULT 0"):
+            for col in ("tools_json TEXT", "facilities_json TEXT", "xp REAL NOT NULL DEFAULT 0", "extra_skills_json TEXT"):
                 try:
                     self._conn.execute(f"ALTER TABLE recipes ADD COLUMN {col}")
                 except sqlite3.OperationalError:
