@@ -1,3 +1,4 @@
+import calendar
 import json
 import re
 import time
@@ -87,25 +88,29 @@ IMAGE_OVERRIDES = {
 
 
 def replace_items(db, mapping):
-    """mapping: list of {id, name, members, limit, highalch, value, ...} from /mapping."""
+    """mapping: list of {id, name, members, limit, highalch, value, ...} from /mapping.
+
+    Atomic: readers never see an empty/partial items table mid-replace."""
     now = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-    db.execute("DELETE FROM items")
-    db.executemany(
-        "INSERT INTO items (id, name, members, buy_limit, highalch, value, image_url, updated_at) VALUES (?,?,?,?,?,?,?,?)",
-        [
-            (
-                int(m["id"]), 
-                m["name"], 
-                1 if m.get("members") else 0, 
-                m.get("limit"), 
-                m.get("highalch"), 
-                m.get("value"), 
-                _get_item_image_url(m["name"]),
-                now
-            )
-            for m in mapping
-        ],
-    )
+    rows = [
+        (
+            int(m["id"]),
+            m["name"],
+            1 if m.get("members") else 0,
+            m.get("limit"),
+            m.get("highalch"),
+            m.get("value"),
+            _get_item_image_url(m["name"]),
+            now,
+        )
+        for m in mapping
+    ]
+    with db.transaction() as conn:
+        conn.execute("DELETE FROM items")
+        conn.executemany(
+            "INSERT INTO items (id, name, members, buy_limit, highalch, value, image_url, updated_at) VALUES (?,?,?,?,?,?,?,?)",
+            rows,
+        )
 
 
 def _get_item_image_url(name: str) -> str:
@@ -136,7 +141,8 @@ def items_stale(db, ttl_secs):
     if not row or not row["u"]:
         return True
     try:
-        last = time.mktime(time.strptime(row["u"], "%Y-%m-%dT%H:%M:%SZ"))
+        # stored UTC: parse with timegm (mktime would apply the local offset)
+        last = calendar.timegm(time.strptime(row["u"], "%Y-%m-%dT%H:%M:%SZ"))
     except ValueError:
         return True
     return (time.time() - last) > ttl_secs
@@ -170,6 +176,12 @@ def insert_snapshots(db, rows):
         )
 
 
+def prune_snapshots(db, ttl_secs):
+    """Delete price_snapshots older than ttl_secs (bounds table growth)."""
+    cutoff = int(time.time()) - ttl_secs
+    db.execute("DELETE FROM price_snapshots WHERE ts < ?", (cutoff,))
+
+
 def get_recipes(db):
     rows = db.query("SELECT * FROM recipes ORDER BY skill, level, id")
     for r in rows:
@@ -184,22 +196,26 @@ def get_recipes(db):
 
 
 def replace_recipes(db, recipes):
-    """recipes: resolved dicts with product_item_id, materials [{item_id, qty}], fee, note."""
-    db.execute("DELETE FROM recipes")
-    db.executemany(
-        "INSERT INTO recipes (id, skill, level, xp, members, product_item_id, product_qty, materials_json, fee, note, tools_json, facilities_json, extra_skills_json) "
-        "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
-        [
-            (
-                r["id"], r["skill"], r["level"], r.get("xp", 0), 1 if r["members"] else 0,
-                r["product"]["item_id"], r["product"]["qty"],
-                json.dumps(r["materials"]), r.get("fee", 0), r.get("note"),
-                json.dumps(r.get("tools") or []), json.dumps(r.get("facilities") or []),
-                json.dumps(r.get("extra_skills") or []),
-            )
-            for r in recipes
-        ],
-    )
+    """recipes: resolved dicts with product_item_id, materials [{item_id, qty}], fee, note.
+
+    Atomic: readers never see an empty/partial recipes table mid-replace."""
+    rows = [
+        (
+            r["id"], r["skill"], r["level"], r.get("xp", 0), 1 if r["members"] else 0,
+            r["product"]["item_id"], r["product"]["qty"],
+            json.dumps(r["materials"]), r.get("fee", 0), r.get("note"),
+            json.dumps(r.get("tools") or []), json.dumps(r.get("facilities") or []),
+            json.dumps(r.get("extra_skills") or []),
+        )
+        for r in recipes
+    ]
+    with db.transaction() as conn:
+        conn.execute("DELETE FROM recipes")
+        conn.executemany(
+            "INSERT INTO recipes (id, skill, level, xp, members, product_item_id, product_qty, materials_json, fee, note, tools_json, facilities_json, extra_skills_json) "
+            "VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)",
+            rows,
+        )
 
 
 def get_player(db, name):

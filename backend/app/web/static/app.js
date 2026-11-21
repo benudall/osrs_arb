@@ -177,12 +177,14 @@ function buildQuery() {
 }
 
 let loadTimer = null;
+let loadSeq = 0;
 function scheduleLoad() {
   clearTimeout(loadTimer);
   loadTimer = setTimeout(loadData, 350);
 }
 
 async function loadData() {
+  const seq = ++loadSeq; // overlapping calls: only the newest may render
   const banner = $('errorBanner');
   banner.hidden = true;
   const active = skills.filter((s) => state.skillFilter[s.skill] !== false);
@@ -194,14 +196,15 @@ async function loadData() {
   }
   try {
     const res = await api(`/api/recipes?${buildQuery()}`);
+    if (seq !== loadSeq) return; // a newer request superseded this one
     meta = res.meta;
     // best-net filter runs client-side: HA/LA nets need the live alchemy cost
     let out = res.rows;
     if (state.profitableOnly) out = out.filter((r) => bestNet(r) > 0);
     if (state.acq !== 'any') {
       out = out.filter((r) => {
-        const b = r.product.buy;
-        if (b == null) return false;
+        if (r.product.buy == null) return false;
+        const b = r.product.buy * r.product.qty; // per craft: qty units
         return state.acq === 'craft' ? r.cost < b : b < r.cost;
       });
     }
@@ -209,6 +212,7 @@ async function loadData() {
     renderMeta();
     renderTable();
   } catch (e) {
+    if (seq !== loadSeq) return;
     banner.textContent = String(e.message ?? e);
     banner.hidden = false;
   }
@@ -232,19 +236,19 @@ const COLS = [
   { key: 'cost', label: 'Craft', sortable: true,
     tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning).' },
   { key: 'buy', label: 'Buy', sortable: true,
-    tip: 'Grand Exchange buy price of the product, per unit.' },
+    tip: 'Grand Exchange buy price of the product, per unit. Craft/Buy comparisons use qty x this price vs Craft.' },
   { key: 'gross', label: 'Sell', sortable: true,
     tip: 'Grand Exchange sell revenue per craft = GE sell price x product qty.' },
   { key: 'net', label: 'Sell Net', sortable: true,
-    tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <=100 gp) - cost.' },
+    tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <50 gp) - cost.' },
   { key: 'ha', label: 'HA', sortable: true,
-    tip: 'High Level Alchemy payout = floor(60% x static value).' },
+    tip: 'High Level Alchemy payout per craft = product qty x floor(60% x static value).' },
   { key: 'ha_net', label: 'HA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = HA - min(Craft, Buy) - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = HA - min(Craft, Buy x qty) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'la', label: 'LA', sortable: true,
-    tip: 'Low Level Alchemy payout = floor(40% x static value).' },
+    tip: 'Low Level Alchemy payout per craft = product qty x floor(40% x static value).' },
   { key: 'la_net', label: 'LA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = LA - min(Craft, Buy) - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = LA - min(Craft, Buy x qty) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'best_net', label: 'Best Net', sortable: true,
     tip: 'Best route per craft = max(Sell Net, HA Net, LA Net).' },
   { key: 'volume', label: 'Vol/5m', sortable: true,
@@ -253,14 +257,14 @@ const COLS = [
     tip: 'Max crafts per 4 hours under Jagex GE buy limits (min over every material and the product). net/4h in the row detail.' },
 ];
 
-const alch = (r, frac) => (r.product.value == null ? null : Math.floor(r.product.value * frac));
+const alch = (r, frac) => (r.product.value == null ? null : Math.floor(r.product.value * frac) * r.product.qty);
 const alchNet = (r, frac) => {
   const a = alch(r, frac);
   const fee = meta && meta.alchemy_cost;
   if (a == null || fee == null) return null;
-  // product in hand via cheapest route: craft it, or buy it on GE
+  // product in hand via cheapest route: craft the batch, or buy qty units on GE
   let base = r.cost;
-  if (r.product.buy != null && r.product.buy < base) base = r.product.buy;
+  if (r.product.buy != null && r.product.buy * r.product.qty < base) base = r.product.buy * r.product.qty;
   return a - base - fee;
 };
 const bestNet = (r) => {
@@ -332,7 +336,7 @@ function detailHtml(r) {
   const lines = [];
 
   lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
-    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock @ price</th></tr></thead><tbody');
+    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock @ price</th></tr></thead><tbody>');
 
   if (r.tools && r.tools.length) {
     lines.push(sect('Tools'));
@@ -488,11 +492,11 @@ function renderTable() {
     const bN = bestNet(r);
     // struck = not the best route this row; best stays clean
     const netCls = (v) => `${v > 0 ? 'pos' : 'neg'}${v < bN ? ' strike' : ''}`;
-    // struck = the higher of Craft vs Buy (unpicked acquisition)
-    const pBuy = r.product.buy;
-    const craftCls = 'gp' + (pBuy != null && pBuy < r.cost ? ' strike' : '');
-    const buyCls = 'gp' + (pBuy != null && pBuy > r.cost ? ' strike' : '');
-    tr.append(num(r.xp), num(r.cost, craftCls), num(pBuy, buyCls), num(r.gross, 'gp'),
+    // struck = the higher of Craft vs Buy (unpicked acquisition); buy x qty = per craft
+    const pBuyTotal = r.product.buy != null ? r.product.buy * r.product.qty : null;
+    const craftCls = 'gp' + (pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
+    const buyCls = 'gp' + (pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
+    tr.append(num(r.xp), num(r.cost, craftCls), num(r.product.buy, buyCls), num(r.gross, 'gp'),
       num(r.net, netCls(r.net)),
       num(alch(r, 0.6), 'gp'),
       num(haN, haN == null ? null : netCls(haN)),
@@ -588,7 +592,8 @@ async function init() {
   }
   renderHead();
   await loadData();
-  setInterval(loadData, 30000);
+  // auto-refresh every 30 s; skip while the tab is hidden
+  setInterval(() => { if (!document.hidden) loadData(); }, 30000);
   // saved player -> fill fields automatically
   if (state.playerName.trim()) fetchPlayer();
 }

@@ -42,7 +42,8 @@ On startup the server: fetches `/mapping` into SQLite, seeds `recipes.json`, the
 `/latest` + `/5m` + `/1h` every 60 s into `var/osrs_arb.sqlite` (gitignored).
 
 Endpoints: `GET /api/skills`, `GET /api/recipes`, `GET /api/meta`,
-`GET /api/hiscores?player=NAME`, `POST /api/admin/reseed`, `POST /api/admin/refresh-mapping`.
+`GET /api/hiscores?player=NAME`, `POST /api/admin/reseed`, `POST /api/admin/refresh-mapping`
+(admin POSTs are unauthenticated — the tool is meant to run on localhost only).
 Docs at http://127.0.0.1:8000/docs.
 
 CLI: `python -m scripts.seed_recipes` (seed only). `python scripts/verify_levels.py`
@@ -80,7 +81,7 @@ Levels for harvested recipes come straight from the wiki tables.
   Conservative mode = buy `high` / sell `low` (all instant). Optimistic = the reverse.
 - Cost/Net use the **cheapest acquisition** per material — buy it, or craft it if that is
   cheaper (⚒ in the materials column). `cost` = Σ cheapest-per-material × qty + fees, `net` = gross − tax − cost.
-- GE tax 2% (exempt ≤ 100 gp, cap 5 m/item) — `backend/app/config.py`.
+- GE tax 2% (exempt < 50 gp, cap 5 m/item) — `backend/app/config.py`.
 - Buy limits cap real profit: `count` column = max crafts per 4 h, `net_4h` in row detail.
 - Volume gate (5 m trade volume of the scarcest ingredient) hides illiquid "ghost profits".
 - Recipe **levels**: cooking verified against the wiki guide; smithing/crafting/fletching/herblore/magic

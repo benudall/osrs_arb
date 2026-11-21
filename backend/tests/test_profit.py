@@ -41,16 +41,16 @@ RECIPE = {
 }
 
 
-def test_tax_exempt_at_or_below_threshold():
-    limit = config.GE_TAX_EXEMPT_MAX
-    assert profit.ge_tax(limit) == 0
+def test_tax_exempt_below_threshold():
+    limit = config.GE_TAX_EXEMPT_BELOW
     assert profit.ge_tax(limit - 1) == 0
+    assert profit.ge_tax(limit) == math.floor(limit * config.GE_TAX_RATE)  # 50 gp itself is taxed (1 coin)
     assert profit.ge_tax(limit + 1) == math.floor((limit + 1) * config.GE_TAX_RATE)
 
 
 def test_tax_two_percent():
     assert profit.ge_tax(1000) == 20
-    assert profit.ge_tax(config.GE_TAX_EXEMPT_MAX + 50) == math.floor((config.GE_TAX_EXEMPT_MAX + 50) * config.GE_TAX_RATE)  # floor
+    assert profit.ge_tax(config.GE_TAX_EXEMPT_BELOW + 50) == math.floor((config.GE_TAX_EXEMPT_BELOW + 50) * config.GE_TAX_RATE)  # floor
 
 
 def test_tax_cap():

@@ -43,11 +43,13 @@ def validate(raw: list[dict]) -> tuple[list[dict], list[str]]:
         if isinstance(xp, bool) or not isinstance(xp, (int, float)) or xp < 0:
             errors.append(f"{rid}: xp must be a number >= 0 (OSRS wiki value per craft)")
             continue
-        if not r["product"].get("item") or not isinstance(r["product"].get("qty"), int) or r["product"]["qty"] < 1:
+        if not isinstance(r["product"], dict) or not r["product"].get("item") \
+                or not isinstance(r["product"].get("qty"), int) or r["product"]["qty"] < 1:
             errors.append(f"{rid}: bad product")
             continue
-        if not r["materials"] or not all(
-            isinstance(m.get("qty"), int) and m["qty"] > 0 and m.get("item") for m in r["materials"]
+        if not isinstance(r["materials"], list) or not r["materials"] or not all(
+            isinstance(m, dict) and isinstance(m.get("qty"), int) and m["qty"] > 0 and m.get("item")
+            for m in r["materials"]
         ):
             errors.append(f"{rid}: bad materials")
             continue

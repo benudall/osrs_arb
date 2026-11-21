@@ -6,10 +6,10 @@ from .. import config
 def ge_tax(sell_price: int) -> int:
     """Grand Exchange tax on one item sold at sell_price.
 
-    2% of the sale price, waived for items selling at <= 100 gp,
-    capped at 5,000,000 gp per item.
+    2% of the sale price, rounded down; items selling below 50 gp are
+    effectively exempt (floor would be < 1 coin), capped at 5,000,000 gp per item.
     """
-    if sell_price is None or sell_price <= config.GE_TAX_EXEMPT_MAX:
+    if sell_price is None or sell_price < config.GE_TAX_EXEMPT_BELOW:
         return 0
     return min(math.floor(sell_price * config.GE_TAX_RATE), config.GE_TAX_CAP)
 
@@ -80,7 +80,7 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         })
         cost += chosen * m["qty"]
         # how many crafts per 5m does this material's buy-side volume support?
-        supported = buy_vol / m["qty"]
+        supported = buy_vol / m["qty"] if m["qty"] > 0 else float('inf')
         min_mat_vol = supported if min_mat_vol is None else min(min_mat_vol, supported)
 
     gross = sell_price * recipe["product"]["qty"]

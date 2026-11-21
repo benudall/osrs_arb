@@ -1,3 +1,4 @@
+import calendar
 import json
 import time
 
@@ -39,10 +40,12 @@ def _search_words(q: str | None) -> list[str]:
 
 def _row_matches(row: dict, words: list[str]) -> bool:
     """Case-insensitive free-text match: every word must appear in the
-    product name."""
+    product name, material names, skill, or note."""
     if not words:
         return True
-    haystack = row["product"]["name"].lower()
+    parts = [row["product"]["name"], row.get("skill") or "", row.get("note") or ""]
+    parts += [m["name"] for m in row.get("materials", [])]
+    haystack = " ".join(parts).lower()
     return all(w in haystack for w in words)
 
 
@@ -75,7 +78,7 @@ def recipes(
     mode: str = Query("conservative"),
     f2p_only: bool = Query(False),
     min_volume: int = Query(0, ge=0),
-    q: str | None = Query(None, description="free-text search: product name only (all words must match)"),
+    q: str | None = Query(None, description="free-text search; every word must match in product name, materials, skill, or note"),
 ):
     if mode not in MODES:
         raise HTTPException(400, f"mode must be one of {MODES}")
@@ -96,10 +99,15 @@ def recipes(
         if res:
             alchemy_cost = res["high"][0]
 
-    # craft cost per unit for every craftable item (cheapest recipe) —
-    # lets the detail table show what a material would cost to make instead of buy
+    # craft cost per unit for every craftable item that is used as a material
+    # elsewhere (cheapest recipe) — lets the detail table show what a material
+    # would cost to make instead of buy. Only evaluated for products that are
+    # actually someone's material — the vast majority of recipes aren't.
+    material_ids = {m["item_id"] for r in all_recipes for m in r["materials"]}
     craft_costs = {}
     for r in all_recipes:
+        if r["product"]["item_id"] not in material_ids:
+            continue
         row = profit.evaluate_recipe(r, item_map, store, mode=mode)
         if row is None or row["product"]["qty"] < 1:
             continue
@@ -108,7 +116,7 @@ def recipes(
         if pid not in craft_costs or per_unit < craft_costs[pid]:
             craft_costs[pid] = per_unit
 
-    rows, skipped = [], 0
+    rows, skipped_no_price, skipped_filtered = [], 0, 0
     for r in all_recipes:
         if skill_filter:
             if r["skill"] not in skill_filter and not any(es["skill"] in skill_filter for es in r.get("extra_skills", [])):
@@ -129,13 +137,13 @@ def recipes(
 
         row = profit.evaluate_recipe(r, item_map, store, mode=mode, craft_costs=craft_costs)
         if row is None:
-            skipped += 1
+            skipped_no_price += 1
             continue
         if not _row_matches(row, search_words):
-            skipped += 1
+            skipped_filtered += 1
             continue
         if row["volume"] < min_volume:
-            skipped += 1
+            skipped_filtered += 1
             continue
         rows.append(row)
 
@@ -145,7 +153,8 @@ def recipes(
             "last_refresh": store.last_refresh,
             "item_count": len(item_map),
             "recipes_total": len(all_recipes),
-            "skipped_no_price": skipped,
+            "skipped_no_price": skipped_no_price,
+            "skipped_filtered": skipped_filtered,
             "alchemy_cost": alchemy_cost,
             "nature_rune_id": nature_id,
         },
@@ -175,10 +184,14 @@ def hiscores(request: Request, player: str = Query(min_length=1, max_length=12))
 
     cached = dao.get_player(db, name)
     if cached:
-        age = time.mktime(time.strptime(cached["fetched_at"], "%Y-%m-%dT%H:%M:%SZ"))
-        if time.time() - age <= config.HISCORES_TTL_SECS:
+        try:
+            # stored UTC: parse with timegm (mktime would apply the local offset)
+            age = calendar.timegm(time.strptime(cached["fetched_at"], "%Y-%m-%dT%H:%M:%SZ"))
             skills_cached = {k.lower(): v for k, v in json.loads(cached["skills_json"]).items()}
-            return HiscoresResponse(player=name, skills=skills_cached, cached=True)
+            if time.time() - age <= config.HISCORES_TTL_SECS:
+                return HiscoresResponse(player=name, skills=skills_cached, cached=True)
+        except (ValueError, TypeError, AttributeError):
+            pass  # corrupt cache row -> fall through and refetch
 
     try:
         r = httpx.get(

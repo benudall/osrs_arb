@@ -1,4 +1,6 @@
-from app.api.routes import _row_matches, _search_words
+import pytest
+
+from app.api.routes import _parse_levels, _row_matches, _search_words
 
 ROW = {
     "skill": "herblore",
@@ -51,3 +53,22 @@ def test_all_words_must_match():
 
 def test_empty_words_match_everything():
     assert _row_matches(ROW, [])
+
+
+# ---------- _parse_levels ----------
+
+def test_parse_levels_valid():
+    assert _parse_levels("smithing:40,cooking:21") == {"smithing": 40, "cooking": 21}
+    assert _parse_levels(" smithing : 40 , ") == {"smithing": 40}
+
+
+def test_parse_levels_empty():
+    assert _parse_levels(None) == {}
+    assert _parse_levels("") == {}
+    assert _parse_levels(" , ") == {}
+
+
+def test_parse_levels_rejects_bad_input():
+    for bad in ("smithing", "smithing:abc", "smithing:100", "smithing:0", "smithing:"):
+        with pytest.raises(Exception):
+            _parse_levels(bad)

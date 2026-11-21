@@ -1,3 +1,4 @@
+import contextlib
 import sqlite3
 import threading
 
@@ -92,3 +93,17 @@ class Database:
     def query_one(self, sql, params=()):
         rows = self.query(sql, params)
         return rows[0] if rows else None
+
+    @contextlib.contextmanager
+    def transaction(self):
+        """Atomic multi-statement block: all-or-nothing, and invisible to
+        other threads until commit (the lock is held for the whole block).
+        Use the yielded connection directly, NOT self.execute (which would
+        commit early)."""
+        with self._lock:
+            try:
+                yield self._conn
+                self._conn.commit()
+            except Exception:
+                self._conn.rollback()
+                raise

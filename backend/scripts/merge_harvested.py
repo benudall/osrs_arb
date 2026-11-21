@@ -38,7 +38,10 @@ def resolve_item(name, name_to_id, lower_map=None):
     prefix = name + "("
     variants = [n for n in name_to_id if n.startswith(prefix)]
     if variants:
-        return max(variants, key=lambda n: n)  # deterministic pick
+        def charge(n):
+            m = re.search(r"\((\d+)\)$", n)
+            return int(m.group(1)) if m else 0
+        return max(variants, key=charge)  # highest charge/dose, numeric (not lexicographic)
     if lower_map:
         hit = lower_map.get(name.lower())
         if hit is not None:

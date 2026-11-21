@@ -51,7 +51,10 @@ class PriceStore:
             self.last_refresh = time.time()
 
     def _fresh(self, ts: int | None) -> bool:
-        return bool(ts) and (time.time() - ts) <= self._stale_secs
+        if ts is None:
+            return False
+        # Wiki API timestamps are unix seconds, same unit as time.time()
+        return (time.time() - ts) <= self._stale_secs
 
     def resolve(self, item_id: int) -> dict | None:
         """Per-side price resolution for one item.

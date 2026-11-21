@@ -13,9 +13,13 @@ REFRESH_SECS = 60          # background /latest + /5m poll
 MAPPING_TTL_SECS = 24 * 3600
 STALE_SECS = 15 * 60       # /latest older than this -> fall back to window averages
 
+SNAPSHOT_TTL_SECS = 7 * 24 * 3600  # prune price_snapshots older than this
+
 # --- Grand Exchange tax (change here if Jagex tweaks it) ---
 GE_TAX_RATE = 0.02
-GE_TAX_EXEMPT_MAX = 50    # items selling at <= this many gp are tax-exempt
+# Tax = floor(price * rate), cap per item. floor() makes it < 1 coin below 50 gp,
+# which the wiki treats as no tax obligation; 50 gp itself IS taxed (1 coin).
+GE_TAX_EXEMPT_BELOW = 50  # items selling at < this many gp are tax-exempt
 GE_TAX_CAP = 5_000_000     # per-item cap
 
 # --- Storage ---

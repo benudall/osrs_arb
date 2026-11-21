@@ -9,6 +9,7 @@ Usage:
 First run creates backend/.venv and installs requirements automatically.
 """
 import argparse
+import hashlib
 import os
 import pathlib
 import subprocess
@@ -36,12 +37,15 @@ def main() -> int:
         venv.create(VENV_DIR, with_pip=True)
 
     marker = VENV_DIR / ".deps_ok"
-    if args.setup or not marker.exists():
+    reqs = BACKEND / "requirements.txt"
+    req_hash = hashlib.sha256(reqs.read_bytes()).hexdigest()[:16]
+    # reinstall on first run, --setup, or whenever requirements.txt changed
+    if args.setup or not marker.exists() or marker.read_text().strip() != req_hash:
         print("Installing dependencies ...")
         subprocess.check_call(
-            [str(VENV_PY), "-m", "pip", "install", "-q", "-r", str(BACKEND / "requirements.txt")]
+            [str(VENV_PY), "-m", "pip", "install", "-q", "-r", str(reqs)]
         )
-        marker.write_text("ok")
+        marker.write_text(req_hash)
 
     if args.browser:
         threading.Timer(4.0, lambda: webbrowser.open(url)).start()

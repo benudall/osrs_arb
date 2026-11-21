@@ -41,6 +41,7 @@ async def refresh_loop(app):
     api = app.state.api
     db = app.state.db
     store = app.state.store
+    cycles = 0
     while True:
         try:
             if dao.items_stale(db, config.MAPPING_TTL_SECS):
@@ -60,6 +61,9 @@ async def refresh_loop(app):
                 rows.append((int(item_id), int(d.get("timestamp") or 0), d.get("avgHighPrice"), d.get("avgLowPrice"),
                              d.get("highPriceVolume"), d.get("lowPriceVolume"), "5m"))
             dao.insert_snapshots(db, rows)
+            cycles += 1
+            if cycles % 60 == 0:  # ~hourly: prune snapshots older than the TTL
+                dao.prune_snapshots(db, config.SNAPSHOT_TTL_SECS)
             store.mark_refreshed()
             log.info("refresh ok: %d latest, %d 5m, %d 1h", len(latest.get("data", {})),
                      len(five.get("data", {})), len(one.get("data", {})))
