@@ -262,8 +262,7 @@ button:disabled { opacity: 0.5; cursor: default; }
   text-align: right;
 }
 .strike {
-  text-decoration: line-through;
-  opacity: 0.5;
+  opacity: 0.35;
 }
 
 .pos { color: var(--pos); }
