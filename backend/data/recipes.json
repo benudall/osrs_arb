@@ -13738,6 +13738,24 @@
       },
       "materials": [
         { "item": "Iron ore", "qty": 1 },
+        { "item": "Nature rune", "qty": 1 }
+      ]
+    },
+    {
+      "id": "superheat_steel_bar",
+      "skill": "magic",
+      "level": 43,
+      "extra_skills": [
+        { "skill": "smithing", "level": 15 }
+      ],
+      "xp": 0,
+      "members": false,
+      "product": {
+        "item": "Steel bar",
+        "qty": 1
+      },
+      "materials": [
+        { "item": "Iron ore", "qty": 1 },
         { "item": "Coal", "qty": 2 },
         { "item": "Nature rune", "qty": 1 }
       ]

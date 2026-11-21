@@ -91,6 +91,7 @@ button:disabled { opacity: 0.5; cursor: default; }
   white-space: nowrap;
 }
 .recipe-table td:first-child { text-align: left; }
+.recipe-table td { padding: 0px 5px;}
 .recipe-table th { text-align: center; }
 .recipe-table td:nth-child(2) { text-align: left; white-space: normal; }
 .recipe-table thead th {
@@ -108,6 +109,9 @@ button:disabled { opacity: 0.5; cursor: default; }
 .recipe-table tbody tr:last-child td:last-child { border-bottom-right-radius: 7px; }
 .recipe-table th.sortable { cursor: pointer; }
 .recipe-table th.sortable:hover { color: var(--text); }
+/* vertical rules around route groups (GE/HA/LA) and Best Net */
+.recipe-table .gsep { border-left: 1px solid var(--border); }
+.recipe-table .gsep-r { border-right: 1px solid var(--border); }
 
 .main-row { cursor: pointer; }
 .main-row:hover { background: #20232e; }

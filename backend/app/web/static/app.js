@@ -347,6 +347,7 @@ function renderHead() {
     }
     return th;
   };
+  const GSEP_L = new Set(HEAD_GROUPS.map((g) => g.keys[0])); // left edge of each route group
   for (const c of visibleCols()) {
     if (inGroup.has(c.key)) {
       const g = startOfGroup.get(c.key);
@@ -354,12 +355,17 @@ function renderHead() {
         const gh = document.createElement('th');
         gh.textContent = g.label;
         gh.colSpan = g.keys.length;
+        gh.className = 'gsep';
         tr1.append(gh);
       }
-      tr2.append(leaf(c));
+      const lth = leaf(c);
+      if (GSEP_L.has(c.key)) lth.classList.add('gsep');
+      tr2.append(lth);
     } else {
       const th = leaf(c);
       th.rowSpan = 2;
+      if (c.key === 'members' || c.key === 'cost') th.classList.add('gsep');
+      if (c.key === 'best_net') th.classList.add('gsep', 'gsep-r');
       tr1.append(th);
     }
   }
@@ -491,6 +497,7 @@ function renderTable() {
     badge.className = 'badge ' + (r.members ? 'members' : 'f2p');
     badge.textContent = '★';
     badge.title = r.members ? 'Members' : 'Free-to-play';
+    tdB.classList.add('gsep');
     tdB.append(badge);
     tr.append(tdB);
 
@@ -545,11 +552,11 @@ function renderTable() {
     const pBuyTotal = r.product.buy != null ? r.product.buy * r.product.qty : null;
     const craftCls = 'gp' + (pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
     const buyCls = 'gp' + (pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
-    const cells = [num(r.xp), num(r.cost, craftCls), num(r.product.buy, buyCls)];
-    if (routeOn('ge')) cells.push(num(r.gross, 'gp'), num(r.net, netCls(r.net)));
-    if (routeOn('ha')) cells.push(num(alch(r, 0.6), 'gp'), num(haN, haN == null ? null : netCls(haN)));
-    if (routeOn('la')) cells.push(num(alch(r, 0.4), 'gp'), num(laN, laN == null ? null : netCls(laN)));
-    cells.push(num(bN, netCls(bN)), num(r.volume), num(r.max_crafts_4h));
+    const cells = [num(r.xp), num(r.cost, craftCls + ' gsep'), num(r.product.buy, buyCls)];
+    if (routeOn('ge')) cells.push(num(r.gross, 'gp gsep'), num(r.net, netCls(r.net)));
+    if (routeOn('ha')) cells.push(num(alch(r, 0.6), 'gp gsep'), num(haN, haN == null ? null : netCls(haN)));
+    if (routeOn('la')) cells.push(num(alch(r, 0.4), 'gp gsep'), num(laN, laN == null ? null : netCls(laN)));
+    cells.push(num(bN, netCls(bN) + ' gsep gsep-r'), num(r.volume), num(r.max_crafts_4h));
     tr.append(...cells);
     tbody.append(tr);
 
