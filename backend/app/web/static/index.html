@@ -31,8 +31,8 @@
         Search
         <input id="search" type="search" placeholder="e.g. potion, rune" />
       </label>
-      <label title="conservative = buy materials at the instant-buy price and sell the product at the instant-sell price (everything instant, worst case). optimistic = buy at the instant-sell price and sell at the instant-buy price (needs patience on both ends, best case).">Margin mode
-        <select id="mode"></select>
+      <label class="check" title="Search also matches material names, not just the product name.">
+        <input id="searchMaterials" type="checkbox" /> In materials
       </label>
       <label class="check">
         <input id="filterLevels" type="checkbox" /> Filter by my levels
@@ -69,9 +69,8 @@
 
     <footer>
       <p class="hint">
-        conservative = buy materials at instant-buy price, sell product at instant-sell price. optimistic = the
-        reverse. ≈ = latest price stale, using window average. Click a row for the breakdown. Prices: OSRS Wiki
-        Real-time Prices API.
+        conservative = buy materials at instant-buy price, sell product at instant-sell price. ≈ = latest price
+        stale, using window average. Click a row for the breakdown. Prices: OSRS Wiki Real-time Prices API.
       </p>
     </footer>
   </div>

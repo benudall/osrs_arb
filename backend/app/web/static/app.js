@@ -5,7 +5,6 @@ const LS_KEY = 'osrs_arb_ui_v2';
 const state = {
   levels: {},        // skill -> string ("" = no filter)
   skillFilter: {},   // skill -> bool (include in table; default true)
-  mode: 'conservative',
   f2pOnly: false,
   profitableOnly: false,
   acq: [],
@@ -13,10 +12,10 @@ const state = {
   filterLevels: true,
   playerName: '',
   search: '',
+  searchMaterials: false,
 };
 
 let skills = [];
-let modes = ['conservative', 'optimistic'];
 let rows = [];
 let allRows = [];  // unfiltered server response; applyFilters() -> rows
 let meta = null;
@@ -75,6 +74,8 @@ function loadState() {
     norm[String(k).toLowerCase()] = v;
   }
   state.levels = norm;
+  // margin mode removed from the UI; conservative is the only mode
+  delete state.mode;
   // migrate legacy single-value acq ('any'|'craft'|'buy') to array
   if (typeof state.acq === 'string') {
     state.acq = state.acq === 'any' ? [] : [state.acq];
@@ -166,7 +167,7 @@ function buildQuery() {
   if (active.length && active.length < skills.length) {
     p.set('skills', active.map((s) => s.skill).join(','));
   }
-  p.set('mode', state.mode);
+  p.set('mode', 'conservative');
   if (state.f2pOnly) p.set('f2p_only', 'true');
   if (state.filterLevels) {
     const levels = Object.entries(state.levels)
@@ -176,7 +177,10 @@ function buildQuery() {
     if (levels.length) p.set('levels', levels.join(','));
   }
   const q = state.search.trim();
-  if (q) p.set('q', q);
+  if (q) {
+    p.set('q', q);
+    if (state.searchMaterials) p.set('include_materials', 'true');
+  }
   return p.toString();
 }
 
@@ -259,8 +263,10 @@ const COLS = [
     tip: 'Low Level Alchemy payout per craft = product qty x floor(40% x static value).' },
   { key: 'la_net', label: 'LA Net', sortable: true,
     tip: 'Alchemy-route profit per craft = LA - min(Craft, Buy x qty) - alchemy cost (Nature rune instant-buy, live).' },
-  { key: 'best_net', label: 'Best Net', sortable: true,
+  { key: 'best_net', label: 'Best\nNet', sortable: true,
     tip: 'Best route per craft = max over the enabled routes (Sell Net, HA Net, LA Net).' },
+  { key: 'return', label: 'Return', sortable: true,
+    tip: 'Return multiple = (Best Net + lowest acquisition) ÷ lowest acquisition (Craft vs Buy x qty). ≥1× = profit.' },
   { key: 'volume', label: 'Vol/5m', sortable: true,
     tip: '5-minute trade volume of the scarcest item: product sell volume vs each material buy volume / qty. Low = profit you cannot actually move.' },
   { key: 'max_crafts_4h', label: '4h count', sortable: true,
@@ -290,6 +296,20 @@ const bestNet = (r) => {
   }
   return cands.length ? Math.max(...cands) : null;
 };
+const minAcq = (r) => {
+  let base = r.cost;
+  if (r.product.buy != null && r.product.buy * r.product.qty < base) base = r.product.buy * r.product.qty;
+  return base;
+};
+// Return = (Best Net + lowest acquisition) ÷ lowest acquisition = payout ÷ cost
+const returnMul = (r) => {
+  const best = bestNet(r);
+  if (best == null) return null;
+  const base = minAcq(r);
+  if (!base) return null; // free to acquire → ratio undefined
+  return (best + base) / base;
+};
+const fmtMul = (v) => (v === null || v === undefined ? '—' : v.toFixed(2) + '×');
 
 function cellValue(r, key) {
   if (key === 'product') return r.product.name;
@@ -299,6 +319,7 @@ function cellValue(r, key) {
   if (key === 'ha_net') return alchNet(r, 0.6);
   if (key === 'la_net') return alchNet(r, 0.4);
   if (key === 'best_net') return bestNet(r);
+  if (key === 'return') return returnMul(r);
   return r[key];
 }
 
@@ -339,6 +360,7 @@ function renderHead() {
     const th = document.createElement('th');
     th.textContent = c.label;
     if (c.tip) th.title = c.tip;
+    if (c.key === 'best_net') th.style.whiteSpace = 'pre-line'; // label stacks vertically
     if (c.key === 'skill') th.style.textAlign = 'center';
     if (c.sortable) {
       th.className = 'sortable';
@@ -515,10 +537,10 @@ function renderTable() {
     tdS.style.textAlign = 'center';
     tdL.style.textAlign = 'center';
 
-    const num = (v, cls) => {
+    const num = (v, cls, f = fmt) => {
       const td = document.createElement('td');
       if (cls) td.className = cls;
-      td.textContent = fmt(v);
+      td.textContent = f(v);
       return td;
     };
 
@@ -543,20 +565,27 @@ function renderTable() {
     }
 
     tr.append(tdS, tdL);
+    const haP = alch(r, 0.6);
+    const laP = alch(r, 0.4);
     const haN = alchNet(r, 0.6);
     const laN = alchNet(r, 0.4);
     const bN = bestNet(r);
     // struck = not the best route this row; best stays clean
     const netCls = (v) => `${v > 0 ? 'pos' : 'neg'}${v < bN ? ' strike' : ''}`;
+    // payout struck when its route's net is not the best (matches the net cell)
+    const payCls = (netV) => (netV != null && netV < bN ? 'gp strike' : 'gp');
     // struck = the higher of Craft vs Buy (unpicked acquisition); buy x qty = per craft
     const pBuyTotal = r.product.buy != null ? r.product.buy * r.product.qty : null;
     const craftCls = 'gp' + (pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
     const buyCls = 'gp' + (pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
     const cells = [num(r.xp), num(r.cost, craftCls + ' gsep'), num(r.product.buy, buyCls)];
-    if (routeOn('ge')) cells.push(num(r.gross, 'gp gsep'), num(r.net, netCls(r.net)));
-    if (routeOn('ha')) cells.push(num(alch(r, 0.6), 'gp gsep'), num(haN, haN == null ? null : netCls(haN)));
-    if (routeOn('la')) cells.push(num(alch(r, 0.4), 'gp gsep'), num(laN, laN == null ? null : netCls(laN)));
-    cells.push(num(bN, netCls(bN) + ' gsep gsep-r'), num(r.volume), num(r.max_crafts_4h));
+    if (routeOn('ge')) cells.push(num(r.gross, payCls(r.net) + ' gsep'), num(r.net, netCls(r.net)));
+    if (routeOn('ha')) cells.push(num(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
+    if (routeOn('la')) cells.push(num(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
+    const ret = returnMul(r);
+    cells.push(num(bN, netCls(bN) + ' gsep gsep-r'),
+      num(ret, ret == null ? null : ret >= 1 ? 'pos' : 'neg', fmtMul),
+      num(r.volume), num(r.max_crafts_4h));
     tr.append(...cells);
     tbody.append(tr);
 
@@ -598,7 +627,6 @@ $('tbody').addEventListener('click', (e) => {
   renderTable();
 });
 
-$('mode').addEventListener('change', (e) => { state.mode = e.target.value; saveState(); scheduleLoad(); });
 $('f2pOnly').addEventListener('change', (e) => { state.f2pOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('profitableOnly').addEventListener('change', (e) => { state.profitableOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('acqFilter').addEventListener('change', (e) => { state.acq = [...e.target.selectedOptions].map((o) => o.value); saveState(); scheduleLoad(); });
@@ -612,6 +640,7 @@ $('routeFilter').addEventListener('change', (e) => {
 });
 $('filterLevels').addEventListener('change', (e) => { state.filterLevels = e.target.checked; saveState(); scheduleLoad(); });
 $('search').addEventListener('input', (e) => { state.search = e.target.value; saveState(); scheduleLoad(); });
+$('searchMaterials').addEventListener('change', (e) => { state.searchMaterials = e.target.checked; saveState(); scheduleLoad(); });
 $('refresh').addEventListener('click', loadData);
 $('fetchPlayer').addEventListener('click', fetchPlayer);
 $('player').addEventListener('keydown', (e) => { if (e.key === 'Enter') fetchPlayer(); });
@@ -621,7 +650,6 @@ $('player').addEventListener('input', (e) => { state.playerName = e.target.value
 
 async function init() {
   loadState();
-  $('mode').value = state.mode;
   $('f2pOnly').checked = state.f2pOnly;
   $('profitableOnly').checked = state.profitableOnly;
   for (const opt of $('acqFilter').options) opt.selected = state.acq.includes(opt.value);
@@ -629,19 +657,11 @@ async function init() {
   $('filterLevels').checked = state.filterLevels;
   $('player').value = state.playerName;
   $('search').value = state.search;
+  $('searchMaterials').checked = state.searchMaterials;
 
   try {
-    const [s, m] = await Promise.all([api('/api/skills'), api('/api/meta')]);
+    const s = await api('/api/skills');
     skills = s.skills;
-    modes = m.mode_options;
-    const sel = $('mode');
-    sel.replaceChildren(...modes.map((mode) => {
-      const o = document.createElement('option');
-      o.value = mode;
-      o.textContent = mode;
-      return o;
-    }));
-    sel.value = state.mode;
     renderLevels();
   } catch (e) {
     $('errorBanner').textContent = `backend unreachable: ${e.message}`;

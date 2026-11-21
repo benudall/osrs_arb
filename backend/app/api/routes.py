@@ -38,12 +38,15 @@ def _search_words(q: str | None) -> list[str]:
     return [w for w in q.lower().split() if w]
 
 
-def _row_matches(row: dict, words: list[str]) -> bool:
-    """Case-insensitive free-text match: every word must appear in the
-    product name."""
+def _row_matches(row: dict, words: list[str], include_materials: bool = False) -> bool:
+    """Case-insensitive free-text match: every word must appear in the product
+    name (plus, when include_materials is set, the material names)."""
     if not words:
         return True
-    haystack = row["product"]["name"].lower()
+    parts = [row["product"]["name"].lower()]
+    if include_materials:
+        parts.extend(m["name"].lower() for m in row["materials"])
+    haystack = " ".join(parts)
     return all(w in haystack for w in words)
 
 
@@ -76,6 +79,7 @@ def recipes(
     mode: str = Query("conservative"),
     f2p_only: bool = Query(False),
     q: str | None = Query(None, description="free-text search; every word must match in the product name"),
+    include_materials: bool = Query(False, description="search also matches material names"),
 ):
     if mode not in MODES:
         raise HTTPException(400, f"mode must be one of {MODES}")
@@ -136,7 +140,7 @@ def recipes(
         if row is None:
             skipped_no_price += 1
             continue
-        if not _row_matches(row, search_words):
+        if not _row_matches(row, search_words, include_materials):
             skipped_filtered += 1
             continue
         rows.append(row)
