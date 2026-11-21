@@ -9,6 +9,7 @@ const state = {
   f2pOnly: false,
   profitableOnly: false,
   acq: [],
+  routes: ['ge', 'ha', 'la'],  // visible route column groups
   filterLevels: true,
   playerName: '',
   search: '',
@@ -17,6 +18,7 @@ const state = {
 let skills = [];
 let modes = ['conservative', 'optimistic'];
 let rows = [];
+let allRows = [];  // unfiltered server response; applyFilters() -> rows
 let meta = null;
 let sortKey = 'best_net';
 let sortDir = 'desc';
@@ -185,12 +187,27 @@ function scheduleLoad() {
   loadTimer = setTimeout(loadData, 350);
 }
 
+// client-side filters (routes/profitableOnly/acq) reapplied without a refetch
+function applyFilters() {
+  let out = allRows;
+  if (state.profitableOnly) out = out.filter((r) => bestNet(r) > 0);
+  if (state.acq.length) {
+    out = out.filter((r) => {
+      if (r.product.buy == null) return false;
+      const b = r.product.buy * r.product.qty; // per craft: qty units
+      return (state.acq.includes('craft') && r.cost < b) || (state.acq.includes('buy') && b < r.cost);
+    });
+  }
+  rows = out;
+}
+
 async function loadData() {
   const seq = ++loadSeq; // overlapping calls: only the newest may render
   const banner = $('errorBanner');
   banner.hidden = true;
   const active = skills.filter((s) => state.skillFilter[s.skill] !== false);
   if (skills.length && !active.length) {
+    allRows = [];
     rows = [];
     renderMeta();
     renderTable();
@@ -200,17 +217,8 @@ async function loadData() {
     const res = await api(`/api/recipes?${buildQuery()}`);
     if (seq !== loadSeq) return; // a newer request superseded this one
     meta = res.meta;
-    // best-net filter runs client-side: HA/LA nets need the live alchemy cost
-    let out = res.rows;
-    if (state.profitableOnly) out = out.filter((r) => bestNet(r) > 0);
-    if (state.acq.length) {
-      out = out.filter((r) => {
-        if (r.product.buy == null) return false;
-        const b = r.product.buy * r.product.qty; // per craft: qty units
-        return (state.acq.includes('craft') && r.cost < b) || (state.acq.includes('buy') && b < r.cost);
-      });
-    }
-    rows = out;
+    allRows = res.rows;
+    applyFilters();
     renderMeta();
     renderTable();
   } catch (e) {
@@ -252,7 +260,7 @@ const COLS = [
   { key: 'la_net', label: 'LA Net', sortable: true,
     tip: 'Alchemy-route profit per craft = LA - min(Craft, Buy x qty) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'best_net', label: 'Best Net', sortable: true,
-    tip: 'Best route per craft = max(Sell Net, HA Net, LA Net).' },
+    tip: 'Best route per craft = max over the enabled routes (Sell Net, HA Net, LA Net).' },
   { key: 'volume', label: 'Vol/5m', sortable: true,
     tip: '5-minute trade volume of the scarcest item: product sell volume vs each material buy volume / qty. Low = profit you cannot actually move.' },
   { key: 'max_crafts_4h', label: '4h count', sortable: true,
@@ -270,11 +278,17 @@ const alchNet = (r, frac) => {
   return a - base - fee;
 };
 const bestNet = (r) => {
-  const cands = [r.net];
-  const h = alchNet(r, 0.6), l = alchNet(r, 0.4);
-  if (h != null) cands.push(h);
-  if (l != null) cands.push(l);
-  return Math.max(...cands);
+  const cands = [];
+  if (routeOn('ge')) cands.push(r.net);
+  if (routeOn('ha')) {
+    const h = alchNet(r, 0.6);
+    if (h != null) cands.push(h);
+  }
+  if (routeOn('la')) {
+    const l = alchNet(r, 0.4);
+    if (l != null) cands.push(l);
+  }
+  return cands.length ? Math.max(...cands) : null;
 };
 
 function cellValue(r, key) {
@@ -305,9 +319,23 @@ function renderMeta() {
     : 'No rows — adjust filters or wait for the first price refresh.';
 }
 
+// Two-row header: group th's span the (payout, net) leaf pairs below them.
+const HEAD_GROUPS = [
+  { id: 'ge', label: 'GE', keys: ['gross', 'net'] },
+  { id: 'ha', label: 'HA', keys: ['ha', 'ha_net'] },
+  { id: 'la', label: 'LA', keys: ['la', 'la_net'] },
+];
+const routeOf = new Map(HEAD_GROUPS.flatMap((g) => g.keys.map((k) => [k, g.id])));
+const routeOn = (id) => state.routes.includes(id);
+const visibleCols = () => COLS.filter((c) => !routeOf.has(c.key) || routeOn(routeOf.get(c.key)));
+
 function renderHead() {
-  const tr = document.createElement('tr');
-  for (const c of COLS) {
+  const startOfGroup = new Map(HEAD_GROUPS.map((g) => [g.keys[0], g]));
+  const inGroup = new Set(HEAD_GROUPS.flatMap((g) => g.keys));
+
+  const tr1 = document.createElement('tr');
+  const tr2 = document.createElement('tr');
+  const leaf = (c) => {
     const th = document.createElement('th');
     th.textContent = c.label;
     if (c.tip) th.title = c.tip;
@@ -317,9 +345,28 @@ function renderHead() {
       th.dataset.key = c.key;
       if (sortKey === c.key) th.textContent += sortDir === 'asc' ? ' ▲' : ' ▼';
     }
-    tr.append(th);
+    return th;
+  };
+  for (const c of visibleCols()) {
+    if (inGroup.has(c.key)) {
+      const g = startOfGroup.get(c.key);
+      if (g) {
+        const gh = document.createElement('th');
+        gh.textContent = g.label;
+        gh.colSpan = g.keys.length;
+        tr1.append(gh);
+      }
+      tr2.append(leaf(c));
+    } else {
+      const th = leaf(c);
+      th.rowSpan = 2;
+      tr1.append(th);
+    }
   }
-  $('thead').replaceChildren(tr);
+  $('thead').replaceChildren(tr1, tr2);
+  // second header row must stick directly under the first, not at top: 0
+  const h1 = tr1.offsetHeight;
+  for (const th of tr2.children) th.style.top = h1 + 'px';
 }
 
 function detailHtml(r) {
@@ -390,7 +437,7 @@ function renderTable() {
   if (!sorted.length) {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
-    td.colSpan = COLS.length;
+    td.colSpan = visibleCols().length;
     td.className = 'empty';
     td.textContent = 'No rows — adjust filters or wait for the first price refresh.';
     tr.append(td);
@@ -498,21 +545,19 @@ function renderTable() {
     const pBuyTotal = r.product.buy != null ? r.product.buy * r.product.qty : null;
     const craftCls = 'gp' + (pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
     const buyCls = 'gp' + (pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
-    tr.append(num(r.xp), num(r.cost, craftCls), num(r.product.buy, buyCls), num(r.gross, 'gp'),
-      num(r.net, netCls(r.net)),
-      num(alch(r, 0.6), 'gp'),
-      num(haN, haN == null ? null : netCls(haN)),
-      num(alch(r, 0.4), 'gp'),
-      num(laN, laN == null ? null : netCls(laN)),
-      num(bN, netCls(bN)));
-    tr.append(num(r.volume), num(r.max_crafts_4h));
+    const cells = [num(r.xp), num(r.cost, craftCls), num(r.product.buy, buyCls)];
+    if (routeOn('ge')) cells.push(num(r.gross, 'gp'), num(r.net, netCls(r.net)));
+    if (routeOn('ha')) cells.push(num(alch(r, 0.6), 'gp'), num(haN, haN == null ? null : netCls(haN)));
+    if (routeOn('la')) cells.push(num(alch(r, 0.4), 'gp'), num(laN, laN == null ? null : netCls(laN)));
+    cells.push(num(bN, netCls(bN)), num(r.volume), num(r.max_crafts_4h));
+    tr.append(...cells);
     tbody.append(tr);
 
     if (expanded.has(r.recipe_id)) {
       const dtr = document.createElement('tr');
       dtr.className = 'detail-row';
       const td = document.createElement('td');
-      td.colSpan = COLS.length;
+      td.colSpan = visibleCols().length;
       td.innerHTML = detailHtml(r);
       dtr.append(td);
       tbody.append(dtr);
@@ -550,6 +595,14 @@ $('mode').addEventListener('change', (e) => { state.mode = e.target.value; saveS
 $('f2pOnly').addEventListener('change', (e) => { state.f2pOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('profitableOnly').addEventListener('change', (e) => { state.profitableOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('acqFilter').addEventListener('change', (e) => { state.acq = [...e.target.selectedOptions].map((o) => o.value); saveState(); scheduleLoad(); });
+$('routeFilter').addEventListener('change', (e) => {
+  state.routes = [...e.target.selectedOptions].map((o) => o.value);
+  saveState();
+  // head + body in one synchronous pass: single paint, no misalignment gap
+  applyFilters();
+  renderHead();
+  renderTable();
+});
 $('filterLevels').addEventListener('change', (e) => { state.filterLevels = e.target.checked; saveState(); scheduleLoad(); });
 $('search').addEventListener('input', (e) => { state.search = e.target.value; saveState(); scheduleLoad(); });
 $('refresh').addEventListener('click', loadData);
@@ -565,6 +618,7 @@ async function init() {
   $('f2pOnly').checked = state.f2pOnly;
   $('profitableOnly').checked = state.profitableOnly;
   for (const opt of $('acqFilter').options) opt.selected = state.acq.includes(opt.value);
+  for (const opt of $('routeFilter').options) opt.selected = state.routes.includes(opt.value);
   $('filterLevels').checked = state.filterLevels;
   $('player').value = state.playerName;
   $('search').value = state.search;

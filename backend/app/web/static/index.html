@@ -49,6 +49,13 @@
           <option value="buy">buy</option>
         </select>
       </label>
+      <label title="Show/hide route columns: GE = Sell + Sell Net, HA = High Alchemy + HA Net, LA = Low Alchemy + LA Net. Best Net only considers enabled routes; empty selection hides all three.">Routes
+        <select id="routeFilter" multiple size="3">
+          <option value="ge">GE</option>
+          <option value="ha">HA</option>
+          <option value="la">LA</option>
+        </select>
+      </label>
       <button id="refresh">Refresh now</button>
     </div>
 
