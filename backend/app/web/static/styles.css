@@ -257,11 +257,7 @@ button:disabled { opacity: 0.5; cursor: default; }
   min-width: 100%;
   text-align: right;
 }
-.gp.strike {
-  text-decoration: line-through;
-  opacity: 0.55;
-}
-td.strike {
+.strike {
   text-decoration: line-through;
   opacity: 0.55;
 }

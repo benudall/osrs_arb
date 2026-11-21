@@ -8,9 +8,8 @@ const state = {
   mode: 'conservative',
   f2pOnly: false,
   profitableOnly: false,
-  acq: 'any',
+  acq: [],
   filterLevels: true,
-  minVolume: 0,
   playerName: '',
   search: '',
 };
@@ -74,6 +73,10 @@ function loadState() {
     norm[String(k).toLowerCase()] = v;
   }
   state.levels = norm;
+  // migrate legacy single-value acq ('any'|'craft'|'buy') to array
+  if (typeof state.acq === 'string') {
+    state.acq = state.acq === 'any' ? [] : [state.acq];
+  }
 }
 
 async function api(path) {
@@ -170,7 +173,6 @@ function buildQuery() {
       .map(([k, v]) => `${k}:${v}`);
     if (levels.length) p.set('levels', levels.join(','));
   }
-  if (state.minVolume > 0) p.set('min_volume', String(state.minVolume));
   const q = state.search.trim();
   if (q) p.set('q', q);
   return p.toString();
@@ -201,11 +203,11 @@ async function loadData() {
     // best-net filter runs client-side: HA/LA nets need the live alchemy cost
     let out = res.rows;
     if (state.profitableOnly) out = out.filter((r) => bestNet(r) > 0);
-    if (state.acq !== 'any') {
+    if (state.acq.length) {
       out = out.filter((r) => {
         if (r.product.buy == null) return false;
         const b = r.product.buy * r.product.qty; // per craft: qty units
-        return state.acq === 'craft' ? r.cost < b : b < r.cost;
+        return (state.acq.includes('craft') && r.cost < b) || (state.acq.includes('buy') && b < r.cost);
       });
     }
     rows = out;
@@ -547,13 +549,8 @@ $('tbody').addEventListener('click', (e) => {
 $('mode').addEventListener('change', (e) => { state.mode = e.target.value; saveState(); scheduleLoad(); });
 $('f2pOnly').addEventListener('change', (e) => { state.f2pOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('profitableOnly').addEventListener('change', (e) => { state.profitableOnly = e.target.checked; saveState(); scheduleLoad(); });
-$('acqFilter').addEventListener('change', (e) => { state.acq = e.target.value; saveState(); scheduleLoad(); });
+$('acqFilter').addEventListener('change', (e) => { state.acq = [...e.target.selectedOptions].map((o) => o.value); saveState(); scheduleLoad(); });
 $('filterLevels').addEventListener('change', (e) => { state.filterLevels = e.target.checked; saveState(); scheduleLoad(); });
-$('minVolume').addEventListener('input', (e) => {
-  state.minVolume = Math.max(0, parseInt(e.target.value, 10) || 0);
-  saveState();
-  scheduleLoad();
-});
 $('search').addEventListener('input', (e) => { state.search = e.target.value; saveState(); scheduleLoad(); });
 $('refresh').addEventListener('click', loadData);
 $('fetchPlayer').addEventListener('click', fetchPlayer);
@@ -567,9 +564,8 @@ async function init() {
   $('mode').value = state.mode;
   $('f2pOnly').checked = state.f2pOnly;
   $('profitableOnly').checked = state.profitableOnly;
-  $('acqFilter').value = state.acq;
+  for (const opt of $('acqFilter').options) opt.selected = state.acq.includes(opt.value);
   $('filterLevels').checked = state.filterLevels;
-  $('minVolume').value = state.minVolume;
   $('player').value = state.playerName;
   $('search').value = state.search;
 

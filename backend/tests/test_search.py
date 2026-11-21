@@ -27,28 +27,25 @@ def test_match_product_name():
     assert not _row_matches(ROW, _search_words("defence"))
 
 
-def test_match_material():
-    assert _row_matches(ROW, _search_words("guam"))
-    assert not _row_matches(ROW, _search_words("aranim"))
+def test_match_material_name_ignored():
+    # search is product-name only: material names must not match
+    assert not _row_matches(ROW, _search_words("guam"))
+    assert not _row_matches(ROW, _search_words("vial"))
 
 
-def test_match_note():
+def test_match_note_ignored():
     row = dict(ROW)
     row["note"] = "needs a tanning leather"
-    assert _row_matches(row, _search_words("tanning"))
-    assert not _row_matches(ROW, _search_words("tanning"))
+    assert not _row_matches(row, _search_words("tanning"))
 
 
-def test_match_skill():
-    assert _row_matches(ROW, _search_words("herblore"))
-    assert not _row_matches(ROW, _search_words("smithing"))
+def test_match_skill_ignored():
+    assert not _row_matches(ROW, _search_words("herblore"))
 
 
 def test_all_words_must_match():
-    assert _row_matches(ROW, _search_words("attack guam"))
-    # both words must appear, not split across fields: "guam" ok, "attack" ok
-    assert _row_matches(ROW, _search_words("guam attack"))
-    assert not _row_matches(ROW, _search_words("attack iron"))
+    assert _row_matches(ROW, _search_words("attack potion"))
+    assert not _row_matches(ROW, _search_words("attack guam"))
 
 
 def test_empty_words_match_everything():
