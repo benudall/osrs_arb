@@ -12,6 +12,7 @@
     <header>
       <h1>OSRS Crafting Arb</h1>
       <div id="meta" class="meta"></div>
+      <button id="refresh">Refresh now</button>
     </header>
 
     <section class="panel">
@@ -26,27 +27,29 @@
             </div>
           </div>
         </div>
+        <div class="filters-side">
+          <h2>Filters</h2>
+          <div class="controls">
+      <div class="search-group">
+        <label title="Case-insensitive search on the product name. Multiple words = every word must match.">
+          Search
+          <input id="search" type="search" placeholder="e.g. potion, rune" />
+        </label>
+        <label class="check" title="Search also matches material names, not just the product name.">
+          <input id="searchMaterials" type="checkbox" /> Search materials
+        </label>
       </div>
-      <div id="playerError" class="error" hidden></div>
-    </section>
-
-    <div class="controls">
-      <label title="Case-insensitive search on the product name. Multiple words = every word must match.">
-        Search
-        <input id="search" type="search" placeholder="e.g. potion, rune" />
-      </label>
-      <label class="check" title="Search also matches material names, not just the product name.">
-        <input id="searchMaterials" type="checkbox" /> In materials
-      </label>
-      <label class="check">
-        <input id="filterLevels" type="checkbox" /> Filter by my levels
-      </label>
-      <label class="check">
-        <input id="f2pOnly" type="checkbox" /> F2P only
-      </label>
-      <label class="check" title="Only show recipes whose best route (Sell Net, HA Net or LA Net) is positive per craft.">
-        <input id="profitableOnly" type="checkbox" /> Profitable only
-      </label>
+      <div class="check-stack">
+        <label class="check">
+          <input id="filterLevels" type="checkbox" /> Filter by my levels
+        </label>
+        <label class="check">
+          <input id="f2pOnly" type="checkbox" /> F2P only
+        </label>
+        <label class="check" title="Only show recipes whose best route (Sell Net, HA Net or LA Net) is positive per craft.">
+          <input id="profitableOnly" type="checkbox" /> Profitable only
+        </label>
+      </div>
       <label title="Filter by the better (cheaper) way to get the product: craft it (Craft < Buy x qty) or buy qty units on the GE (Buy x qty < Craft). Select one or both; empty selection = no filter. Recipes with no buy price are excluded when a side is selected.">Better option
         <select id="acqFilter" multiple size="2">
           <option value="craft">craft</option>
@@ -60,8 +63,11 @@
           <option value="la">LA</option>
         </select>
       </label>
-      <button id="refresh">Refresh now</button>
-    </div>
+          </div>
+        </div>
+      </div>
+      <div id="playerError" class="error" hidden></div>
+    </section>
 
     <div id="errorBanner" class="error banner" hidden></div>
 
@@ -69,13 +75,6 @@
       <thead id="thead"></thead>
       <tbody id="tbody"></tbody>
     </table>
-
-    <footer>
-      <p class="hint">
-        conservative = buy materials at instant-buy price, sell product at instant-sell price. ≈ = latest price
-        stale, using window average. Click a row for the breakdown. Prices: OSRS Wiki Real-time Prices API.
-      </p>
-    </footer>
   </div>
   <script src="/app.js"></script>
 </body>
