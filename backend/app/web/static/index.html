@@ -15,15 +15,19 @@
     </header>
 
     <section class="panel">
-      <div class="panel-head">
-        <h2>Skill levels</h2>
-        <div class="player-fetch">
-          <input id="player" type="text" maxlength="12" placeholder="Player name" />
-          <button id="fetchPlayer">Fetch</button>
+      <div class="panel-cols">
+        <div class="levels-side">
+          <h2>Skill levels</h2>
+          <div id="levels" class="level-grid">
+            <div class="level-input player-cell">
+              <span>Player</span>
+              <input id="player" type="text" maxlength="12" placeholder="Player name" />
+              <button id="fetchPlayer">Fetch</button>
+            </div>
+          </div>
         </div>
       </div>
       <div id="playerError" class="error" hidden></div>
-      <div id="levels" class="level-grid"></div>
     </section>
 
     <div class="controls">
@@ -60,7 +64,6 @@
     </div>
 
     <div id="errorBanner" class="error banner" hidden></div>
-    <p id="status" class="hint"></p>
 
     <table class="recipe-table">
       <thead id="thead"></thead>

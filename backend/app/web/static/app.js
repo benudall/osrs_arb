@@ -101,7 +101,8 @@ async function api(path) {
 
 function renderLevels() {
   const wrap = $('levels');
-  wrap.innerHTML = '';
+  // keep the static player cell (first child), replace only the skill cells
+  for (const el of [...wrap.querySelectorAll('.level-input:not(.player-cell)')]) el.remove();
   for (const s of skills) {
     const cell = document.createElement('div');
     cell.className = 'level-input';
@@ -338,11 +339,6 @@ function renderMeta() {
     'prices updated ' + (meta.last_refresh ? new Date(meta.last_refresh * 1000).toLocaleTimeString() : '—'),
   ];
   $('meta').innerHTML = bits.join(' · ');
-
-  const best = rows.length ? Math.max(...rows.map((r) => bestNet(r))) : 0;
-  $('status').textContent = rows.length
-    ? `${rows.length} recipes · best net ${best.toLocaleString()} gp/craft`
-    : 'No rows — adjust filters or wait for the first price refresh.';
 }
 
 // Two-row header: group th's span the (payout, net) leaf pairs below them.

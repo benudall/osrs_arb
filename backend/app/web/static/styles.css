@@ -36,11 +36,12 @@ h2 { font-size: 14px; margin: 0; }
   padding: 12px;
   margin-bottom: 12px;
 }
-.panel-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
-.player-fetch { display: flex; gap: 6px; }
+.panel-cols { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+.levels-side { flex: 1; min-width: 0; }
 
 .level-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
 .level-input { display: flex; flex-direction: column; gap: 2px; font-size: 12px; color: var(--muted); }
+.level-input > span { line-height: 16px; }
 .show-toggle {
   display: flex;
   align-items: center;
