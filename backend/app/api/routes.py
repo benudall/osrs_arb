@@ -26,9 +26,9 @@ MODES = ("conservative", "optimistic")
 def skills(request: Request):
     db = request.app.state.db
     rows = db.query(
-        "SELECT skill, COUNT(*) AS count FROM recipes GROUP BY skill ORDER BY skill"
+        "SELECT skill, COUNT(*) AS count, MIN(members) AS f2p FROM recipes GROUP BY skill ORDER BY skill"
     )
-    return SkillsResponse(skills=[{"skill": r["skill"], "count": r["count"]} for r in rows])
+    return SkillsResponse(skills=[{"skill": r["skill"], "count": r["count"], "f2p": not r["f2p"]} for r in rows])
 
 
 def _search_words(q: str | None) -> list[str]:

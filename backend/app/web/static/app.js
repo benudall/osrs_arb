@@ -107,7 +107,13 @@ function renderLevels() {
     const cell = document.createElement('div');
     cell.className = 'level-input';
     const span = document.createElement('span');
-    span.textContent = s.skill;
+    const star = document.createElement('span');
+    star.className = 'badge ' + (s.f2p ? 'f2p' : 'members');
+    star.textContent = '★';
+    star.title = s.f2p ? 'Has F2P recipes' : 'Members-only skill';
+    span.append(star);
+    span.append(document.createTextNode(s.skill));
+    span.title = s.f2p ? 'Has F2P recipes' : 'Members-only skill';
     const input = document.createElement('input');
     input.type = 'number';
     input.min = '1';
@@ -677,7 +683,9 @@ async function init() {
 
   try {
     const s = await api('/api/skills');
-    skills = s.skills;
+    // fletching & herblore last, alphabetical otherwise
+    const tail = (sk) => (sk.skill === 'fletching' || sk.skill === 'herblore') ? 1 : 0;
+    skills = s.skills.slice().sort((a, b) => tail(a) - tail(b) || a.skill.localeCompare(b.skill));
     renderLevels();
   } catch (e) {
     $('errorBanner').textContent = `backend unreachable: ${e.message}`;

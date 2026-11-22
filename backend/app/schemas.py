@@ -4,6 +4,7 @@ from pydantic import BaseModel
 class SkillInfo(BaseModel):
     skill: str
     count: int
+    f2p: bool
 
 
 class SkillsResponse(BaseModel):

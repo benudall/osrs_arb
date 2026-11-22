@@ -47,6 +47,7 @@ h2 { font-size: 14px; margin: 0; }
 .level-input input[type='number'] { width: 100%; }
 .player-cell { grid-column: span 2; }
 .player-cell input { width: 100%; }
+.level-input .badge { margin-right: 3px; }
 .show-toggle {
   display: flex;
   align-items: center;
