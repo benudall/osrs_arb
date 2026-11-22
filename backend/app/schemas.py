@@ -31,6 +31,7 @@ class ProductRow(BaseModel):
     qty: int
     price: int
     buy: int | None
+    buy_vol: int
     value: int | None
     stale: bool
     source: str | None
@@ -42,6 +43,7 @@ class ToolRow(BaseModel):
     name: str
     image_url: str | None
     buy: int | None
+    buy_vol: int = 0
     sell: int | None
     tax: int
 

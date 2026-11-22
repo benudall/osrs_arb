@@ -278,3 +278,6 @@ footer { margin-top: 12px; }
 
 /* gp amounts in gold; net stays pos/neg; counts/levels/volumes stay default */
 .gp { color: var(--gold); }
+
+/* stock under a buy value: units traded at that price, white per request */
+.stock { color: #fff; font-size: 11px; }

@@ -256,9 +256,9 @@ const COLS = [
   { key: 'cost', label: 'Craft', sortable: true,
     tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning).' },
   { key: 'buy', label: 'Buy', sortable: true,
-    tip: 'Grand Exchange buy price of the product, per unit. Craft/Buy comparisons use qty x this price vs Craft.' },
+    tip: 'Grand Exchange buy price of the product, per unit; (xN) below = units traded at that price in the 5m (or 1h) window. Craft/Buy comparisons use qty x this price vs Craft.' },
   { key: 'gross', label: 'Sell', sortable: true,
-    tip: 'Grand Exchange sell revenue per craft = GE sell price x product qty.' },
+    tip: 'Grand Exchange sell revenue per craft = GE sell price x product qty; (xN) below = units traded at the sell price in the 5m (or 1h) window.' },
   { key: 'net', label: 'Sell Net', sortable: true,
     tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <50 gp) - cost.' },
   { key: 'ha', label: 'HA', sortable: true,
@@ -273,8 +273,6 @@ const COLS = [
     tip: 'Best route per craft = max over the enabled routes (Sell Net, HA Net, LA Net).' },
   { key: 'return', label: 'Return', sortable: true,
     tip: 'Return multiple = (Best Net + lowest acquisition) ÷ lowest acquisition (Craft vs Buy x qty). ≥1× = profit.' },
-  { key: 'volume', label: 'Vol/5m', sortable: true,
-    tip: '5-minute trade volume of the scarcest item: product sell volume vs each material buy volume / qty. Low = profit you cannot actually move.' },
   { key: 'max_crafts_4h', label: '4h count', sortable: true,
     tip: 'Max crafts per 4 hours under Jagex GE buy limits (min over every material and the product). net/4h in the row detail.' },
 ];
@@ -421,7 +419,7 @@ function detailHtml(r) {
     lines.push(sect('Tools'));
     for (const t of r.tools) {
       const name = t.id !== null && t.id !== undefined ? itemLinks(t.id, t.name, t.image_url) : esc(t.name);
-      lines.push(row(name, null, t.buy, null, t.buy, null, null, null));
+      lines.push(row(name, null, t.buy, null, t.buy, null, null, null, t.buy_vol ?? null));
     }
   }
   if (r.facilities && r.facilities.length) {
@@ -549,6 +547,17 @@ function renderTable() {
       td.textContent = f(v);
       return td;
     };
+    // value with the stock (units traded at that price) below it, white text
+    const numStock = (v, vol, cls, f = fmt) => {
+      const td = num(v, cls, f);
+      if (v != null && vol != null) {
+        const s = document.createElement('div');
+        s.className = 'stock';
+        s.textContent = `(x${fmt(vol)})`;
+        td.append(s);
+      }
+      return td;
+    };
 
     const addSkillRow = (skillName, level, playerLevel) => {
       const sDiv = document.createElement('div');
@@ -584,14 +593,14 @@ function renderTable() {
     const pBuyTotal = r.product.buy != null ? r.product.buy * r.product.qty : null;
     const craftCls = 'gp' + (pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
     const buyCls = 'gp' + (pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
-    const cells = [num(r.xp), num(r.cost, craftCls + ' gsep'), num(r.product.buy, buyCls)];
-    if (routeOn('ge')) cells.push(num(r.gross, payCls(r.net) + ' gsep'), num(r.net, netCls(r.net)));
+    const cells = [num(r.xp), num(r.cost, craftCls + ' gsep'), numStock(r.product.buy, r.product.buy_vol, buyCls)];
+    if (routeOn('ge')) cells.push(numStock(r.gross, r.product.vol, payCls(r.net) + ' gsep'), num(r.net, netCls(r.net)));
     if (routeOn('ha')) cells.push(num(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
     if (routeOn('la')) cells.push(num(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
     const ret = returnMul(r);
     cells.push(num(bN, netCls(bN) + ' gsep'),
       num(ret, (ret == null ? null : ret >= 1 ? 'pos' : 'neg') + ' gsep-r', fmtMul),
-      num(r.volume), num(r.max_crafts_4h));
+      num(r.max_crafts_4h));
     tr.append(...cells);
     tbody.append(tr);
 
