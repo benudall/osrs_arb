@@ -54,6 +54,11 @@ function esc(s) {
   }[c]));
 }
 
+// plain wiki article link (no item id needed)
+function wikiLink(name) {
+  return `<a href="${WIKI_ITEM_URL}${encodeURIComponent(name).replace(/%20/g, '_')}" target="_blank" rel="noopener">${esc(name)}</a>`;
+}
+
 function fmt(n) {
   if (n === null || n === undefined) return '—';
   return Number(n).toLocaleString('en-US');
@@ -325,7 +330,7 @@ function cellValue(r, key) {
 
 function renderMeta() {
   if (!meta) return;
-  const natureLink = meta.nature_rune_id ? itemLinks(meta.nature_rune_id, 'Nature rune', null) : 'Nature rune';
+  const natureLink = meta.nature_rune_id ? itemLinks(meta.nature_rune_id, 'Nature rune', meta.nature_rune_image) : 'Nature rune';
   const bits = [
     meta.alchemy_cost == null
       ? `alchemy cost (${natureLink}): —`
@@ -387,7 +392,8 @@ function renderHead() {
       const th = leaf(c);
       th.rowSpan = 2;
       if (c.key === 'members' || c.key === 'cost') th.classList.add('gsep');
-      if (c.key === 'best_net') th.classList.add('gsep', 'gsep-r');
+      if (c.key === 'best_net') th.classList.add('gsep');
+      if (c.key === 'return') th.classList.add('gsep-r');
       tr1.append(th);
     }
   }
@@ -424,7 +430,11 @@ function detailHtml(r) {
   }
   if (r.facilities && r.facilities.length) {
     lines.push(sect('Facilities'));
-    for (const f of r.facilities) lines.push(row(esc(f), null, null, null, null, null, null, null));
+    for (const f of r.facilities) {
+      // some facility strings combine options ("Cooking range or fire") — link each part
+      const parts = f.split(/\s+or\s+/).map(wikiLink).join(' or ');
+      lines.push(row(parts, null, null, null, null, null, null, null));
+    }
   }
   lines.push(sect('Materials'));
   let matsBuyTotal = 0;
@@ -583,8 +593,8 @@ function renderTable() {
     if (routeOn('ha')) cells.push(num(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
     if (routeOn('la')) cells.push(num(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
     const ret = returnMul(r);
-    cells.push(num(bN, netCls(bN) + ' gsep gsep-r'),
-      num(ret, ret == null ? null : ret >= 1 ? 'pos' : 'neg', fmtMul),
+    cells.push(num(bN, netCls(bN) + ' gsep'),
+      num(ret, (ret == null ? null : ret >= 1 ? 'pos' : 'neg') + ' gsep-r', fmtMul),
       num(r.volume), num(r.max_crafts_4h));
     tr.append(...cells);
     tbody.append(tr);

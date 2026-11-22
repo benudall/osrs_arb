@@ -94,11 +94,13 @@ def recipes(
 
     # alchemy spells need a Nature rune: its current instant-buy price
     alchemy_cost = None
+    nature_image = None
     nature_id = dao.get_name_to_id(db).get("Nature rune")
     if nature_id:
         res = store.resolve(nature_id)
         if res:
             alchemy_cost = res["high"][0]
+        nature_image = (item_map.get(nature_id) or {}).get("image_url")
 
     # craft cost per unit for every craftable item that is used as a material
     # elsewhere (cheapest recipe) — lets the detail table show what a material
@@ -155,6 +157,7 @@ def recipes(
             "skipped_filtered": skipped_filtered,
             "alchemy_cost": alchemy_cost,
             "nature_rune_id": nature_id,
+            "nature_rune_image": nature_image,
         },
     )
 

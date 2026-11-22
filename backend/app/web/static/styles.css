@@ -142,6 +142,8 @@ button:disabled { opacity: 0.5; cursor: default; }
   padding: 0px 5px;
 }
 .detail-table th:first-child, .detail-table td:first-child { text-align: left; }
+.detail-table a { color: var(--accent); text-decoration: none; }
+.detail-table a:hover { text-decoration: underline; }
 .detail-table thead th {
   position: static;
   background: #20232e;

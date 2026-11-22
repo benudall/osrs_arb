@@ -83,6 +83,7 @@ class RecipesMeta(BaseModel):
     skipped_filtered: int
     alchemy_cost: int | None
     nature_rune_id: int | None
+    nature_rune_image: str | None
 
 
 class RecipesResponse(BaseModel):
