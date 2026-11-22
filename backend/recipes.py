@@ -1,12 +1,11 @@
-"""Load, validate, and seed the curated recipe database.
+"""Recipe loading, validation, and name resolution (DB-free).
 
-recipes.json stores item NAMES (human-reviewable); seeding resolves them to
-item ids via the /mapping data in the items table.
+recipes.json stores item NAMES (human-reviewable); baking resolves them to
+item ids via the /mapping data. Used by scripts/bake_static.py and
+scripts/merge_harvested.py.
 """
 import json
 import logging
-
-from ..db import dao
 
 log = logging.getLogger(__name__)
 
@@ -156,29 +155,3 @@ def resolve_names(raw: list[dict], name_to_id: dict) -> tuple[list[dict], list[s
             "facilities": facilities,
         })
     return resolved, sorted(unknown)
-
-
-def seed(db, recipes_path) -> dict:
-    """Validate + resolve + write recipes to DB. Returns a report.
-
-    The members flag in recipes.json is documentation only - the DB stores a
-    computed flag (product or any ingredient is a members item)."""
-    raw = load_recipe_file(recipes_path)
-    ok, struct_errors = validate(raw)
-    for e in struct_errors:
-        log.error("recipe %s", e)
-    name_to_id = dao.get_name_to_id(db)
-    if not name_to_id:
-        raise RuntimeError("items table empty - fetch /mapping before seeding recipes")
-    item_map = dao.get_item_map(db)
-    resolved, unknown = resolve_names(ok, name_to_id)
-    for r in resolved:
-        r["members"] = compute_members(r["product"]["item_id"], r["materials"], item_map)
-    dao.replace_recipes(db, resolved)
-    return {
-        "total_in_file": len(raw),
-        "seeded": len(resolved),
-        "skipped_structural": len(struct_errors),
-        "unknown_items": unknown,
-        "structural_errors": struct_errors,
-    }

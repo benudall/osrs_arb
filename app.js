@@ -10,18 +10,27 @@ const state = {
   acq: [],
   routes: ['ge', 'ha', 'la'],  // visible route column groups
   filterLevels: true,
-  playerName: '',
   search: '',
   searchMaterials: false,
 };
 
 let skills = [];
 let rows = [];
-let allRows = [];  // unfiltered server response; applyFilters() -> rows
+let allRows = [];   // every evaluated row, before any filtering
+let queryRows = []; // after the old server-side filters (skills/levels/f2p/search)
 let meta = null;
 let sortKey = 'best_net';
 let sortDir = 'desc';
 const expanded = new Set();
+
+// static site data (baked by backend/scripts/bake_static.py)
+let items = {};     // item id -> {name, image, limit, value, members}
+let recipesData = [];
+let natureId = null; // Nature rune item id (alchemy cost)
+
+// live prices, polled straight from the wiki API (CORS-open)
+const WIKI_BASE = 'https://prices.runescape.wiki/api/v1/osrs';
+const store = new OSRSPriceStore();
 
 const $ = (id) => document.getElementById(id);
 
@@ -81,19 +90,17 @@ function loadState() {
   state.levels = norm;
   // margin mode removed from the UI; conservative is the only mode
   delete state.mode;
+  // hiscores lookup removed with the backend
+  delete state.playerName;
   // migrate legacy single-value acq ('any'|'craft'|'buy') to array
   if (typeof state.acq === 'string') {
     state.acq = state.acq === 'any' ? [] : [state.acq];
   }
 }
 
-async function api(path) {
-  const r = await fetch(path);
-  if (!r.ok) {
-    let detail = `HTTP ${r.status}`;
-    try { detail = (await r.json()).detail ?? detail; } catch { /* ignore */ }
-    throw new Error(detail);
-  }
+async function fetchJSON(path, opts) {
+  const r = await fetch(path, opts);
+  if (!r.ok) throw new Error(`HTTP ${r.status}`);
   return r.json();
 }
 
@@ -149,55 +156,57 @@ function fillLevelInputs() {
   }
 }
 
-async function fetchPlayer() {
-  const name = state.playerName.trim();
-  const err = $('playerError');
-  err.hidden = true;
-  if (!name) return;
-  $('fetchPlayer').disabled = true;
-  try {
-    const res = await api(`/api/hiscores?player=${encodeURIComponent(name)}`);
-    for (const [skill, level] of Object.entries(res.skills)) {
-      state.levels[skill.toLowerCase()] = String(level);
-    }
-    saveState();
-    fillLevelInputs();
-    scheduleLoad();
-  } catch (e) {
-    err.textContent = `hiscores: ${e.message}`;
-    err.hidden = false;
-  } finally {
-    $('fetchPlayer').disabled = false;
-  }
-}
-
 // ---------- data ----------
 
-function buildQuery() {
-  const p = new URLSearchParams();
-  const active = skills.filter((s) => state.skillFilter[s.skill] !== false);
-  if (active.length && active.length < skills.length) {
-    p.set('skills', active.map((s) => s.skill).join(','));
+function computeSkills() {
+  const by = new Map();
+  for (const r of recipesData) {
+    let s = by.get(r.skill);
+    if (!s) {
+      s = { skill: r.skill, count: 0, f2p: false };
+      by.set(r.skill, s);
+    }
+    s.count++;
+    if (!r.members) s.f2p = true;
   }
-  p.set('mode', 'conservative');
-  if (state.f2pOnly) p.set('f2p_only', 'true');
+  return [...by.values()];
+}
+
+// the old server-side /api/recipes filters, now client-side
+function queryFilter() {
+  const active = new Set(skills.filter((s) => state.skillFilter[s.skill] !== false).map((s) => s.skill));
+  if (skills.length && active.size === 0) return [];
+  const levelMap = {};
   if (state.filterLevels) {
-    const levels = Object.entries(state.levels)
-      .map(([k, v]) => [k, parseInt(v, 10)])
-      .filter(([, v]) => Number.isFinite(v) && v > 0)
-      .map(([k, v]) => `${k}:${v}`);
-    if (levels.length) p.set('levels', levels.join(','));
+    for (const [k, v] of Object.entries(state.levels)) {
+      const n = parseInt(v, 10);
+      if (Number.isFinite(n) && n > 0) levelMap[k] = n;
+    }
   }
-  const q = state.search.trim();
-  if (q) {
-    p.set('q', q);
-    if (state.searchMaterials) p.set('include_materials', 'true');
+  const q = state.search.trim().toLowerCase();
+  const words = q ? q.split(/\s+/).filter(Boolean) : [];
+  const out = [];
+  for (const r of allRows) {
+    if (active.size && active.size < skills.length) {
+      if (!active.has(r.skill) && !(r.extra_skills || []).some((es) => active.has(es.skill))) continue;
+    }
+    if (state.f2pOnly && r.members) continue;
+    if (state.filterLevels) {
+      const lvl = levelMap[r.skill];
+      if (lvl !== undefined && r.level > lvl) continue;
+      if ((r.extra_skills || []).some((es) => levelMap[es.skill] !== undefined && levelMap[es.skill] < es.level)) continue;
+    }
+    if (words.length) {
+      const parts = [r.product.name.toLowerCase()];
+      if (state.searchMaterials) for (const m of r.materials) parts.push(m.name.toLowerCase());
+      if (!words.every((w) => parts.join(' ').includes(w))) continue;
+    }
+    out.push(r);
   }
-  return p.toString();
+  return out;
 }
 
 let loadTimer = null;
-let loadSeq = 0;
 function scheduleLoad() {
   clearTimeout(loadTimer);
   loadTimer = setTimeout(loadData, 350);
@@ -205,7 +214,7 @@ function scheduleLoad() {
 
 // client-side filters (routes/profitableOnly/acq) reapplied without a refetch
 function applyFilters() {
-  let out = allRows;
+  let out = queryRows;
   if (state.profitableOnly) out = out.filter((r) => bestNet(r) > 0);
   if (state.acq.length) {
     out = out.filter((r) => {
@@ -217,30 +226,50 @@ function applyFilters() {
   rows = out;
 }
 
-async function loadData() {
-  const seq = ++loadSeq; // overlapping calls: only the newest may render
+// re-evaluate all recipes against the current price store (no network)
+function loadData() {
+  if (!recipesData.length) return;
+  const { rows: evaluated } = OSRSProfit.evaluateAll(recipesData, items, store, 'conservative');
+  allRows = evaluated;
+  queryRows = queryFilter();
+  applyFilters();
+  meta = {
+    last_refresh: store.lastRefresh,
+    alchemy_cost: natureId != null ? (store.resolve(natureId)?.high?.[0] ?? null) : null,
+    nature_rune_id: natureId,
+    nature_rune_image: natureId != null ? (items[natureId]?.image ?? null) : null,
+  };
+  renderMeta();
+  renderTable();
+}
+
+let lastPoll = 0;
+async function pollPrices(force = false) {
+  const now = Date.now();
+  if (!force && now - lastPoll < 10000) { loadData(); return; } // debounced: just re-render
+  lastPoll = now;
   const banner = $('errorBanner');
   banner.hidden = true;
-  const active = skills.filter((s) => state.skillFilter[s.skill] !== false);
-  if (skills.length && !active.length) {
-    allRows = [];
-    rows = [];
-    renderMeta();
-    renderTable();
-    return;
-  }
   try {
-    const res = await api(`/api/recipes?${buildQuery()}`);
-    if (seq !== loadSeq) return; // a newer request superseded this one
-    meta = res.meta;
-    allRows = res.rows;
-    applyFilters();
-    renderMeta();
-    renderTable();
+    const [latest, w5, w1] = await Promise.all([
+      fetchJSON(WIKI_BASE + '/latest'),
+      fetchJSON(WIKI_BASE + '/5m'),
+      fetchJSON(WIKI_BASE + '/1h'),
+    ]);
+    store.updateLatest(latest);
+    store.updateWindow(w5, '5m');
+    store.updateWindow(w1, '1h');
+    store.markRefreshed();
+    loadData();
   } catch (e) {
-    if (seq !== loadSeq) return;
-    banner.textContent = String(e.message ?? e);
-    banner.hidden = false;
+    // keep whatever prices we have; surface the failure only if we have none
+    console.warn('price refresh failed', e);
+    if (!store.lastRefresh) {
+      banner.textContent = 'could not reach the OSRS wiki prices API: ' + (e.message ?? e);
+      banner.hidden = false;
+    } else {
+      loadData();
+    }
   }
 }
 
@@ -663,10 +692,7 @@ $('routeFilter').addEventListener('change', (e) => {
 $('filterLevels').addEventListener('change', (e) => { state.filterLevels = e.target.checked; saveState(); scheduleLoad(); });
 $('search').addEventListener('input', (e) => { state.search = e.target.value; saveState(); scheduleLoad(); });
 $('searchMaterials').addEventListener('change', (e) => { state.searchMaterials = e.target.checked; saveState(); scheduleLoad(); });
-$('refresh').addEventListener('click', loadData);
-$('fetchPlayer').addEventListener('click', fetchPlayer);
-$('player').addEventListener('keydown', (e) => { if (e.key === 'Enter') fetchPlayer(); });
-$('player').addEventListener('input', (e) => { state.playerName = e.target.value; saveState(); });
+$('refresh').addEventListener('click', () => pollPrices(true));
 
 // ---------- init ----------
 
@@ -677,26 +703,29 @@ async function init() {
   for (const opt of $('acqFilter').options) opt.selected = state.acq.includes(opt.value);
   for (const opt of $('routeFilter').options) opt.selected = state.routes.includes(opt.value);
   $('filterLevels').checked = state.filterLevels;
-  $('player').value = state.playerName;
   $('search').value = state.search;
   $('searchMaterials').checked = state.searchMaterials;
 
   try {
-    const s = await api('/api/skills');
+    const data = await fetchJSON('data/recipes.json', { cache: 'no-cache' });
+    items = data.items;
+    recipesData = data.recipes;
+    for (const [iid, info] of Object.entries(items)) {
+      if (info.name === 'Nature rune') { natureId = parseInt(iid, 10); break; }
+    }
     // fletching & herblore last, alphabetical otherwise
     const tail = (sk) => (sk.skill === 'fletching' || sk.skill === 'herblore') ? 1 : 0;
-    skills = s.skills.slice().sort((a, b) => tail(a) - tail(b) || a.skill.localeCompare(b.skill));
+    skills = computeSkills().sort((a, b) => tail(a) - tail(b) || a.skill.localeCompare(b.skill));
     renderLevels();
   } catch (e) {
-    $('errorBanner').textContent = `backend unreachable: ${e.message}`;
+    $('errorBanner').textContent = `could not load data/recipes.json: ${e.message}`;
     $('errorBanner').hidden = false;
   }
   renderHead();
-  await loadData();
-  // auto-refresh every 30 s; skip while the tab is hidden
-  setInterval(() => { if (!document.hidden) loadData(); }, 30000);
-  // saved player -> fill fields automatically
-  if (state.playerName.trim()) fetchPlayer();
+  loadData(); // empty price store -> rows appear after the first poll
+  await pollPrices(true);
+  // poll the wiki API every 60 s (prices only; recipes are static baked data)
+  setInterval(() => { if (!document.hidden) pollPrices(true); }, 60000);
 }
 
 init();

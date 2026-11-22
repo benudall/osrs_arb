@@ -15,7 +15,7 @@ import urllib.request
 from html.parser import HTMLParser
 
 sys.path.insert(0, ".")
-from app import config  # noqa: E402
+import config  # noqa: E402
 
 OUT_PATH = config.RECIPES_PATH.parent / "harvested_raw.json"
 

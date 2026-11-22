@@ -1,6 +1,6 @@
 import time
 
-from app.core.prices import PriceStore
+from pricestore import PriceStore
 
 
 def make_store(latest=None, w5=None, w1=None, stale_secs=900):

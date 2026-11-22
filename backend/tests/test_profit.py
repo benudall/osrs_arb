@@ -2,8 +2,8 @@ import math
 
 import pytest
 
-from app import config
-from app.core import profit
+import config
+import profit
 
 
 class FakeStore:

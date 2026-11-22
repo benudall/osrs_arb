@@ -14,10 +14,8 @@ import sys
 
 sys.path.insert(0, ".")
 
-from app import config  # noqa: E402
-from app.core import recipes as recipes_mod  # noqa: E402
-from app.db import dao  # noqa: E402
-from app.db.sqlite import Database  # noqa: E402
+import config  # noqa: E402
+import itemdata  # noqa: E402
 
 
 def slug(name):
@@ -51,8 +49,7 @@ def resolve_item(name, name_to_id, lower_map=None):
 
 def main():
     dry = "--dry-run" in sys.argv
-    db = Database(config.DB_PATH)
-    items = dao.get_item_map(db)  # id -> {name, members, buy_limit}
+    _, items = itemdata.index_mapping(itemdata.fetch_mapping())  # id -> {name, members, ...}
     name_to_id = {v["name"]: k for k, v in items.items()}
     lower_map = {}
     for n in name_to_id:

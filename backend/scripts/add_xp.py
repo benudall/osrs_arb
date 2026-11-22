@@ -15,7 +15,7 @@ import re
 import sys
 
 sys.path.insert(0, ".")
-from app import config  # noqa: E402
+import config  # noqa: E402
 from scripts.harvest_recipes import TableCollector, cell_text, fetch  # noqa: E402
 
 # skill -> (page, None) or (page, table_index) when the page has several

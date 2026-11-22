@@ -2,88 +2,97 @@
 
 Buy materials off the GE → craft → sell product. Finds profitable recipes for your skill levels.
 
-**Pure Python.** FastAPI + SQLite backend serves a vanilla JS UI from the same origin —
-no node, no npm, no build step.
+**Fully static.** Vanilla JS served by GitHub Pages — no backend, no database, no build step.
+Prices are pulled client-side from the OSRS Wiki Real-time Prices API (CORS-open); recipes and
+item metadata are baked into `data/recipes.json` at repo-bake time.
 
-- Backend: Python / FastAPI / SQLite (`backend/`)
-- UI: static files served by FastAPI (`backend/app/web/static/` — plain HTML/JS/CSS)
-- Prices: OSRS Wiki Real-time Prices API (needs a descriptive User-Agent — set it in `backend/app/config.py`)
-- Recipes: curated in `backend/data/recipes.json` (item names; resolved to ids at seed)
+- UI: `index.html` + `app.js` + `styles.css` (plain HTML/JS/CSS, no framework)
+- Profit math: `profit.js` + `pricestore.js` (browser globals, also loadable in node)
+- Baked site data: `data/recipes.json` (generated — do not edit by hand)
+- Python tooling: `backend/` (recipe pipeline, tests, parity harness)
+
+## Data flow
+
+```
+repo bake time (python)                 browser (runtime)
+───────────────────────                 ──────────────────────────────
+backend/data/recipes.json   ──bake──▶   data/recipes.json  (ids, names, images,
+  (item names, hand-editable)               buy limits, values — static)
+                                        + wiki /latest /5m /1h  every 60s  (live prices)
+                                        → evaluate all recipes in JS → table
+```
+
+The baked file is self-contained: the browser never fetches `/mapping`. Only prices are live.
+Hiscores lookup was dropped (CORS-blocked, no backend anymore) — enter levels manually; they
+persist in localStorage.
 
 ## Resources
 
-- **[OSRS Wiki Real-time Prices API](https://prices.runescape.wiki/api/v1/osrs)**: Used for real-time item price data and market volume.
-- **[OSRS Hiscores API](https://services.runescape.com/m=hiscore_oldschool/index_lite.json)**: Used to fetch player skill levels for automatic recipe filtering.
+- **[OSRS Wiki Real-time Prices API](https://prices.runescape.wiki/api/v1/osrs)**: live prices
+  + volumes. CORS-open; the browser sends its own User-Agent (can't be overridden from JS —
+  accepted tradeoff of a static site).
+- Recipe data: curated in `backend/data/recipes.json` (item names), harvested from the wiki
+  skill guide pages.
 
-## Setup
+## Run locally
 
-One command (or double-click `start.bat`):
+Any static file server from the repo root (a real server is needed because `fetch()` of local
+JSON doesn't work from `file://`):
 
 ```bash
-python run.py
+python -m http.server 8000
+# open http://127.0.0.1:8000/
 ```
 
-First run creates the venv and installs deps automatically, then serves UI + API at
-http://127.0.0.1:8000/ (open it yourself; add `--browser` to auto-open). Flags:
-`--setup` (reinstall deps), `--port N`, `--browser`.
+## Deploy (GitHub Pages)
 
-Manual equivalent:
+Repo Settings → Pages → Deploy from branch → `main` / `(root)`. `.nojekyll` is already in place.
+After re-baking data, users may need a hard refresh (Pages CDN caches); bump a `?v=` query in
+`app.js`'s `data/recipes.json` fetch if staleness bites.
+
+## Recipe pipeline (all Python, run from `backend/` with the venv active)
+
+```bash
+python -m venv .venv
+.venv/Scripts/pip install -r requirements.txt     # pytest only
+.venv/Scripts/python -m pytest                    # profit-math unit tests
+
+python scripts/harvest_recipes.py    # wiki HTML tables -> data/harvested_raw.json
+python scripts/merge_harvested.py    # resolve names, dedupe vs curated, append
+python scripts/bake_static.py        # data/recipes.json -> ../data/recipes.json (ids)
+python scripts/verify_levels.py      # spot-check recipe levels vs wiki guides
+```
+
+- `backend/data/recipes.json` is the source of truth (item names; reviewable diffs).
+- `bake_static.py` resolves names→ids, recomputes members flags, attaches wiki image URLs,
+  and embeds every referenced item (name/image/buy-limit/value) so the site is self-contained.
+- Merge keeps curated recipes on conflict, resolves dose suffixes (`Attack potion(3)`) and
+  charged jewellery (`Ring of dueling(8)`), and skips quest/minigame-only items.
+
+## JS ↔ Python parity
+
+`profit.js` and `pricestore.js` are ports of `backend/profit.py` / `backend/pricestore.py`
+(the Python files are the reference). The parity harness proves they agree:
 
 ```bash
 cd backend
-python -m venv .venv
-.venv/Scripts/pip install -r requirements.txt     # Windows
-# .venv/bin/pip install -r requirements.txt       # Linux/macOS
-.venv/Scripts/python -m pytest                    # unit tests (profit math)
-.venv/Scripts/python -m uvicorn app.main:app --reload --port 8000
+.venv/Scripts/python scripts/gen_fixtures.py    # live prices -> tests/fixtures.json (committed)
+node scripts/parity_check.cjs                   # replay through JS, diff every row
 ```
 
-On startup the server: fetches `/mapping` into SQLite, seeds `recipes.json`, then polls
-`/latest` + `/5m` + `/1h` every 60 s into `var/osrs_arb.sqlite` (gitignored).
-
-Endpoints: `GET /api/skills`, `GET /api/recipes`, `GET /api/meta`,
-`GET /api/hiscores?player=NAME`, `POST /api/admin/reseed`, `POST /api/admin/refresh-mapping`
-(admin POSTs are unauthenticated — the tool is meant to run on localhost only).
-Docs at http://127.0.0.1:8000/docs.
-
-CLI: `python -m scripts.seed_recipes` (seed only). `python scripts/verify_levels.py`
-prints recipe-level rows from the wiki skill guides for spot-checking.
-
-### Recipe harvesting pipeline
-
-Recipes come from two sources: the curated `recipes.json` entries (hand-checked) and
-a bulk harvest of the wiki skill guide pages (Smithing, Cooking, Crafting, Fletching,
-Herblore + the seven Lvl-N Enchant spell pages):
-
-```bash
-python scripts/harvest_recipes.py    # wiki HTML tables -> data/harvested_raw.json
-python scripts/merge_harvested.py    # resolve names, dedupe vs curated, append
-python -m scripts.seed_recipes       # reload into SQLite
-```
-
-Merge keeps curated recipes on conflict, resolves names against the GE item mapping
-(incl. potion dose suffixes like `Attack potion(3)` and charged jewellery like
-`Ring of dueling(8)`), and skips quest/minigame-only items that aren't on the GE.
-Levels for harvested recipes come straight from the wiki tables.
-
-## Features
-
-- Per-skill level inputs (persisted in localStorage, or fetched from hiscores by player name)
-- Free-text search (product / materials / skill, all words must match)
-- Conservative/optimistic margin modes, f2p filter, min-volume gate
-- Sortable table: product, materials, cost, gross, net, net%, volume, 4h count, member badge
-- Expandable row detail: per-material breakdown + tax + buy-limit math + recipe notes
-- Auto-refresh every 30 s, stale-price marker (≈)
+Fixtures freeze the clock, trim wiki payloads to referenced items, and cover both margin
+modes: every recipe row and every price resolution must match exactly. Re-run `gen_fixtures.py`
+whenever the math or the baked data changes, and commit the refreshed fixtures.
 
 ## Notes
 
 - `high` = price buyers pay (you buy materials at `high`), `low` = price sellers get.
-  Conservative mode = buy `high` / sell `low` (all instant). Optimistic = the reverse.
+  Conservative pricing is baked in: buy `high` / sell `low` (all instant).
 - Cost/Net use the **cheapest acquisition** per material — buy it, or craft it if that is
-  cheaper (⚒ in the materials column). `cost` = Σ cheapest-per-material × qty + fees, `net` = gross − tax − cost.
-- GE tax 2% (exempt < 50 gp, cap 5 m/item) — `backend/app/config.py`.
+  cheaper (⚒ in the materials column). `cost` = Σ cheapest-per-material × qty + fees,
+  `net` = gross − tax − cost.
+- GE tax 2% (exempt < 50 gp, cap 5 m/item) — `backend/config.py` and mirrored in `profit.js`.
 - Buy limits cap real profit: `count` column = max crafts per 4 h, `net_4h` in row detail.
 - Volume gate (5 m trade volume of the scarcest ingredient) hides illiquid "ghost profits".
-- Recipe **levels**: cooking verified against the wiki guide; smithing/crafting/fletching/herblore/magic
-  levels now come from the wiki skill pages via the harvest pipeline. Curated-entry levels are memory-based
-  and win over harvested ones — spot-check with `scripts/verify_levels.py` if in doubt. Yields are wiki-checked.
+- Price staleness: `/latest` values older than 15 min fall back to the 5 m then 1 h window
+  averages (marked ≈).
