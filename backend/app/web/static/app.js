@@ -400,6 +400,7 @@ function renderHead() {
 function detailHtml(r) {
   const sect = (label) => `<tr class="sect"><td colspan="9">${label}</td></tr>`;
   const val = (v, strike) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="gp${strike ? ' strike' : ''}">${fmt(v)}</span>`);
+  const stockVal = (v) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="stock-val">${fmt(v)}</span>`);
   const row = (name, craftEach, buyEach, craftTotal, buyTotal, sellEach, sellTotal, tax, stock = null) => {
     const hasCraft = craftEach !== null && craftEach !== undefined;
     const craftHigher = hasCraft && buyEach !== null && buyEach !== undefined && craftEach > buyEach;
@@ -408,12 +409,12 @@ function detailHtml(r) {
       `<td>${val(craftTotal, craftHigher)}</td>` +
       `<td>${val(buyEach, hasCraft && !craftHigher)}</td>` +
       `<td>${val(buyTotal, hasCraft && !craftHigher)}</td>` +
-      `<td>${val(sellEach)}</td><td>${val(sellTotal)}</td><td>${val(tax)}</td><td>${val(stock)}</td></tr>`;
+      `<td>${val(sellEach)}</td><td>${val(sellTotal)}</td><td>${val(tax)}</td><td>${stockVal(stock)}</td></tr>`;
   };
   const lines = [];
 
   lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
-    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock @ price</th></tr></thead><tbody>');
+    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock</th></tr></thead><tbody>');
 
   if (r.tools && r.tools.length) {
     lines.push(sect('Tools'));

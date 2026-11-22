@@ -259,11 +259,12 @@ button:disabled { opacity: 0.5; cursor: default; }
 
 
 /* detail table: numbers right-aligned, struck-out = more expensive acquisition */
-.detail-table td .gp, .detail-table td .dim {
+.detail-table td .gp, .detail-table td .dim, .detail-table td .stock-val {
   display: inline-block;
   min-width: 100%;
   text-align: right;
 }
+.stock-val { color: #fff; }
 .strike {
   opacity: 0.35;
 }
