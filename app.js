@@ -225,11 +225,13 @@ function loadData() {
   allRows = evaluated;
   queryRows = queryFilter();
   applyFilters();
+  const nres = natureId != null ? store.resolve(natureId) : null;
   meta = {
     last_refresh: store.lastRefresh,
-    alchemy_cost: natureId != null ? (store.resolve(natureId)?.high?.[0] ?? null) : null,
+    alchemy_cost: nres?.high?.[0] ?? null,
     nature_rune_id: natureId,
     nature_rune_image: natureId != null ? (items[natureId]?.image ?? null) : null,
+    nature_rune_vol: nres?.high_vol?.[0] ?? null,
   };
   renderMeta();
   renderTable();
@@ -372,7 +374,8 @@ function renderMeta() {
   const bits = [
     meta.alchemy_cost == null
       ? `alchemy cost (${natureLink}): —`
-      : `alchemy cost (${natureLink}): <span class="gp">${meta.alchemy_cost.toLocaleString()} gp</span>`,
+      : `alchemy cost (${natureLink}): <span class="gp">${meta.alchemy_cost.toLocaleString()} gp</span>` +
+        (meta.nature_rune_vol != null ? ` <span class="stock">(x${fmt(meta.nature_rune_vol)})</span>` : ''),
     'prices updated ' + (meta.last_refresh ? new Date(meta.last_refresh * 1000).toLocaleTimeString() : '—'),
   ];
   $('meta').innerHTML = bits.join(' · ');
