@@ -7,8 +7,8 @@ const state = {
   skillFilter: {},   // skill -> bool (include in table; default true)
   f2pOnly: false,
   profitableOnly: false,
-  acq: [],
-  routes: ['ge', 'ha', 'la'],  // visible route column groups
+  ins: ['craft', 'buy'],       // visible acquisition column groups (craft = Craft, buy = Buy)
+  routes: ['ge', 'ha', 'la'],  // visible route (sell) column groups
   filterLevels: true,
   search: '',
   searchMaterials: false,
@@ -92,10 +92,9 @@ function loadState() {
   delete state.mode;
   // hiscores lookup removed with the backend
   delete state.playerName;
-  // migrate legacy single-value acq ('any'|'craft'|'buy') to array
-  if (typeof state.acq === 'string') {
-    state.acq = state.acq === 'any' ? [] : [state.acq];
-  }
+  // old 'acq' was a row filter (better option); replaced by the In column toggle
+  delete state.acq;
+  if (!Array.isArray(state.ins)) state.ins = ['craft', 'buy'];
 }
 
 async function fetchJSON(path, opts) {
@@ -212,17 +211,10 @@ function scheduleLoad() {
   loadTimer = setTimeout(loadData, 350);
 }
 
-// client-side filters (routes/profitableOnly/acq) reapplied without a refetch
+// client-side filters (profitableOnly) reapplied without a refetch
 function applyFilters() {
   let out = queryRows;
   if (state.profitableOnly) out = out.filter((r) => bestNet(r) > 0);
-  if (state.acq.length) {
-    out = out.filter((r) => {
-      if (r.product.buy == null) return false;
-      const b = r.product.buy * r.product.qty; // per craft: qty units
-      return (state.acq.includes('craft') && r.cost < b) || (state.acq.includes('buy') && b < r.cost);
-    });
-  }
   rows = out;
 }
 
@@ -295,36 +287,52 @@ const COLS = [
   { key: 'gross', label: 'Sell', sortable: true,
     tip: 'Grand Exchange sell revenue per craft = GE sell price x product qty; (xN) below = units traded at the sell price in the 5m (or 1h) window.' },
   { key: 'net', label: 'Sell Net', sortable: true,
-    tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <50 gp) - cost.' },
+    tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <50 gp) - visible acquisition (Craft; or Buy x qty when the Craft column is hidden).' },
   { key: 'ha', label: 'HA', sortable: true,
     tip: 'High Level Alchemy payout per craft = product qty x floor(60% x static value).' },
   { key: 'ha_net', label: 'HA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = HA - min(Craft, Buy x qty) - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = HA - cheapest visible acquisition (Craft vs Buy x qty, per the In toggle) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'la', label: 'LA', sortable: true,
     tip: 'Low Level Alchemy payout per craft = product qty x floor(40% x static value).' },
   { key: 'la_net', label: 'LA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = LA - min(Craft, Buy x qty) - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = LA - cheapest visible acquisition (Craft vs Buy x qty, per the In toggle) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'best_net', label: 'Best\nNet', sortable: true,
-    tip: 'Best route per craft = max over the enabled routes (Sell Net, HA Net, LA Net).' },
+    tip: 'Best route per craft = max over the enabled routes (Sell Net, HA Net, LA Net), each using only the visible acquisition (In toggle).' },
   { key: 'return', label: 'Return', sortable: true,
-    tip: 'Return multiple = (Best Net + lowest acquisition) ÷ lowest acquisition (Craft vs Buy x qty). ≥1× = profit.' },
+    tip: 'Return multiple = (Best Net + lowest visible acquisition) ÷ lowest visible acquisition (Craft vs Buy x qty). ≥1× = profit.' },
   { key: 'max_crafts_4h', label: '4h count', sortable: true,
     tip: 'Max crafts per 4 hours under Jagex GE buy limits (min over every material and the product). net/4h in the row detail.' },
 ];
 
 const alch = (r, frac) => (r.product.value == null ? null : Math.floor(r.product.value * frac) * r.product.qty);
+// acquisition cost per craft from the visible In columns only:
+// both visible = cheaper of Craft vs Buy x qty; one visible = that one; none = null
+const acqBase = (r) => {
+  const c = inOn('craft') ? r.cost : null;
+  const b = inOn('buy') && r.product.buy != null ? r.product.buy * r.product.qty : null;
+  if (c != null && b != null) return Math.min(c, b);
+  return c ?? b;
+};
+// Sell Net is Craft-based (as before) when Craft is visible; falls back to Buy x qty if Craft is hidden
+const sellNet = (r) => {
+  let base = inOn('craft') ? r.cost : null;
+  if (base == null) base = acqBase(r);
+  if (base == null) return null;
+  return OSRSProfit.pyRound(r.gross - r.tax - base);
+};
 const alchNet = (r, frac) => {
   const a = alch(r, frac);
   const fee = meta && meta.alchemy_cost;
-  if (a == null || fee == null) return null;
-  // product in hand via cheapest route: craft the batch, or buy qty units on GE
-  let base = r.cost;
-  if (r.product.buy != null && r.product.buy * r.product.qty < base) base = r.product.buy * r.product.qty;
+  const base = acqBase(r);
+  if (a == null || fee == null || base == null) return null;
   return a - base - fee;
 };
 const bestNet = (r) => {
   const cands = [];
-  if (routeOn('ge')) cands.push(r.net);
+  if (routeOn('ge')) {
+    const sn = sellNet(r);
+    if (sn != null) cands.push(sn);
+  }
   if (routeOn('ha')) {
     const h = alchNet(r, 0.6);
     if (h != null) cands.push(h);
@@ -335,16 +343,11 @@ const bestNet = (r) => {
   }
   return cands.length ? Math.max(...cands) : null;
 };
-const minAcq = (r) => {
-  let base = r.cost;
-  if (r.product.buy != null && r.product.buy * r.product.qty < base) base = r.product.buy * r.product.qty;
-  return base;
-};
-// Return = (Best Net + lowest acquisition) ÷ lowest acquisition = payout ÷ cost
+// Return = (Best Net + lowest visible acquisition) ÷ lowest visible acquisition = payout ÷ cost
 const returnMul = (r) => {
   const best = bestNet(r);
   if (best == null) return null;
-  const base = minAcq(r);
+  const base = acqBase(r);
   if (!base) return null; // free to acquire → ratio undefined
   return (best + base) / base;
 };
@@ -357,6 +360,7 @@ function cellValue(r, key) {
   if (key === 'la') return alch(r, 0.4);
   if (key === 'ha_net') return alchNet(r, 0.6);
   if (key === 'la_net') return alchNet(r, 0.4);
+  if (key === 'net') return sellNet(r);
   if (key === 'best_net') return bestNet(r);
   if (key === 'return') return returnMul(r);
   return r[key];
@@ -381,8 +385,13 @@ const HEAD_GROUPS = [
   { id: 'la', label: 'LA', keys: ['la', 'la_net'] },
 ];
 const routeOf = new Map(HEAD_GROUPS.flatMap((g) => g.keys.map((k) => [k, g.id])));
+const inOf = new Map([['cost', 'craft'], ['buy', 'buy']]); // column key -> In group id
 const routeOn = (id) => state.routes.includes(id);
-const visibleCols = () => COLS.filter((c) => !routeOf.has(c.key) || routeOn(routeOf.get(c.key)));
+const inOn = (id) => state.ins.includes(id);
+const visibleCols = () => COLS.filter((c) =>
+  routeOf.has(c.key) ? routeOn(routeOf.get(c.key))
+  : inOf.has(c.key) ? inOn(inOf.get(c.key))
+  : true);
 
 function renderHead() {
   const startOfGroup = new Map(HEAD_GROUPS.map((g) => [g.keys[0], g]));
@@ -420,7 +429,7 @@ function renderHead() {
     } else {
       const th = leaf(c);
       th.rowSpan = 2;
-      if (c.key === 'members' || c.key === 'cost') th.classList.add('gsep');
+      if (c.key === 'members' || c.key === 'cost' || (c.key === 'buy' && !inOn('craft'))) th.classList.add('gsep');
       if (c.key === 'best_net') th.classList.add('gsep');
       if (c.key === 'return') th.classList.add('gsep-r');
       tr1.append(th);
@@ -621,16 +630,21 @@ function renderTable() {
     const haN = alchNet(r, 0.6);
     const laN = alchNet(r, 0.4);
     const bN = bestNet(r);
+    const sn = sellNet(r);
     // struck = not the best route this row; best stays clean
     const netCls = (v) => `${v > 0 ? 'pos' : 'neg'}${v < bN ? ' strike' : ''}`;
     // payout struck when its route's net is not the best (matches the net cell)
     const payCls = (netV) => (netV != null && netV < bN ? 'gp strike' : 'gp');
     // struck = the higher of Craft vs Buy (unpicked acquisition); buy x qty = per craft
+    // only when both In columns are visible — no comparison to show otherwise
     const pBuyTotal = r.product.buy != null ? r.product.buy * r.product.qty : null;
-    const craftCls = 'gp' + (pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
-    const buyCls = 'gp' + (pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
-    const cells = [num(r.xp), num(r.cost, craftCls + ' gsep'), numStock(r.product.buy, r.product.buy_vol, buyCls)];
-    if (routeOn('ge')) cells.push(numStock(r.gross, r.product.vol, payCls(r.net) + ' gsep'), num(r.net, netCls(r.net)));
+    const bothIn = inOn('craft') && inOn('buy');
+    const craftCls = 'gp' + (bothIn && pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
+    const buyCls = 'gp' + (bothIn && pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
+    const cells = [num(r.xp)];
+    if (inOn('craft')) cells.push(num(r.cost, craftCls + ' gsep'));
+    if (inOn('buy')) cells.push(numStock(r.product.buy, r.product.buy_vol, buyCls + (inOn('craft') ? '' : ' gsep')));
+    if (routeOn('ge')) cells.push(numStock(r.gross, r.product.vol, payCls(sn) + ' gsep'), num(sn, sn == null ? null : netCls(sn)));
     if (routeOn('ha')) cells.push(num(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
     if (routeOn('la')) cells.push(num(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
     const ret = returnMul(r);
@@ -680,7 +694,13 @@ $('tbody').addEventListener('click', (e) => {
 
 $('f2pOnly').addEventListener('change', (e) => { state.f2pOnly = e.target.checked; saveState(); scheduleLoad(); });
 $('profitableOnly').addEventListener('change', (e) => { state.profitableOnly = e.target.checked; saveState(); scheduleLoad(); });
-$('acqFilter').addEventListener('change', (e) => { state.acq = [...e.target.selectedOptions].map((o) => o.value); saveState(); scheduleLoad(); });
+$('insFilter').addEventListener('change', (e) => {
+  state.ins = [...e.target.selectedOptions].map((o) => o.value);
+  saveState();
+  // display-only toggle: no row filtering, just column visibility
+  renderHead();
+  renderTable();
+});
 $('routeFilter').addEventListener('change', (e) => {
   state.routes = [...e.target.selectedOptions].map((o) => o.value);
   saveState();
@@ -700,7 +720,7 @@ async function init() {
   loadState();
   $('f2pOnly').checked = state.f2pOnly;
   $('profitableOnly').checked = state.profitableOnly;
-  for (const opt of $('acqFilter').options) opt.selected = state.acq.includes(opt.value);
+  for (const opt of $('insFilter').options) opt.selected = state.ins.includes(opt.value);
   for (const opt of $('routeFilter').options) opt.selected = state.routes.includes(opt.value);
   $('filterLevels').checked = state.filterLevels;
   $('search').value = state.search;
