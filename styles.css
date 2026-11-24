@@ -280,6 +280,8 @@ button:disabled { opacity: 0.5; cursor: default; }
 .pos { color: var(--pos); }
 .neg { color: var(--neg); }
 .error { color: var(--neg); font-size: 13px; }
+.late { color: var(--neg); }
+.latest-age { color: inherit; }
 .banner { padding: 8px 12px; background: #3a2226; border-radius: 6px; margin-bottom: 12px; }
 .hint { color: var(--muted); font-size: 12px; }
 .empty { text-align: center !important; color: var(--muted); padding: 24px !important; }

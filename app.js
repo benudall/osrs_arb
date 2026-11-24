@@ -226,8 +226,16 @@ function loadData() {
   queryRows = queryFilter();
   applyFilters();
   const nres = natureId != null ? store.resolve(natureId) : null;
+  // newest trade timestamp across all items: game live -> a few min old max;
+  // frozen while polls still succeed -> servers likely in maintenance
+  let latestTs = 0;
+  for (const d of Object.values(store.latest)) {
+    if (d.high_ts > latestTs) latestTs = d.high_ts;
+    if (d.low_ts > latestTs) latestTs = d.low_ts;
+  }
   meta = {
     last_refresh: store.lastRefresh,
+    latest_ts: latestTs || null,
     alchemy_cost: nres?.high?.[0] ?? null,
     nature_rune_id: natureId,
     nature_rune_image: natureId != null ? (items[natureId]?.image ?? null) : null,
@@ -376,8 +384,16 @@ function renderMeta() {
       ? `alchemy cost (${natureLink}): —`
       : `alchemy cost (${natureLink}): <span class="gp">${meta.alchemy_cost.toLocaleString()} gp</span>` +
         (meta.nature_rune_vol != null ? ` <span class="stock">(x${fmt(meta.nature_rune_vol)})</span>` : ''),
-    'prices updated ' + (meta.last_refresh ? new Date(meta.last_refresh * 1000).toLocaleTimeString() : '—'),
+    'last refresh ' + (meta.last_refresh ? new Date(meta.last_refresh * 1000).toLocaleTimeString() : '—'),
   ];
+  // newest trade age: red past 10 min while refreshes keep succeeding = likely maintenance
+  const LATE_SECS = 600;
+  const age = meta.latest_ts ? Date.now() / 1000 - meta.latest_ts : null;
+  const late = age != null && age > LATE_SECS;
+  const ageBit = meta.latest_ts
+    ? ` <a class="latest-age${late ? ' late' : ''}" href="https://oldschool.runescape.com/game-status" target="_blank" rel="noopener" title="Trade timestamps from the OSRS wiki prices API. Opens the Jagex game status page.${late ? ' No trades for ' + Math.floor(age / 60) + ' min while price refreshes still succeed — RuneScape may be under maintenance.' : ''}">(${Math.floor(age / 60)}m old)</a>`
+    : '';
+  bits.push(`latest prices <span${late ? ' class="late"' : ''}>${meta.latest_ts ? new Date(meta.latest_ts * 1000).toLocaleTimeString() : '—'}${ageBit}</span>`);
   $('meta').innerHTML = bits.join(' · ');
 }
 
