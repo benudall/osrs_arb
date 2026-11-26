@@ -10,6 +10,7 @@ const state = {
   ins: ['craft', 'buy'],       // visible acquisition column groups (craft = Craft, buy = Buy)
   routes: ['ge', 'ha', 'la'],  // visible route (sell) column groups
   filterLevels: true,
+  liquidGp: '',
   search: '',
   searchMaterials: false,
 };
@@ -324,6 +325,8 @@ const COLS = [
     tip: 'Best route per craft = max over the enabled routes (Sell Net, HA Net, LA Net), each using only the visible acquisition (In toggle).' },
   { key: 'return', label: 'Return', sortable: true,
     tip: 'Return multiple = (Best Net + lowest visible acquisition) ÷ lowest visible acquisition (Craft vs Buy x qty). ≥1× = profit.' },
+  { key: 'max_gp', label: 'Max\nNet', sortable: true,
+    tip: 'Max net from liquid gold: top = Best Net x crafts affordable with Liquid gp (÷ cheapest visible acquisition, Craft vs Buy x qty); (xN) below = craft count.' },
   { key: 'max_crafts_4h', label: '4h count', sortable: true,
     tip: 'Max crafts per 4 hours under Jagex GE buy limits (min over every material and the product). net/4h in the row detail.' },
 ];
@@ -378,6 +381,25 @@ const returnMul = (r) => {
 };
 const fmtMul = (v) => (v === null || v === undefined ? '—' : v.toFixed(2) + '×');
 
+// Liquid gp as a positive number, or null when unset/invalid
+const liquidGpNum = () => {
+  const n = parseFloat(state.liquidGp);
+  return Number.isFinite(n) && n > 0 ? n : null;
+};
+// Max gp = crafts affordable with Liquid gp (÷ cheapest visible acquisition) x Best Net
+const maxCrafts = (r) => {
+  const lg = liquidGpNum();
+  const base = acqBase(r);
+  if (lg == null || base == null || base <= 0) return null;
+  return Math.floor(lg / base);
+};
+const maxGp = (r) => {
+  const best = bestNet(r);
+  const n = maxCrafts(r);
+  if (best == null || n == null) return null;
+  return best * n;
+};
+
 function cellValue(r, key) {
   if (key === 'product') return r.product.name;
   if (key === 'buy') return r.product.buy;
@@ -388,6 +410,7 @@ function cellValue(r, key) {
   if (key === 'net') return sellNet(r);
   if (key === 'best_net') return bestNet(r);
   if (key === 'return') return returnMul(r);
+  if (key === 'max_gp') return maxGp(r);
   return r[key];
 }
 
@@ -437,7 +460,7 @@ function renderHead() {
     const th = document.createElement('th');
     th.textContent = c.key === 'product' ? `Products (x${rows.length})` : c.label;
     if (c.tip) th.title = c.tip;
-    if (c.key === 'best_net') th.style.whiteSpace = 'pre-line'; // label stacks vertically
+    if (c.key === 'best_net' || c.key === 'max_gp') th.style.whiteSpace = 'pre-line'; // label stacks vertically
     if (c.key === 'skill') th.style.textAlign = 'center';
     if (c.sortable) {
       th.className = 'sortable';
@@ -465,7 +488,7 @@ function renderHead() {
       th.rowSpan = 2;
       if (c.key === 'members' || c.key === 'cost' || (c.key === 'buy' && !inOn('craft'))) th.classList.add('gsep');
       if (c.key === 'best_net') th.classList.add('gsep');
-      if (c.key === 'return') th.classList.add('gsep-r');
+      if (c.key === 'max_gp') th.classList.add('gsep-r');
       tr1.append(th);
     }
   }
@@ -758,8 +781,30 @@ function renderTable() {
     if (routeOn('ha')) cells.push(num(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
     if (routeOn('la')) cells.push(num(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
     const ret = returnMul(r);
+    // Max Net: Best Net x crafts affordable with Liquid gp, (xN) count below
+    const mgCell = () => {
+      const td = document.createElement('td');
+      const n = maxCrafts(r);
+      const total = maxGp(r);
+      if (n == null || total == null) {
+        td.textContent = '—';
+        td.classList.add('gsep-r');
+        return td;
+      }
+      td.classList.add('gsep-r');
+      const gp = document.createElement('div');
+      gp.className = 'gp';
+      gp.textContent = fmt(total);
+      td.append(gp);
+      const s = document.createElement('div');
+      s.className = 'stock';
+      s.textContent = `(x${fmt(n)})`;
+      td.append(s);
+      return td;
+    };
     cells.push(num(bN, (bN == null ? null : netCls(bN)) + ' gsep'),
-      num(ret, (ret == null ? null : ret >= 1 ? 'pos' : 'neg') + ' gsep-r', fmtMul),
+      num(ret, (ret == null ? null : ret >= 1 ? 'pos' : 'neg'), fmtMul),
+      mgCell(),
       num(r.max_crafts_4h));
     tr.append(...cells);
     tbody.append(tr);
@@ -820,6 +865,7 @@ $('routeFilter').addEventListener('change', (e) => {
   renderTable();
 });
 $('filterLevels').addEventListener('change', (e) => { state.filterLevels = e.target.checked; saveState(); scheduleLoad(); });
+$('liquidGp').addEventListener('input', (e) => { state.liquidGp = e.target.value; saveState(); scheduleLoad(); });
 $('search').addEventListener('input', (e) => { state.search = e.target.value; saveState(); scheduleLoad(); });
 $('searchMaterials').addEventListener('change', (e) => { state.searchMaterials = e.target.checked; saveState(); scheduleLoad(); });
 $('refresh').addEventListener('click', () => pollPrices(true));
@@ -833,6 +879,7 @@ async function init() {
   for (const opt of $('insFilter').options) opt.selected = state.ins.includes(opt.value);
   for (const opt of $('routeFilter').options) opt.selected = state.routes.includes(opt.value);
   $('filterLevels').checked = state.filterLevels;
+  $('liquidGp').value = state.liquidGp;
   $('search').value = state.search;
   $('searchMaterials').checked = state.searchMaterials;
 
