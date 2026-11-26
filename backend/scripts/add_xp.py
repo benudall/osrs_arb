@@ -1,4 +1,4 @@
-"""Add an 'xp' field to every recipe in data/recipes.json.
+"""Add an 'xp' field to every recipe in data/recipes/<skill>.json.
 
 Source: OSRS wiki '<Skill>/Experience table' pages (the canonical per-recipe
 experience lists). Each wiki row is matched to a recipe by product name
@@ -16,6 +16,7 @@ import sys
 
 sys.path.insert(0, ".")
 import config  # noqa: E402
+import recipes as recipes_mod  # noqa: E402
 from scripts.harvest_recipes import TableCollector, cell_text, fetch  # noqa: E402
 
 # skill -> (page, None) or (page, table_index) when the page has several
@@ -144,8 +145,7 @@ def match_recipe(recipe: dict, rows: list):
 
 def main():
     dry = "--dry-run" in sys.argv
-    data = json.load(open(config.RECIPES_PATH, encoding="utf-8"))
-    recipes = data["recipes"]
+    recipes = recipes_mod.load_recipes(config.RECIPES_DIR)
 
     wiki = {}
     for skill, (page, ti) in SOURCES.items():
@@ -199,11 +199,8 @@ def main():
         print("  N", *a)
 
     if not dry:
-        data["recipes"] = new_recipes
-        with open(config.RECIPES_PATH, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
-            f.write("\n")
-        print(f"\nwritten: {config.RECIPES_PATH}")
+        recipes_mod.write_recipes(config.RECIPES_DIR, new_recipes)
+        print(f"\nwritten: {config.RECIPES_DIR}/")
 
 
 if __name__ == "__main__":

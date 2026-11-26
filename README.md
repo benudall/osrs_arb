@@ -4,11 +4,11 @@ Buy materials off the GE → craft → sell product. Finds profitable recipes fo
 
 **Fully static.** Vanilla JS served by GitHub Pages — no backend, no database, no build step.
 Prices are pulled client-side from the OSRS Wiki Real-time Prices API (CORS-open); recipes and
-item metadata are baked into `data/recipes.json` at repo-bake time.
+item metadata are baked into `data/` at repo-bake time.
 
 - UI: `index.html` + `app.js` + `styles.css` (plain HTML/JS/CSS, no framework)
 - Profit math: `profit.js` + `pricestore.js` (browser globals, also loadable in node)
-- Baked site data: `data/recipes.json` (generated — do not edit by hand)
+- Baked site data: `data/items.json` + `data/recipes/` (generated — do not edit by hand)
 - Python tooling: `backend/` (recipe pipeline, tests, parity harness)
 
 ## Data flow
@@ -16,13 +16,18 @@ item metadata are baked into `data/recipes.json` at repo-bake time.
 ```
 repo bake time (python)                 browser (runtime)
 ───────────────────────                 ──────────────────────────────
-backend/data/recipes.json   ──bake──▶   data/recipes.json  (ids, names, images,
-  (item names, hand-editable)               buy limits, values — static)
+backend/data/recipes/       ──bake──▶   data/items.json           (id -> name/image/
+  <skill>.json (per skill)                buy limit, value — static)
+  (item names, hand-editable)           data/recipes/<skill>.json  (resolved recipes)
+                                        data/recipes/index.json    (manifest)
                                         + wiki /latest /5m /1h  every 60s  (live prices)
                                         → evaluate all recipes in JS → table
 ```
 
 The baked file is self-contained: the browser never fetches `/mapping`. Only prices are live.
+Recipes may reference items with no GE price history (ids/metadata fall back to OSRS wiki
+infoboxes at bake time): those rows still render — craft cost covers priced materials only
+(marked `*`), and HA/LA payouts come from the static item value.
 Hiscores lookup was dropped (CORS-blocked, no backend anymore) — enter levels manually; they
 persist in localStorage.
 
@@ -31,8 +36,8 @@ persist in localStorage.
 - **[OSRS Wiki Real-time Prices API](https://prices.runescape.wiki/api/v1/osrs)**: live prices
   + volumes. CORS-open; the browser sends its own User-Agent (can't be overridden from JS —
   accepted tradeoff of a static site).
-- Recipe data: curated in `backend/data/recipes.json` (item names), harvested from the wiki
-  skill guide pages.
+- Recipe data: curated in `backend/data/recipes/<skill>.json` (item names), harvested from
+  the wiki skill guide pages.
 
 ## Run locally
 
@@ -48,7 +53,7 @@ python -m http.server 8000
 
 Repo Settings → Pages → Deploy from branch → `main` / `(root)`. `.nojekyll` is already in place.
 After re-baking data, users may need a hard refresh (Pages CDN caches); bump a `?v=` query in
-`app.js`'s `data/recipes.json` fetch if staleness bites.
+`app.js`'s `data/` fetches if staleness bites.
 
 ## Recipe pipeline (all Python, run from `backend/` with the venv active)
 
@@ -59,11 +64,12 @@ python -m venv .venv
 
 python scripts/harvest_recipes.py    # wiki HTML tables -> data/harvested_raw.json
 python scripts/merge_harvested.py    # resolve names, dedupe vs curated, append
-python scripts/bake_static.py        # data/recipes.json -> ../data/recipes.json (ids)
+python scripts/bake_static.py        # data/recipes/<skill>.json -> ../data/ (items.json + recipes/)
 python scripts/verify_levels.py      # spot-check recipe levels vs wiki guides
 ```
 
-- `backend/data/recipes.json` is the source of truth (item names; reviewable diffs).
+- `backend/data/recipes/<skill>.json` is the source of truth (item names; reviewable diffs),
+  one file per skill; `_meta.json` holds version + provenance notes.
 - `bake_static.py` resolves names→ids, recomputes members flags, attaches wiki image URLs,
   and embeds every referenced item (name/image/buy-limit/value) so the site is self-contained.
 - Merge keeps curated recipes on conflict, resolves dose suffixes (`Attack potion(3)`) and
@@ -88,11 +94,16 @@ whenever the math or the baked data changes, and commit the refreshed fixtures.
 
 - `high` = price buyers pay (you buy materials at `high`), `low` = price sellers get.
   Conservative pricing is baked in: buy `high` / sell `low` (all instant).
-- Cost/Net use the **cheapest acquisition** per material — buy it, or craft it if that is
-  cheaper (⚒ in the materials column). `cost` = Σ cheapest-per-material × qty + fees,
-  `net` = gross − tax − cost.
+- Cost/Net use the **cheapest acquisition** per material — buy it, or craft it if
+  that is cheaper (⚒ in the materials column), recursively (crafted materials
+  price their own materials the same way). `cost` = Σ cheapest-per-material ×
+  qty + fees, `net` = gross − tax − cost.
 - GE tax 2% (exempt < 50 gp, cap 5 m/item) — `backend/config.py` and mirrored in `profit.js`.
 - Buy limits cap real profit: `count` column = max crafts per 4 h, `net_4h` in row detail.
+- Row detail expands materials that are themselves products of recipes: each
+  craftable material's own recipe opens recursively in column blocks to its left
+  ("← made from"), with the material's cells spanning its expansion; sub-blocks
+  show the sub-recipe's fee and materials totals.
 - Volume gate (5 m trade volume of the scarcest ingredient) hides illiquid "ghost profits".
 - Price staleness: `/latest` values older than 15 min fall back to the 5 m then 1 h window
   averages (marked ≈).

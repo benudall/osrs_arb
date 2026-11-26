@@ -19,6 +19,7 @@ let rows = [];
 let allRows = [];   // every evaluated row, before any filtering
 let queryRows = []; // after the old server-side filters (skills/levels/f2p/search)
 let meta = null;
+let craftRows = new Map(); // product item id -> evaluated recipe row (detail-table material recursion)
 let sortKey = 'best_net';
 let sortDir = 'desc';
 const expanded = new Set();
@@ -223,6 +224,19 @@ function loadData() {
   if (!recipesData.length) return;
   const { rows: evaluated } = OSRSProfit.evaluateAll(recipesData, items, store, 'conservative');
   allRows = evaluated;
+  // product item id -> the evaluated row behind its cheapest per-unit craft cost
+  // (same recipe the Craft column's material prices come from); lets the detail
+  // table expand materials that are themselves products of other recipes
+  const bestCraft = new Map();
+  const firstRow = new Map();
+  for (const row of evaluated) {
+    if (!firstRow.has(row.product.id)) firstRow.set(row.product.id, row);
+    if (row.cost != null && row.product.qty >= 1) {
+      const cur = bestCraft.get(row.product.id);
+      if (!cur || row.cost / row.product.qty < cur.cost / cur.product.qty) bestCraft.set(row.product.id, row);
+    }
+  }
+  craftRows = new Map([...firstRow].map(([pid, row]) => [pid, bestCraft.get(pid) ?? row]));
   queryRows = queryFilter();
   applyFilters();
   const nres = natureId != null ? store.resolve(natureId) : null;
@@ -278,7 +292,7 @@ async function pollPrices(force = false) {
 // ---------- rendering ----------
 
 const COLS = [
-  { key: 'product', label: 'Product', sortable: true,
+  { key: 'product', label: 'Products', sortable: true,
     tip: 'Item crafted. Name links to its price page on the wiki.' },
   { key: 'materials', label: 'Materials', sortable: false,
     tip: 'Materials per craft, each at its cheapest acquisition price in gp (bought, or crafted if cheaper — ⚒ = crafted).' },
@@ -291,7 +305,7 @@ const COLS = [
   { key: 'xp', label: 'XP', sortable: true,
     tip: 'Experience gained per craft, from the OSRS wiki (0 = service actions like tanning, or the (unf) step of a potion).' },
   { key: 'cost', label: 'Craft', sortable: true,
-    tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning).' },
+    tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning). * = some materials have no GE price — cost covers priced parts only.' },
   { key: 'buy', label: 'Buy', sortable: true,
     tip: 'Grand Exchange buy price of the product, per unit; (xN) below = units traded at that price in the 5m (or 1h) window. Craft/Buy comparisons use qty x this price vs Craft.' },
   { key: 'gross', label: 'Sell', sortable: true,
@@ -325,6 +339,7 @@ const acqBase = (r) => {
 };
 // Sell Net is Craft-based (as before) when Craft is visible; falls back to Buy x qty if Craft is hidden
 const sellNet = (r) => {
+  if (r.gross == null) return null;
   let base = inOn('craft') ? r.cost : null;
   if (base == null) base = acqBase(r);
   if (base == null) return null;
@@ -420,7 +435,7 @@ function renderHead() {
   const tr2 = document.createElement('tr');
   const leaf = (c) => {
     const th = document.createElement('th');
-    th.textContent = c.label;
+    th.textContent = c.key === 'product' ? `Products (x${rows.length})` : c.label;
     if (c.tip) th.title = c.tip;
     if (c.key === 'best_net') th.style.whiteSpace = 'pre-line'; // label stacks vertically
     if (c.key === 'skill') th.style.textAlign = 'center';
@@ -461,65 +476,131 @@ function renderHead() {
 }
 
 function detailHtml(r) {
-  const sect = (label) => `<tr class="sect"><td colspan="9">${label}</td></tr>`;
-  const val = (v, strike) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="gp${strike ? ' strike' : ''}">${fmt(v)}</span>`);
-  const stockVal = (v) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="stock-val">${fmt(v)}</span>`);
-  const row = (name, craftEach, buyEach, craftTotal, buyTotal, sellEach, sellTotal, tax, stock = null) => {
-    const hasCraft = craftEach !== null && craftEach !== undefined;
-    const craftHigher = hasCraft && buyEach !== null && buyEach !== undefined && craftEach > buyEach;
-    return `<tr><td>${name}</td>` +
-      `<td>${val(craftEach, craftHigher)}</td>` +
-      `<td>${val(craftTotal, craftHigher)}</td>` +
-      `<td>${val(buyEach, hasCraft && !craftHigher)}</td>` +
-      `<td>${val(buyTotal, hasCraft && !craftHigher)}</td>` +
-      `<td>${val(sellEach)}</td><td>${val(sellTotal)}</td><td>${val(tax)}</td><td>${stockVal(stock)}</td></tr>`;
+  const INDENT = 16; // px of name-cell indent per recursion level
+  const stockTip = 'Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.';
+
+  // Materials that are themselves products of recipes are expanded in rows
+  // ABOVE the material: the material's recipe opens as indented sub-rows, and
+  // the material's own row below them doubles as the total of that block
+  // (same columns as the product row). craftRows maps product item id -> the
+  // evaluated recipe row behind its Craft price (see loadData); the product-id
+  // chain guards against recipe loops. Each node also remembers the buy price
+  // of the product it goes into, so a sub-material that costs more than that
+  // product is struck out (its whole acquisition path is dominated).
+  const buildNode = (mat, chain, parentPrice, parentName) => {
+    const sub = craftRows.get(mat.id) ?? null;
+    const node = { mat, sub, children: [], fee: 0, parentPrice: parentPrice ?? null, parentName: parentName ?? null };
+    if (!sub || chain.has(mat.id)) return node; // not craftable, or would loop
+    const next = new Set(chain);
+    next.add(mat.id);
+    node.children = sub.materials.map((m) => buildNode(m, next, mat.price, mat.name));
+    node.fee = sub.fee || 0;
+    return node;
   };
+
+  const topNodes = r.materials.map((m) => buildNode(m, new Set([r.product.id])));
+
+  const val = (v, strike) => (v === null || v === undefined || Number.isNaN(v)
+    ? '<span class="dim">—</span>'
+    : `<span class="gp${strike ? ' strike' : ''}">${fmt(v)}</span>`);
+  const stockVal = (v) => (v === null || v === undefined ? '<span class="dim">—</span>' : `<span class="stock-val">${fmt(v)}</span>`);
+  const matName = (m) => `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name, m.image_url)}`;
+  const indent = (depth) => (depth > 0 ? ` style="padding-left:${depth * INDENT}px"` : '');
+
+  // one material row; a row with children (a craftable material) doubles as
+  // the total of the rows above it, so it gets the totals styling.
+  // Struck = the more expensive acquisition: craft vs buy within the row, and
+  // (for expanded sub-materials) the whole row when its cheapest acquisition
+  // costs more than the product it goes into.
+  const matRow = (node, depth) => {
+    const m = node.mat;
+    const isParent = node.children.length > 0;
+    const hasCraft = m.craft !== null && m.craft !== undefined;
+    const craftHigher = hasCraft && m.price !== null && m.price !== undefined && m.craft > m.price;
+    const craftChosen = hasCraft && (m.price == null || m.craft < m.price);
+    const chosen = craftChosen ? m.craft : m.price;
+    const dominated = node.parentPrice != null && chosen != null && chosen > node.parentPrice;
+    const strikeCraft = (hasCraft && craftHigher) || (dominated && craftChosen);
+    const strikeBuy = (hasCraft && !craftHigher) || (dominated && !craftChosen);
+    let tip = '';
+    if (isParent) {
+      tip = ` title="Crafted: ${esc(node.sub.materials.map((sm) => `${sm.qty}× ${sm.name}`).join(' + '))} → ${node.sub.product.qty}× ${esc(m.name)} (per craft) — total of the rows above"`;
+    } else if (dominated) {
+      tip = ` title="${fmt(chosen)} gp — more expensive than ${esc(node.parentName)} (${fmt(node.parentPrice)} gp)"`;
+    }
+    const cls = depth === 0 ? ` class="hl${isParent ? ' totals' : ''}"` : isParent ? ' class="totals"' : '';
+    return `<tr${cls}><td${indent(depth)}${tip}>${matName(m)}</td>` +
+      `<td>${val(m.craft, strikeCraft)}</td>` +
+      `<td>${val(hasCraft ? m.craft * m.qty : null, strikeCraft)}</td>` +
+      `<td>${val(m.price, strikeBuy)}</td>` +
+      `<td>${val(m.price != null ? m.price * m.qty : null, strikeBuy)}</td>` +
+      `<td>${val(null)}</td><td>${val(null)}</td><td>${val(null)}</td>` +
+      `<td>${stockVal(m.vol)}</td></tr>`;
+  };
+
+  // sub-recipe fee, one more indented row above the total row
+  const feeRow = (fee, depth) =>
+    `<tr><td${indent(depth)}><span class="dim">+ fee</span></td>` +
+    `<td>${val(null)}</td><td>${val(fee)}</td><td>${val(null)}</td><td>${val(null)}</td>` +
+    `<td>${val(null)}</td><td>${val(null)}</td><td>${val(null)}</td><td>${val(null)}</td></tr>`;
+
+  // post-order: a node's expansion renders above its own (total) row
+  const emitNode = (node, depth, out) => {
+    for (const c of node.children) emitNode(c, depth + 1, out);
+    if (node.fee > 0) out.push(feeRow(node.fee, depth + 1));
+    out.push(matRow(node, depth));
+  };
+
   const lines = [];
 
-  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
-    '<th title="Grand Exchange stock at that price: units traded at that price point in the 5m (or 1h) window. 0 = no trades at that price in the window.">Stock</th></tr></thead><tbody>');
-
+  // tools & facilities as a plain note above the table (no price columns)
+  const notes = [];
   if (r.tools && r.tools.length) {
-    lines.push(sect('Tools'));
-    for (const t of r.tools) {
-      const name = t.id !== null && t.id !== undefined ? itemLinks(t.id, t.name, t.image_url) : esc(t.name);
-      lines.push(row(name, null, t.buy, null, t.buy, null, null, null, t.buy_vol ?? null));
-    }
+    notes.push('Tools: ' + r.tools.map((t) => (t.id !== null && t.id !== undefined ? itemLinks(t.id, t.name, t.image_url) : esc(t.name))).join(', '));
   }
   if (r.facilities && r.facilities.length) {
-    lines.push(sect('Facilities'));
-    for (const f of r.facilities) {
-      // some facility strings combine options ("Cooking range or fire") — link each part
-      const parts = f.split(/\s+or\s+/).map(wikiLink).join(' or ');
-      lines.push(row(parts, null, null, null, null, null, null, null));
-    }
+    // some facility strings combine options ("Cooking range or fire") — link each part
+    notes.push('Facilities: ' + r.facilities.map((f) => f.split(/\s+or\s+/).map(wikiLink).join(' or ')).join(', '));
   }
+  if (notes.length) lines.push(`<div class="hint">${notes.join(' · ')}</div>`);
+
+  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
+    `<th title="${stockTip}">Stock</th></tr></thead><tbody>`);
+
+  const sect = (label) => `<tr class="sect"><td colspan="9">${label}</td></tr>`;
+
   lines.push(sect('Materials'));
-  let matsBuyTotal = 0;
-  let matsCraftTotal = 0;
-  for (const m of r.materials) {
-    // struck = the more expensive acquisition (row() strikes craft when craft>buy, buy when craft<=buy & craft exists)
-    const hasCraft = m.craft !== null && m.craft !== undefined;
-    const craftStruck = hasCraft && m.craft > m.price;
-    const buyStruck = hasCraft && !craftStruck;
-    if (!buyStruck) matsBuyTotal += m.price * m.qty;        // buy total: only non-struck buy options
-    if (hasCraft && !craftStruck) matsCraftTotal += m.craft * m.qty;  // craft total: only non-struck craft options
-    const name = `${m.qty > 1 ? m.qty + '× ' : ''}${itemLinks(m.id, m.name, m.image_url)}`;
-    lines.push(row(name, m.craft, m.price, hasCraft ? m.craft * m.qty : null, m.price * m.qty, null, null, null, m.vol ?? null));
-  }
+  for (const n of topNodes) emitNode(n, 0, lines);
   if (r.materials.length > 1) {
-    lines.push(row('<b>Materials total</b>', null, null, matsCraftTotal || null, matsBuyTotal || null, null, null, null));
+    let matsBuyTotal = 0;
+    let matsCraftTotal = 0;
+    for (const m of r.materials) {
+      // struck = the more expensive acquisition (excluded from the totals)
+      const hasCraft = m.craft !== null && m.craft !== undefined;
+      const craftStruck = hasCraft && m.craft > m.price;
+      const buyStruck = hasCraft && !craftStruck; // buy struck when craft is the cheaper pick
+      if (!buyStruck && m.price != null) matsBuyTotal += m.price * m.qty;        // buy total: only non-struck buy options
+      if (hasCraft && !craftStruck && m.craft != null) matsCraftTotal += m.craft * m.qty;  // craft total: only non-struck craft options
+    }
+    lines.push('<tr class="totals hl"><td><b>Materials total</b></td>' +
+      `<td>${val(null)}</td><td>${val(matsCraftTotal || null)}</td><td>${val(null)}</td><td>${val(matsBuyTotal || null)}</td>` +
+      `<td>${val(null)}</td><td>${val(null)}</td><td>${val(null)}</td><td>${stockVal(null)}</td></tr>`);
   }
   lines.push(sect('Product'));
   const prodName = `${r.product.qty > 1 ? r.product.qty + '× ' : ''}${itemLinks(r.product.id, r.product.name, r.product.image_url)}`;
-  const sellEach = Math.round(r.gross / r.product.qty);
-  lines.push(row(prodName, null, null, null, null, sellEach, r.gross, r.tax, r.product.vol ?? null));
+  const sellEach = r.gross == null ? null : Math.round(r.gross / r.product.qty);
+  lines.push(`<tr class="hl"><td>${prodName}</td><td>${val(null)}</td><td>${val(null)}</td><td>${val(null)}</td><td>${val(null)}</td>` +
+    `<td>${val(sellEach)}</td><td>${val(r.gross)}</td><td>${val(r.tax)}</td><td>${stockVal(r.product.vol ?? null)}</td></tr>`);
   lines.push('</tbody></table>');
   if (r.note) lines.push(`<div class="note">⚠ ${esc(r.note)}</div>`);
   return lines.join('');
 }
 
 function renderTable() {
+  // keep the product header count in sync when filters change without a head re-render
+  const pth = document.querySelector('#thead th[data-key="product"]');
+  if (pth) pth.textContent = `Products (x${rows.length})` + (sortKey === 'product' ? (sortDir === 'asc' ? ' ▲' : ' ▼') : '');
+
   const sorted = [...rows].sort((a, b) => {
     const va = cellValue(a, sortKey);
     const vb = cellValue(b, sortKey);
@@ -661,13 +742,23 @@ function renderTable() {
     const craftCls = 'gp' + (bothIn && pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
     const buyCls = 'gp' + (bothIn && pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
     const cells = [num(r.xp)];
-    if (inOn('craft')) cells.push(num(r.cost, craftCls + ' gsep'));
+    if (inOn('craft')) {
+      const costTd = num(r.cost, craftCls + ' gsep');
+      if (r.cost_incomplete) {
+        const star = document.createElement('span');
+        star.className = 'unpriced';
+        star.textContent = '*';
+        star.title = 'Some materials have no GE price — cost covers priced parts only.';
+        costTd.append(star);
+      }
+      cells.push(costTd);
+    }
     if (inOn('buy')) cells.push(numStock(r.product.buy, r.product.buy_vol, buyCls + (inOn('craft') ? '' : ' gsep')));
     if (routeOn('ge')) cells.push(numStock(r.gross, r.product.vol, payCls(sn) + ' gsep'), num(sn, sn == null ? null : netCls(sn)));
     if (routeOn('ha')) cells.push(num(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
     if (routeOn('la')) cells.push(num(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
     const ret = returnMul(r);
-    cells.push(num(bN, netCls(bN) + ' gsep'),
+    cells.push(num(bN, (bN == null ? null : netCls(bN)) + ' gsep'),
       num(ret, (ret == null ? null : ret >= 1 ? 'pos' : 'neg') + ' gsep-r', fmtMul),
       num(r.max_crafts_4h));
     tr.append(...cells);
@@ -746,9 +837,15 @@ async function init() {
   $('searchMaterials').checked = state.searchMaterials;
 
   try {
-    const data = await fetchJSON('data/recipes.json', { cache: 'no-cache' });
-    items = data.items;
-    recipesData = data.recipes;
+    const [index, itemsDoc] = await Promise.all([
+      fetchJSON('data/recipes/index.json', { cache: 'no-cache' }),
+      fetchJSON('data/items.json', { cache: 'no-cache' }),
+    ]);
+    const skillLists = await Promise.all(
+      index.skills.map((s) => fetchJSON(`data/recipes/${s}.json`, { cache: 'no-cache' }))
+    );
+    items = itemsDoc.items;
+    recipesData = skillLists.flat();
     for (const [iid, info] of Object.entries(items)) {
       if (info.name === 'Nature rune') { natureId = parseInt(iid, 10); break; }
     }
@@ -757,7 +854,7 @@ async function init() {
     skills = computeSkills().sort((a, b) => tail(a) - tail(b) || a.skill.localeCompare(b.skill));
     renderLevels();
   } catch (e) {
-    $('errorBanner').textContent = `could not load data/recipes.json: ${e.message}`;
+    $('errorBanner').textContent = `could not load baked data (data/items.json + data/recipes/): ${e.message}`;
     $('errorBanner').hidden = false;
   }
   renderHead();

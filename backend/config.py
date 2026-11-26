@@ -20,7 +20,12 @@ GE_TAX_EXEMPT_BELOW = 50
 GE_TAX_CAP = 5_000_000
 
 # --- Paths ---
-RECIPES_PATH = BACKEND_ROOT / "data" / "recipes.json"      # source of truth (item names)
-SITE_DATA_PATH = PROJECT_ROOT / "data" / "recipes.json"    # baked artifact served by Pages
+DATA_DIR = BACKEND_ROOT / "data"
+RECIPES_DIR = DATA_DIR / "recipes"                         # source of truth (item names), one <skill>.json per skill
+HARVESTED_PATH = DATA_DIR / "harvested_raw.json"           # raw wiki harvest (merge_harvested input)
+SITE_DATA_DIR = PROJECT_ROOT / "data"                      # baked artifacts served by Pages
+SITE_ITEMS_PATH = SITE_DATA_DIR / "items.json"             # baked item metadata (id -> name/image/limit/value/members)
+SITE_RECIPES_DIR = SITE_DATA_DIR / "recipes"               # baked per-skill recipe arrays
+SITE_RECIPES_INDEX = SITE_RECIPES_DIR / "index.json"       # baked manifest: {generated, skills}
 MAPPING_CACHE = PROJECT_ROOT / "var" / "mapping.json"      # /mapping cache for offline re-bakes
 FIXTURES_PATH = BACKEND_ROOT / "tests" / "fixtures.json"   # parity fixtures (committed)

@@ -35,7 +35,11 @@ def _side(price_resolved, mode: str, kind: str):
 
 def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservative",
                     craft_costs: dict | None = None) -> dict | None:
-    """Compute one recipe row. Returns None if any needed price is missing.
+    """Compute one recipe row. Returns None only if item metadata is missing.
+
+    Missing GE prices are tolerated: unpriced sides become None and the row
+    still renders (partial craft cost + cost_incomplete flag; HA/LA payouts
+    come from the item's static value, so they need no live prices at all).
 
     recipe: {id, skill, level, members, product: {item_id, qty},
              materials: [{item_id, qty}], fee, note}
@@ -46,31 +50,40 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
     if prod_info is None:
         return None
     prod_res = store.resolve(recipe["product"]["item_id"])
-    if prod_res is None:
-        return None
-
-    sell_price, sell_stale, sell_src, sell_vol, sell_vol_src = _side(prod_res, mode, "sell")
-    if sell_price is None:
-        return None
-    prod_buy, prod_buy_stale, prod_buy_src, prod_buy_vol, _ = _side(prod_res, mode, "buy")
+    sell_price = sell_stale = sell_src = sell_vol = None
+    prod_buy = prod_buy_stale = prod_buy_src = prod_buy_vol = None
+    if prod_res is not None:
+        sell_price, sell_stale, sell_src, sell_vol, _ = _side(prod_res, mode, "sell")
+        prod_buy, prod_buy_stale, prod_buy_src, prod_buy_vol, _ = _side(prod_res, mode, "buy")
 
     materials = []
     cost = float(recipe.get("fee", 0))
+    cost_known = False
+    cost_incomplete = False
     min_mat_vol = None
     for m in recipe["materials"]:
         info = item_map.get(m["item_id"])
         if info is None:
             return None
         res = store.resolve(m["item_id"])
-        if res is None:
-            return None
-        buy_price, buy_stale, buy_src, buy_vol, buy_vol_src = _side(res, mode, "buy")
-        mat_sell, _, _, _, _ = _side(res, mode, "sell")
-        if buy_price is None:
-            return None
+        buy_price = buy_stale = buy_src = buy_vol = None
+        mat_sell = None
+        if res is not None:
+            buy_price, buy_stale, buy_src, buy_vol, _ = _side(res, mode, "buy")
+            mat_sell, _, _, _, _ = _side(res, mode, "sell")
         craft_unit = round(craft_costs[m["item_id"]]) if craft_costs and m["item_id"] in craft_costs else None
-        # cheapest acquisition for this material: buy at GE price, or craft it if that is cheaper
-        chosen = craft_unit if craft_unit is not None and craft_unit < buy_price else buy_price
+        # cheapest acquisition for this material: buy at GE price, or craft it if
+        # that is cheaper; a material with neither leaves the cost incomplete
+        if craft_unit is not None and (buy_price is None or craft_unit < buy_price):
+            chosen = craft_unit
+        elif buy_price is not None:
+            chosen = buy_price
+        else:
+            chosen = None
+            cost_incomplete = True
+        if chosen is not None:
+            cost += chosen * m["qty"]
+            cost_known = True
         materials.append({
             "id": m["item_id"],
             "name": info["name"],
@@ -84,15 +97,17 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
             "sell_tax": ge_tax(mat_sell) if mat_sell is not None else 0,
             "craft": craft_unit,
         })
-        cost += chosen * m["qty"]
-        # how many crafts per 5m does this material's buy-side volume support?
-        supported = buy_vol / m["qty"] if m["qty"] > 0 else float('inf')
-        min_mat_vol = supported if min_mat_vol is None else min(min_mat_vol, supported)
+        if buy_vol is not None:
+            # how many crafts per 5m does this material's buy-side volume support?
+            supported = buy_vol / m["qty"] if m["qty"] > 0 else float('inf')
+            min_mat_vol = supported if min_mat_vol is None else min(min_mat_vol, supported)
 
-    gross = sell_price * recipe["product"]["qty"]
-    tax_total = ge_tax(sell_price) * recipe["product"]["qty"]
-    net = gross - tax_total - cost
-    net_pct = round(net / cost * 100, 1) if cost > 0 else None
+    if not cost_known:
+        cost = None
+    gross = sell_price * recipe["product"]["qty"] if sell_price is not None else None
+    tax_total = ge_tax(sell_price) * recipe["product"]["qty"] if sell_price is not None else None
+    net = None if (gross is None or cost is None) else gross - tax_total - cost
+    net_pct = round(net / cost * 100, 1) if (net is not None and cost and cost > 0) else None
 
     # 4h buy-limit cap: limited by every material and the product itself
     max_crafts = None
@@ -111,10 +126,12 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         c = prod_limit // recipe["product"]["qty"]
         max_crafts = c if max_crafts is None else min(max_crafts, c)
     if max_crafts is None:
-        max_crafts = 0
-    net_4h = None if (limited or max_crafts == 0) else net * max_crafts
+        max_crafts = None  # no buy limits known at all
+    net_4h = None if (limited or not max_crafts or net is None) else net * max_crafts
 
-    volume = int(min(sell_vol, min_mat_vol)) if min_mat_vol is not None else int(sell_vol)
+    volume = None
+    if sell_vol is not None:
+        volume = int(min(sell_vol, min_mat_vol)) if min_mat_vol is not None else int(sell_vol)
 
     tools_out = []
     for t in recipe.get("tools") or []:
@@ -153,12 +170,13 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         },
         "materials": materials,
         "fee": recipe.get("fee", 0),
-        "cost": round(cost),
+        "cost": round(cost) if cost is not None else None,
+        "cost_incomplete": cost_incomplete,
         "gross": gross,
         "tax": tax_total,
-        "net": round(net),
+        "net": round(net) if net is not None else None,
         "net_pct": net_pct,
-        "volume": max(volume, 0),
+        "volume": max(volume, 0) if volume is not None else None,
         "max_crafts_4h": max_crafts,
         "net_4h": round(net_4h) if net_4h is not None else None,
         "mode": mode,
@@ -171,24 +189,35 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
 def evaluate_all(recipes: list[dict], item_map: dict, store, mode: str = "conservative"):
     """Evaluate every recipe (the old /api/recipes route logic, minus filters).
 
-    Two passes: pass 1 computes per-unit craft costs for every product that is
-    also used as a material elsewhere (cheapest alternative acquisition);
-    pass 2 evaluates all recipes with those costs available.
+    Craft costs are computed to a fixed point: repeated sweeps until no
+    product's per-unit craft cost improves, so a material's ⚒ price always
+    equals the fully recursive cheapest craft decomposition shown in its own
+    row (and expanded in the detail table) — e.g. Uncooked pizza inside Plain
+    pizza prices cheese via milk, not at the cheese GE price. Each sweep can
+    only lower costs (materials gain cheaper options), so this converges; the
+    sweep cap just bounds pathological recipe cycles. Keep in lockstep with
+    ../profit.js (scripts/parity_check.cjs verifies over fixtures).
 
     Returns (rows, skipped_no_price).
     """
     material_ids = {m["item_id"] for r in recipes for m in r["materials"]}
-    craft_costs = {}
-    for r in recipes:
-        if r["product"]["item_id"] not in material_ids:
-            continue
-        row = evaluate_recipe(r, item_map, store, mode=mode)
-        if row is None or row["product"]["qty"] < 1:
-            continue
-        per_unit = row["cost"] / row["product"]["qty"]
-        pid = r["product"]["item_id"]
-        if pid not in craft_costs or per_unit < craft_costs[pid]:
-            craft_costs[pid] = per_unit
+    craft_costs: dict[int, float] = {}
+    max_sweeps = 10
+    for _sweep in range(max_sweeps):
+        changed = False
+        for r in recipes:
+            pid = r["product"]["item_id"]
+            if pid not in material_ids:
+                continue
+            row = evaluate_recipe(r, item_map, store, mode=mode, craft_costs=craft_costs)
+            if row is None or row["product"]["qty"] < 1 or row["cost"] is None:
+                continue
+            per_unit = row["cost"] / row["product"]["qty"]
+            if pid not in craft_costs or per_unit < craft_costs[pid]:
+                craft_costs[pid] = per_unit
+                changed = True
+        if not changed:
+            break
 
     rows, skipped_no_price = [], 0
     for r in recipes:

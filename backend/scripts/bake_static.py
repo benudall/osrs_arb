@@ -1,11 +1,15 @@
-"""Bake backend/data/recipes.json (item names) into ../data/recipes.json
-(item ids + display metadata) for the static GitHub Pages site.
+"""Bake backend/data/recipes/<skill>.json (item names) into the static files
+served by the GitHub Pages site:
+
+  data/items.json              {generated, items: {id -> name/image/limit/value/members}}
+  data/recipes/<skill>.json    bare array of resolved recipes for that skill
+  data/recipes/index.json      {generated, skills: [...]} manifest for the loader
 
 The output is self-contained: the browser needs no /mapping fetch at runtime —
 every referenced item carries name, image URL, buy limit, value and members
 flag. Prices still come live from the wiki prices API (CORS-open).
 
-Re-run whenever recipes.json or the mapping changes:
+Re-run whenever the recipe files or the mapping change:
     cd backend && python scripts/bake_static.py
 
 Usage (from backend/):  python scripts/bake_static.py [--force-mapping]
@@ -26,10 +30,34 @@ def main() -> int:
     mapping = itemdata.fetch_mapping(force=force)
     name_to_id, item_map = itemdata.index_mapping(mapping)
 
-    raw = recipes_mod.load_recipe_file(config.RECIPES_PATH)
+    raw = recipes_mod.load_recipes(config.RECIPES_DIR)
     ok, struct_errors = recipes_mod.validate(raw)
     for e in struct_errors:
         print(f"STRUCTURAL: {e}")
+
+    # Names missing from /mapping (items with no GE price history) fall back to
+    # their OSRS wiki infoboxes for id/value/members/image, so recipes can
+    # reference unpriced items and still render (craft cost partial, alch ok).
+    ref_names = set()
+    for r in ok:
+        ref_names.add(r["product"]["item"])
+        ref_names.update(m["item"] for m in r["materials"])
+        ref_names.update(t for t in r.get("tools") or [])
+    missing_names = sorted(n for n in ref_names if n not in name_to_id)
+    wiki_meta = itemdata.fetch_wiki_meta(missing_names) if missing_names else {}
+    fallback_used = []
+    for n in missing_names:
+        meta = wiki_meta.get(n)
+        if not meta or not meta.get("id"):
+            continue
+        mid = int(meta["id"])
+        if mid not in item_map:
+            item_map[mid] = itemdata.fallback_item_map_entry(meta, display_name=n)
+        name_to_id[n] = mid
+        fallback_used.append(n)
+    if fallback_used:
+        print(f"wiki-meta fallback ({len(fallback_used)}): " + ", ".join(fallback_used))
+
     resolved, unknown = recipes_mod.resolve_names(ok, name_to_id)
     for r in resolved:
         r["members"] = recipes_mod.compute_members(r["product"]["item_id"], r["materials"], item_map)
@@ -76,17 +104,31 @@ def main() -> int:
         }
         for r in resolved
     ]
-    out = {
-        "generated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "items": items_out,
-        "recipes": recipes_out,
-    }
+    generated = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    skills = sorted({r["skill"] for r in recipes_out})
 
-    config.SITE_DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
-    config.SITE_DATA_PATH.write_text(
-        json.dumps(out, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+    config.SITE_DATA_DIR.mkdir(parents=True, exist_ok=True)
+    config.SITE_ITEMS_PATH.write_text(
+        json.dumps({"generated": generated, "items": items_out}, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
     )
-    print(f"baked {len(recipes_out)} recipes, {len(items_out)} items -> {config.SITE_DATA_PATH}")
+    config.SITE_RECIPES_DIR.mkdir(parents=True, exist_ok=True)
+    by_skill: dict[str, list] = {}
+    for r in recipes_out:
+        by_skill.setdefault(r["skill"], []).append(r)
+    for skill, batch in sorted(by_skill.items()):
+        (config.SITE_RECIPES_DIR / f"{skill}.json").write_text(
+            json.dumps(batch, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
+    for path in config.SITE_RECIPES_DIR.glob("*.json"):
+        if path.stem not in by_skill:
+            path.unlink()
+    config.SITE_RECIPES_INDEX.write_text(
+        json.dumps({"generated": generated, "skills": skills}, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    print(f"baked {len(recipes_out)} recipes ({len(skills)} skills), {len(items_out)} items "
+          f"-> {config.SITE_ITEMS_PATH}, {config.SITE_RECIPES_DIR}/")
     if unknown:
         print(f"unknown item names skipped: {unknown}")
     return 0

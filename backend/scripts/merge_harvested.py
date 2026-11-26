@@ -1,4 +1,4 @@
-"""Merge harvested wiki recipes into data/recipes.json.
+"""Merge harvested wiki recipes into data/recipes/<skill>.json.
 
 - curated recipes always win (same product item id)
 - product/material names resolved against the items table (from /mapping)
@@ -16,6 +16,7 @@ sys.path.insert(0, ".")
 
 import config  # noqa: E402
 import itemdata  # noqa: E402
+import recipes as recipes_mod  # noqa: E402
 
 
 def slug(name):
@@ -55,14 +56,11 @@ def main():
     for n in name_to_id:
         lower_map.setdefault(n.lower(), n)
 
-    curated_doc = json.loads(config.RECIPES_PATH.read_text(encoding="utf-8"))
-    curated = curated_doc["recipes"]
+    curated = recipes_mod.load_recipes(config.RECIPES_DIR)
     curated_products = {name_to_id[r["product"]["item"]] for r in curated
                         if r["product"]["item"] in name_to_id}
 
-    harvested = json.loads(
-        (config.RECIPES_PATH.parent / "harvested_raw.json").read_text(encoding="utf-8")
-    )["recipes"]
+    harvested = json.loads(config.HARVESTED_PATH.read_text(encoding="utf-8"))["recipes"]
 
     # wiki cooking table uses generic names; GE items differ
     RAW_OVERRIDES = {"Raw meat": "Raw beef", "Raw Sinew": "Raw beef",
@@ -153,13 +151,10 @@ def main():
                   [(m["item"], m["qty"]) for m in r["materials"]])
         return 0
 
-    merged = dict(curated_doc)
-    merged["version"] = curated_doc.get("version", 1) + 1
-    merged["recipes"] = curated + added
-    config.RECIPES_PATH.write_text(
-        json.dumps(merged, indent=2, ensure_ascii=False), encoding="utf-8"
-    )
-    print(f"wrote {len(merged['recipes'])} recipes -> {config.RECIPES_PATH}")
+    meta = recipes_mod.load_meta(config.RECIPES_DIR)
+    meta["version"] = meta.get("version", 1) + 1
+    recipes_mod.write_recipes(config.RECIPES_DIR, curated + added, meta=meta)
+    print(f"wrote {len(curated) + len(added)} recipes -> {config.RECIPES_DIR}/")
     return 0
 
 

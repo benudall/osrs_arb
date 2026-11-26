@@ -165,11 +165,19 @@ button:disabled { opacity: 0.5; cursor: default; }
   letter-spacing: 0.06em;
   text-align: left !important;
 }
-.detail-table tr.totals td {
+/* detail table: flat panel background everywhere; top-level material rows and
+   the product row highlighted */
+.detail-table td {
+  background: var(--panel);
+}
+.detail-table tr.hl td {
   background: #1e2130;
+}
+.detail-table tr.totals td {
   font-weight: 600;
 }
 .dim { color: var(--muted); }
+.unpriced { color: var(--muted); margin-left: 2px; cursor: help; }
 .note { color: var(--warn); }
 
 .badge {

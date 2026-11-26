@@ -1,0 +1,5546 @@
+{
+ "skill": "crafting",
+ "recipes": [
+  {
+   "id": "leather",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 0,
+   "members": false,
+   "product": {
+    "item": "Leather",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cowhide",
+     "qty": 1
+    }
+   ],
+   "fee": 1,
+   "note": "Tanning fee included (1 gp at a tanner)."
+  },
+  {
+   "id": "hard_leather",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 0,
+   "members": false,
+   "product": {
+    "item": "Hard leather",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cowhide",
+     "qty": 1
+    }
+   ],
+   "fee": 3,
+   "note": "Tanning fee included (3 gp at a tanner)."
+  },
+  {
+   "id": "soda_ash",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 0,
+   "members": true,
+   "product": {
+    "item": "Soda ash",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Seaweed",
+     "qty": 1
+    }
+   ],
+   "note": "Cook seaweed on a fire or range."
+  },
+  {
+   "id": "molten_glass",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 20.0,
+   "members": true,
+   "product": {
+    "item": "Molten glass",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bucket of sand",
+     "qty": 1
+    },
+    {
+     "item": "Soda ash",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "bowstring",
+   "skill": "crafting",
+   "level": 10,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Bow string",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flax",
+     "qty": 1
+    }
+   ],
+   "note": "Spin flax on a spinning wheel."
+  },
+  {
+   "id": "green_dleather",
+   "skill": "crafting",
+   "level": 57,
+   "xp": 0,
+   "members": true,
+   "product": {
+    "item": "Green dragon leather",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Green dragonhide",
+     "qty": 1
+    }
+   ],
+   "fee": 20,
+   "note": "Tanning fee included (20 gp at a tanner)."
+  },
+  {
+   "id": "green_vamb",
+   "skill": "crafting",
+   "level": 57,
+   "xp": 62.0,
+   "members": true,
+   "product": {
+    "item": "Green d'hide vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Green dragon leather",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "green_chaps",
+   "skill": "crafting",
+   "level": 60,
+   "xp": 124.0,
+   "members": true,
+   "product": {
+    "item": "Green d'hide chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Green dragon leather",
+     "qty": 2
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "green_body",
+   "skill": "crafting",
+   "level": 63,
+   "xp": 186.0,
+   "members": true,
+   "product": {
+    "item": "Green d'hide body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Green dragon leather",
+     "qty": 3
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "blue_dleather",
+   "skill": "crafting",
+   "level": 66,
+   "xp": 0,
+   "members": true,
+   "product": {
+    "item": "Blue dragon leather",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blue dragonhide",
+     "qty": 1
+    }
+   ],
+   "fee": 20,
+   "note": "Tanning fee included (20 gp at a tanner)."
+  },
+  {
+   "id": "blue_vamb",
+   "skill": "crafting",
+   "level": 66,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Blue d'hide vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blue dragon leather",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "blue_chaps",
+   "skill": "crafting",
+   "level": 68,
+   "xp": 140.0,
+   "members": true,
+   "product": {
+    "item": "Blue d'hide chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blue dragon leather",
+     "qty": 2
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "blue_body",
+   "skill": "crafting",
+   "level": 71,
+   "xp": 210.0,
+   "members": true,
+   "product": {
+    "item": "Blue d'hide body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blue dragon leather",
+     "qty": 3
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "sapphire_ring",
+   "skill": "crafting",
+   "level": 20,
+   "xp": 40.0,
+   "members": false,
+   "product": {
+    "item": "Sapphire ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    },
+    {
+     "item": "Sapphire",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "sapphire_necklace",
+   "skill": "crafting",
+   "level": 22,
+   "xp": 55.0,
+   "members": false,
+   "product": {
+    "item": "Sapphire necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    },
+    {
+     "item": "Sapphire",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "sapphire_amulet_u",
+   "skill": "crafting",
+   "level": 24,
+   "xp": 65.0,
+   "members": false,
+   "product": {
+    "item": "Sapphire amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    },
+    {
+     "item": "Sapphire",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "sapphire_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": false,
+   "product": {
+    "item": "Sapphire amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Sapphire amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "ball_of_wool",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 2.5,
+   "members": false,
+   "product": {
+    "item": "Ball of wool",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "linen_yarn",
+   "skill": "crafting",
+   "level": 12,
+   "xp": 16.0,
+   "members": true,
+   "product": {
+    "item": "Linen yarn",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flax",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "magic_string",
+   "skill": "crafting",
+   "level": 19,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Magic string",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic roots",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rope",
+   "skill": "crafting",
+   "level": 30,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Rope",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hair",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hemp_yarn",
+   "skill": "crafting",
+   "level": 39,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Hemp yarn",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hemp",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "cotton_yarn",
+   "skill": "crafting",
+   "level": 73,
+   "xp": 105.0,
+   "members": true,
+   "product": {
+    "item": "Cotton yarn",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cotton boll",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bolt_of_linen",
+   "skill": "crafting",
+   "level": 12,
+   "xp": 20.0,
+   "members": true,
+   "product": {
+    "item": "Bolt of linen",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Linen yarn",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "empty_sack",
+   "skill": "crafting",
+   "level": 21,
+   "xp": 38.0,
+   "members": true,
+   "product": {
+    "item": "Empty sack",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Jute fibre",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "drift_net",
+   "skill": "crafting",
+   "level": 26,
+   "xp": 55.0,
+   "members": true,
+   "product": {
+    "item": "Drift net",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Jute fibre",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "basket",
+   "skill": "crafting",
+   "level": 36,
+   "xp": 56.0,
+   "members": true,
+   "product": {
+    "item": "Basket",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow branch",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bolt_of_canvas",
+   "skill": "crafting",
+   "level": 39,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Bolt of canvas",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hemp yarn",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bolt_of_cotton",
+   "skill": "crafting",
+   "level": 73,
+   "xp": 132.0,
+   "members": true,
+   "product": {
+    "item": "Bolt of cotton",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cotton yarn",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "leather_gloves",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 13.8,
+   "members": false,
+   "product": {
+    "item": "Leather gloves",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "leather_boots",
+   "skill": "crafting",
+   "level": 7,
+   "xp": 16.3,
+   "members": false,
+   "product": {
+    "item": "Leather boots",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "leather_cowl",
+   "skill": "crafting",
+   "level": 9,
+   "xp": 18.5,
+   "members": false,
+   "product": {
+    "item": "Leather cowl",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "leather_vambraces",
+   "skill": "crafting",
+   "level": 11,
+   "xp": 22.0,
+   "members": false,
+   "product": {
+    "item": "Leather vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "leather_body",
+   "skill": "crafting",
+   "level": 14,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Leather body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "leather_chaps",
+   "skill": "crafting",
+   "level": 18,
+   "xp": 27.0,
+   "members": false,
+   "product": {
+    "item": "Leather chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hardleather_body",
+   "skill": "crafting",
+   "level": 28,
+   "xp": 35.0,
+   "members": false,
+   "product": {
+    "item": "Hardleather body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hard leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "coif",
+   "skill": "crafting",
+   "level": 38,
+   "xp": 37.0,
+   "members": false,
+   "product": {
+    "item": "Coif",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hard_leather_shield",
+   "skill": "crafting",
+   "level": 41,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Hard leather shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hard leather",
+     "qty": 1
+    },
+    {
+     "item": "Oak shield",
+     "qty": 2
+    },
+    {
+     "item": "Bronze nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": [
+    "Hammer"
+   ]
+  },
+  {
+   "id": "studded_body",
+   "skill": "crafting",
+   "level": 41,
+   "xp": 40.0,
+   "members": true,
+   "product": {
+    "item": "Studded body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather body",
+     "qty": 1
+    },
+    {
+     "item": "Steel studs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "studded_chaps",
+   "skill": "crafting",
+   "level": 44,
+   "xp": 42.0,
+   "members": true,
+   "product": {
+    "item": "Studded chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Leather chaps",
+     "qty": 1
+    },
+    {
+     "item": "Steel studs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "green_d_hide_shield",
+   "skill": "crafting",
+   "level": 62,
+   "xp": 124.0,
+   "members": true,
+   "product": {
+    "item": "Green d'hide shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Green dragon leather",
+     "qty": 1
+    },
+    {
+     "item": "Maple shield",
+     "qty": 2
+    },
+    {
+     "item": "Steel nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": [
+    "Hammer"
+   ]
+  },
+  {
+   "id": "blue_d_hide_shield",
+   "skill": "crafting",
+   "level": 69,
+   "xp": 140.0,
+   "members": true,
+   "product": {
+    "item": "Blue d'hide shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blue dragon leather",
+     "qty": 1
+    },
+    {
+     "item": "Yew shield",
+     "qty": 2
+    },
+    {
+     "item": "Mithril nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": [
+    "Hammer"
+   ]
+  },
+  {
+   "id": "red_d_hide_vambraces",
+   "skill": "crafting",
+   "level": 73,
+   "xp": 78.0,
+   "members": true,
+   "product": {
+    "item": "Red d'hide vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red dragon leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "red_d_hide_chaps",
+   "skill": "crafting",
+   "level": 75,
+   "xp": 156.0,
+   "members": true,
+   "product": {
+    "item": "Red d'hide chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red dragon leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "red_d_hide_shield",
+   "skill": "crafting",
+   "level": 76,
+   "xp": 156.0,
+   "members": true,
+   "product": {
+    "item": "Red d'hide shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red dragon leather",
+     "qty": 1
+    },
+    {
+     "item": "Magic shield",
+     "qty": 2
+    },
+    {
+     "item": "Adamantite nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": [
+    "Hammer"
+   ]
+  },
+  {
+   "id": "red_d_hide_body",
+   "skill": "crafting",
+   "level": 77,
+   "xp": 234.0,
+   "members": true,
+   "product": {
+    "item": "Red d'hide body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red dragon leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "black_d_hide_vambraces",
+   "skill": "crafting",
+   "level": 79,
+   "xp": 86.0,
+   "members": true,
+   "product": {
+    "item": "Black d'hide vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Black dragon leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "black_d_hide_chaps",
+   "skill": "crafting",
+   "level": 82,
+   "xp": 172.0,
+   "members": true,
+   "product": {
+    "item": "Black d'hide chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Black dragon leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "black_d_hide_shield",
+   "skill": "crafting",
+   "level": 83,
+   "xp": 172.0,
+   "members": true,
+   "product": {
+    "item": "Black d'hide shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Black dragon leather",
+     "qty": 1
+    },
+    {
+     "item": "Redwood shield",
+     "qty": 2
+    },
+    {
+     "item": "Rune nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": [
+    "Hammer"
+   ]
+  },
+  {
+   "id": "black_d_hide_body",
+   "skill": "crafting",
+   "level": 84,
+   "xp": 258.0,
+   "members": true,
+   "product": {
+    "item": "Black d'hide body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Black dragon leather",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snakeskin_boots",
+   "skill": "crafting",
+   "level": 45,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Snakeskin boots",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snakeskin_vambraces",
+   "skill": "crafting",
+   "level": 47,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Snakeskin vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snakeskin_bandana",
+   "skill": "crafting",
+   "level": 48,
+   "xp": 45.0,
+   "members": true,
+   "product": {
+    "item": "Snakeskin bandana",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snakeskin_chaps",
+   "skill": "crafting",
+   "level": 51,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Snakeskin chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snakeskin_body",
+   "skill": "crafting",
+   "level": 53,
+   "xp": 55.0,
+   "members": true,
+   "product": {
+    "item": "Snakeskin body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snakeskin_shield",
+   "skill": "crafting",
+   "level": 56,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Snakeskin shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 1
+    },
+    {
+     "item": "Willow shield",
+     "qty": 2
+    },
+    {
+     "item": "Iron nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "yak_hide_armour_legs",
+   "skill": "crafting",
+   "level": 43,
+   "xp": 32.0,
+   "members": true,
+   "product": {
+    "item": "Yak-hide armour (legs)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cured yak-hide",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "yak_hide_armour_top",
+   "skill": "crafting",
+   "level": 46,
+   "xp": 32.0,
+   "members": true,
+   "product": {
+    "item": "Yak-hide armour (top)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cured yak-hide",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "pointed_blood_n_tar_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Pointed blood'n'tar snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish red shell (pointed)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "blood_n_tar_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Blood'n'tar snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish red shell (round)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "broken_bark_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Broken bark snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish bark shell",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "pointed_bruise_blue_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Pointed bruise blue snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish blue shell (pointed)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bruise_blue_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Bruise blue snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish blue shell (round)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "pointed_myre_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Pointed myre snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish myre shell (pointed)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "myre_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Myre snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish myre shell (round)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "pointed_ochre_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Pointed ochre snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish ochre shell (pointed)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ochre_snelm",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 32.5,
+   "members": true,
+   "product": {
+    "item": "Ochre snelm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Blamish ochre shell (round)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "xerician_hat",
+   "skill": "crafting",
+   "level": 14,
+   "xp": 66.0,
+   "members": true,
+   "product": {
+    "item": "Xerician hat",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Xerician fabric",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "xerician_robe",
+   "skill": "crafting",
+   "level": 17,
+   "xp": 88.0,
+   "members": true,
+   "product": {
+    "item": "Xerician robe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Xerician fabric",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "xerician_top",
+   "skill": "crafting",
+   "level": 22,
+   "xp": 110.0,
+   "members": true,
+   "product": {
+    "item": "Xerician top",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Xerician fabric",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "splitbark_gauntlets",
+   "skill": "crafting",
+   "level": 60,
+   "xp": 62.0,
+   "members": true,
+   "product": {
+    "item": "Splitbark gauntlets",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bark",
+     "qty": 1
+    },
+    {
+     "item": "Fine cloth",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "splitbark_boots",
+   "skill": "crafting",
+   "level": 60,
+   "xp": 62.0,
+   "members": true,
+   "product": {
+    "item": "Splitbark boots",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bark",
+     "qty": 1
+    },
+    {
+     "item": "Fine cloth",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "splitbark_helm",
+   "skill": "crafting",
+   "level": 61,
+   "xp": 124.0,
+   "members": true,
+   "product": {
+    "item": "Splitbark helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bark",
+     "qty": 1
+    },
+    {
+     "item": "Fine cloth",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "splitbark_legs",
+   "skill": "crafting",
+   "level": 62,
+   "xp": 186.0,
+   "members": true,
+   "product": {
+    "item": "Splitbark legs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bark",
+     "qty": 1
+    },
+    {
+     "item": "Fine cloth",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "splitbark_body",
+   "skill": "crafting",
+   "level": 62,
+   "xp": 248.0,
+   "members": true,
+   "product": {
+    "item": "Splitbark body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bark",
+     "qty": 1
+    },
+    {
+     "item": "Fine cloth",
+     "qty": 4
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mixed_hide_cape",
+   "skill": "crafting",
+   "level": 68,
+   "xp": 62.0,
+   "members": true,
+   "product": {
+    "item": "Mixed hide cape",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mixed hide base",
+     "qty": 1
+    },
+    {
+     "item": "Jaguar fur",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mixed_hide_boots",
+   "skill": "crafting",
+   "level": 69,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Mixed hide boots",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mixed hide base",
+     "qty": 1
+    },
+    {
+     "item": "Sunlight antelope fur",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mixed_hide_legs",
+   "skill": "crafting",
+   "level": 71,
+   "xp": 210.0,
+   "members": true,
+   "product": {
+    "item": "Mixed hide legs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mixed hide base",
+     "qty": 1
+    },
+    {
+     "item": "Fox fur",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mixed_hide_top",
+   "skill": "crafting",
+   "level": 72,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Mixed hide top",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mixed hide base",
+     "qty": 1
+    },
+    {
+     "item": "Sunlight antelope fur",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hueycoatl_hide_vambraces",
+   "skill": "crafting",
+   "level": 76,
+   "xp": 95.0,
+   "members": true,
+   "product": {
+    "item": "Hueycoatl hide vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hueycoatl hide",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hueycoatl_hide_coif",
+   "skill": "crafting",
+   "level": 76,
+   "xp": 190.0,
+   "members": true,
+   "product": {
+    "item": "Hueycoatl hide coif",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hueycoatl hide",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hueycoatl_hide_chaps",
+   "skill": "crafting",
+   "level": 77,
+   "xp": 190.0,
+   "members": true,
+   "product": {
+    "item": "Hueycoatl hide chaps",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hueycoatl hide",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hueycoatl_hide_body",
+   "skill": "crafting",
+   "level": 78,
+   "xp": 285.0,
+   "members": true,
+   "product": {
+    "item": "Hueycoatl hide body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Hueycoatl hide",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "beer_glass",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Beer glass",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Molten glass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "empty_candle_lantern",
+   "skill": "crafting",
+   "level": 4,
+   "xp": 19.0,
+   "members": true,
+   "product": {
+    "item": "Empty candle lantern",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Molten glass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "empty_oil_lamp",
+   "skill": "crafting",
+   "level": 12,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Empty oil lamp",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Molten glass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "oil_lantern",
+   "skill": "crafting",
+   "level": 26,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Oil lantern",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Empty oil lamp",
+     "qty": 1
+    },
+    {
+     "item": "Oil lantern frame",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "vial",
+   "skill": "crafting",
+   "level": 33,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Vial",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Molten glass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "unpowered_orb",
+   "skill": "crafting",
+   "level": 46,
+   "xp": 52.5,
+   "members": true,
+   "product": {
+    "item": "Unpowered orb",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Molten glass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "lantern_lens",
+   "skill": "crafting",
+   "level": 49,
+   "xp": 55.0,
+   "members": true,
+   "product": {
+    "item": "Lantern lens",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Molten glass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Opal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut opal",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "jade",
+   "skill": "crafting",
+   "level": 13,
+   "xp": 20.0,
+   "members": true,
+   "product": {
+    "item": "Jade",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut jade",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "red_topaz",
+   "skill": "crafting",
+   "level": 16,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Red topaz",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut red topaz",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "sapphire",
+   "skill": "crafting",
+   "level": 20,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Sapphire",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut sapphire",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "emerald",
+   "skill": "crafting",
+   "level": 27,
+   "xp": 67.5,
+   "members": false,
+   "product": {
+    "item": "Emerald",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut emerald",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ruby",
+   "skill": "crafting",
+   "level": 34,
+   "xp": 85.0,
+   "members": false,
+   "product": {
+    "item": "Ruby",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut ruby",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "diamond",
+   "skill": "crafting",
+   "level": 43,
+   "xp": 107.5,
+   "members": false,
+   "product": {
+    "item": "Diamond",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut diamond",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragonstone",
+   "skill": "crafting",
+   "level": 55,
+   "xp": 137.5,
+   "members": true,
+   "product": {
+    "item": "Dragonstone",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut dragonstone",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "onyx",
+   "skill": "crafting",
+   "level": 67,
+   "xp": 167.5,
+   "members": true,
+   "product": {
+    "item": "Onyx",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut onyx",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "zenyte",
+   "skill": "crafting",
+   "level": 89,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Zenyte",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncut zenyte",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_ring",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 10.0,
+   "members": true,
+   "product": {
+    "item": "Opal ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Opal",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_necklace",
+   "skill": "crafting",
+   "level": 16,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Opal necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Opal",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_bracelet",
+   "skill": "crafting",
+   "level": 22,
+   "xp": 45.0,
+   "members": true,
+   "product": {
+    "item": "Opal bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Opal",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_amulet_u",
+   "skill": "crafting",
+   "level": 27,
+   "xp": 55.0,
+   "members": true,
+   "product": {
+    "item": "Opal amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Opal",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "jade_ring",
+   "skill": "crafting",
+   "level": 13,
+   "xp": 32.0,
+   "members": true,
+   "product": {
+    "item": "Jade ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Jade",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "jade_necklace",
+   "skill": "crafting",
+   "level": 25,
+   "xp": 54.0,
+   "members": true,
+   "product": {
+    "item": "Jade necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Jade",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "jade_bracelet",
+   "skill": "crafting",
+   "level": 29,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Jade bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Jade",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "jade_amulet_u",
+   "skill": "crafting",
+   "level": 34,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Jade amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Jade",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "topaz_ring",
+   "skill": "crafting",
+   "level": 16,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Topaz ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red topaz",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "topaz_necklace",
+   "skill": "crafting",
+   "level": 32,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Topaz necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red topaz",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "topaz_bracelet",
+   "skill": "crafting",
+   "level": 38,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Topaz bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red topaz",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "topaz_amulet_u",
+   "skill": "crafting",
+   "level": 45,
+   "xp": 80.0,
+   "members": true,
+   "product": {
+    "item": "Topaz amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Red topaz",
+     "qty": 1
+    },
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "gold_ring",
+   "skill": "crafting",
+   "level": 5,
+   "xp": 15.0,
+   "members": false,
+   "product": {
+    "item": "Gold ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "gold_necklace",
+   "skill": "crafting",
+   "level": 6,
+   "xp": 20.0,
+   "members": false,
+   "product": {
+    "item": "Gold necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "gold_bracelet",
+   "skill": "crafting",
+   "level": 7,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Gold bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "gold_amulet_u",
+   "skill": "crafting",
+   "level": 8,
+   "xp": 30.0,
+   "members": false,
+   "product": {
+    "item": "Gold amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "sapphire_bracelet",
+   "skill": "crafting",
+   "level": 23,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Sapphire bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Sapphire",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "emerald_ring",
+   "skill": "crafting",
+   "level": 27,
+   "xp": 55.0,
+   "members": false,
+   "product": {
+    "item": "Emerald ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "emerald_necklace",
+   "skill": "crafting",
+   "level": 29,
+   "xp": 60.0,
+   "members": false,
+   "product": {
+    "item": "Emerald necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "emerald_bracelet",
+   "skill": "crafting",
+   "level": 30,
+   "xp": 65.0,
+   "members": true,
+   "product": {
+    "item": "Emerald bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "emerald_amulet_u",
+   "skill": "crafting",
+   "level": 31,
+   "xp": 70.0,
+   "members": false,
+   "product": {
+    "item": "Emerald amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ruby_ring",
+   "skill": "crafting",
+   "level": 34,
+   "xp": 70.0,
+   "members": false,
+   "product": {
+    "item": "Ruby ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ruby_necklace",
+   "skill": "crafting",
+   "level": 40,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Ruby necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ruby_bracelet",
+   "skill": "crafting",
+   "level": 42,
+   "xp": 80.0,
+   "members": true,
+   "product": {
+    "item": "Ruby bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "gold_tiara",
+   "skill": "crafting",
+   "level": 42,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Gold tiara",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ruby_amulet_u",
+   "skill": "crafting",
+   "level": 50,
+   "xp": 85.0,
+   "members": false,
+   "product": {
+    "item": "Ruby amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "diamond_ring",
+   "skill": "crafting",
+   "level": 43,
+   "xp": 85.0,
+   "members": false,
+   "product": {
+    "item": "Diamond ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Diamond",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "diamond_necklace",
+   "skill": "crafting",
+   "level": 56,
+   "xp": 90.0,
+   "members": false,
+   "product": {
+    "item": "Diamond necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Diamond",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "diamond_bracelet",
+   "skill": "crafting",
+   "level": 58,
+   "xp": 95.0,
+   "members": true,
+   "product": {
+    "item": "Diamond bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Diamond",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "diamond_amulet_u",
+   "skill": "crafting",
+   "level": 70,
+   "xp": 100.0,
+   "members": false,
+   "product": {
+    "item": "Diamond amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Diamond",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragonstone_ring",
+   "skill": "crafting",
+   "level": 55,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Dragonstone ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragonstone",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragon_necklace",
+   "skill": "crafting",
+   "level": 72,
+   "xp": 105.0,
+   "members": true,
+   "product": {
+    "item": "Dragon necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragonstone",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragonstone_bracelet",
+   "skill": "crafting",
+   "level": 74,
+   "xp": 110.0,
+   "members": true,
+   "product": {
+    "item": "Dragonstone bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragonstone",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragonstone_amulet_u",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Dragonstone amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragonstone",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "onyx_ring",
+   "skill": "crafting",
+   "level": 67,
+   "xp": 115.0,
+   "members": true,
+   "product": {
+    "item": "Onyx ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Onyx",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "onyx_necklace",
+   "skill": "crafting",
+   "level": 82,
+   "xp": 120.0,
+   "members": true,
+   "product": {
+    "item": "Onyx necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Onyx",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "onyx_bracelet",
+   "skill": "crafting",
+   "level": 84,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Onyx bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Onyx",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "onyx_amulet_u",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 165.0,
+   "members": true,
+   "product": {
+    "item": "Onyx amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Onyx",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "zenyte_ring",
+   "skill": "crafting",
+   "level": 89,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Zenyte ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Zenyte",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "zenyte_necklace",
+   "skill": "crafting",
+   "level": 92,
+   "xp": 165.0,
+   "members": true,
+   "product": {
+    "item": "Zenyte necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Zenyte",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "zenyte_bracelet",
+   "skill": "crafting",
+   "level": 95,
+   "xp": 180.0,
+   "members": true,
+   "product": {
+    "item": "Zenyte bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Zenyte",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "zenyte_amulet_u",
+   "skill": "crafting",
+   "level": 98,
+   "xp": 200.0,
+   "members": true,
+   "product": {
+    "item": "Zenyte amulet (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Zenyte",
+     "qty": 1
+    },
+    {
+     "item": "Gold bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "silver_sickle",
+   "skill": "crafting",
+   "level": 18,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Silver sickle",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "silver_bolts_unf",
+   "skill": "crafting",
+   "level": 21,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Silver bolts (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "water_battlestaff",
+   "skill": "crafting",
+   "level": 54,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Water battlestaff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Battlestaff",
+     "qty": 1
+    },
+    {
+     "item": "Water orb",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "earth_battlestaff",
+   "skill": "crafting",
+   "level": 58,
+   "xp": 112.5,
+   "members": true,
+   "product": {
+    "item": "Earth battlestaff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Battlestaff",
+     "qty": 1
+    },
+    {
+     "item": "Earth orb",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "fire_battlestaff",
+   "skill": "crafting",
+   "level": 62,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Fire battlestaff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Battlestaff",
+     "qty": 1
+    },
+    {
+     "item": "Fire orb",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "air_battlestaff",
+   "skill": "crafting",
+   "level": 66,
+   "xp": 137.5,
+   "members": true,
+   "product": {
+    "item": "Air battlestaff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Battlestaff",
+     "qty": 1
+    },
+    {
+     "item": "Air orb",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_bolt_tips",
+   "skill": "crafting",
+   "level": 83,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Amethyst bolt tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Amethyst",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_arrowtips",
+   "skill": "crafting",
+   "level": 85,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Amethyst arrowtips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Amethyst",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_javelin_tips",
+   "skill": "crafting",
+   "level": 87,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Amethyst javelin tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Amethyst",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_dart_tip",
+   "skill": "crafting",
+   "level": 89,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Amethyst dart tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Amethyst",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "unstrung_symbol",
+   "skill": "crafting",
+   "level": 16,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Unstrung symbol",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "unstrung_emblem",
+   "skill": "crafting",
+   "level": 17,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Unstrung emblem",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "tiara",
+   "skill": "crafting",
+   "level": 23,
+   "xp": 52.5,
+   "members": false,
+   "product": {
+    "item": "Tiara",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Silver bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bird_house",
+   "skill": "crafting",
+   "level": 5,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "oak_bird_house",
+   "skill": "crafting",
+   "level": 15,
+   "xp": 20.0,
+   "members": true,
+   "product": {
+    "item": "Oak bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Oak logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "willow_bird_house",
+   "skill": "crafting",
+   "level": 25,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Willow bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "teak_bird_house",
+   "skill": "crafting",
+   "level": 35,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Teak bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Teak logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "maple_bird_house",
+   "skill": "crafting",
+   "level": 45,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Maple bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Maple logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mahogany_bird_house",
+   "skill": "crafting",
+   "level": 50,
+   "xp": 40.0,
+   "members": true,
+   "product": {
+    "item": "Mahogany bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mahogany logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "yew_bird_house",
+   "skill": "crafting",
+   "level": 60,
+   "xp": 45.0,
+   "members": true,
+   "product": {
+    "item": "Yew bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Yew logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "magic_bird_house",
+   "skill": "crafting",
+   "level": 75,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Magic bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "redwood_bird_house",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 55.0,
+   "members": true,
+   "product": {
+    "item": "Redwood bird house",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Redwood logs",
+     "qty": 1
+    },
+    {
+     "item": "Clockwork",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Opal amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Opal amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "jade_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Jade amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Jade amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "topaz_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Topaz amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Topaz amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "gold_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": false,
+   "product": {
+    "item": "Gold amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "emerald_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": false,
+   "product": {
+    "item": "Emerald amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "ruby_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": false,
+   "product": {
+    "item": "Ruby amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "diamond_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": false,
+   "product": {
+    "item": "Diamond amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Diamond amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "dragonstone_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Dragonstone amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragonstone amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "onyx_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Onyx amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Onyx amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "zenyte_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Zenyte amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Zenyte amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unblessed_symbol",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": false,
+   "product": {
+    "item": "Unblessed symbol",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unstrung symbol",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unpowered_symbol",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Unpowered symbol",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unstrung emblem",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "pre_nature_amulet",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Pre-nature amulet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald amulet (u)",
+     "qty": 1
+    },
+    {
+     "item": "Magic string",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "spiky_vambraces",
+   "skill": "crafting",
+   "level": 32,
+   "xp": 6.0,
+   "members": true,
+   "product": {
+    "item": "Spiky vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Kebbit claws",
+     "qty": 1
+    },
+    {
+     "item": "Leather vambraces",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "green_spiky_vambraces",
+   "skill": "crafting",
+   "level": 32,
+   "xp": 5.0,
+   "members": true,
+   "product": {
+    "item": "Green spiky vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Kebbit claws",
+     "qty": 1
+    },
+    {
+     "item": "Green d'hide vambraces",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "blue_spiky_vambraces",
+   "skill": "crafting",
+   "level": 32,
+   "xp": 6.0,
+   "members": true,
+   "product": {
+    "item": "Blue spiky vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Kebbit claws",
+     "qty": 1
+    },
+    {
+     "item": "Blue d'hide vambraces",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "red_spiky_vambraces",
+   "skill": "crafting",
+   "level": 32,
+   "xp": 5.8,
+   "members": true,
+   "product": {
+    "item": "Red spiky vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Kebbit claws",
+     "qty": 1
+    },
+    {
+     "item": "Red d'hide vambraces",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "black_spiky_vambraces",
+   "skill": "crafting",
+   "level": 32,
+   "xp": 6.0,
+   "members": true,
+   "product": {
+    "item": "Black spiky vambraces",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Kebbit claws",
+     "qty": 1
+    },
+    {
+     "item": "Black d'hide vambraces",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "strung_rabbit_foot",
+   "skill": "crafting",
+   "level": 37,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Strung rabbit foot",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Rabbit foot",
+     "qty": 1
+    },
+    {
+     "item": "Ball of wool",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unfired_pot",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 6.3,
+   "members": false,
+   "product": {
+    "item": "Unfired pot",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Soft clay",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "pot",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 6.3,
+   "members": false,
+   "product": {
+    "item": "Pot",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unfired pot",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unfired_cup",
+   "skill": "crafting",
+   "level": 3,
+   "xp": 8.5,
+   "members": true,
+   "product": {
+    "item": "Unfired cup",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Soft clay",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "empty_cup",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 8.5,
+   "members": true,
+   "product": {
+    "item": "Empty cup",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unfired cup",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unfired_pie_dish",
+   "skill": "crafting",
+   "level": 7,
+   "xp": 15.0,
+   "members": false,
+   "product": {
+    "item": "Unfired pie dish",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Soft clay",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "pie_dish",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 10.0,
+   "members": false,
+   "product": {
+    "item": "Pie dish",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unfired pie dish",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unfired_bowl",
+   "skill": "crafting",
+   "level": 8,
+   "xp": 18.0,
+   "members": false,
+   "product": {
+    "item": "Unfired bowl",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Soft clay",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "bowl",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 15.0,
+   "members": false,
+   "product": {
+    "item": "Bowl",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unfired bowl",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unfired_plant_pot",
+   "skill": "crafting",
+   "level": 19,
+   "xp": 20.0,
+   "members": true,
+   "product": {
+    "item": "Unfired plant pot",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Soft clay",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "empty_plant_pot",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Empty plant pot",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unfired plant pot",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "unfired_pot_lid",
+   "skill": "crafting",
+   "level": 25,
+   "xp": 20.0,
+   "members": true,
+   "product": {
+    "item": "Unfired pot lid",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Soft clay",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "pot_lid",
+   "skill": "crafting",
+   "level": 1,
+   "xp": 20.0,
+   "members": true,
+   "product": {
+    "item": "Pot lid",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unfired pot lid",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "empty_light_orb",
+   "skill": "crafting",
+   "level": 87,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Empty light orb",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Molten glass",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "bullseye_lantern_empty",
+   "skill": "crafting",
+   "level": 49,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Bullseye lantern (empty)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bullseye lantern (unf)",
+     "qty": 1
+    },
+    {
+     "item": "Lantern lens",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": "Bullseye lantern (unf) is a Smithing product (49 Smithing)."
+  },
+  {
+   "id": "clockwork",
+   "skill": "crafting",
+   "level": 8,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Clockwork",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "limestone_brick",
+   "skill": "crafting",
+   "level": 12,
+   "xp": 6.0,
+   "members": true,
+   "product": {
+    "item": "Limestone brick",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Limestone",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "toy_soldier",
+   "skill": "crafting",
+   "level": 13,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Toy soldier",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Clockwork",
+     "qty": 1
+    },
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "toy_doll",
+   "skill": "crafting",
+   "level": 18,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Toy doll",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Clockwork",
+     "qty": 1
+    },
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "toy_mouse",
+   "skill": "crafting",
+   "level": 33,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Toy mouse",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Clockwork",
+     "qty": 1
+    },
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "toy_cat",
+   "skill": "crafting",
+   "level": 85,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Toy cat",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Clockwork",
+     "qty": 1
+    },
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "white_toy_horsey",
+   "skill": "crafting",
+   "level": 10,
+   "xp": 15.0,
+   "members": false,
+   "product": {
+    "item": "White toy horsey",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "brown_toy_horsey",
+   "skill": "crafting",
+   "level": 10,
+   "xp": 15.0,
+   "members": false,
+   "product": {
+    "item": "Brown toy horsey",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "grey_toy_horsey",
+   "skill": "crafting",
+   "level": 10,
+   "xp": 15.0,
+   "members": false,
+   "product": {
+    "item": "Grey toy horsey",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "black_toy_horsey",
+   "skill": "crafting",
+   "level": 10,
+   "xp": 15.0,
+   "members": false,
+   "product": {
+    "item": "Black toy horsey",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Plank",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "wooden_cat",
+   "skill": "crafting",
+   "level": 16,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Wooden cat",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Plank",
+     "qty": 1
+    },
+    {
+     "item": "Fur",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "lunar_boots",
+   "skill": "crafting",
+   "level": 61,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Lunar boots",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Suqah leather",
+     "qty": 1
+    },
+    {
+     "item": "Thread",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "lunar_gloves",
+   "skill": "crafting",
+   "level": 61,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Lunar gloves",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Suqah leather",
+     "qty": 1
+    },
+    {
+     "item": "Thread",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "lunar_legs",
+   "skill": "crafting",
+   "level": 61,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Lunar legs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Suqah leather",
+     "qty": 1
+    },
+    {
+     "item": "Thread",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "lunar_torso",
+   "skill": "crafting",
+   "level": 61,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Lunar torso",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Suqah leather",
+     "qty": 1
+    },
+    {
+     "item": "Thread",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crossbow_string",
+   "skill": "crafting",
+   "level": 10,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Crossbow string",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Sinew",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "broodoo_shield_combat",
+   "skill": "crafting",
+   "level": 35,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Broodoo shield (combat)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 2
+    },
+    {
+     "item": "Tribal mask (combat)",
+     "qty": 1
+    },
+    {
+     "item": "Bronze nails",
+     "qty": 8
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "broodoo_shield_disease",
+   "skill": "crafting",
+   "level": 35,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Broodoo shield (disease)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 2
+    },
+    {
+     "item": "Tribal mask (disease)",
+     "qty": 1
+    },
+    {
+     "item": "Bronze nails",
+     "qty": 8
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "broodoo_shield_poison",
+   "skill": "crafting",
+   "level": 35,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Broodoo shield (poison)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snakeskin",
+     "qty": 2
+    },
+    {
+     "item": "Tribal mask (poison)",
+     "qty": 1
+    },
+    {
+     "item": "Bronze nails",
+     "qty": 8
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "archer_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 400.0,
+   "members": true,
+   "product": {
+    "item": "Archer icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Archers ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "berserker_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 400.0,
+   "members": true,
+   "product": {
+    "item": "Berserker icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Berserker ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "seers_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 400.0,
+   "members": true,
+   "product": {
+    "item": "Seers icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Seers ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "warrior_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 400.0,
+   "members": true,
+   "product": {
+    "item": "Warrior icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Warrior ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "ultor_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Ultor icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ultor vestige",
+     "qty": 1
+    },
+    {
+     "item": "Berserker icon",
+     "qty": 1
+    },
+    {
+     "item": "Blood rune",
+     "qty": 500
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "magus_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Magus icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magus vestige",
+     "qty": 1
+    },
+    {
+     "item": "Seers icon",
+     "qty": 1
+    },
+    {
+     "item": "Blood rune",
+     "qty": 500
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "bellator_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Bellator icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bellator vestige",
+     "qty": 1
+    },
+    {
+     "item": "Warrior icon",
+     "qty": 1
+    },
+    {
+     "item": "Blood rune",
+     "qty": 500
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "venator_icon",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Venator icon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Venator vestige",
+     "qty": 1
+    },
+    {
+     "item": "Archer icon",
+     "qty": 1
+    },
+    {
+     "item": "Blood rune",
+     "qty": 500
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "ultor_ring",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 2500.0,
+   "members": true,
+   "product": {
+    "item": "Ultor ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ultor icon",
+     "qty": 1
+    },
+    {
+     "item": "Chromium ingot",
+     "qty": 3
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "magus_ring",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 2500.0,
+   "members": true,
+   "product": {
+    "item": "Magus ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magus icon",
+     "qty": 1
+    },
+    {
+     "item": "Chromium ingot",
+     "qty": 3
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "bellator_ring",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 2500.0,
+   "members": true,
+   "product": {
+    "item": "Bellator ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bellator icon",
+     "qty": 1
+    },
+    {
+     "item": "Chromium ingot",
+     "qty": 3
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "venator_ring",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 2500.0,
+   "members": true,
+   "product": {
+    "item": "Venator ring",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Venator icon",
+     "qty": 1
+    },
+    {
+     "item": "Chromium ingot",
+     "qty": 3
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "armadylean_plate_helm",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 210.0,
+   "members": true,
+   "product": {
+    "item": "Armadylean plate",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Armadyl helmet",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "armadylean_plate_chest",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 840.0,
+   "members": true,
+   "product": {
+    "item": "Armadylean plate",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Armadyl chestplate",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "armadylean_plate_skirt",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 630.0,
+   "members": true,
+   "product": {
+    "item": "Armadylean plate",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Armadyl chainskirt",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "masori_body_f",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 3320.0,
+   "members": true,
+   "product": {
+    "item": "Masori body (f)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Masori body",
+     "qty": 1
+    },
+    {
+     "item": "Armadylean plate",
+     "qty": 4
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "masori_chaps_f",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 2490.0,
+   "members": true,
+   "product": {
+    "item": "Masori chaps (f)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Masori chaps",
+     "qty": 1
+    },
+    {
+     "item": "Armadylean plate",
+     "qty": 3
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "masori_mask_f",
+   "skill": "crafting",
+   "level": 90,
+   "xp": 830.0,
+   "members": true,
+   "product": {
+    "item": "Masori mask (f)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Masori mask",
+     "qty": 1
+    },
+    {
+     "item": "Armadylean plate",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "serpentine_helm_uncharged",
+   "skill": "crafting",
+   "level": 52,
+   "xp": 120.0,
+   "members": true,
+   "product": {
+    "item": "Serpentine helm (uncharged)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Serpentine visage",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "trident_uncharged",
+   "skill": "crafting",
+   "level": 59,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Uncharged trident",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncharged trident",
+     "qty": 1
+    },
+    {
+     "item": "Magic fang",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "trident_e_uncharged",
+   "skill": "crafting",
+   "level": 59,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Uncharged trident (e)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Uncharged trident (e)",
+     "qty": 1
+    },
+    {
+     "item": "Magic fang",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "noxious_halberd",
+   "skill": "crafting",
+   "level": 72,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Noxious halberd",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Noxious point",
+     "qty": 1
+    },
+    {
+     "item": "Noxious blade",
+     "qty": 1
+    },
+    {
+     "item": "Noxious pommel",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "purging_staff",
+   "skill": "crafting",
+   "level": 74,
+   "xp": 730.0,
+   "members": true,
+   "product": {
+    "item": "Purging staff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Tormented synapse",
+     "qty": 1
+    },
+    {
+     "item": "Iron bar",
+     "qty": 1
+    },
+    {
+     "item": "Battlestaff",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": "730 XP on the first attach; 73 XP for each subsequent synapse."
+  },
+  {
+   "id": "bone_staff",
+   "skill": "crafting",
+   "level": 35,
+   "xp": 300.0,
+   "members": true,
+   "product": {
+    "item": "Bone staff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Battlestaff",
+     "qty": 1
+    },
+    {
+     "item": "Chaos rune",
+     "qty": 1000
+    },
+    {
+     "item": "Scurrius' spine",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "amulet_of_rancour",
+   "skill": "crafting",
+   "level": 86,
+   "xp": 500.0,
+   "members": true,
+   "product": {
+    "item": "Amulet of rancour",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Amulet of torture",
+     "qty": 1
+    },
+    {
+     "item": "Etched araxyte fang",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "necklace_of_rupture",
+   "skill": "crafting",
+   "level": 84,
+   "xp": 500.0,
+   "members": true,
+   "product": {
+    "item": "Necklace of rupture",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Necklace of anguish",
+     "qty": 1
+    },
+    {
+     "item": "Etched elder venator fang",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "accursed_sceptre",
+   "skill": "crafting",
+   "level": 85,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Accursed sceptre",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Thammaron's sceptre (u)",
+     "qty": 1
+    },
+    {
+     "item": "Skull of Vet'ion",
+     "qty": 1
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_axe",
+   "skill": "crafting",
+   "level": 76,
+   "xp": 6000.0,
+   "members": true,
+   "product": {
+    "item": "Crystal axe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragon axe",
+     "qty": 1
+    },
+    {
+     "item": "Crystal tool seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 120
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_pickaxe",
+   "skill": "crafting",
+   "level": 76,
+   "xp": 6000.0,
+   "members": true,
+   "product": {
+    "item": "Crystal pickaxe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragon pickaxe",
+     "qty": 1
+    },
+    {
+     "item": "Crystal tool seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 120
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_harpoon",
+   "skill": "crafting",
+   "level": 76,
+   "xp": 6000.0,
+   "members": true,
+   "product": {
+    "item": "Crystal harpoon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragon harpoon",
+     "qty": 1
+    },
+    {
+     "item": "Crystal tool seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 120
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_bow",
+   "skill": "crafting",
+   "level": 78,
+   "xp": 2000.0,
+   "members": true,
+   "product": {
+    "item": "Crystal bow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Crystal weapon seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 40
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_halberd",
+   "skill": "crafting",
+   "level": 78,
+   "xp": 2000.0,
+   "members": true,
+   "product": {
+    "item": "Crystal halberd",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Crystal weapon seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 40
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_shield",
+   "skill": "crafting",
+   "level": 78,
+   "xp": 2000.0,
+   "members": true,
+   "product": {
+    "item": "Crystal shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Crystal weapon seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 40
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_helm",
+   "skill": "crafting",
+   "level": 70,
+   "xp": 2500.0,
+   "members": true,
+   "product": {
+    "item": "Crystal helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Crystal armour seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 50
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_legs",
+   "skill": "crafting",
+   "level": 72,
+   "xp": 5000.0,
+   "members": true,
+   "product": {
+    "item": "Crystal legs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Crystal armour seed",
+     "qty": 2
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 100
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "crystal_body",
+   "skill": "crafting",
+   "level": 74,
+   "xp": 7500.0,
+   "members": true,
+   "product": {
+    "item": "Crystal body",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Crystal armour seed",
+     "qty": 3
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 150
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "blade_of_saeldor",
+   "skill": "crafting",
+   "level": 82,
+   "xp": 5000.0,
+   "members": true,
+   "product": {
+    "item": "Blade of Saeldor",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Enhanced crystal weapon seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 100
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "bow_of_faerdhinen",
+   "skill": "crafting",
+   "level": 82,
+   "xp": 5000.0,
+   "members": true,
+   "product": {
+    "item": "Bow of Faerdhinen",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Enhanced crystal weapon seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 100
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "enhanced_crystal_key",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 500.0,
+   "members": true,
+   "product": {
+    "item": "Enhanced crystal key",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Crystal key",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 10
+    }
+   ],
+   "fee": 0
+  },
+  {
+   "id": "eternal_teleport_crystal",
+   "skill": "crafting",
+   "level": 80,
+   "xp": 5000.0,
+   "members": true,
+   "product": {
+    "item": "Eternal teleport crystal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Enhanced crystal teleport seed",
+     "qty": 1
+    },
+    {
+     "item": "Crystal shard",
+     "qty": 100
+    }
+   ],
+   "fee": 0
+  }
+ ]
+}

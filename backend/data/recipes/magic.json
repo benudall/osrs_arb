@@ -1,0 +1,1039 @@
+{
+ "skill": "magic",
+ "recipes": [
+  {
+   "id": "enchant_sapphire_ring",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Ring of recoil",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Sapphire ring",
+     "qty": 1
+    },
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "enchant_sapphire_amulet",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": false,
+   "product": {
+    "item": "Amulet of magic",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Sapphire amulet",
+     "qty": 1
+    },
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "enchant_emerald_ring",
+   "skill": "magic",
+   "level": 27,
+   "xp": 37.0,
+   "members": true,
+   "product": {
+    "item": "Ring of dueling(8)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald ring",
+     "qty": 1
+    },
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "enchant_emerald_amulet",
+   "skill": "magic",
+   "level": 27,
+   "xp": 37.0,
+   "members": false,
+   "product": {
+    "item": "Amulet of defence",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald amulet",
+     "qty": 1
+    },
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "enchant_ruby_ring",
+   "skill": "magic",
+   "level": 49,
+   "xp": 59.0,
+   "members": false,
+   "product": {
+    "item": "Ring of forging",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby ring",
+     "qty": 1
+    },
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "enchant_ruby_amulet",
+   "skill": "magic",
+   "level": 49,
+   "xp": 59.0,
+   "members": false,
+   "product": {
+    "item": "Amulet of strength",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby amulet",
+     "qty": 1
+    },
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "bracelet_of_clay",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Bracelet of clay",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Sapphire bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "games_necklace_8",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Games necklace(8)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Sapphire necklace",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ring_of_pursuit",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Ring of pursuit",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Opal ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "expeditious_bracelet",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Expeditious bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Opal bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dodgy_necklace",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Dodgy necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Opal necklace",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amulet_of_bounty",
+   "skill": "magic",
+   "level": 7,
+   "xp": 17.5,
+   "members": true,
+   "product": {
+    "item": "Amulet of bounty",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Opal amulet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "binding_necklace",
+   "skill": "magic",
+   "level": 27,
+   "xp": 37.0,
+   "members": true,
+   "product": {
+    "item": "Binding necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Emerald necklace",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "castle_wars_bracelet_3",
+   "skill": "magic",
+   "level": 27,
+   "xp": 37.0,
+   "members": true,
+   "product": {
+    "item": "Castle wars bracelet(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Emerald bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ring_of_returning_5",
+   "skill": "magic",
+   "level": 27,
+   "xp": 37.0,
+   "members": true,
+   "product": {
+    "item": "Ring of returning(5)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Jade ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "flamtaer_bracelet",
+   "skill": "magic",
+   "level": 27,
+   "xp": 37.0,
+   "members": true,
+   "product": {
+    "item": "Flamtaer bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Jade bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amulet_of_chemistry",
+   "skill": "magic",
+   "level": 27,
+   "xp": 37.0,
+   "members": true,
+   "product": {
+    "item": "Amulet of chemistry",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Jade amulet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "inoculation_bracelet",
+   "skill": "magic",
+   "level": 49,
+   "xp": 59.0,
+   "members": true,
+   "product": {
+    "item": "Inoculation bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Ruby bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "efaritay_s_aid",
+   "skill": "magic",
+   "level": 49,
+   "xp": 59.0,
+   "members": true,
+   "product": {
+    "item": "Efaritay's aid",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Topaz ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bracelet_of_slaughter",
+   "skill": "magic",
+   "level": 49,
+   "xp": 59.0,
+   "members": true,
+   "product": {
+    "item": "Bracelet of slaughter",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Topaz bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "necklace_of_faith",
+   "skill": "magic",
+   "level": 49,
+   "xp": 59.0,
+   "members": true,
+   "product": {
+    "item": "Necklace of faith",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Topaz necklace",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "burning_amulet_5",
+   "skill": "magic",
+   "level": 49,
+   "xp": 59.0,
+   "members": true,
+   "product": {
+    "item": "Burning amulet(5)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Topaz amulet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ring_of_life",
+   "skill": "magic",
+   "level": 57,
+   "xp": 67.0,
+   "members": true,
+   "product": {
+    "item": "Ring of life",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Diamond ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "phoenix_necklace",
+   "skill": "magic",
+   "level": 57,
+   "xp": 67.0,
+   "members": true,
+   "product": {
+    "item": "Phoenix necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Diamond necklace",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "abyssal_bracelet_5",
+   "skill": "magic",
+   "level": 57,
+   "xp": 67.0,
+   "members": true,
+   "product": {
+    "item": "Abyssal bracelet(5)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Diamond bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amulet_of_power",
+   "skill": "magic",
+   "level": 57,
+   "xp": 67.0,
+   "members": false,
+   "product": {
+    "item": "Amulet of power",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Diamond amulet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ring_of_stone",
+   "skill": "magic",
+   "level": 87,
+   "xp": 97.0,
+   "members": true,
+   "product": {
+    "item": "Ring of stone",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Onyx ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "berserker_necklace",
+   "skill": "magic",
+   "level": 87,
+   "xp": 97.0,
+   "members": true,
+   "product": {
+    "item": "Berserker necklace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Onyx necklace",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "regen_bracelet",
+   "skill": "magic",
+   "level": 87,
+   "xp": 97.0,
+   "members": true,
+   "product": {
+    "item": "Regen bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Onyx bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amulet_of_fury",
+   "skill": "magic",
+   "level": 87,
+   "xp": 97.0,
+   "members": true,
+   "product": {
+    "item": "Amulet of fury",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Onyx amulet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ring_of_suffering",
+   "skill": "magic",
+   "level": 93,
+   "xp": 110.0,
+   "members": true,
+   "product": {
+    "item": "Ring of suffering",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Zenyte ring",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "necklace_of_anguish",
+   "skill": "magic",
+   "level": 93,
+   "xp": 110.0,
+   "members": true,
+   "product": {
+    "item": "Necklace of anguish",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Zenyte necklace",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "tormented_bracelet",
+   "skill": "magic",
+   "level": 93,
+   "xp": 110.0,
+   "members": true,
+   "product": {
+    "item": "Tormented bracelet",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Zenyte bracelet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amulet_of_torture",
+   "skill": "magic",
+   "level": 93,
+   "xp": 110.0,
+   "members": true,
+   "product": {
+    "item": "Amulet of torture",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cosmic rune",
+     "qty": 1
+    },
+    {
+     "item": "Zenyte amulet",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "superheat_bronze_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 1
+    }
+   ],
+   "xp": 0,
+   "members": false,
+   "product": {
+    "item": "Bronze bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Copper ore",
+     "qty": 1
+    },
+    {
+     "item": "Tin ore",
+     "qty": 1
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "superheat_iron_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 15
+    }
+   ],
+   "xp": 0,
+   "members": false,
+   "product": {
+    "item": "Iron bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron ore",
+     "qty": 1
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "superheat_steel_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 15
+    }
+   ],
+   "xp": 0,
+   "members": false,
+   "product": {
+    "item": "Steel bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 2
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "superheat_silver_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 20
+    }
+   ],
+   "xp": 0,
+   "members": false,
+   "product": {
+    "item": "Silver bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Silver ore",
+     "qty": 1
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "superheat_gold_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 40
+    }
+   ],
+   "xp": 0,
+   "members": false,
+   "product": {
+    "item": "Gold bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold ore",
+     "qty": 1
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "superheat_mithril_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 50
+    }
+   ],
+   "xp": 0,
+   "members": true,
+   "product": {
+    "item": "Mithril bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 4
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "superheat_adamant_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 70
+    }
+   ],
+   "xp": 0,
+   "members": true,
+   "product": {
+    "item": "Adamantite bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 6
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "superheat_runite_bar",
+   "skill": "magic",
+   "level": 43,
+   "extra_skills": [
+    {
+     "skill": "smithing",
+     "level": 85
+    }
+   ],
+   "xp": 0,
+   "members": true,
+   "product": {
+    "item": "Runite bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 8
+    },
+    {
+     "item": "Nature rune",
+     "qty": 1
+    }
+   ]
+  }
+ ]
+}

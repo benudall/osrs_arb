@@ -1,0 +1,4954 @@
+[
+ {
+  "id": "cook_shrimp",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": false,
+  "product": {
+   "id": 315,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 317,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Burn risk at low Cooking.",
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_sardine",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 40.0,
+  "members": false,
+  "product": {
+   "id": 325,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 327,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Burn risk at low Cooking.",
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_anchovies",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": false,
+  "product": {
+   "id": 319,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 321,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Burn risk at low Cooking.",
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_herring",
+  "skill": "cooking",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 347,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 345,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Burn risk at low Cooking.",
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_trout",
+  "skill": "cooking",
+  "level": 15,
+  "extra_skills": [],
+  "xp": 70.0,
+  "members": false,
+  "product": {
+   "id": 333,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 335,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_salmon",
+  "skill": "cooking",
+  "level": 25,
+  "extra_skills": [],
+  "xp": 90.0,
+  "members": false,
+  "product": {
+   "id": 329,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 331,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_tuna",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": false,
+  "product": {
+   "id": 361,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_lobster",
+  "skill": "cooking",
+  "level": 40,
+  "extra_skills": [],
+  "xp": 120.0,
+  "members": false,
+  "product": {
+   "id": 379,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 377,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cook_swordfish",
+  "skill": "cooking",
+  "level": 45,
+  "extra_skills": [],
+  "xp": 140.0,
+  "members": false,
+  "product": {
+   "id": 373,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 371,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "jug_of_wine",
+  "skill": "cooking",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 200.0,
+  "members": false,
+  "product": {
+   "id": 1993,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1987,
+    "qty": 1
+   },
+   {
+    "id": 1937,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "16s per inventory; no burn risk.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cooked_meat",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": false,
+  "product": {
+   "id": 2142,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2132,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "sinew",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 3.0,
+  "members": true,
+  "product": {
+   "id": 9436,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2132,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_chicken",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": false,
+  "product": {
+   "id": 2140,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2138,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_rabbit",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": true,
+  "product": {
+   "id": 3228,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3226,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "ugthanki_meat",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 40.0,
+  "members": true,
+  "product": {
+   "id": 1861,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1859,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "mackerel",
+  "skill": "cooking",
+  "level": 10,
+  "extra_skills": [],
+  "xp": 60.0,
+  "members": true,
+  "product": {
+   "id": 355,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cod",
+  "skill": "cooking",
+  "level": 18,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 339,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 341,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "pike",
+  "skill": "cooking",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 80.0,
+  "members": false,
+  "product": {
+   "id": 351,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "red_crab_meat",
+  "skill": "cooking",
+  "level": 21,
+  "extra_skills": [],
+  "xp": 85.0,
+  "members": true,
+  "product": {
+   "id": 31689,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31686,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "rainbow_fish",
+  "skill": "cooking",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 110.0,
+  "members": true,
+  "product": {
+   "id": 10136,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 10138,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cave_eel",
+  "skill": "cooking",
+  "level": 38,
+  "extra_skills": [],
+  "xp": 115.0,
+  "members": true,
+  "product": {
+   "id": 5003,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 5001,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "bass",
+  "skill": "cooking",
+  "level": 43,
+  "extra_skills": [],
+  "xp": 130.0,
+  "members": true,
+  "product": {
+   "id": 365,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "blue_crab_meat",
+  "skill": "cooking",
+  "level": 48,
+  "extra_skills": [],
+  "xp": 145.0,
+  "members": true,
+  "product": {
+   "id": 31695,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31692,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "swordtip_squid",
+  "skill": "cooking",
+  "level": 56,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 31556,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31553,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "monkfish",
+  "skill": "cooking",
+  "level": 62,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 7946,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7944,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "giant_krill",
+  "skill": "cooking",
+  "level": 69,
+  "extra_skills": [],
+  "xp": 177.5,
+  "members": true,
+  "product": {
+   "id": 32312,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 32309,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "jumbo_squid",
+  "skill": "cooking",
+  "level": 71,
+  "extra_skills": [],
+  "xp": 180.0,
+  "members": true,
+  "product": {
+   "id": 31564,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "haddock",
+  "skill": "cooking",
+  "level": 73,
+  "extra_skills": [],
+  "xp": 180.0,
+  "members": true,
+  "product": {
+   "id": 32320,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 32317,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "rainbow_crab_meat",
+  "skill": "cooking",
+  "level": 77,
+  "extra_skills": [],
+  "xp": 200.0,
+  "members": true,
+  "product": {
+   "id": 31703,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31700,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "yellowfin",
+  "skill": "cooking",
+  "level": 79,
+  "extra_skills": [],
+  "xp": 200.0,
+  "members": true,
+  "product": {
+   "id": 32328,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 32325,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "shark",
+  "skill": "cooking",
+  "level": 80,
+  "extra_skills": [],
+  "xp": 210.0,
+  "members": true,
+  "product": {
+   "id": 385,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 383,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "sea_turtle",
+  "skill": "cooking",
+  "level": 82,
+  "extra_skills": [],
+  "xp": 211.3,
+  "members": true,
+  "product": {
+   "id": 397,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 395,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "halibut",
+  "skill": "cooking",
+  "level": 83,
+  "extra_skills": [],
+  "xp": 212.5,
+  "members": true,
+  "product": {
+   "id": 32336,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 32333,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "anglerfish",
+  "skill": "cooking",
+  "level": 84,
+  "extra_skills": [],
+  "xp": 230.0,
+  "members": true,
+  "product": {
+   "id": 13441,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 13439,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "bluefin",
+  "skill": "cooking",
+  "level": 87,
+  "extra_skills": [],
+  "xp": 215.0,
+  "members": true,
+  "product": {
+   "id": 32344,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 32341,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "dark_crab",
+  "skill": "cooking",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 215.0,
+  "members": true,
+  "product": {
+   "id": 11936,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 11934,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "manta_ray",
+  "skill": "cooking",
+  "level": 91,
+  "extra_skills": [],
+  "xp": 216.3,
+  "members": true,
+  "product": {
+   "id": 391,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 389,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "marlin",
+  "skill": "cooking",
+  "level": 91,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": true,
+  "product": {
+   "id": 32352,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 32349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "raw_mud_pie",
+  "skill": "cooking",
+  "level": 29,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7168,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2315,
+    "qty": 1
+   },
+   {
+    "id": 6032,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 434,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Filling added in stages (compost, water, clay) - combined steps.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "mud_pie",
+  "skill": "cooking",
+  "level": 29,
+  "extra_skills": [],
+  "xp": 128.0,
+  "members": true,
+  "product": {
+   "id": 7170,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7168,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "raw_garden_pie",
+  "skill": "cooking",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7176,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2315,
+    "qty": 1
+   },
+   {
+    "id": 1982,
+    "qty": 1
+   },
+   {
+    "id": 1957,
+    "qty": 1
+   },
+   {
+    "id": 1965,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Filling added in stages (tomato, onion, cabbage) - combined steps.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "garden_pie",
+  "skill": "cooking",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 138.0,
+  "members": true,
+  "product": {
+   "id": 7178,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7176,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "raw_fish_pie",
+  "skill": "cooking",
+  "level": 47,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7186,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2315,
+    "qty": 1
+   },
+   {
+    "id": 333,
+    "qty": 1
+   },
+   {
+    "id": 339,
+    "qty": 1
+   },
+   {
+    "id": 1942,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Filling added in stages (trout, cod, potato) - combined steps.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "fish_pie",
+  "skill": "cooking",
+  "level": 47,
+  "extra_skills": [],
+  "xp": 164.0,
+  "members": true,
+  "product": {
+   "id": 7188,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7186,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "raw_admiral_pie",
+  "skill": "cooking",
+  "level": 70,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7196,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2315,
+    "qty": 1
+   },
+   {
+    "id": 329,
+    "qty": 1
+   },
+   {
+    "id": 361,
+    "qty": 1
+   },
+   {
+    "id": 1942,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Filling added in stages (salmon, tuna, potato) - combined steps.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "admiral_pie",
+  "skill": "cooking",
+  "level": 70,
+  "extra_skills": [],
+  "xp": 210.0,
+  "members": true,
+  "product": {
+   "id": 7198,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7196,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "raw_wild_pie",
+  "skill": "cooking",
+  "level": 85,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7206,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2315,
+    "qty": 1
+   },
+   {
+    "id": 2136,
+    "qty": 1
+   },
+   {
+    "id": 2876,
+    "qty": 1
+   },
+   {
+    "id": 3226,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Filling added in stages (bear meat, chompy, rabbit) - combined steps.",
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "wild_pie",
+  "skill": "cooking",
+  "level": 85,
+  "extra_skills": [],
+  "xp": 240.0,
+  "members": true,
+  "product": {
+   "id": 7208,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7206,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "raw_summer_pie",
+  "skill": "cooking",
+  "level": 95,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7216,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2315,
+    "qty": 1
+   },
+   {
+    "id": 5504,
+    "qty": 1
+   },
+   {
+    "id": 5982,
+    "qty": 1
+   },
+   {
+    "id": 1955,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Filling added in stages (strawberry, watermelon, apple) - combined steps.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "summer_pie",
+  "skill": "cooking",
+  "level": 95,
+  "extra_skills": [],
+  "xp": 260.0,
+  "members": true,
+  "product": {
+   "id": 7218,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7216,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_karambwan",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 190.0,
+  "members": true,
+  "product": {
+   "id": 3144,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3142,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "2-tick cook with Karambwan vessel.",
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_slimy_eel",
+  "skill": "cooking",
+  "level": 28,
+  "extra_skills": [],
+  "xp": 95.0,
+  "members": true,
+  "product": {
+   "id": 3381,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3379,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_barb_tailed_kebbit",
+  "skill": "cooking",
+  "level": 32,
+  "extra_skills": [],
+  "xp": 106.0,
+  "members": true,
+  "product": {
+   "id": 29131,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29101,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_wild_kebbit",
+  "skill": "cooking",
+  "level": 23,
+  "extra_skills": [],
+  "xp": 73.0,
+  "members": true,
+  "product": {
+   "id": 29128,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29104,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_larupia",
+  "skill": "cooking",
+  "level": 31,
+  "extra_skills": [],
+  "xp": 92.0,
+  "members": true,
+  "product": {
+   "id": 29146,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29122,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_graahk",
+  "skill": "cooking",
+  "level": 41,
+  "extra_skills": [],
+  "xp": 124.0,
+  "members": true,
+  "product": {
+   "id": 29149,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29119,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_kyatt",
+  "skill": "cooking",
+  "level": 51,
+  "extra_skills": [],
+  "xp": 143.0,
+  "members": true,
+  "product": {
+   "id": 29152,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29125,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_jubbly",
+  "skill": "cooking",
+  "level": 41,
+  "extra_skills": [],
+  "xp": 160.0,
+  "members": true,
+  "product": {
+   "id": 7568,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7566,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_pyre_fox",
+  "skill": "cooking",
+  "level": 59,
+  "extra_skills": [],
+  "xp": 154.0,
+  "members": true,
+  "product": {
+   "id": 29137,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29110,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_sunlight_antelope",
+  "skill": "cooking",
+  "level": 68,
+  "extra_skills": [],
+  "xp": 175.0,
+  "members": true,
+  "product": {
+   "id": 29140,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29116,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_moonlight_antelope",
+  "skill": "cooking",
+  "level": 92,
+  "extra_skills": [],
+  "xp": 220.0,
+  "members": true,
+  "product": {
+   "id": 29143,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29113,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_dashing_kebbit",
+  "skill": "cooking",
+  "level": 82,
+  "extra_skills": [],
+  "xp": 215.0,
+  "members": true,
+  "product": {
+   "id": 29134,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29107,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_t_bone_steak",
+  "skill": "cooking",
+  "level": 13,
+  "extra_skills": [],
+  "xp": 90.0,
+  "members": false,
+  "product": {
+   "id": 33109,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 33106,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_chompy",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 140.0,
+  "members": true,
+  "product": {
+   "id": 2878,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2876,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "thin_snail_meat",
+  "skill": "cooking",
+  "level": 12,
+  "extra_skills": [],
+  "xp": 70.0,
+  "members": true,
+  "product": {
+   "id": 3369,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "lean_snail_meat",
+  "skill": "cooking",
+  "level": 17,
+  "extra_skills": [],
+  "xp": 80.0,
+  "members": true,
+  "product": {
+   "id": 3371,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3365,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "fat_snail_meat",
+  "skill": "cooking",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 95.0,
+  "members": true,
+  "product": {
+   "id": 3373,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3367,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "roe",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 10.0,
+  "members": true,
+  "product": {
+   "id": 11324,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 11328,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "caviar",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 15.0,
+  "members": true,
+  "product": {
+   "id": 11326,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 11332,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cooked_oomlie_wrap",
+  "skill": "cooking",
+  "level": 50,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": true,
+  "product": {
+   "id": 2343,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2341,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "bread_dough",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2307,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "bread",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 40.0,
+  "members": false,
+  "product": {
+   "id": 2309,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2307,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ugthanki_kebab",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 40.0,
+  "members": true,
+  "product": {
+   "id": 1885,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1881,
+    "qty": 1
+   },
+   {
+    "id": 1865,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "baked_potato",
+  "skill": "cooking",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 15.0,
+  "members": true,
+  "product": {
+   "id": 6701,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1942,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cooked_sweetcorn",
+  "skill": "cooking",
+  "level": 28,
+  "extra_skills": [],
+  "xp": 104.0,
+  "members": true,
+  "product": {
+   "id": 5988,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 5986,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pat_of_butter",
+  "skill": "cooking",
+  "level": 38,
+  "extra_skills": [],
+  "xp": 40.5,
+  "members": true,
+  "product": {
+   "id": 6697,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1927,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cheese",
+  "skill": "cooking",
+  "level": 48,
+  "extra_skills": [],
+  "xp": 64.0,
+  "members": false,
+  "product": {
+   "id": 1985,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1927,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_egg",
+  "skill": "cooking",
+  "level": 13,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7076,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1944,
+    "qty": 1
+   },
+   {
+    "id": 1923,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "scrambled_egg",
+  "skill": "cooking",
+  "level": 13,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 7078,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7076,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "egg_and_tomato",
+  "skill": "cooking",
+  "level": 23,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7064,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7078,
+    "qty": 1
+   },
+   {
+    "id": 1982,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "spicy_sauce",
+  "skill": "cooking",
+  "level": 9,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 7072,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7074,
+    "qty": 1
+   },
+   {
+    "id": 2169,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "chilli_con_carne",
+  "skill": "cooking",
+  "level": 11,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7062,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7072,
+    "qty": 1
+   },
+   {
+    "id": 2142,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "fried_onions",
+  "skill": "cooking",
+  "level": 42,
+  "extra_skills": [],
+  "xp": 60.0,
+  "members": true,
+  "product": {
+   "id": 7084,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1871,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "fried_mushrooms",
+  "skill": "cooking",
+  "level": 46,
+  "extra_skills": [],
+  "xp": 60.0,
+  "members": true,
+  "product": {
+   "id": 7082,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7080,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "mushroom_and_onion",
+  "skill": "cooking",
+  "level": 57,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7066,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7082,
+    "qty": 1
+   },
+   {
+    "id": 7084,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "potato_with_butter",
+  "skill": "cooking",
+  "level": 39,
+  "extra_skills": [],
+  "xp": 40.0,
+  "members": true,
+  "product": {
+   "id": 6703,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 6701,
+    "qty": 1
+   },
+   {
+    "id": 6697,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "potato_with_cheese",
+  "skill": "cooking",
+  "level": 47,
+  "extra_skills": [],
+  "xp": 40.0,
+  "members": true,
+  "product": {
+   "id": 6705,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 6703,
+    "qty": 1
+   },
+   {
+    "id": 1985,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "chilli_potato",
+  "skill": "cooking",
+  "level": 41,
+  "extra_skills": [],
+  "xp": 15.0,
+  "members": true,
+  "product": {
+   "id": 7054,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7062,
+    "qty": 1
+   },
+   {
+    "id": 6703,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "egg_potato",
+  "skill": "cooking",
+  "level": 51,
+  "extra_skills": [],
+  "xp": 45.0,
+  "members": true,
+  "product": {
+   "id": 7056,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7064,
+    "qty": 1
+   },
+   {
+    "id": 6703,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "mushroom_potato",
+  "skill": "cooking",
+  "level": 64,
+  "extra_skills": [],
+  "xp": 55.0,
+  "members": true,
+  "product": {
+   "id": 7058,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7066,
+    "qty": 1
+   },
+   {
+    "id": 6703,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "tuna_and_corn",
+  "skill": "cooking",
+  "level": 67,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 7068,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7088,
+    "qty": 1
+   },
+   {
+    "id": 361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "tuna_potato",
+  "skill": "cooking",
+  "level": 68,
+  "extra_skills": [],
+  "xp": 10.0,
+  "members": true,
+  "product": {
+   "id": 7060,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7068,
+    "qty": 1
+   },
+   {
+    "id": 6703,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_berry_pie",
+  "skill": "cooking",
+  "level": 10,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2321,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1951,
+    "qty": 1
+   },
+   {
+    "id": 2315,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "redberry_pie",
+  "skill": "cooking",
+  "level": 10,
+  "extra_skills": [],
+  "xp": 78.0,
+  "members": false,
+  "product": {
+   "id": 2325,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2321,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_apple_pie",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2317,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1955,
+    "qty": 1
+   },
+   {
+    "id": 2315,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "apple_pie",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 130.0,
+  "members": false,
+  "product": {
+   "id": 2323,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2317,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_mushroom_pie",
+  "skill": "cooking",
+  "level": 60,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 21684,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 21626,
+    "qty": 1
+   },
+   {
+    "id": 2315,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "mushroom_pie",
+  "skill": "cooking",
+  "level": 60,
+  "extra_skills": [],
+  "xp": 200.0,
+  "members": true,
+  "product": {
+   "id": 21690,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 21684,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_dragonfruit_pie",
+  "skill": "cooking",
+  "level": 73,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 22789,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 22929,
+    "qty": 1
+   },
+   {
+    "id": 2315,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "dragonfruit_pie",
+  "skill": "cooking",
+  "level": 73,
+  "extra_skills": [],
+  "xp": 220.0,
+  "members": true,
+  "product": {
+   "id": 22795,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 22789,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "chocolate_cake",
+  "skill": "cooking",
+  "level": 50,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": false,
+  "product": {
+   "id": 1897,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1891,
+    "qty": 1
+   },
+   {
+    "id": 1973,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pizza_base",
+  "skill": "cooking",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2283,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "meat_pizza",
+  "skill": "cooking",
+  "level": 45,
+  "extra_skills": [],
+  "xp": 26.0,
+  "members": false,
+  "product": {
+   "id": 2293,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2289,
+    "qty": 1
+   },
+   {
+    "id": 2142,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "anchovy_pizza",
+  "skill": "cooking",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 39.0,
+  "members": false,
+  "product": {
+   "id": 2297,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2289,
+    "qty": 1
+   },
+   {
+    "id": 319,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pineapple_pizza",
+  "skill": "cooking",
+  "level": 65,
+  "extra_skills": [],
+  "xp": 45.0,
+  "members": true,
+  "product": {
+   "id": 2301,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2289,
+    "qty": 1
+   },
+   {
+    "id": 2118,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "wine_of_zamorak",
+  "skill": "cooking",
+  "level": 65,
+  "extra_skills": [],
+  "xp": 200.0,
+  "members": true,
+  "product": {
+   "id": 245,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20749,
+    "qty": 1
+   },
+   {
+    "id": 1937,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "dwarven_stout",
+  "skill": "cooking",
+  "level": 19,
+  "extra_skills": [],
+  "xp": 215.0,
+  "members": true,
+  "product": {
+   "id": 1913,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 5994,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "asgarnian_ale",
+  "skill": "cooking",
+  "level": 24,
+  "extra_skills": [],
+  "xp": 248.0,
+  "members": true,
+  "product": {
+   "id": 1905,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 5996,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "greenmans_ale",
+  "skill": "cooking",
+  "level": 29,
+  "extra_skills": [],
+  "xp": 281.0,
+  "members": true,
+  "product": {
+   "id": 1909,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 255,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "wizards_mind_bomb",
+  "skill": "cooking",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 314.0,
+  "members": true,
+  "product": {
+   "id": 1907,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 5998,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "dragon_bitter",
+  "skill": "cooking",
+  "level": 39,
+  "extra_skills": [],
+  "xp": 347.0,
+  "members": true,
+  "product": {
+   "id": 1911,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 6000,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "moonlight_mead",
+  "skill": "cooking",
+  "level": 44,
+  "extra_skills": [],
+  "xp": 380.0,
+  "members": true,
+  "product": {
+   "id": 2955,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 6004,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "chefs_delight",
+  "skill": "cooking",
+  "level": 54,
+  "extra_skills": [],
+  "xp": 446.0,
+  "members": true,
+  "product": {
+   "id": 5755,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 1975,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "slayers_respite",
+  "skill": "cooking",
+  "level": 59,
+  "extra_skills": [],
+  "xp": 479.0,
+  "members": true,
+  "product": {
+   "id": 5759,
+   "qty": 8
+  },
+  "materials": [
+   {
+    "id": 1929,
+    "qty": 2
+   },
+   {
+    "id": 6008,
+    "qty": 2
+   },
+   {
+    "id": 6002,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "POH brewing vat; takes several days. 8 glasses per brew.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "plain_pizza",
+  "skill": "cooking",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 143.0,
+  "members": false,
+  "product": {
+   "id": 2289,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2287,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Combined steps: base + tomato + cheese -> bake (uncooked pizza has no GE price).",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cake",
+  "skill": "cooking",
+  "level": 40,
+  "extra_skills": [],
+  "xp": 180.0,
+  "members": false,
+  "product": {
+   "id": 1891,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1944,
+    "qty": 1
+   },
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1927,
+    "qty": 1
+   },
+   {
+    "id": 1887,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Combined steps: mix in cake tin -> bake (uncooked cake has no GE price).",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pie_shell",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2315,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1953,
+    "qty": 1
+   },
+   {
+    "id": 2313,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Use the dough on a pie dish; the dish is consumed (returned only if the finished pie is eaten, not sold). Craft the dough from a pot of flour + bucket of water if cheaper than buying it.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_botanical_pie",
+  "skill": "cooking",
+  "level": 52,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 19656,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 19653,
+    "qty": 1
+   },
+   {
+    "id": 2315,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "botanical_pie",
+  "skill": "cooking",
+  "level": 52,
+  "extra_skills": [],
+  "xp": 180.0,
+  "members": true,
+  "product": {
+   "id": 19662,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 19656,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "foresters_ration",
+  "skill": "cooking",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 51.1,
+  "members": true,
+  "product": {
+   "id": 28157,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2140,
+    "qty": 1
+   },
+   {
+    "id": 6020,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "kebab_mix",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 1881,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1875,
+    "qty": 1
+   },
+   {
+    "id": 1861,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "stew",
+  "skill": "cooking",
+  "level": 25,
+  "extra_skills": [],
+  "xp": 117.0,
+  "members": false,
+  "product": {
+   "id": 2003,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2142,
+    "qty": 1
+   },
+   {
+    "id": 1942,
+    "qty": 1
+   },
+   {
+    "id": 1921,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Combined steps: meat + potato + bowl of water -> range (uncooked stew has no GE price).",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "curry",
+  "skill": "cooking",
+  "level": 60,
+  "extra_skills": [],
+  "xp": 280.0,
+  "members": true,
+  "product": {
+   "id": 2011,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2142,
+    "qty": 1
+   },
+   {
+    "id": 1942,
+    "qty": 1
+   },
+   {
+    "id": 1921,
+    "qty": 1
+   },
+   {
+    "id": 5970,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": "Combined steps: stew + 3 curry leaves (uncooked curry has no GE price).",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pot_of_cream",
+  "skill": "cooking",
+  "level": 21,
+  "extra_skills": [],
+  "xp": 18.0,
+  "members": true,
+  "product": {
+   "id": 2130,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1927,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "apple_mush",
+  "skill": "cooking",
+  "level": 14,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 5992,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1955,
+    "qty": 4
+   },
+   {
+    "id": 1925,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "Crushed in an apple press; intermediate for cider.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cider",
+  "skill": "cooking",
+  "level": 14,
+  "extra_skills": [],
+  "xp": 182.0,
+  "members": true,
+  "product": {
+   "id": 5763,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 5992,
+    "qty": 4
+   },
+   {
+    "id": 5767,
+    "qty": 1
+   },
+   {
+    "id": 1919,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": "Brewed in a POH fermenting vat; takes several days. 8 glasses per brew. Crush 4 cooking apples + 1 bucket in an apple press for the mush (see the apple_mush recipe) if cheaper than buying it.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "toad_crunchies",
+  "skill": "cooking",
+  "level": 10,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": true,
+  "product": {
+   "id": 2217,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2152,
+    "qty": 2
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2165,
+    "name": "Crunchy tray"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "spicy_crunchies",
+  "skill": "cooking",
+  "level": 12,
+  "extra_skills": [],
+  "xp": 102.0,
+  "members": true,
+  "product": {
+   "id": 2213,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2165,
+    "name": "Crunchy tray"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "worm_crunchies",
+  "skill": "cooking",
+  "level": 14,
+  "extra_skills": [],
+  "xp": 104.0,
+  "members": true,
+  "product": {
+   "id": 2205,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2162,
+    "qty": 2
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2165,
+    "name": "Crunchy tray"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "chocchip_crunchies",
+  "skill": "cooking",
+  "level": 16,
+  "extra_skills": [],
+  "xp": 106.0,
+  "members": true,
+  "product": {
+   "id": 2209,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 1973,
+    "qty": 2
+   },
+   {
+    "id": 1975,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2165,
+    "name": "Crunchy tray"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "fruit_batta",
+  "skill": "cooking",
+  "level": 25,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 2277,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 4
+   },
+   {
+    "id": 2122,
+    "qty": 1
+   },
+   {
+    "id": 2110,
+    "qty": 1
+   },
+   {
+    "id": 2116,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2164,
+    "name": "Batta tin"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "toad_batta",
+  "skill": "cooking",
+  "level": 26,
+  "extra_skills": [],
+  "xp": 152.0,
+  "members": true,
+  "product": {
+   "id": 2255,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   },
+   {
+    "id": 1985,
+    "qty": 1
+   },
+   {
+    "id": 2152,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2164,
+    "name": "Batta tin"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "worm_batta",
+  "skill": "cooking",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 154.0,
+  "members": true,
+  "product": {
+   "id": 2253,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2162,
+    "qty": 1
+   },
+   {
+    "id": 1985,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2164,
+    "name": "Batta tin"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "vegetable_batta",
+  "skill": "cooking",
+  "level": 28,
+  "extra_skills": [],
+  "xp": 156.0,
+  "members": true,
+  "product": {
+   "id": 2281,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 1982,
+    "qty": 2
+   },
+   {
+    "id": 2126,
+    "qty": 1
+   },
+   {
+    "id": 1957,
+    "qty": 1
+   },
+   {
+    "id": 1985,
+    "qty": 1
+   },
+   {
+    "id": 1965,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2164,
+    "name": "Batta tin"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "worm_hole",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 170.0,
+  "members": true,
+  "product": {
+   "id": 2191,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2162,
+    "qty": 4
+   },
+   {
+    "id": 1957,
+    "qty": 2
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2166,
+    "name": "Gnomebowl mould"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "veg_ball",
+  "skill": "cooking",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 175.0,
+  "members": true,
+  "product": {
+   "id": 2195,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 1957,
+    "qty": 2
+   },
+   {
+    "id": 1942,
+    "qty": 2
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2166,
+    "name": "Gnomebowl mould"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "tangled_toads_legs",
+  "skill": "cooking",
+  "level": 40,
+  "extra_skills": [],
+  "xp": 185.0,
+  "members": true,
+  "product": {
+   "id": 2187,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 2152,
+    "qty": 4
+   },
+   {
+    "id": 1985,
+    "qty": 2
+   },
+   {
+    "id": 2126,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2166,
+    "name": "Gnomebowl mould"
+   },
+   {
+    "id": 2169,
+    "name": "Gnome spice"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "chocolate_bomb",
+  "skill": "cooking",
+  "level": 42,
+  "extra_skills": [],
+  "xp": 190.0,
+  "members": true,
+  "product": {
+   "id": 2185,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 1973,
+    "qty": 4
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   },
+   {
+    "id": 1975,
+    "qty": 1
+   },
+   {
+    "id": 2130,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2166,
+    "name": "Gnomebowl mould"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "fruit_blast",
+  "skill": "cooking",
+  "level": 6,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 2084,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2114,
+    "qty": 1
+   },
+   {
+    "id": 2102,
+    "qty": 1
+   },
+   {
+    "id": 2108,
+    "qty": 1
+   },
+   {
+    "id": 2106,
+    "qty": 1
+   },
+   {
+    "id": 2026,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2025,
+    "name": "Cocktail shaker"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "pineapple_punch",
+  "skill": "cooking",
+  "level": 8,
+  "extra_skills": [],
+  "xp": 70.0,
+  "members": true,
+  "product": {
+   "id": 2048,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2114,
+    "qty": 2
+   },
+   {
+    "id": 2102,
+    "qty": 1
+   },
+   {
+    "id": 2108,
+    "qty": 1
+   },
+   {
+    "id": 2122,
+    "qty": 1
+   },
+   {
+    "id": 2116,
+    "qty": 1
+   },
+   {
+    "id": 2112,
+    "qty": 1
+   },
+   {
+    "id": 2026,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2025,
+    "name": "Cocktail shaker"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "wizard_blizzard",
+  "skill": "cooking",
+  "level": 18,
+  "extra_skills": [],
+  "xp": 110.0,
+  "members": true,
+  "product": {
+   "id": 2054,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2015,
+    "qty": 2
+   },
+   {
+    "id": 2019,
+    "qty": 1
+   },
+   {
+    "id": 2120,
+    "qty": 1
+   },
+   {
+    "id": 2102,
+    "qty": 1
+   },
+   {
+    "id": 2108,
+    "qty": 1
+   },
+   {
+    "id": 2116,
+    "qty": 1
+   },
+   {
+    "id": 2124,
+    "qty": 1
+   },
+   {
+    "id": 2026,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2025,
+    "name": "Cocktail shaker"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "short_green_guy",
+  "skill": "cooking",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 120.0,
+  "members": true,
+  "product": {
+   "id": 2080,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2015,
+    "qty": 1
+   },
+   {
+    "id": 2120,
+    "qty": 3
+   },
+   {
+    "id": 2124,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   },
+   {
+    "id": 2026,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2025,
+    "name": "Cocktail shaker"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "drunk_dragon",
+  "skill": "cooking",
+  "level": 32,
+  "extra_skills": [],
+  "xp": 160.0,
+  "members": true,
+  "product": {
+   "id": 2092,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2015,
+    "qty": 1
+   },
+   {
+    "id": 2019,
+    "qty": 1
+   },
+   {
+    "id": 2126,
+    "qty": 1
+   },
+   {
+    "id": 2116,
+    "qty": 1
+   },
+   {
+    "id": 2130,
+    "qty": 1
+   },
+   {
+    "id": 2026,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2025,
+    "name": "Cocktail shaker"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "choc_saturday",
+  "skill": "cooking",
+  "level": 33,
+  "extra_skills": [],
+  "xp": 170.0,
+  "members": true,
+  "product": {
+   "id": 2074,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2017,
+    "qty": 1
+   },
+   {
+    "id": 1973,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   },
+   {
+    "id": 1927,
+    "qty": 1
+   },
+   {
+    "id": 1975,
+    "qty": 1
+   },
+   {
+    "id": 2130,
+    "qty": 1
+   },
+   {
+    "id": 2026,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2025,
+    "name": "Cocktail shaker"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "blurberry_special",
+  "skill": "cooking",
+  "level": 37,
+  "extra_skills": [],
+  "xp": 180.0,
+  "members": true,
+  "product": {
+   "id": 2064,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2015,
+    "qty": 1
+   },
+   {
+    "id": 2021,
+    "qty": 1
+   },
+   {
+    "id": 2019,
+    "qty": 1
+   },
+   {
+    "id": 2102,
+    "qty": 2
+   },
+   {
+    "id": 2108,
+    "qty": 1
+   },
+   {
+    "id": 2104,
+    "qty": 1
+   },
+   {
+    "id": 2110,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   },
+   {
+    "id": 2124,
+    "qty": 1
+   },
+   {
+    "id": 2026,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2025,
+    "name": "Cocktail shaker"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "cheese_tom_batta",
+  "skill": "cooking",
+  "level": 29,
+  "extra_skills": [],
+  "xp": 158.0,
+  "members": true,
+  "product": {
+   "id": 2259,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   },
+   {
+    "id": 1982,
+    "qty": 1
+   },
+   {
+    "id": 1985,
+    "qty": 1
+   },
+   {
+    "id": 2128,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2164,
+    "name": "Batta tin"
+   }
+  ],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_meat_pie",
+  "skill": "cooking",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2319,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2142,
+    "qty": 1
+   },
+   {
+    "id": 2315,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "meat_pie",
+  "skill": "cooking",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 110.0,
+  "members": false,
+  "product": {
+   "id": 2327,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2319,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "karambwanji",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 10.0,
+  "members": true,
+  "product": {
+   "id": 21394,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3150,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_bream",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 45.0,
+  "members": true,
+  "product": {
+   "id": 29217,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 29216,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cooked_giant_crab_meat",
+  "skill": "cooking",
+  "level": 21,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": true,
+  "product": {
+   "id": 7521,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7518,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "lava_eel",
+  "skill": "cooking",
+  "level": 53,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": true,
+  "product": {
+   "id": 2149,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2148,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "cavefish",
+  "skill": "cooking",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 23.0,
+  "members": false,
+  "product": {
+   "id": 25660,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 25658,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "catfish",
+  "skill": "cooking",
+  "level": 46,
+  "extra_skills": [],
+  "xp": 43.0,
+  "members": true,
+  "product": {
+   "id": 25672,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 25670,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "tetra",
+  "skill": "cooking",
+  "level": 33,
+  "extra_skills": [],
+  "xp": 31.0,
+  "members": false,
+  "product": {
+   "id": 25666,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 25664,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "guppy",
+  "skill": "cooking",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 12.0,
+  "members": false,
+  "product": {
+   "id": 25654,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 25652,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "pysk_fish",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 10.0,
+  "members": true,
+  "product": {
+   "id": 20856,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20855,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "suphi_fish",
+  "skill": "cooking",
+  "level": 15,
+  "extra_skills": [],
+  "xp": 13.0,
+  "members": true,
+  "product": {
+   "id": 20858,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20857,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "leckish_fish",
+  "skill": "cooking",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 16.0,
+  "members": true,
+  "product": {
+   "id": 20860,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20859,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "brawk_fish",
+  "skill": "cooking",
+  "level": 45,
+  "extra_skills": [],
+  "xp": 19.0,
+  "members": true,
+  "product": {
+   "id": 20862,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20861,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "mycil_fish",
+  "skill": "cooking",
+  "level": 60,
+  "extra_skills": [],
+  "xp": 22.0,
+  "members": true,
+  "product": {
+   "id": 20864,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20863,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "roqed_fish",
+  "skill": "cooking",
+  "level": 75,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 20866,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20865,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "kyren_fish",
+  "skill": "cooking",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 28.0,
+  "members": true,
+  "product": {
+   "id": 20868,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 20867,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "stuffed_snake",
+  "skill": "cooking",
+  "level": 70,
+  "extra_skills": [],
+  "xp": 180.0,
+  "members": true,
+  "product": {
+   "id": 7579,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 7577,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "wrapped_oomlie",
+  "skill": "cooking",
+  "level": 50,
+  "extra_skills": [],
+  "xp": 10.0,
+  "members": true,
+  "product": {
+   "id": 2341,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2337,
+    "qty": 1
+   },
+   {
+    "id": 2339,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Cooking range or fire"
+  ]
+ },
+ {
+  "id": "spider_on_stick",
+  "skill": "cooking",
+  "level": 16,
+  "extra_skills": [],
+  "xp": 80.0,
+  "members": true,
+  "product": {
+   "id": 6297,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 6293,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "spider_on_shaft",
+  "skill": "cooking",
+  "level": 16,
+  "extra_skills": [],
+  "xp": 80.0,
+  "members": true,
+  "product": {
+   "id": 6299,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 6295,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "blood_sac",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 20.0,
+  "members": true,
+  "product": {
+   "id": 33623,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 33621,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "zulrahs_scales",
+  "skill": "cooking",
+  "level": 72,
+  "extra_skills": [],
+  "xp": 118.0,
+  "members": true,
+  "product": {
+   "id": 12934,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 13339,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "XP varies 109-127 per snake.",
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pitta_dough",
+  "skill": "cooking",
+  "level": 58,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 1863,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pitta_bread",
+  "skill": "cooking",
+  "level": 58,
+  "extra_skills": [],
+  "xp": 40.0,
+  "members": true,
+  "product": {
+   "id": 1865,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1863,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "pastry_dough",
+  "skill": "cooking",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 1953,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1929,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_pizza",
+  "skill": "cooking",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2287,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2283,
+    "qty": 1
+   },
+   {
+    "id": 1982,
+    "qty": 1
+   },
+   {
+    "id": 1985,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_cake",
+  "skill": "cooking",
+  "level": 40,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 1889,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1944,
+    "qty": 1
+   },
+   {
+    "id": 1933,
+    "qty": 1
+   },
+   {
+    "id": 1927,
+    "qty": 1
+   },
+   {
+    "id": 1887,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_stew",
+  "skill": "cooking",
+  "level": 25,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": false,
+  "product": {
+   "id": 2001,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2142,
+    "qty": 1
+   },
+   {
+    "id": 1942,
+    "qty": 1
+   },
+   {
+    "id": 1921,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "uncooked_curry",
+  "skill": "cooking",
+  "level": 60,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 2009,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2142,
+    "qty": 1
+   },
+   {
+    "id": 1942,
+    "qty": 1
+   },
+   {
+    "id": 1921,
+    "qty": 1
+   },
+   {
+    "id": 5970,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ }
+]

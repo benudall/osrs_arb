@@ -1,0 +1,5515 @@
+[
+ {
+  "id": "bronze_bar",
+  "skill": "smithing",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 6.2,
+  "members": false,
+  "product": {
+   "id": 2349,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 436,
+    "qty": 1
+   },
+   {
+    "id": 438,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "iron_bar",
+  "skill": "smithing",
+  "level": 15,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": false,
+  "product": {
+   "id": 2351,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 440,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": "50% smelt success below level 45 (ring of forging or level 45+ for guaranteed).",
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "silver_bar",
+  "skill": "smithing",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 13.7,
+  "members": false,
+  "product": {
+   "id": 2355,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 442,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "steel_bar",
+  "skill": "smithing",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": false,
+  "product": {
+   "id": 2353,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 440,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "gold_bar",
+  "skill": "smithing",
+  "level": 40,
+  "extra_skills": [],
+  "xp": 22.5,
+  "members": false,
+  "product": {
+   "id": 2357,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 444,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "mithril_bar",
+  "skill": "smithing",
+  "level": 50,
+  "extra_skills": [],
+  "xp": 30.0,
+  "members": false,
+  "product": {
+   "id": 2359,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 447,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 4
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "adamant_bar",
+  "skill": "smithing",
+  "level": 70,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 2361,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 449,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 6
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "rune_bar",
+  "skill": "smithing",
+  "level": 85,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 2363,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 451,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 8
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "bronze_arrowtips",
+  "skill": "smithing",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 39,
+   "qty": 15
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_arrowtips",
+  "skill": "smithing",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 40,
+   "qty": 15
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_arrowtips",
+  "skill": "smithing",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 41,
+   "qty": 15
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_arrowtips",
+  "skill": "smithing",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 42,
+   "qty": 15
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_arrowtips",
+  "skill": "smithing",
+  "level": 75,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 43,
+   "qty": 15
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_arrowtips",
+  "skill": "smithing",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 44,
+   "qty": 15
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "cannonball",
+  "skill": "smithing",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 25.6,
+  "members": true,
+  "product": {
+   "id": 2,
+   "qty": 4
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": null,
+    "name": "Ammo mould"
+   }
+  ],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "lead_bar",
+  "skill": "smithing",
+  "level": 25,
+  "extra_skills": [],
+  "xp": 15.5,
+  "members": true,
+  "product": {
+   "id": 32889,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31716,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "cupronickel_bar",
+  "skill": "smithing",
+  "level": 74,
+  "extra_skills": [],
+  "xp": 42.0,
+  "members": true,
+  "product": {
+   "id": 32892,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31719,
+    "qty": 1
+   },
+   {
+    "id": 436,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "bronze_dagger",
+  "skill": "smithing",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": false,
+  "product": {
+   "id": 1205,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_axe",
+  "skill": "smithing",
+  "level": 1,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": false,
+  "product": {
+   "id": 1351,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_mace",
+  "skill": "smithing",
+  "level": 2,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": false,
+  "product": {
+   "id": 1422,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_med_helm",
+  "skill": "smithing",
+  "level": 3,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": false,
+  "product": {
+   "id": 1139,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_bolts_unf",
+  "skill": "smithing",
+  "level": 3,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 9375,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_shortsword",
+  "skill": "smithing",
+  "level": 4,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": false,
+  "product": {
+   "id": 1277,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_dart_tip",
+  "skill": "smithing",
+  "level": 4,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 819,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_wire",
+  "skill": "smithing",
+  "level": 4,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 1794,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_nails",
+  "skill": "smithing",
+  "level": 4,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 4819,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_scimitar",
+  "skill": "smithing",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1321,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_spear",
+  "skill": "smithing",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 1237,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_hasta",
+  "skill": "smithing",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 11367,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_cannonball",
+  "skill": "smithing",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 8.8,
+  "members": true,
+  "product": {
+   "id": 31906,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": null,
+    "name": "Ammo mould"
+   }
+  ],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "bronze_limbs",
+  "skill": "smithing",
+  "level": 6,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 9420,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_longsword",
+  "skill": "smithing",
+  "level": 6,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1291,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_javelin_tips",
+  "skill": "smithing",
+  "level": 6,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 19570,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_full_helm",
+  "skill": "smithing",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1155,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_knife",
+  "skill": "smithing",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 864,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_sq_shield",
+  "skill": "smithing",
+  "level": 8,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1173,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_warhammer",
+  "skill": "smithing",
+  "level": 9,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1337,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_battleaxe",
+  "skill": "smithing",
+  "level": 10,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1375,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_keel_parts",
+  "skill": "smithing",
+  "level": 10,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 31999,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_chainbody",
+  "skill": "smithing",
+  "level": 11,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1103,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_kiteshield",
+  "skill": "smithing",
+  "level": 12,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1189,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_claws",
+  "skill": "smithing",
+  "level": 13,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 3095,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_2h_sword",
+  "skill": "smithing",
+  "level": 14,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1307,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_platelegs",
+  "skill": "smithing",
+  "level": 16,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1075,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_plateskirt",
+  "skill": "smithing",
+  "level": 16,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1087,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bronze_platebody",
+  "skill": "smithing",
+  "level": 18,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": false,
+  "product": {
+   "id": 1117,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2349,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_dagger",
+  "skill": "smithing",
+  "level": 15,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1203,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_axe",
+  "skill": "smithing",
+  "level": 16,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1349,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_mace",
+  "skill": "smithing",
+  "level": 17,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1420,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_spit",
+  "skill": "smithing",
+  "level": 17,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 7225,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_med_helm",
+  "skill": "smithing",
+  "level": 18,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1137,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_bolts_unf",
+  "skill": "smithing",
+  "level": 18,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 9377,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_shortsword",
+  "skill": "smithing",
+  "level": 19,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": false,
+  "product": {
+   "id": 1279,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_dart_tip",
+  "skill": "smithing",
+  "level": 19,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 820,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_nails",
+  "skill": "smithing",
+  "level": 19,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 4820,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_scimitar",
+  "skill": "smithing",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1323,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_spear",
+  "skill": "smithing",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 1239,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_hasta",
+  "skill": "smithing",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 11369,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_cannonball",
+  "skill": "smithing",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 17.2,
+  "members": true,
+  "product": {
+   "id": 31908,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": null,
+    "name": "Ammo mould"
+   }
+  ],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "iron_longsword",
+  "skill": "smithing",
+  "level": 21,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1293,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_javelin_tips",
+  "skill": "smithing",
+  "level": 21,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 19572,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_full_helm",
+  "skill": "smithing",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1153,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_knife",
+  "skill": "smithing",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 863,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_keel_parts",
+  "skill": "smithing",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": true,
+  "product": {
+   "id": 32002,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_sq_shield",
+  "skill": "smithing",
+  "level": 23,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1175,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_limbs",
+  "skill": "smithing",
+  "level": 23,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 9423,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_warhammer",
+  "skill": "smithing",
+  "level": 24,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1335,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_battleaxe",
+  "skill": "smithing",
+  "level": 25,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1363,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_chainbody",
+  "skill": "smithing",
+  "level": 26,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1101,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "oil_lantern_frame",
+  "skill": "smithing",
+  "level": 26,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 4540,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_kiteshield",
+  "skill": "smithing",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1191,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_claws",
+  "skill": "smithing",
+  "level": 28,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 3096,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_2h_sword",
+  "skill": "smithing",
+  "level": 29,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1309,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_platelegs",
+  "skill": "smithing",
+  "level": 31,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1067,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_plateskirt",
+  "skill": "smithing",
+  "level": 31,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1081,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "iron_platebody",
+  "skill": "smithing",
+  "level": 33,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": false,
+  "product": {
+   "id": 1115,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2351,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_dagger",
+  "skill": "smithing",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1207,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_axe",
+  "skill": "smithing",
+  "level": 31,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1353,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_mace",
+  "skill": "smithing",
+  "level": 32,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1424,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_med_helm",
+  "skill": "smithing",
+  "level": 33,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1141,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_bolts_unf",
+  "skill": "smithing",
+  "level": 33,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 9378,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_shortsword",
+  "skill": "smithing",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1281,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_nails",
+  "skill": "smithing",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": false,
+  "product": {
+   "id": 1539,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "chain",
+  "skill": "smithing",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 32886,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_dart_tip",
+  "skill": "smithing",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 821,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_scimitar",
+  "skill": "smithing",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1325,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_spear",
+  "skill": "smithing",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 1241,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_hasta",
+  "skill": "smithing",
+  "level": 35,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 11371,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_limbs",
+  "skill": "smithing",
+  "level": 36,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 9425,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_longsword",
+  "skill": "smithing",
+  "level": 36,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1295,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_javelin_tips",
+  "skill": "smithing",
+  "level": 36,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 19574,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_studs",
+  "skill": "smithing",
+  "level": 36,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 2370,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_full_helm",
+  "skill": "smithing",
+  "level": 37,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1157,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_knife",
+  "skill": "smithing",
+  "level": 37,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 865,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_sq_shield",
+  "skill": "smithing",
+  "level": 38,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1177,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_keel_parts",
+  "skill": "smithing",
+  "level": 38,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": true,
+  "product": {
+   "id": 32005,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_warhammer",
+  "skill": "smithing",
+  "level": 39,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": false,
+  "product": {
+   "id": 1339,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_battleaxe",
+  "skill": "smithing",
+  "level": 40,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": false,
+  "product": {
+   "id": 1365,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_chainbody",
+  "skill": "smithing",
+  "level": 41,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": false,
+  "product": {
+   "id": 1105,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_kiteshield",
+  "skill": "smithing",
+  "level": 42,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": false,
+  "product": {
+   "id": 1193,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_claws",
+  "skill": "smithing",
+  "level": 43,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 3097,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_2h_sword",
+  "skill": "smithing",
+  "level": 44,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": false,
+  "product": {
+   "id": 1311,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_platelegs",
+  "skill": "smithing",
+  "level": 46,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": false,
+  "product": {
+   "id": 1069,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_plateskirt",
+  "skill": "smithing",
+  "level": 46,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": false,
+  "product": {
+   "id": 1083,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "steel_platebody",
+  "skill": "smithing",
+  "level": 48,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1119,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "bullseye_lantern_unf",
+  "skill": "smithing",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 4544,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2353,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_dagger",
+  "skill": "smithing",
+  "level": 50,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1209,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_axe",
+  "skill": "smithing",
+  "level": 51,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1355,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_mace",
+  "skill": "smithing",
+  "level": 52,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1428,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_med_helm",
+  "skill": "smithing",
+  "level": 53,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1143,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_bolts_unf",
+  "skill": "smithing",
+  "level": 53,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 9379,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_shortsword",
+  "skill": "smithing",
+  "level": 54,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": false,
+  "product": {
+   "id": 1285,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_nails",
+  "skill": "smithing",
+  "level": 54,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 4822,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_dart_tip",
+  "skill": "smithing",
+  "level": 54,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 822,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_cannonball",
+  "skill": "smithing",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 34.0,
+  "members": true,
+  "product": {
+   "id": 31910,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": null,
+    "name": "Ammo mould"
+   }
+  ],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "mithril_scimitar",
+  "skill": "smithing",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": false,
+  "product": {
+   "id": 1329,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_spear",
+  "skill": "smithing",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": true,
+  "product": {
+   "id": 1243,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_hasta",
+  "skill": "smithing",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": true,
+  "product": {
+   "id": 11373,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_limbs",
+  "skill": "smithing",
+  "level": 56,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 9427,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_longsword",
+  "skill": "smithing",
+  "level": 56,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": false,
+  "product": {
+   "id": 1299,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_javelin_tips",
+  "skill": "smithing",
+  "level": 56,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 19576,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_keel_parts",
+  "skill": "smithing",
+  "level": 56,
+  "extra_skills": [],
+  "xp": 250.0,
+  "members": true,
+  "product": {
+   "id": 32008,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_full_helm",
+  "skill": "smithing",
+  "level": 57,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": false,
+  "product": {
+   "id": 1159,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_knife",
+  "skill": "smithing",
+  "level": 57,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 866,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_sq_shield",
+  "skill": "smithing",
+  "level": 58,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": false,
+  "product": {
+   "id": 1181,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_warhammer",
+  "skill": "smithing",
+  "level": 59,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1343,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mith_grapple_tip",
+  "skill": "smithing",
+  "level": 59,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 9416,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_battleaxe",
+  "skill": "smithing",
+  "level": 60,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1369,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_chainbody",
+  "skill": "smithing",
+  "level": 61,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1109,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_kiteshield",
+  "skill": "smithing",
+  "level": 62,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1197,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_claws",
+  "skill": "smithing",
+  "level": 63,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": true,
+  "product": {
+   "id": 3099,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_2h_sword",
+  "skill": "smithing",
+  "level": 64,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1315,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_platelegs",
+  "skill": "smithing",
+  "level": 66,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1071,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_plateskirt",
+  "skill": "smithing",
+  "level": 66,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1085,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "mithril_platebody",
+  "skill": "smithing",
+  "level": 68,
+  "extra_skills": [],
+  "xp": 250.0,
+  "members": false,
+  "product": {
+   "id": 1121,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2359,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_dagger",
+  "skill": "smithing",
+  "level": 70,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": false,
+  "product": {
+   "id": 1211,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_axe",
+  "skill": "smithing",
+  "level": 71,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": false,
+  "product": {
+   "id": 1357,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_mace",
+  "skill": "smithing",
+  "level": 72,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": false,
+  "product": {
+   "id": 1430,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_med_helm",
+  "skill": "smithing",
+  "level": 73,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": false,
+  "product": {
+   "id": 1145,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_bolts_unf",
+  "skill": "smithing",
+  "level": 73,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 9380,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_shortsword",
+  "skill": "smithing",
+  "level": 74,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": false,
+  "product": {
+   "id": 1287,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamantite_nails",
+  "skill": "smithing",
+  "level": 74,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 4823,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_keel_parts",
+  "skill": "smithing",
+  "level": 74,
+  "extra_skills": [],
+  "xp": 312.5,
+  "members": true,
+  "product": {
+   "id": 32011,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_dart_tip",
+  "skill": "smithing",
+  "level": 74,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 823,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_scimitar",
+  "skill": "smithing",
+  "level": 75,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": false,
+  "product": {
+   "id": 1331,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_spear",
+  "skill": "smithing",
+  "level": 75,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": true,
+  "product": {
+   "id": 1245,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_hasta",
+  "skill": "smithing",
+  "level": 75,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": true,
+  "product": {
+   "id": 11375,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_cannonball",
+  "skill": "smithing",
+  "level": 75,
+  "extra_skills": [],
+  "xp": 42.4,
+  "members": true,
+  "product": {
+   "id": 31912,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": null,
+    "name": "Ammo mould"
+   }
+  ],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "adamantite_limbs",
+  "skill": "smithing",
+  "level": 76,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 9429,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_longsword",
+  "skill": "smithing",
+  "level": 76,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": false,
+  "product": {
+   "id": 1301,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_javelin_tips",
+  "skill": "smithing",
+  "level": 76,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 19578,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_full_helm",
+  "skill": "smithing",
+  "level": 77,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": false,
+  "product": {
+   "id": 1161,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_knife",
+  "skill": "smithing",
+  "level": 77,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 867,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_sq_shield",
+  "skill": "smithing",
+  "level": 78,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": false,
+  "product": {
+   "id": 1183,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_warhammer",
+  "skill": "smithing",
+  "level": 79,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1345,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_battleaxe",
+  "skill": "smithing",
+  "level": 80,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1371,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_chainbody",
+  "skill": "smithing",
+  "level": 81,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1111,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_kiteshield",
+  "skill": "smithing",
+  "level": 82,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1199,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_claws",
+  "skill": "smithing",
+  "level": 83,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": true,
+  "product": {
+   "id": 3100,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_2h_sword",
+  "skill": "smithing",
+  "level": 84,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1317,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_platelegs",
+  "skill": "smithing",
+  "level": 86,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1073,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_plateskirt",
+  "skill": "smithing",
+  "level": 86,
+  "extra_skills": [],
+  "xp": 187.5,
+  "members": false,
+  "product": {
+   "id": 1091,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "adamant_platebody",
+  "skill": "smithing",
+  "level": 88,
+  "extra_skills": [],
+  "xp": 312.5,
+  "members": false,
+  "product": {
+   "id": 1123,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2361,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_dagger",
+  "skill": "smithing",
+  "level": 85,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1213,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_axe",
+  "skill": "smithing",
+  "level": 86,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1359,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_keel_parts",
+  "skill": "smithing",
+  "level": 86,
+  "extra_skills": [],
+  "xp": 375.0,
+  "members": true,
+  "product": {
+   "id": 32014,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_mace",
+  "skill": "smithing",
+  "level": 87,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1432,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_med_helm",
+  "skill": "smithing",
+  "level": 88,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1147,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "runite_bolts_unf",
+  "skill": "smithing",
+  "level": 88,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 9381,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_shortsword",
+  "skill": "smithing",
+  "level": 89,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": false,
+  "product": {
+   "id": 1289,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_nails",
+  "skill": "smithing",
+  "level": 89,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 4824,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_dart_tip",
+  "skill": "smithing",
+  "level": 89,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 824,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_scimitar",
+  "skill": "smithing",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1333,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_spear",
+  "skill": "smithing",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 1247,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_hasta",
+  "skill": "smithing",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 11377,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_cannonball",
+  "skill": "smithing",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 50.8,
+  "members": true,
+  "product": {
+   "id": 31914,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": null,
+    "name": "Ammo mould"
+   }
+  ],
+  "facilities": [
+   "Furnace"
+  ]
+ },
+ {
+  "id": "runite_limbs",
+  "skill": "smithing",
+  "level": 91,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 9431,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_longsword",
+  "skill": "smithing",
+  "level": 91,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1303,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_javelin_tips",
+  "skill": "smithing",
+  "level": 91,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 19580,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_full_helm",
+  "skill": "smithing",
+  "level": 92,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1163,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_knife",
+  "skill": "smithing",
+  "level": 92,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 868,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_sq_shield",
+  "skill": "smithing",
+  "level": 93,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": false,
+  "product": {
+   "id": 1185,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_warhammer",
+  "skill": "smithing",
+  "level": 94,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": false,
+  "product": {
+   "id": 1347,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_battleaxe",
+  "skill": "smithing",
+  "level": 95,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": false,
+  "product": {
+   "id": 1373,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_chainbody",
+  "skill": "smithing",
+  "level": 96,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": false,
+  "product": {
+   "id": 1113,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_kiteshield",
+  "skill": "smithing",
+  "level": 97,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": false,
+  "product": {
+   "id": 1201,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_claws",
+  "skill": "smithing",
+  "level": 98,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 3101,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 2
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_2h_sword",
+  "skill": "smithing",
+  "level": 99,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": false,
+  "product": {
+   "id": 1319,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_platelegs",
+  "skill": "smithing",
+  "level": 99,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": false,
+  "product": {
+   "id": 1079,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_plateskirt",
+  "skill": "smithing",
+  "level": 99,
+  "extra_skills": [],
+  "xp": 225.0,
+  "members": false,
+  "product": {
+   "id": 1093,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 3
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ },
+ {
+  "id": "rune_platebody",
+  "skill": "smithing",
+  "level": 99,
+  "extra_skills": [],
+  "xp": 375.0,
+  "members": false,
+  "product": {
+   "id": 1127,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2363,
+    "qty": 5
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [
+   {
+    "id": 2347,
+    "name": "Hammer"
+   }
+  ],
+  "facilities": [
+   "Anvil"
+  ]
+ }
+]

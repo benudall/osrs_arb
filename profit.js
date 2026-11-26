@@ -40,7 +40,10 @@
     return [value, stale, source, v, vsrc];
   }
 
-  /* Compute one recipe row. Returns null if any needed price is missing.
+  /* Compute one recipe row. Returns null only if item metadata is missing.
+   * Missing GE prices are tolerated: unpriced sides become null and the row
+   * still renders (partial craft cost + cost_incomplete flag; HA/LA payouts
+   * come from the item's static value, so they need no live prices at all).
    * recipe: {id, skill, level, members, product: {id, qty},
    *          materials: [{id, qty}], fee, note}  (the baked site data shape)
    * itemMap: {item_id: {name, image, limit, value}}
@@ -50,26 +53,43 @@
     const prodInfo = itemMap[recipe.product.id];
     if (!prodInfo) return null;
     const prodRes = store.resolve(recipe.product.id);
-    if (!prodRes) return null;
-
-    const [sellPrice, sellStale, sellSrc, sellVol] = side(prodRes, mode, 'sell');
-    if (sellPrice == null) return null;
-    const [prodBuy, prodBuyStale, prodBuySrc, prodBuyVol] = side(prodRes, mode, 'buy');
+    let sellPrice = null, sellStale = null, sellSrc = null, sellVol = null;
+    let prodBuy = null, prodBuyStale = null, prodBuySrc = null, prodBuyVol = null;
+    if (prodRes) {
+      [sellPrice, sellStale, sellSrc, sellVol] = side(prodRes, mode, 'sell');
+      [prodBuy, prodBuyStale, prodBuySrc, prodBuyVol] = side(prodRes, mode, 'buy');
+    }
 
     const materials = [];
     let cost = recipe.fee || 0;
+    let costKnown = false;
+    let costIncomplete = false;
     let minMatVol = null;
     for (const m of recipe.materials) {
       const info = itemMap[m.id];
       if (!info) return null;
       const res = store.resolve(m.id);
-      if (!res) return null;
-      const [buyPrice, buyStale, buySrc, buyVol] = side(res, mode, 'buy');
-      const [matSell] = side(res, mode, 'sell');
-      if (buyPrice == null) return null;
+      let buyPrice = null, buyStale = null, buySrc = null, buyVol = null, matSell = null;
+      if (res) {
+        [buyPrice, buyStale, buySrc, buyVol] = side(res, mode, 'buy');
+        [matSell] = side(res, mode, 'sell');
+      }
       const craftUnit = craftCosts && (m.id in craftCosts) ? pyRound(craftCosts[m.id]) : null;
-      // cheapest acquisition for this material: buy at GE price, or craft it if that is cheaper
-      const chosen = craftUnit !== null && craftUnit < buyPrice ? craftUnit : buyPrice;
+      // cheapest acquisition for this material: buy at GE price, or craft it if
+      // that is cheaper; a material with neither leaves the cost incomplete
+      let chosen;
+      if (craftUnit !== null && (buyPrice === null || craftUnit < buyPrice)) {
+        chosen = craftUnit;
+      } else if (buyPrice !== null) {
+        chosen = buyPrice;
+      } else {
+        chosen = null;
+        costIncomplete = true;
+      }
+      if (chosen !== null) {
+        cost += chosen * m.qty;
+        costKnown = true;
+      }
       materials.push({
         id: m.id,
         name: info.name,
@@ -83,16 +103,18 @@
         sell_tax: matSell == null ? 0 : geTax(matSell),
         craft: craftUnit,
       });
-      cost += chosen * m.qty;
-      // how many crafts per 5m does this material's buy-side volume support?
-      const supported = m.qty > 0 ? buyVol / m.qty : Infinity;
-      minMatVol = minMatVol === null ? supported : Math.min(minMatVol, supported);
+      if (buyVol !== null) {
+        // how many crafts per 5m does this material's buy-side volume support?
+        const supported = m.qty > 0 ? buyVol / m.qty : Infinity;
+        minMatVol = minMatVol === null ? supported : Math.min(minMatVol, supported);
+      }
     }
 
-    const gross = sellPrice * recipe.product.qty;
-    const taxTotal = geTax(sellPrice) * recipe.product.qty;
-    const net = gross - taxTotal - cost;
-    const netPct = cost > 0 ? pyRound(((net / cost) * 100) * 10) / 10 : null;
+    if (!costKnown) cost = null;
+    const gross = sellPrice !== null ? sellPrice * recipe.product.qty : null;
+    const taxTotal = sellPrice !== null ? geTax(sellPrice) * recipe.product.qty : null;
+    const net = gross === null || cost === null ? null : gross - taxTotal - cost;
+    const netPct = net !== null && cost && cost > 0 ? pyRound(((net / cost) * 100) * 10) / 10 : null;
 
     // 4h buy-limit cap: limited by every material and the product itself
     let maxCrafts = null;
@@ -110,10 +132,11 @@
       const c = Math.floor(prodLimit / recipe.product.qty);
       maxCrafts = maxCrafts === null ? c : Math.min(maxCrafts, c);
     }
-    if (maxCrafts === null) maxCrafts = 0;
-    const net4h = (limited || maxCrafts === 0) ? null : net * maxCrafts;
+    if (maxCrafts === null) maxCrafts = null; // no buy limits known at all
+    const net4h = limited || !maxCrafts || net === null ? null : net * maxCrafts;
 
-    const volume = minMatVol !== null ? Math.trunc(Math.min(sellVol, minMatVol)) : Math.trunc(sellVol);
+    const volume = sellVol === null ? null
+      : (minMatVol !== null ? Math.trunc(Math.min(sellVol, minMatVol)) : Math.trunc(sellVol));
 
     const toolsOut = [];
     for (const t of recipe.tools || []) {
@@ -155,12 +178,13 @@
       },
       materials,
       fee: recipe.fee || 0,
-      cost: pyRound(cost),
+      cost: cost === null ? null : pyRound(cost),
+      cost_incomplete: costIncomplete,
       gross,
       tax: taxTotal,
-      net: pyRound(net),
+      net: net === null ? null : pyRound(net),
       net_pct: netPct,
-      volume: Math.max(volume, 0),
+      volume: volume === null ? null : Math.max(volume, 0),
       max_crafts_4h: maxCrafts,
       net_4h: net4h === null ? null : pyRound(net4h),
       mode,
@@ -171,20 +195,34 @@
   }
 
   /* Evaluate every recipe (the old /api/recipes route logic, minus filters).
-   * Two passes: pass 1 computes per-unit craft costs for every product that is
-   * also used as a material elsewhere; pass 2 evaluates all recipes with those
-   * costs available. Returns {rows, skippedNoPrice}. */
+   * Craft costs are computed to a fixed point: repeated sweeps until no
+   * product's per-unit craft cost improves, so a material's ⚒ price always
+   * equals the fully recursive cheapest craft decomposition shown in its own
+   * row (and expanded in the detail table) — e.g. Uncooked pizza inside Plain
+   * pizza prices cheese via milk, not at the cheese GE price. Each sweep can
+   * only lower costs (materials gain cheaper options), so this converges; the
+   * sweep cap just bounds pathological recipe cycles. Keep in lockstep with
+   * backend/profit.py (parity_check.cjs verifies over fixtures).
+   */
   function evaluateAll(recipes, itemMap, store, mode = 'conservative') {
     const materialIds = new Set();
     for (const r of recipes) for (const m of r.materials) materialIds.add(m.id);
     const craftCosts = {};
-    for (const r of recipes) {
-      if (!materialIds.has(r.product.id)) continue;
-      const row = evaluateRecipe(r, itemMap, store, mode);
-      if (!row || row.product.qty < 1) continue;
-      const perUnit = row.cost / row.product.qty;
-      const pid = r.product.id;
-      if (!(pid in craftCosts) || perUnit < craftCosts[pid]) craftCosts[pid] = perUnit;
+    const MAX_SWEEPS = 10;
+    for (let sweep = 0; sweep < MAX_SWEEPS; sweep++) {
+      let changed = false;
+      for (const r of recipes) {
+        const pid = r.product.id;
+        if (!materialIds.has(pid)) continue;
+        const row = evaluateRecipe(r, itemMap, store, mode, craftCosts);
+        if (!row || row.product.qty < 1 || row.cost === null) continue;
+        const perUnit = row.cost / row.product.qty;
+        if (!(pid in craftCosts) || perUnit < craftCosts[pid]) {
+          craftCosts[pid] = perUnit;
+          changed = true;
+        }
+      }
+      if (!changed) break;
     }
     const rows = [];
     let skippedNoPrice = 0;

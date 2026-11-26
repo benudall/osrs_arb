@@ -1,0 +1,706 @@
+{
+ "Crystal bow": {
+  "name": "Crystal bow",
+  "id": 23983,
+  "value": 300000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Crystal bow.png"
+ },
+ "Crystal shield": {
+  "name": "Crystal shield",
+  "id": 23991,
+  "value": 300000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Crystal shield.png"
+ },
+ "Lunar legs": {
+  "name": "Lunar legs",
+  "id": 9098,
+  "value": 100,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Lunar legs.png"
+ },
+ "Lunar torso": {
+  "name": "Lunar torso",
+  "id": 9097,
+  "value": 100,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Lunar torso.png"
+ },
+ "Crystal halberd": {
+  "name": "Crystal halberd",
+  "id": 23987,
+  "value": 300000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Crystal halberd.png"
+ },
+ "Lunar gloves": {
+  "name": "Lunar gloves",
+  "id": 9099,
+  "value": 100,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Lunar gloves.png"
+ },
+ "Lunar boots": {
+  "name": "Lunar boots",
+  "id": 9100,
+  "value": 100,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Lunar boots.png"
+ },
+ "Suqah leather": {
+  "name": "Suqah leather",
+  "id": 9081,
+  "value": 60,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Suqah leather.png"
+ },
+ "Empty light orb": {
+  "name": "Empty light orb",
+  "id": 10980,
+  "value": 250,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Empty light orb.png"
+ },
+ "Pre-nature amulet": {
+  "name": "Pre-nature amulet",
+  "id": 6041,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Pre-nature amulet.png"
+ },
+ "Crystal shard": {
+  "name": "Crystal shard",
+  "id": 23962,
+  "value": 10000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Crystal shard 1.png"
+ },
+ "Crystal pickaxe": {
+  "name": "Crystal pickaxe",
+  "id": 23680,
+  "value": 520000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Eternal teleport crystal": {
+  "name": "Eternal teleport crystal",
+  "id": 23946,
+  "value": 500,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Eternal teleport crystal.png"
+ },
+ "Crystal harpoon": {
+  "name": "Crystal harpoon",
+  "id": 23762,
+  "value": 520000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Enhanced crystal key": {
+  "name": "Enhanced crystal key",
+  "id": 23951,
+  "value": 500,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Enhanced crystal key.png"
+ },
+ "Crystal helm": {
+  "name": "Crystal helm",
+  "id": 23971,
+  "value": 500000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Crystal legs": {
+  "name": "Crystal legs",
+  "id": 23979,
+  "value": 1000000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Crystal body": {
+  "name": "Crystal body",
+  "id": 23975,
+  "value": 1500000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Crystal axe": {
+  "name": "Crystal axe",
+  "id": 23673,
+  "value": 520000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Accursed sceptre": {
+  "name": "Accursed sceptre",
+  "id": 27665,
+  "value": 175000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Ultor vestige": {
+  "name": "Ultor vestige",
+  "id": 28285,
+  "value": 50000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Ultor vestige.png"
+ },
+ "Venator vestige": {
+  "name": "Venator vestige",
+  "id": 28283,
+  "value": 50000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Venator vestige.png"
+ },
+ "Magus vestige": {
+  "name": "Magus vestige",
+  "id": 28281,
+  "value": 50000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Magus vestige.png"
+ },
+ "Bellator vestige": {
+  "name": "Bellator vestige",
+  "id": 28279,
+  "value": 50000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Bellator vestige.png"
+ },
+ "Ultor icon": {
+  "name": "Ultor icon",
+  "id": 28287,
+  "value": 58000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Ultor icon.png"
+ },
+ "Venator icon": {
+  "name": "Venator icon",
+  "id": 28289,
+  "value": 58000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Venator icon.png"
+ },
+ "Magus icon": {
+  "name": "Magus icon",
+  "id": 28291,
+  "value": 58000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Magus icon.png"
+ },
+ "Bellator icon": {
+  "name": "Bellator icon",
+  "id": 28293,
+  "value": 58000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Bellator icon.png"
+ },
+ "Scurrius' spine": {
+  "name": "Scurrius' spine",
+  "id": 28798,
+  "value": 1000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Scurrius' spine.png"
+ },
+ "Bone staff": {
+  "name": "Bone staff",
+  "id": 28796,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Bone staff.png"
+ },
+ "Purging staff": {
+  "name": "Purging staff",
+  "id": 29594,
+  "value": 800000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Purging staff.png"
+ },
+ "Noxious blade": {
+  "name": "Noxious blade",
+  "id": 29792,
+  "value": 160000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Noxious blade.png"
+ },
+ "Noxious point": {
+  "name": "Noxious point",
+  "id": 29790,
+  "value": 160000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Noxious point.png"
+ },
+ "Noxious pommel": {
+  "name": "Noxious pommel",
+  "id": 29794,
+  "value": 160000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Noxious pommel.png"
+ },
+ "Bow of faerdhinen": null,
+ "Blade of saeldor": null,
+ "Blade of Saeldor": {
+  "name": "Blade of Saeldor",
+  "id": 23995,
+  "value": 5000000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Bow of Faerdhinen": {
+  "name": "Bow of Faerdhinen",
+  "id": 25865,
+  "value": 5000000,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": null
+ },
+ "Karambwanji": {
+  "name": "Karambwanji",
+  "id": 21394,
+  "value": 10,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Karambwanji.png"
+ },
+ "Lava eel": {
+  "name": "Lava eel",
+  "id": 2149,
+  "value": 150,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Lava eel.png"
+ },
+ "Raw karambwanji": {
+  "name": "Raw karambwanji",
+  "id": 3150,
+  "value": 19,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Raw karambwanji.png"
+ },
+ "Raw stuffed snake": {
+  "name": "Raw stuffed snake",
+  "id": 7577,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Raw stuffed snake.png"
+ },
+ "Stuffed snake": {
+  "name": "Stuffed snake",
+  "id": 7579,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Stuffed snake.png"
+ },
+ "Raw lava eel": {
+  "name": "Raw lava eel",
+  "id": 2148,
+  "value": 150,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Raw lava eel.png"
+ },
+ "Uncooked pizza": {
+  "name": "Uncooked pizza",
+  "id": 2287,
+  "value": 25,
+  "highalch": null,
+  "members": false,
+  "tradeable": true,
+  "image_file": "Uncooked pizza.png"
+ },
+ "Giant crab meat": {
+  "name": "Giant crab meat",
+  "id": 7518,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Giant crab meat.png"
+ },
+ "Pitta dough": {
+  "name": "Pitta dough",
+  "id": 1863,
+  "value": 4,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Pitta dough.png"
+ },
+ "Palm leaf": {
+  "name": "Palm leaf",
+  "id": 2339,
+  "value": 5,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Palm leaf.png"
+ },
+ "Uncooked curry": {
+  "name": "Uncooked curry",
+  "id": 2009,
+  "value": 10,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Uncooked curry.png"
+ },
+ "Uncooked stew": {
+  "name": "Uncooked stew",
+  "id": 2001,
+  "value": 10,
+  "highalch": null,
+  "members": false,
+  "tradeable": true,
+  "image_file": "Uncooked stew.png"
+ },
+ "Sacred eel": {
+  "name": "Sacred eel",
+  "id": 13339,
+  "value": 140,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Sacred eel.png"
+ },
+ "Uncooked cake": {
+  "name": "Uncooked cake",
+  "id": 1889,
+  "value": 20,
+  "highalch": null,
+  "members": false,
+  "tradeable": true,
+  "image_file": "Uncooked cake.png"
+ },
+ "Suphi fish (1)": {
+  "name": "Suphi fish (1)",
+  "id": 20858,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Suphi fish (1).png"
+ },
+ "Leckish fish (2)": {
+  "name": "Leckish fish (2)",
+  "id": 20860,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Leckish fish (2).png"
+ },
+ "Brawk fish (3)": {
+  "name": "Brawk fish (3)",
+  "id": 20862,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Brawk fish (3).png"
+ },
+ "Mycil fish (4)": {
+  "name": "Mycil fish (4)",
+  "id": 20864,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Mycil fish (4).png"
+ },
+ "Roqed fish (5)": {
+  "name": "Roqed fish (5)",
+  "id": 20866,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Roqed fish (5).png"
+ },
+ "Kyren fish (6)": {
+  "name": "Kyren fish (6)",
+  "id": 20868,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Kyren fish (6).png"
+ },
+ "Pysk fish (0)": {
+  "name": "Pysk fish (0)",
+  "id": 20856,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Pysk fish (0).png"
+ },
+ "Raw roqed fish (5)": {
+  "name": "Raw roqed fish (5)",
+  "id": 20865,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Raw roqed fish (5).png"
+ },
+ "Raw pysk fish (0)": {
+  "name": "Raw pysk fish (0)",
+  "id": 20855,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Raw pysk fish (0).png"
+ },
+ "Raw suphi fish (1)": {
+  "name": "Raw suphi fish (1)",
+  "id": 20857,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Raw suphi fish (1).png"
+ },
+ "Raw leckish fish (2)": {
+  "name": "Raw leckish fish (2)",
+  "id": 20859,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Raw leckish fish (2).png"
+ },
+ "Raw brawk fish (3)": {
+  "name": "Raw brawk fish (3)",
+  "id": 20861,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Raw brawk fish (3).png"
+ },
+ "Raw mycil fish (4)": {
+  "name": "Raw mycil fish (4)",
+  "id": 20863,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Raw mycil fish (4).png"
+ },
+ "Raw kyren fish (6)": {
+  "name": "Raw kyren fish (6)",
+  "id": 20867,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Raw kyren fish (6).png"
+ },
+ "Spider on stick (raw)": {
+  "name": "Spider on stick",
+  "id": 6293,
+  "value": 25,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Spider on stick (raw).png"
+ },
+ "Spider on shaft (raw)": {
+  "name": "Spider on shaft",
+  "id": 6295,
+  "value": 20,
+  "highalch": null,
+  "members": true,
+  "tradeable": true,
+  "image_file": "Spider on shaft (raw).png"
+ },
+ "Catfish": {
+  "name": "Catfish",
+  "id": 25672,
+  "value": 5,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Catfish.png"
+ },
+ "Raw catfish": {
+  "name": "Raw catfish",
+  "id": 25670,
+  "value": 5,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Raw catfish.png"
+ },
+ "Tetra": {
+  "name": "Tetra",
+  "id": 25666,
+  "value": 5,
+  "highalch": null,
+  "members": false,
+  "tradeable": false,
+  "image_file": "Tetra.png"
+ },
+ "Raw tetra": {
+  "name": "Raw tetra",
+  "id": 25664,
+  "value": 5,
+  "highalch": null,
+  "members": false,
+  "tradeable": false,
+  "image_file": "Raw tetra.png"
+ },
+ "Cavefish": {
+  "name": "Cavefish",
+  "id": 25660,
+  "value": 5,
+  "highalch": null,
+  "members": false,
+  "tradeable": false,
+  "image_file": "Cavefish.png"
+ },
+ "Raw cavefish": {
+  "name": "Raw cavefish",
+  "id": 25658,
+  "value": 5,
+  "highalch": null,
+  "members": false,
+  "tradeable": false,
+  "image_file": "Raw cavefish.png"
+ },
+ "Guppy": {
+  "name": "Guppy",
+  "id": 25654,
+  "value": 5,
+  "highalch": null,
+  "members": false,
+  "tradeable": false,
+  "image_file": "Guppy.png"
+ },
+ "Raw guppy": {
+  "name": "Raw guppy",
+  "id": 25652,
+  "value": 5,
+  "highalch": null,
+  "members": false,
+  "tradeable": false,
+  "image_file": "Raw guppy.png"
+ },
+ "Cooked bream": {
+  "name": "Cooked bream",
+  "id": 29217,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Cooked bream.png"
+ },
+ "Raw bream": {
+  "name": "Raw bream",
+  "id": 29216,
+  "value": 1,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Raw bream.png"
+ },
+ "Leechfin": {
+  "name": "Leechfin",
+  "id": 33621,
+  "value": 170,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Leechfin.png"
+ },
+ "Blood sac": {
+  "name": "Blood sac",
+  "id": 33623,
+  "value": 23,
+  "highalch": null,
+  "members": true,
+  "tradeable": false,
+  "image_file": "Blood sac.png"
+ }
+}

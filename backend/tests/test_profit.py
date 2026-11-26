@@ -80,11 +80,23 @@ def test_optimistic_mode_swaps_sides():
     assert row["net"] == 1000 - profit.ge_tax(250) * 4 - 180
 
 
-def test_missing_price_returns_none():
-    store = FakeStore({3: {"high": 200, "low": 180}})  # product missing
-    assert profit.evaluate_recipe(RECIPE, ITEMS, store) is None
-    store2 = FakeStore({4: {"high": 250, "low": 220}})  # material missing
-    assert profit.evaluate_recipe(RECIPE, ITEMS, store2) is None
+def test_missing_price_yields_partial_row():
+    # missing product price: row still returned, sell side null, alch from value
+    store = FakeStore({3: {"high": 200, "low": 180}})
+    row = profit.evaluate_recipe(RECIPE, ITEMS, store)
+    assert row is not None
+    assert row["product"]["price"] is None
+    assert row["gross"] is None and row["net"] is None
+    assert row["cost"] == 200 and not row["cost_incomplete"]
+    # missing material price: cost incomplete, other sides intact
+    store2 = FakeStore({4: {"high": 250, "low": 220}})
+    row2 = profit.evaluate_recipe(RECIPE, ITEMS, store2)
+    assert row2["materials"][0]["price"] is None
+    assert row2["cost_incomplete"] is True
+    assert row2["gross"] == 880  # conservative: 4 x low 220
+    assert row2["cost"] is None  # nothing priced at all -> no cost estimate
+    # missing item metadata (not just prices) still returns None
+    assert profit.evaluate_recipe(RECIPE, {}, store) is None
 
 
 def test_volume_uses_buy_and_sell_sides():
@@ -134,3 +146,45 @@ def test_unknown_item_returns_none():
     bad = dict(RECIPE)
     bad["materials"] = [{"item_id": 999, "qty": 1}]
     assert profit.evaluate_recipe(bad, ITEMS, store) is None
+
+
+def test_craft_costs_recursive():
+    # milk -> cheese -> uncooked pizza -> plain pizza: a parent chain must price
+    # each material at its fully recursive craft cost, not the buy-only one
+    # level the old two-pass evaluate_all produced (the pizza bug: Plain pizza
+    # showed Uncooked pizza at the buy-everything cost instead of its own
+    # craft-decomposed cost).
+    items = {
+        10: {"id": 10, "name": "Bucket of milk", "members": False, "buy_limit": 1000},
+        11: {"id": 11, "name": "Cheese", "members": False, "buy_limit": 1000},
+        12: {"id": 12, "name": "Tomato", "members": False, "buy_limit": 1000},
+        13: {"id": 13, "name": "Uncooked pizza", "members": False, "buy_limit": 1000},
+        14: {"id": 14, "name": "Plain pizza", "members": False, "buy_limit": 1000},
+    }
+    recipes = [
+        {"id": "cheese", "skill": "cooking", "level": 1, "members": False,
+         "product": {"item_id": 11, "qty": 1},
+         "materials": [{"item_id": 10, "qty": 1}], "fee": 0, "note": None},
+        {"id": "uncooked_pizza", "skill": "cooking", "level": 1, "members": False,
+         "product": {"item_id": 13, "qty": 1},
+         "materials": [{"item_id": 11, "qty": 1}, {"item_id": 12, "qty": 1}],
+         "fee": 0, "note": None},
+        {"id": "plain_pizza", "skill": "cooking", "level": 1, "members": False,
+         "product": {"item_id": 14, "qty": 1},
+         "materials": [{"item_id": 13, "qty": 1}], "fee": 0, "note": None},
+    ]
+    store = FakeStore({
+        10: {"high": 13, "low": 10},   # milk
+        11: {"high": 62, "low": 55},   # cheese: crafting (13) beats buying (62)
+        12: {"high": 23, "low": 20},   # tomato
+        13: {"high": 90, "low": 80},   # uncooked pizza
+        14: {"high": 120, "low": 110},
+    })
+    rows, _ = profit.evaluate_all(recipes, items, store)
+    by_id = {r["recipe_id"]: r for r in rows}
+    # uncooked pizza = cheese (craft 13 < buy 62) + tomato (buy 23) = 36
+    assert by_id["uncooked_pizza"]["cost"] == 36
+    # plain pizza's material must use that same recursive 36, not the
+    # buy-only 85 (62 + 23) the old single-level pass produced
+    assert by_id["plain_pizza"]["materials"][0]["craft"] == 36
+    assert by_id["plain_pizza"]["cost"] == 36

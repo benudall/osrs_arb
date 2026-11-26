@@ -1,0 +1,1154 @@
+[
+ {
+  "id": "enchant_sapphire_ring",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": true,
+  "product": {
+   "id": 2550,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1637,
+    "qty": 1
+   },
+   {
+    "id": 564,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "enchant_sapphire_amulet",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": false,
+  "product": {
+   "id": 1727,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1694,
+    "qty": 1
+   },
+   {
+    "id": 564,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "enchant_emerald_ring",
+  "skill": "magic",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 37.0,
+  "members": true,
+  "product": {
+   "id": 2552,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1639,
+    "qty": 1
+   },
+   {
+    "id": 564,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "enchant_emerald_amulet",
+  "skill": "magic",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 37.0,
+  "members": false,
+  "product": {
+   "id": 1729,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1696,
+    "qty": 1
+   },
+   {
+    "id": 564,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "enchant_ruby_ring",
+  "skill": "magic",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": false,
+  "product": {
+   "id": 2568,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1641,
+    "qty": 1
+   },
+   {
+    "id": 564,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "enchant_ruby_amulet",
+  "skill": "magic",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": false,
+  "product": {
+   "id": 1725,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 1698,
+    "qty": 1
+   },
+   {
+    "id": 564,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "bracelet_of_clay",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": true,
+  "product": {
+   "id": 11074,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 11072,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "games_necklace_8",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": true,
+  "product": {
+   "id": 3853,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 1656,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ring_of_pursuit",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": true,
+  "product": {
+   "id": 21126,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21081,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "expeditious_bracelet",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": true,
+  "product": {
+   "id": 21177,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21117,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "dodgy_necklace",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": true,
+  "product": {
+   "id": 21143,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21090,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "amulet_of_bounty",
+  "skill": "magic",
+  "level": 7,
+  "extra_skills": [],
+  "xp": 17.5,
+  "members": true,
+  "product": {
+   "id": 21160,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21108,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "binding_necklace",
+  "skill": "magic",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 37.0,
+  "members": true,
+  "product": {
+   "id": 5521,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 1658,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "castle_wars_bracelet_3",
+  "skill": "magic",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 37.0,
+  "members": true,
+  "product": {
+   "id": 11079,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 11076,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ring_of_returning_5",
+  "skill": "magic",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 37.0,
+  "members": true,
+  "product": {
+   "id": 21129,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21084,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "flamtaer_bracelet",
+  "skill": "magic",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 37.0,
+  "members": true,
+  "product": {
+   "id": 21180,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21120,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "amulet_of_chemistry",
+  "skill": "magic",
+  "level": 27,
+  "extra_skills": [],
+  "xp": 37.0,
+  "members": true,
+  "product": {
+   "id": 21163,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21111,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "inoculation_bracelet",
+  "skill": "magic",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": true,
+  "product": {
+   "id": 11088,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 11085,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "efaritay_s_aid",
+  "skill": "magic",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": true,
+  "product": {
+   "id": 21140,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21087,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "bracelet_of_slaughter",
+  "skill": "magic",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": true,
+  "product": {
+   "id": 21183,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21123,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "necklace_of_faith",
+  "skill": "magic",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": true,
+  "product": {
+   "id": 21157,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21096,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "burning_amulet_5",
+  "skill": "magic",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": true,
+  "product": {
+   "id": 21166,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 21114,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ring_of_life",
+  "skill": "magic",
+  "level": 57,
+  "extra_skills": [],
+  "xp": 67.0,
+  "members": true,
+  "product": {
+   "id": 2570,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 1643,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "phoenix_necklace",
+  "skill": "magic",
+  "level": 57,
+  "extra_skills": [],
+  "xp": 67.0,
+  "members": true,
+  "product": {
+   "id": 11090,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 1662,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "abyssal_bracelet_5",
+  "skill": "magic",
+  "level": 57,
+  "extra_skills": [],
+  "xp": 67.0,
+  "members": true,
+  "product": {
+   "id": 11095,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 11092,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "amulet_of_power",
+  "skill": "magic",
+  "level": 57,
+  "extra_skills": [],
+  "xp": 67.0,
+  "members": false,
+  "product": {
+   "id": 1731,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 1700,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ring_of_stone",
+  "skill": "magic",
+  "level": 87,
+  "extra_skills": [],
+  "xp": 97.0,
+  "members": true,
+  "product": {
+   "id": 6583,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 6575,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "berserker_necklace",
+  "skill": "magic",
+  "level": 87,
+  "extra_skills": [],
+  "xp": 97.0,
+  "members": true,
+  "product": {
+   "id": 11128,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 6577,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "regen_bracelet",
+  "skill": "magic",
+  "level": 87,
+  "extra_skills": [],
+  "xp": 97.0,
+  "members": true,
+  "product": {
+   "id": 11133,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 11130,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "amulet_of_fury",
+  "skill": "magic",
+  "level": 87,
+  "extra_skills": [],
+  "xp": 97.0,
+  "members": true,
+  "product": {
+   "id": 6585,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 6581,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ring_of_suffering",
+  "skill": "magic",
+  "level": 93,
+  "extra_skills": [],
+  "xp": 110.0,
+  "members": true,
+  "product": {
+   "id": 19550,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 19538,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "necklace_of_anguish",
+  "skill": "magic",
+  "level": 93,
+  "extra_skills": [],
+  "xp": 110.0,
+  "members": true,
+  "product": {
+   "id": 19547,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 19535,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "tormented_bracelet",
+  "skill": "magic",
+  "level": 93,
+  "extra_skills": [],
+  "xp": 110.0,
+  "members": true,
+  "product": {
+   "id": 19544,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 19532,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "amulet_of_torture",
+  "skill": "magic",
+  "level": 93,
+  "extra_skills": [],
+  "xp": 110.0,
+  "members": true,
+  "product": {
+   "id": 19553,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 564,
+    "qty": 1
+   },
+   {
+    "id": 19541,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_bronze_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 1
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2349,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 436,
+    "qty": 1
+   },
+   {
+    "id": 438,
+    "qty": 1
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_iron_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 15
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2351,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 440,
+    "qty": 1
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_steel_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 15
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2353,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 440,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 2
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_silver_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 20
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2355,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 442,
+    "qty": 1
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_gold_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 40
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2357,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 444,
+    "qty": 1
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_mithril_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 50
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2359,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 447,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 4
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_adamant_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 70
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2361,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 449,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 6
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superheat_runite_bar",
+  "skill": "magic",
+  "level": 43,
+  "extra_skills": [
+   {
+    "skill": "smithing",
+    "level": 85
+   }
+  ],
+  "xp": 0,
+  "members": false,
+  "product": {
+   "id": 2363,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 451,
+    "qty": 1
+   },
+   {
+    "id": 453,
+    "qty": 8
+   },
+   {
+    "id": 561,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ }
+]

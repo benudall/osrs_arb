@@ -1,0 +1,2186 @@
+[
+ {
+  "id": "guam_leaf",
+  "skill": "herblore",
+  "level": 3,
+  "extra_skills": [],
+  "xp": 2.5,
+  "members": true,
+  "product": {
+   "id": 249,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 199,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "guam_potion_unf",
+  "skill": "herblore",
+  "level": 3,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 91,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 249,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "marrentill",
+  "skill": "herblore",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 3.8,
+  "members": true,
+  "product": {
+   "id": 251,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 201,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "marrentill_potion_unf",
+  "skill": "herblore",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 93,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 251,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "tarromin",
+  "skill": "herblore",
+  "level": 11,
+  "extra_skills": [],
+  "xp": 5.0,
+  "members": true,
+  "product": {
+   "id": 253,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 203,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "tarromin_potion_unf",
+  "skill": "herblore",
+  "level": 12,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 95,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 253,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "harralander",
+  "skill": "herblore",
+  "level": 20,
+  "extra_skills": [],
+  "xp": 6.3,
+  "members": true,
+  "product": {
+   "id": 255,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 205,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "harralander_potion_unf",
+  "skill": "herblore",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 97,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 255,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ranarr_weed",
+  "skill": "herblore",
+  "level": 25,
+  "extra_skills": [],
+  "xp": 7.5,
+  "members": true,
+  "product": {
+   "id": 257,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 207,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ranarr_potion_unf",
+  "skill": "herblore",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 99,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 257,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "toadflax",
+  "skill": "herblore",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 8.0,
+  "members": true,
+  "product": {
+   "id": 2998,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3049,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "toadflax_potion_unf",
+  "skill": "herblore",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 3002,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2998,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "irit_leaf",
+  "skill": "herblore",
+  "level": 40,
+  "extra_skills": [],
+  "xp": 8.8,
+  "members": true,
+  "product": {
+   "id": 259,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 209,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "irit_potion_unf",
+  "skill": "herblore",
+  "level": 45,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 101,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 259,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "avantoe",
+  "skill": "herblore",
+  "level": 48,
+  "extra_skills": [],
+  "xp": 10.0,
+  "members": true,
+  "product": {
+   "id": 261,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 211,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "avantoe_potion_unf",
+  "skill": "herblore",
+  "level": 50,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 103,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 261,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "kwuarm",
+  "skill": "herblore",
+  "level": 54,
+  "extra_skills": [],
+  "xp": 11.3,
+  "members": true,
+  "product": {
+   "id": 263,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 213,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "kwuarm_potion_unf",
+  "skill": "herblore",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 105,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 263,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "huasca",
+  "skill": "herblore",
+  "level": 58,
+  "extra_skills": [],
+  "xp": 11.8,
+  "members": true,
+  "product": {
+   "id": 30097,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 30094,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "huasca_potion_unf",
+  "skill": "herblore",
+  "level": 58,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 30100,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 30097,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "snapdragon",
+  "skill": "herblore",
+  "level": 59,
+  "extra_skills": [],
+  "xp": 11.8,
+  "members": true,
+  "product": {
+   "id": 3000,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3051,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "snapdragon_potion_unf",
+  "skill": "herblore",
+  "level": 63,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 3004,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3000,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cadantine",
+  "skill": "herblore",
+  "level": 65,
+  "extra_skills": [],
+  "xp": 12.5,
+  "members": true,
+  "product": {
+   "id": 265,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 215,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "cadantine_potion_unf",
+  "skill": "herblore",
+  "level": 66,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 107,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 265,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "lantadyme",
+  "skill": "herblore",
+  "level": 67,
+  "extra_skills": [],
+  "xp": 13.1,
+  "members": true,
+  "product": {
+   "id": 2481,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2485,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "lantadyme_potion_unf",
+  "skill": "herblore",
+  "level": 69,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 2483,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2481,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "dwarf_weed",
+  "skill": "herblore",
+  "level": 70,
+  "extra_skills": [],
+  "xp": 13.8,
+  "members": true,
+  "product": {
+   "id": 267,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 217,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "dwarf_weed_potion_unf",
+  "skill": "herblore",
+  "level": 72,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 109,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 267,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "torstol",
+  "skill": "herblore",
+  "level": 75,
+  "extra_skills": [],
+  "xp": 15.0,
+  "members": true,
+  "product": {
+   "id": 269,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 219,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "torstol_potion_unf",
+  "skill": "herblore",
+  "level": 78,
+  "extra_skills": [],
+  "xp": 0.0,
+  "members": true,
+  "product": {
+   "id": 111,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 269,
+    "qty": 1
+   },
+   {
+    "id": 227,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "attack_potion_3",
+  "skill": "herblore",
+  "level": 3,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 121,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 249,
+    "qty": 1
+   },
+   {
+    "id": 221,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "antipoison_3",
+  "skill": "herblore",
+  "level": 5,
+  "extra_skills": [],
+  "xp": 37.5,
+  "members": true,
+  "product": {
+   "id": 175,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 251,
+    "qty": 1
+   },
+   {
+    "id": 235,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "strength_potion_3",
+  "skill": "herblore",
+  "level": 12,
+  "extra_skills": [],
+  "xp": 50.0,
+  "members": true,
+  "product": {
+   "id": 115,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 253,
+    "qty": 1
+   },
+   {
+    "id": 225,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "guthix_rest_3",
+  "skill": "herblore",
+  "level": 18,
+  "extra_skills": [],
+  "xp": 59.0,
+  "members": true,
+  "product": {
+   "id": 4419,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 4460,
+    "qty": 1
+   },
+   {
+    "id": 255,
+    "qty": 1
+   },
+   {
+    "id": 249,
+    "qty": 1
+   },
+   {
+    "id": 251,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "compost_potion_3",
+  "skill": "herblore",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 60.0,
+  "members": true,
+  "product": {
+   "id": 6472,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 255,
+    "qty": 1
+   },
+   {
+    "id": 21622,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "restore_potion_3",
+  "skill": "herblore",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 62.5,
+  "members": true,
+  "product": {
+   "id": 127,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 255,
+    "qty": 1
+   },
+   {
+    "id": 223,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "guthix_balance_3",
+  "skill": "herblore",
+  "level": 22,
+  "extra_skills": [],
+  "xp": 25.0,
+  "members": true,
+  "product": {
+   "id": 7662,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 127,
+    "qty": 1
+   },
+   {
+    "id": 1550,
+    "qty": 1
+   },
+   {
+    "id": 7650,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "energy_potion_3",
+  "skill": "herblore",
+  "level": 26,
+  "extra_skills": [],
+  "xp": 67.5,
+  "members": true,
+  "product": {
+   "id": 3010,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 255,
+    "qty": 1
+   },
+   {
+    "id": 1975,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "defence_potion_3",
+  "skill": "herblore",
+  "level": 30,
+  "extra_skills": [],
+  "xp": 75.0,
+  "members": true,
+  "product": {
+   "id": 133,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 257,
+    "qty": 1
+   },
+   {
+    "id": 239,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "agility_potion_3",
+  "skill": "herblore",
+  "level": 34,
+  "extra_skills": [],
+  "xp": 80.0,
+  "members": true,
+  "product": {
+   "id": 3034,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 2998,
+    "qty": 1
+   },
+   {
+    "id": 2152,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "combat_potion_3",
+  "skill": "herblore",
+  "level": 36,
+  "extra_skills": [],
+  "xp": 84.0,
+  "members": true,
+  "product": {
+   "id": 9741,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 255,
+    "qty": 1
+   },
+   {
+    "id": 9736,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "prayer_potion_3",
+  "skill": "herblore",
+  "level": 38,
+  "extra_skills": [],
+  "xp": 87.5,
+  "members": true,
+  "product": {
+   "id": 139,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 257,
+    "qty": 1
+   },
+   {
+    "id": 231,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_attack_3",
+  "skill": "herblore",
+  "level": 45,
+  "extra_skills": [],
+  "xp": 100.0,
+  "members": true,
+  "product": {
+   "id": 145,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 259,
+    "qty": 1
+   },
+   {
+    "id": 221,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "superantipoison_3",
+  "skill": "herblore",
+  "level": 48,
+  "extra_skills": [],
+  "xp": 106.3,
+  "members": true,
+  "product": {
+   "id": 181,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 259,
+    "qty": 1
+   },
+   {
+    "id": 235,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "fishing_potion_3",
+  "skill": "herblore",
+  "level": 50,
+  "extra_skills": [],
+  "xp": 112.5,
+  "members": true,
+  "product": {
+   "id": 151,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 261,
+    "qty": 1
+   },
+   {
+    "id": 231,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_energy_3",
+  "skill": "herblore",
+  "level": 52,
+  "extra_skills": [],
+  "xp": 117.5,
+  "members": true,
+  "product": {
+   "id": 3018,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 261,
+    "qty": 1
+   },
+   {
+    "id": 2970,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "hunter_potion_3",
+  "skill": "herblore",
+  "level": 53,
+  "extra_skills": [],
+  "xp": 120.0,
+  "members": true,
+  "product": {
+   "id": 10000,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 261,
+    "qty": 1
+   },
+   {
+    "id": 10111,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "goading_potion_3",
+  "skill": "herblore",
+  "level": 54,
+  "extra_skills": [],
+  "xp": 132.0,
+  "members": true,
+  "product": {
+   "id": 30140,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 255,
+    "qty": 1
+   },
+   {
+    "id": 29993,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_strength_3",
+  "skill": "herblore",
+  "level": 55,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": true,
+  "product": {
+   "id": 157,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 263,
+    "qty": 1
+   },
+   {
+    "id": 225,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "haemostatic_poultice",
+  "skill": "herblore",
+  "level": 56,
+  "extra_skills": [],
+  "xp": 27.0,
+  "members": true,
+  "product": {
+   "id": 31587,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 31481,
+    "qty": 1
+   },
+   {
+    "id": 31569,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "prayer_regeneration_potion_3",
+  "skill": "herblore",
+  "level": 58,
+  "extra_skills": [],
+  "xp": 132.0,
+  "members": true,
+  "product": {
+   "id": 30128,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 30097,
+    "qty": 1
+   },
+   {
+    "id": 29993,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "weapon_poison",
+  "skill": "herblore",
+  "level": 60,
+  "extra_skills": [],
+  "xp": 137.5,
+  "members": true,
+  "product": {
+   "id": 187,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 263,
+    "qty": 1
+   },
+   {
+    "id": 241,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_fishing_potion_3",
+  "skill": "herblore",
+  "level": 62,
+  "extra_skills": [],
+  "xp": 140.5,
+  "members": true,
+  "product": {
+   "id": 31605,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 31484,
+    "qty": 1
+   },
+   {
+    "id": 32357,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_restore_3",
+  "skill": "herblore",
+  "level": 63,
+  "extra_skills": [],
+  "xp": 142.5,
+  "members": true,
+  "product": {
+   "id": 3026,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 3000,
+    "qty": 1
+   },
+   {
+    "id": 223,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "extreme_energy_potion_3",
+  "skill": "herblore",
+  "level": 66,
+  "extra_skills": [],
+  "xp": 63.0,
+  "members": true,
+  "product": {
+   "id": 31617,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3018,
+    "qty": 1
+   },
+   {
+    "id": 32360,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_defence_3",
+  "skill": "herblore",
+  "level": 66,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 163,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 265,
+    "qty": 1
+   },
+   {
+    "id": 239,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_hunter_potion_3",
+  "skill": "herblore",
+  "level": 67,
+  "extra_skills": [],
+  "xp": 154.0,
+  "members": true,
+  "product": {
+   "id": 31629,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 31484,
+    "qty": 1
+   },
+   {
+    "id": 31708,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "antidote_3",
+  "skill": "herblore",
+  "level": 68,
+  "extra_skills": [],
+  "xp": 155.0,
+  "members": true,
+  "product": {
+   "id": 5945,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 5935,
+    "qty": 1
+   },
+   {
+    "id": 2998,
+    "qty": 1
+   },
+   {
+    "id": 6049,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "antifire_potion_3",
+  "skill": "herblore",
+  "level": 69,
+  "extra_skills": [],
+  "xp": 157.5,
+  "members": true,
+  "product": {
+   "id": 2454,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 2481,
+    "qty": 1
+   },
+   {
+    "id": 241,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ranging_potion_3",
+  "skill": "herblore",
+  "level": 72,
+  "extra_skills": [],
+  "xp": 162.5,
+  "members": true,
+  "product": {
+   "id": 169,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 267,
+    "qty": 1
+   },
+   {
+    "id": 245,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "magic_potion_3",
+  "skill": "herblore",
+  "level": 76,
+  "extra_skills": [],
+  "xp": 172.5,
+  "members": true,
+  "product": {
+   "id": 3042,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 2481,
+    "qty": 1
+   },
+   {
+    "id": 3138,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "stamina_potion_3",
+  "skill": "herblore",
+  "level": 77,
+  "extra_skills": [],
+  "xp": 76.5,
+  "members": true,
+  "product": {
+   "id": 12627,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 3018,
+    "qty": 1
+   },
+   {
+    "id": 12640,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "zamorak_brew_3",
+  "skill": "herblore",
+  "level": 78,
+  "extra_skills": [],
+  "xp": 175.0,
+  "members": true,
+  "product": {
+   "id": 189,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 269,
+    "qty": 1
+   },
+   {
+    "id": 247,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "antidote_3_2",
+  "skill": "herblore",
+  "level": 79,
+  "extra_skills": [],
+  "xp": 177.5,
+  "members": true,
+  "product": {
+   "id": 5954,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 5935,
+    "qty": 1
+   },
+   {
+    "id": 259,
+    "qty": 1
+   },
+   {
+    "id": 6051,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "bastion_potion_3",
+  "skill": "herblore",
+  "level": 80,
+  "extra_skills": [],
+  "xp": 155.0,
+  "members": true,
+  "product": {
+   "id": 22464,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 22446,
+    "qty": 1
+   },
+   {
+    "id": 265,
+    "qty": 1
+   },
+   {
+    "id": 245,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "battlemage_potion_3",
+  "skill": "herblore",
+  "level": 80,
+  "extra_skills": [],
+  "xp": 155.0,
+  "members": true,
+  "product": {
+   "id": 22452,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 22446,
+    "qty": 1
+   },
+   {
+    "id": 265,
+    "qty": 1
+   },
+   {
+    "id": 3138,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "saradomin_brew_3",
+  "skill": "herblore",
+  "level": 81,
+  "extra_skills": [],
+  "xp": 180.0,
+  "members": true,
+  "product": {
+   "id": 6687,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 2998,
+    "qty": 1
+   },
+   {
+    "id": 6693,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "extended_antifire_3",
+  "skill": "herblore",
+  "level": 84,
+  "extra_skills": [],
+  "xp": 82.5,
+  "members": true,
+  "product": {
+   "id": 11953,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2454,
+    "qty": 1
+   },
+   {
+    "id": 11994,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "ancient_brew_3",
+  "skill": "herblore",
+  "level": 85,
+  "extra_skills": [],
+  "xp": 190.0,
+  "members": true,
+  "product": {
+   "id": 26342,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 267,
+    "qty": 1
+   },
+   {
+    "id": 26368,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "extended_stamina_potion_3",
+  "skill": "herblore",
+  "level": 85,
+  "extra_skills": [],
+  "xp": 82.5,
+  "members": true,
+  "product": {
+   "id": 31641,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 12627,
+    "qty": 1
+   },
+   {
+    "id": 32362,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "anti_venom_3",
+  "skill": "herblore",
+  "level": 87,
+  "extra_skills": [],
+  "xp": 90.0,
+  "members": true,
+  "product": {
+   "id": 12907,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 5954,
+    "qty": 1
+   },
+   {
+    "id": 12934,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "menaphite_remedy_3",
+  "skill": "herblore",
+  "level": 88,
+  "extra_skills": [],
+  "xp": 200.0,
+  "members": true,
+  "product": {
+   "id": 27205,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 267,
+    "qty": 1
+   },
+   {
+    "id": 27272,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "armadyl_brew_3",
+  "skill": "herblore",
+  "level": 89,
+  "extra_skills": [],
+  "xp": 205.0,
+  "members": true,
+  "product": {
+   "id": 31653,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 227,
+    "qty": 1
+   },
+   {
+    "id": 31487,
+    "qty": 1
+   },
+   {
+    "id": 31710,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_combat_potion_3",
+  "skill": "herblore",
+  "level": 90,
+  "extra_skills": [],
+  "xp": 150.0,
+  "members": true,
+  "product": {
+   "id": 12697,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 145,
+    "qty": 1
+   },
+   {
+    "id": 157,
+    "qty": 1
+   },
+   {
+    "id": 163,
+    "qty": 1
+   },
+   {
+    "id": 269,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "forgotten_brew_3",
+  "skill": "herblore",
+  "level": 91,
+  "extra_skills": [],
+  "xp": 108.0,
+  "members": true,
+  "product": {
+   "id": 27632,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 26342,
+    "qty": 1
+   },
+   {
+    "id": 27616,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "super_antifire_potion_3",
+  "skill": "herblore",
+  "level": 92,
+  "extra_skills": [],
+  "xp": 130.0,
+  "members": true,
+  "product": {
+   "id": 21981,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 2454,
+    "qty": 1
+   },
+   {
+    "id": 21975,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "anti_venom_3_2",
+  "skill": "herblore",
+  "level": 94,
+  "extra_skills": [],
+  "xp": 125.0,
+  "members": true,
+  "product": {
+   "id": 12915,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 12907,
+    "qty": 1
+   },
+   {
+    "id": 269,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "extended_anti_venom_3",
+  "skill": "herblore",
+  "level": 94,
+  "extra_skills": [],
+  "xp": 60.0,
+  "members": true,
+  "product": {
+   "id": 29827,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 12915,
+    "qty": 1
+   },
+   {
+    "id": 29784,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "extended_super_antifire_3",
+  "skill": "herblore",
+  "level": 98,
+  "extra_skills": [],
+  "xp": 120.0,
+  "members": true,
+  "product": {
+   "id": 22212,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 21981,
+    "qty": 1
+   },
+   {
+    "id": 11994,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ },
+ {
+  "id": "anti_odour_salt",
+  "skill": "herblore",
+  "level": 49,
+  "extra_skills": [],
+  "xp": 11.0,
+  "members": true,
+  "product": {
+   "id": 31712,
+   "qty": 1
+  },
+  "materials": [
+   {
+    "id": 31481,
+    "qty": 1
+   },
+   {
+    "id": 31708,
+    "qty": 1
+   }
+  ],
+  "fee": 0,
+  "note": null,
+  "tools": [],
+  "facilities": []
+ }
+]

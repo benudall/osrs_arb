@@ -17,7 +17,7 @@ from html.parser import HTMLParser
 sys.path.insert(0, ".")
 import config  # noqa: E402
 
-OUT_PATH = config.RECIPES_PATH.parent / "harvested_raw.json"
+OUT_PATH = config.HARVESTED_PATH
 
 UA = "osrs_arb recipe harvester (contact: dev)"
 

@@ -1,24 +1,74 @@
 """Recipe loading, validation, and name resolution (DB-free).
 
-recipes.json stores item NAMES (human-reviewable); baking resolves them to
-item ids via the /mapping data. Used by scripts/bake_static.py and
-scripts/merge_harvested.py.
+Recipes are stored one <skill>.json per skill under data/recipes/ (item
+NAMES, human-reviewable); baking resolves them to item ids via the /mapping
+data. Used by scripts/bake_static.py and scripts/merge_harvested.py.
 """
 import json
 import logging
+import pathlib
 
 log = logging.getLogger(__name__)
 
 REQUIRED_KEYS = {"id", "skill", "level", "members", "product", "materials", "xp"}
 
 
-def load_recipe_file(path) -> list[dict]:
-    with open(path, encoding="utf-8") as f:
-        data = json.load(f)
-    recipes = data.get("recipes", [])
+def load_recipes(recipes_dir) -> list[dict]:
+    """Load and concatenate recipes from every <skill>.json in recipes_dir.
+
+    Files starting with '_' (e.g. _meta.json) are skipped. Recipes keep their
+    file order, so the concatenation stays grouped by skill.
+    """
+    recipes_dir = pathlib.Path(recipes_dir)
+    recipes: list[dict] = []
+    for path in sorted(recipes_dir.glob("*.json")):
+        if path.name.startswith("_"):
+            continue
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        batch = data["recipes"] if isinstance(data, dict) else data
+        if not batch:
+            raise ValueError(f"{path} contains no recipes")
+        recipes.extend(batch)
     if not recipes:
-        raise ValueError(f"{path} contains no recipes")
+        raise ValueError(f"{recipes_dir} contains no recipes")
     return recipes
+
+
+def load_meta(recipes_dir) -> dict:
+    """Load _meta.json (version/source notes) from recipes_dir; {} if absent."""
+    path = pathlib.Path(recipes_dir) / "_meta.json"
+    if not path.exists():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def write_recipes(recipes_dir, recipes: list[dict], meta: dict | None = None) -> None:
+    """Group recipes by skill and write one <skill>.json per skill.
+
+    Each file is {"skill": ..., "recipes": [...]}. Stale skill files from
+    removed skills are deleted. meta (optional) replaces _meta.json.
+    """
+    recipes_dir = pathlib.Path(recipes_dir)
+    recipes_dir.mkdir(parents=True, exist_ok=True)
+    by_skill: dict[str, list[dict]] = {}
+    for r in recipes:
+        by_skill.setdefault(r["skill"], []).append(r)
+    for skill, batch in sorted(by_skill.items()):
+        path = recipes_dir / f"{skill}.json"
+        path.write_text(
+            json.dumps({"skill": skill, "recipes": batch}, indent=1, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+    for path in recipes_dir.glob("*.json"):
+        if path.name.startswith("_"):
+            continue
+        if path.stem not in by_skill:
+            path.unlink()
+    if meta is not None:
+        (recipes_dir / "_meta.json").write_text(
+            json.dumps(meta, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
+        )
 
 
 def validate(raw: list[dict]) -> tuple[list[dict], list[str]]:
@@ -103,6 +153,8 @@ def infer_extras(skill, product_name, materials, fee):
             facilities.append("Spinning wheel")
         if any("leather" in m for m in mats):
             tools.append("Needle")
+        if any(m.startswith("uncut ") for m in mats):
+            tools.append("Chisel")  # gem cutting (opal through zenyte)
     elif skill == "fletching":
         if any(m == "logs" or m.endswith("logs") for m in mats):
             tools.append("Knife")

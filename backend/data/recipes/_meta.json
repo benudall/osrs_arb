@@ -1,0 +1,4 @@
+{
+ "version": 2,
+ "source": "Curated from OSRS wiki skill guides. Yields wiki-verified (arrowtips 15/bar, shafts 15/logs, d'hide 1/2/3, cannonball 4/bar, cooking levels verified). Some non-cooking levels are best-effort from memory - spot-check with scripts/verify_levels.py before trusting cutoffs. Cooking recipes expanded from the wiki Cooking/Experience table (scripts/add_cooking.py); GE-tradeable items with live price data only. Cooking recipes expanded from the wiki Cooking/Experience table (scripts/add_cooking.py); items without GE price history resolved via wiki infoboxes and shown with partial craft cost + alchemy. Crafting recipes expanded from the wiki Crafting/Experience table (scripts/add_crafting.py): amulet/symbol stringing, pottery, glass, misc tradeable crafts and boss/crystal combine crafts."
+}

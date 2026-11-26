@@ -1,0 +1,3806 @@
+{
+ "skill": "smithing",
+ "recipes": [
+  {
+   "id": "bronze_bar",
+   "skill": "smithing",
+   "level": 1,
+   "xp": 6.2,
+   "members": false,
+   "product": {
+    "item": "Bronze bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Copper ore",
+     "qty": 1
+    },
+    {
+     "item": "Tin ore",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "iron_bar",
+   "skill": "smithing",
+   "level": 15,
+   "xp": 12.5,
+   "members": false,
+   "product": {
+    "item": "Iron bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron ore",
+     "qty": 1
+    }
+   ],
+   "note": "50% smelt success below level 45 (ring of forging or level 45+ for guaranteed)."
+  },
+  {
+   "id": "silver_bar",
+   "skill": "smithing",
+   "level": 20,
+   "xp": 13.7,
+   "members": false,
+   "product": {
+    "item": "Silver bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Silver ore",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "steel_bar",
+   "skill": "smithing",
+   "level": 30,
+   "xp": 17.5,
+   "members": false,
+   "product": {
+    "item": "Steel bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 2
+    }
+   ]
+  },
+  {
+   "id": "gold_bar",
+   "skill": "smithing",
+   "level": 40,
+   "xp": 22.5,
+   "members": false,
+   "product": {
+    "item": "Gold bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Gold ore",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "mithril_bar",
+   "skill": "smithing",
+   "level": 50,
+   "xp": 30.0,
+   "members": false,
+   "product": {
+    "item": "Mithril bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 4
+    }
+   ]
+  },
+  {
+   "id": "adamant_bar",
+   "skill": "smithing",
+   "level": 70,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Adamantite bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 6
+    }
+   ]
+  },
+  {
+   "id": "rune_bar",
+   "skill": "smithing",
+   "level": 85,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Runite bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite ore",
+     "qty": 1
+    },
+    {
+     "item": "Coal",
+     "qty": 8
+    }
+   ]
+  },
+  {
+   "id": "bronze_arrowtips",
+   "skill": "smithing",
+   "level": 5,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze arrowtips",
+    "qty": 15
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "iron_arrowtips",
+   "skill": "smithing",
+   "level": 20,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron arrowtips",
+    "qty": 15
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "steel_arrowtips",
+   "skill": "smithing",
+   "level": 35,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Steel arrowtips",
+    "qty": 15
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "mithril_arrowtips",
+   "skill": "smithing",
+   "level": 55,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril arrowtips",
+    "qty": 15
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "adamant_arrowtips",
+   "skill": "smithing",
+   "level": 75,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Adamant arrowtips",
+    "qty": 15
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "rune_arrowtips",
+   "skill": "smithing",
+   "level": 90,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Rune arrowtips",
+    "qty": 15
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "cannonball",
+   "skill": "smithing",
+   "level": 35,
+   "xp": 25.6,
+   "members": true,
+   "product": {
+    "item": "Steel cannonball",
+    "qty": 4
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "lead_bar",
+   "skill": "smithing",
+   "level": 25,
+   "xp": 15.5,
+   "members": true,
+   "product": {
+    "item": "Lead bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Lead ore",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "cupronickel_bar",
+   "skill": "smithing",
+   "level": 74,
+   "xp": 42.0,
+   "members": true,
+   "product": {
+    "item": "Cupronickel bar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Nickel ore",
+     "qty": 1
+    },
+    {
+     "item": "Copper ore",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_dagger",
+   "skill": "smithing",
+   "level": 1,
+   "xp": 12.5,
+   "members": false,
+   "product": {
+    "item": "Bronze dagger",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_axe",
+   "skill": "smithing",
+   "level": 1,
+   "xp": 12.5,
+   "members": false,
+   "product": {
+    "item": "Bronze axe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_mace",
+   "skill": "smithing",
+   "level": 2,
+   "xp": 12.5,
+   "members": false,
+   "product": {
+    "item": "Bronze mace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_med_helm",
+   "skill": "smithing",
+   "level": 3,
+   "xp": 12.5,
+   "members": false,
+   "product": {
+    "item": "Bronze med helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_bolts_unf",
+   "skill": "smithing",
+   "level": 3,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze bolts (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_shortsword",
+   "skill": "smithing",
+   "level": 4,
+   "xp": 12.5,
+   "members": false,
+   "product": {
+    "item": "Bronze shortsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_dart_tip",
+   "skill": "smithing",
+   "level": 4,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze dart tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_wire",
+   "skill": "smithing",
+   "level": 4,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze wire",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_nails",
+   "skill": "smithing",
+   "level": 4,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze nails",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_scimitar",
+   "skill": "smithing",
+   "level": 5,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Bronze scimitar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_spear",
+   "skill": "smithing",
+   "level": 5,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Bronze spear",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_hasta",
+   "skill": "smithing",
+   "level": 5,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Bronze hasta",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_cannonball",
+   "skill": "smithing",
+   "level": 5,
+   "xp": 8.8,
+   "members": true,
+   "product": {
+    "item": "Bronze cannonball",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_limbs",
+   "skill": "smithing",
+   "level": 6,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze limbs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_longsword",
+   "skill": "smithing",
+   "level": 6,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Bronze longsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_javelin_tips",
+   "skill": "smithing",
+   "level": 6,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze javelin tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_full_helm",
+   "skill": "smithing",
+   "level": 7,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Bronze full helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_knife",
+   "skill": "smithing",
+   "level": 7,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Bronze knife",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_sq_shield",
+   "skill": "smithing",
+   "level": 8,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Bronze sq shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_warhammer",
+   "skill": "smithing",
+   "level": 9,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Bronze warhammer",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_battleaxe",
+   "skill": "smithing",
+   "level": 10,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Bronze battleaxe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_keel_parts",
+   "skill": "smithing",
+   "level": 10,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Bronze keel parts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_chainbody",
+   "skill": "smithing",
+   "level": 11,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Bronze chainbody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_kiteshield",
+   "skill": "smithing",
+   "level": 12,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Bronze kiteshield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_claws",
+   "skill": "smithing",
+   "level": 13,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Bronze claws",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_2h_sword",
+   "skill": "smithing",
+   "level": 14,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Bronze 2h sword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_platelegs",
+   "skill": "smithing",
+   "level": 16,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Bronze platelegs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_plateskirt",
+   "skill": "smithing",
+   "level": 16,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Bronze plateskirt",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_platebody",
+   "skill": "smithing",
+   "level": 18,
+   "xp": 62.5,
+   "members": false,
+   "product": {
+    "item": "Bronze platebody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Bronze bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_dagger",
+   "skill": "smithing",
+   "level": 15,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Iron dagger",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_axe",
+   "skill": "smithing",
+   "level": 16,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Iron axe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_mace",
+   "skill": "smithing",
+   "level": 17,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Iron mace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_spit",
+   "skill": "smithing",
+   "level": 17,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron spit",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_med_helm",
+   "skill": "smithing",
+   "level": 18,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Iron med helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_bolts_unf",
+   "skill": "smithing",
+   "level": 18,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron bolts (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_shortsword",
+   "skill": "smithing",
+   "level": 19,
+   "xp": 25.0,
+   "members": false,
+   "product": {
+    "item": "Iron shortsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_dart_tip",
+   "skill": "smithing",
+   "level": 19,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron dart tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_nails",
+   "skill": "smithing",
+   "level": 19,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron nails",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_scimitar",
+   "skill": "smithing",
+   "level": 20,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Iron scimitar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_spear",
+   "skill": "smithing",
+   "level": 20,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Iron spear",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_hasta",
+   "skill": "smithing",
+   "level": 20,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Iron hasta",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_cannonball",
+   "skill": "smithing",
+   "level": 20,
+   "xp": 17.2,
+   "members": true,
+   "product": {
+    "item": "Iron cannonball",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_longsword",
+   "skill": "smithing",
+   "level": 21,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Iron longsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_javelin_tips",
+   "skill": "smithing",
+   "level": 21,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron javelin tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_full_helm",
+   "skill": "smithing",
+   "level": 22,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Iron full helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_knife",
+   "skill": "smithing",
+   "level": 22,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron knife",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_keel_parts",
+   "skill": "smithing",
+   "level": 22,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Iron keel parts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_sq_shield",
+   "skill": "smithing",
+   "level": 23,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Iron sq shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_limbs",
+   "skill": "smithing",
+   "level": 23,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Iron limbs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_warhammer",
+   "skill": "smithing",
+   "level": 24,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Iron warhammer",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_battleaxe",
+   "skill": "smithing",
+   "level": 25,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Iron battleaxe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_chainbody",
+   "skill": "smithing",
+   "level": 26,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Iron chainbody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "oil_lantern_frame",
+   "skill": "smithing",
+   "level": 26,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Oil lantern frame",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_kiteshield",
+   "skill": "smithing",
+   "level": 27,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Iron kiteshield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_claws",
+   "skill": "smithing",
+   "level": 28,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Iron claws",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_2h_sword",
+   "skill": "smithing",
+   "level": 29,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Iron 2h sword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_platelegs",
+   "skill": "smithing",
+   "level": 31,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Iron platelegs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_plateskirt",
+   "skill": "smithing",
+   "level": 31,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Iron plateskirt",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_platebody",
+   "skill": "smithing",
+   "level": 33,
+   "xp": 125.0,
+   "members": false,
+   "product": {
+    "item": "Iron platebody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Iron bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_dagger",
+   "skill": "smithing",
+   "level": 30,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Steel dagger",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_axe",
+   "skill": "smithing",
+   "level": 31,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Steel axe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_mace",
+   "skill": "smithing",
+   "level": 32,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Steel mace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_med_helm",
+   "skill": "smithing",
+   "level": 33,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Steel med helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_bolts_unf",
+   "skill": "smithing",
+   "level": 33,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Steel bolts (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_shortsword",
+   "skill": "smithing",
+   "level": 34,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Steel shortsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_nails",
+   "skill": "smithing",
+   "level": 34,
+   "xp": 37.5,
+   "members": false,
+   "product": {
+    "item": "Steel nails",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "chain",
+   "skill": "smithing",
+   "level": 34,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Chain",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_dart_tip",
+   "skill": "smithing",
+   "level": 34,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Steel dart tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_scimitar",
+   "skill": "smithing",
+   "level": 35,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Steel scimitar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_spear",
+   "skill": "smithing",
+   "level": 35,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Steel spear",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_hasta",
+   "skill": "smithing",
+   "level": 35,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Steel hasta",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_limbs",
+   "skill": "smithing",
+   "level": 36,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Steel limbs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_longsword",
+   "skill": "smithing",
+   "level": 36,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Steel longsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_javelin_tips",
+   "skill": "smithing",
+   "level": 36,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Steel javelin tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_studs",
+   "skill": "smithing",
+   "level": 36,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Steel studs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_full_helm",
+   "skill": "smithing",
+   "level": 37,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Steel full helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_knife",
+   "skill": "smithing",
+   "level": 37,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Steel knife",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_sq_shield",
+   "skill": "smithing",
+   "level": 38,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Steel sq shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_keel_parts",
+   "skill": "smithing",
+   "level": 38,
+   "xp": 187.5,
+   "members": true,
+   "product": {
+    "item": "Steel keel parts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_warhammer",
+   "skill": "smithing",
+   "level": 39,
+   "xp": 112.5,
+   "members": false,
+   "product": {
+    "item": "Steel warhammer",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_battleaxe",
+   "skill": "smithing",
+   "level": 40,
+   "xp": 112.5,
+   "members": false,
+   "product": {
+    "item": "Steel battleaxe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_chainbody",
+   "skill": "smithing",
+   "level": 41,
+   "xp": 112.5,
+   "members": false,
+   "product": {
+    "item": "Steel chainbody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_kiteshield",
+   "skill": "smithing",
+   "level": 42,
+   "xp": 112.5,
+   "members": false,
+   "product": {
+    "item": "Steel kiteshield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_claws",
+   "skill": "smithing",
+   "level": 43,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Steel claws",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_2h_sword",
+   "skill": "smithing",
+   "level": 44,
+   "xp": 112.5,
+   "members": false,
+   "product": {
+    "item": "Steel 2h sword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_platelegs",
+   "skill": "smithing",
+   "level": 46,
+   "xp": 112.5,
+   "members": false,
+   "product": {
+    "item": "Steel platelegs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_plateskirt",
+   "skill": "smithing",
+   "level": 46,
+   "xp": 112.5,
+   "members": false,
+   "product": {
+    "item": "Steel plateskirt",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_platebody",
+   "skill": "smithing",
+   "level": 48,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Steel platebody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bullseye_lantern_unf",
+   "skill": "smithing",
+   "level": 49,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Bullseye lantern (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Steel bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_dagger",
+   "skill": "smithing",
+   "level": 50,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Mithril dagger",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_axe",
+   "skill": "smithing",
+   "level": 51,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Mithril axe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_mace",
+   "skill": "smithing",
+   "level": 52,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Mithril mace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_med_helm",
+   "skill": "smithing",
+   "level": 53,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Mithril med helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_bolts_unf",
+   "skill": "smithing",
+   "level": 53,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril bolts (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_shortsword",
+   "skill": "smithing",
+   "level": 54,
+   "xp": 50.0,
+   "members": false,
+   "product": {
+    "item": "Mithril shortsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_nails",
+   "skill": "smithing",
+   "level": 54,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril nails",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_dart_tip",
+   "skill": "smithing",
+   "level": 54,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril dart tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_cannonball",
+   "skill": "smithing",
+   "level": 55,
+   "xp": 34.0,
+   "members": true,
+   "product": {
+    "item": "Mithril cannonball",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_scimitar",
+   "skill": "smithing",
+   "level": 55,
+   "xp": 100.0,
+   "members": false,
+   "product": {
+    "item": "Mithril scimitar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_spear",
+   "skill": "smithing",
+   "level": 55,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Mithril spear",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_hasta",
+   "skill": "smithing",
+   "level": 55,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Mithril hasta",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_limbs",
+   "skill": "smithing",
+   "level": 56,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril limbs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_longsword",
+   "skill": "smithing",
+   "level": 56,
+   "xp": 100.0,
+   "members": false,
+   "product": {
+    "item": "Mithril longsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_javelin_tips",
+   "skill": "smithing",
+   "level": 56,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril javelin tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_keel_parts",
+   "skill": "smithing",
+   "level": 56,
+   "xp": 250.0,
+   "members": true,
+   "product": {
+    "item": "Mithril keel parts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_full_helm",
+   "skill": "smithing",
+   "level": 57,
+   "xp": 100.0,
+   "members": false,
+   "product": {
+    "item": "Mithril full helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_knife",
+   "skill": "smithing",
+   "level": 57,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril knife",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_sq_shield",
+   "skill": "smithing",
+   "level": 58,
+   "xp": 100.0,
+   "members": false,
+   "product": {
+    "item": "Mithril sq shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_warhammer",
+   "skill": "smithing",
+   "level": 59,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Mithril warhammer",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mith_grapple_tip",
+   "skill": "smithing",
+   "level": 59,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mith grapple tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_battleaxe",
+   "skill": "smithing",
+   "level": 60,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Mithril battleaxe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_chainbody",
+   "skill": "smithing",
+   "level": 61,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Mithril chainbody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_kiteshield",
+   "skill": "smithing",
+   "level": 62,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Mithril kiteshield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_claws",
+   "skill": "smithing",
+   "level": 63,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Mithril claws",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_2h_sword",
+   "skill": "smithing",
+   "level": 64,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Mithril 2h sword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_platelegs",
+   "skill": "smithing",
+   "level": 66,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Mithril platelegs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_plateskirt",
+   "skill": "smithing",
+   "level": 66,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Mithril plateskirt",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_platebody",
+   "skill": "smithing",
+   "level": 68,
+   "xp": 250.0,
+   "members": false,
+   "product": {
+    "item": "Mithril platebody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mithril bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_dagger",
+   "skill": "smithing",
+   "level": 70,
+   "xp": 62.5,
+   "members": false,
+   "product": {
+    "item": "Adamant dagger",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_axe",
+   "skill": "smithing",
+   "level": 71,
+   "xp": 62.5,
+   "members": false,
+   "product": {
+    "item": "Adamant axe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_mace",
+   "skill": "smithing",
+   "level": 72,
+   "xp": 62.5,
+   "members": false,
+   "product": {
+    "item": "Adamant mace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_med_helm",
+   "skill": "smithing",
+   "level": 73,
+   "xp": 62.5,
+   "members": false,
+   "product": {
+    "item": "Adamant med helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_bolts_unf",
+   "skill": "smithing",
+   "level": 73,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Adamant bolts(unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_shortsword",
+   "skill": "smithing",
+   "level": 74,
+   "xp": 62.5,
+   "members": false,
+   "product": {
+    "item": "Adamant shortsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamantite_nails",
+   "skill": "smithing",
+   "level": 74,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Adamantite nails",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_keel_parts",
+   "skill": "smithing",
+   "level": 74,
+   "xp": 312.5,
+   "members": true,
+   "product": {
+    "item": "Adamant keel parts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_dart_tip",
+   "skill": "smithing",
+   "level": 74,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Adamant dart tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_scimitar",
+   "skill": "smithing",
+   "level": 75,
+   "xp": 125.0,
+   "members": false,
+   "product": {
+    "item": "Adamant scimitar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_spear",
+   "skill": "smithing",
+   "level": 75,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Adamant spear",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_hasta",
+   "skill": "smithing",
+   "level": 75,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Adamant hasta",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_cannonball",
+   "skill": "smithing",
+   "level": 75,
+   "xp": 42.4,
+   "members": true,
+   "product": {
+    "item": "Adamant cannonball",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamantite_limbs",
+   "skill": "smithing",
+   "level": 76,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Adamantite limbs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_longsword",
+   "skill": "smithing",
+   "level": 76,
+   "xp": 125.0,
+   "members": false,
+   "product": {
+    "item": "Adamant longsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_javelin_tips",
+   "skill": "smithing",
+   "level": 76,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Adamant javelin tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_full_helm",
+   "skill": "smithing",
+   "level": 77,
+   "xp": 125.0,
+   "members": false,
+   "product": {
+    "item": "Adamant full helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_knife",
+   "skill": "smithing",
+   "level": 77,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Adamant knife",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_sq_shield",
+   "skill": "smithing",
+   "level": 78,
+   "xp": 125.0,
+   "members": false,
+   "product": {
+    "item": "Adamant sq shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_warhammer",
+   "skill": "smithing",
+   "level": 79,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Adamant warhammer",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_battleaxe",
+   "skill": "smithing",
+   "level": 80,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Adamant battleaxe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_chainbody",
+   "skill": "smithing",
+   "level": 81,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Adamant chainbody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_kiteshield",
+   "skill": "smithing",
+   "level": 82,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Adamant kiteshield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_claws",
+   "skill": "smithing",
+   "level": 83,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Adamant claws",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_2h_sword",
+   "skill": "smithing",
+   "level": 84,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Adamant 2h sword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_platelegs",
+   "skill": "smithing",
+   "level": 86,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Adamant platelegs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_plateskirt",
+   "skill": "smithing",
+   "level": 86,
+   "xp": 187.5,
+   "members": false,
+   "product": {
+    "item": "Adamant plateskirt",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_platebody",
+   "skill": "smithing",
+   "level": 88,
+   "xp": 312.5,
+   "members": false,
+   "product": {
+    "item": "Adamant platebody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Adamantite bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_dagger",
+   "skill": "smithing",
+   "level": 85,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Rune dagger",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_axe",
+   "skill": "smithing",
+   "level": 86,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Rune axe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_keel_parts",
+   "skill": "smithing",
+   "level": 86,
+   "xp": 375.0,
+   "members": true,
+   "product": {
+    "item": "Rune keel parts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_mace",
+   "skill": "smithing",
+   "level": 87,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Rune mace",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_med_helm",
+   "skill": "smithing",
+   "level": 88,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Rune med helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "runite_bolts_unf",
+   "skill": "smithing",
+   "level": 88,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Runite bolts (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_shortsword",
+   "skill": "smithing",
+   "level": 89,
+   "xp": 75.0,
+   "members": false,
+   "product": {
+    "item": "Rune shortsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_nails",
+   "skill": "smithing",
+   "level": 89,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Rune nails",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_dart_tip",
+   "skill": "smithing",
+   "level": 89,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Rune dart tip",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_scimitar",
+   "skill": "smithing",
+   "level": 90,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Rune scimitar",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_spear",
+   "skill": "smithing",
+   "level": 90,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Rune spear",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_hasta",
+   "skill": "smithing",
+   "level": 90,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Rune hasta",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_cannonball",
+   "skill": "smithing",
+   "level": 90,
+   "xp": 50.8,
+   "members": true,
+   "product": {
+    "item": "Rune cannonball",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "runite_limbs",
+   "skill": "smithing",
+   "level": 91,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Runite limbs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_longsword",
+   "skill": "smithing",
+   "level": 91,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Rune longsword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_javelin_tips",
+   "skill": "smithing",
+   "level": 91,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Rune javelin tips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_full_helm",
+   "skill": "smithing",
+   "level": 92,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Rune full helm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_knife",
+   "skill": "smithing",
+   "level": 92,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Rune knife",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_sq_shield",
+   "skill": "smithing",
+   "level": 93,
+   "xp": 150.0,
+   "members": false,
+   "product": {
+    "item": "Rune sq shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_warhammer",
+   "skill": "smithing",
+   "level": 94,
+   "xp": 225.0,
+   "members": false,
+   "product": {
+    "item": "Rune warhammer",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_battleaxe",
+   "skill": "smithing",
+   "level": 95,
+   "xp": 225.0,
+   "members": false,
+   "product": {
+    "item": "Rune battleaxe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_chainbody",
+   "skill": "smithing",
+   "level": 96,
+   "xp": 225.0,
+   "members": false,
+   "product": {
+    "item": "Rune chainbody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_kiteshield",
+   "skill": "smithing",
+   "level": 97,
+   "xp": 225.0,
+   "members": false,
+   "product": {
+    "item": "Rune kiteshield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_claws",
+   "skill": "smithing",
+   "level": 98,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Rune claws",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_2h_sword",
+   "skill": "smithing",
+   "level": 99,
+   "xp": 225.0,
+   "members": false,
+   "product": {
+    "item": "Rune 2h sword",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_platelegs",
+   "skill": "smithing",
+   "level": 99,
+   "xp": 225.0,
+   "members": false,
+   "product": {
+    "item": "Rune platelegs",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_plateskirt",
+   "skill": "smithing",
+   "level": 99,
+   "xp": 225.0,
+   "members": false,
+   "product": {
+    "item": "Rune plateskirt",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 3
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_platebody",
+   "skill": "smithing",
+   "level": 99,
+   "xp": 375.0,
+   "members": false,
+   "product": {
+    "item": "Rune platebody",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Runite bar",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  }
+ ]
+}

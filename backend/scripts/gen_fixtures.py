@@ -50,8 +50,13 @@ def to_resolved(baked: dict) -> dict:
 
 
 def main() -> int:
-    baked = json.loads(config.SITE_DATA_PATH.read_text(encoding="utf-8"))
-    item_ids = set(baked["items"].keys())
+    items_doc = json.loads(config.SITE_ITEMS_PATH.read_text(encoding="utf-8"))
+    recipes = []
+    for path in sorted(config.SITE_RECIPES_DIR.glob("*.json")):
+        if path.name == "index.json":
+            continue
+        recipes.extend(json.loads(path.read_text(encoding="utf-8")))
+    item_ids = set(items_doc["items"].keys())
     item_map = {
         int(iid): {
             "id": int(iid),
@@ -61,9 +66,9 @@ def main() -> int:
             "value": v["value"],
             "image_url": v["image"],
         }
-        for iid, v in baked["items"].items()
+        for iid, v in items_doc["items"].items()
     }
-    resolved = [to_resolved(r) for r in baked["recipes"]]
+    resolved = [to_resolved(r) for r in recipes]
 
     now = int(time.time())
     latest = fetch_wiki("/latest")
@@ -97,8 +102,8 @@ def main() -> int:
         "now": now,
         "stale_secs": config.STALE_SECS,
         "wiki": wiki,
-        "items": baked["items"],
-        "recipes": baked["recipes"],
+        "items": items_doc["items"],
+        "recipes": recipes,
         "resolve_samples": resolve_samples,
         "expected": expected,
     }

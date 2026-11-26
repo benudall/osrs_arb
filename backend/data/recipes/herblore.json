@@ -1,0 +1,2029 @@
+{
+ "skill": "herblore",
+ "recipes": [
+  {
+   "id": "guam_leaf",
+   "skill": "herblore",
+   "level": 3,
+   "xp": 2.5,
+   "members": true,
+   "product": {
+    "item": "Guam leaf",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy guam leaf",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "guam_potion_unf",
+   "skill": "herblore",
+   "level": 3,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Guam potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Guam leaf",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "marrentill",
+   "skill": "herblore",
+   "level": 5,
+   "xp": 3.8,
+   "members": true,
+   "product": {
+    "item": "Marrentill",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy marrentill",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "marrentill_potion_unf",
+   "skill": "herblore",
+   "level": 5,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Marrentill potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Marrentill",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "tarromin",
+   "skill": "herblore",
+   "level": 11,
+   "xp": 5.0,
+   "members": true,
+   "product": {
+    "item": "Tarromin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy tarromin",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "tarromin_potion_unf",
+   "skill": "herblore",
+   "level": 12,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Tarromin potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Tarromin",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "harralander",
+   "skill": "herblore",
+   "level": 20,
+   "xp": 6.3,
+   "members": true,
+   "product": {
+    "item": "Harralander",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy harralander",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "harralander_potion_unf",
+   "skill": "herblore",
+   "level": 22,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Harralander potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Harralander",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ranarr_weed",
+   "skill": "herblore",
+   "level": 25,
+   "xp": 7.5,
+   "members": true,
+   "product": {
+    "item": "Ranarr weed",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy ranarr weed",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ranarr_potion_unf",
+   "skill": "herblore",
+   "level": 30,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Ranarr potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ranarr weed",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "toadflax",
+   "skill": "herblore",
+   "level": 30,
+   "xp": 8.0,
+   "members": true,
+   "product": {
+    "item": "Toadflax",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy toadflax",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "toadflax_potion_unf",
+   "skill": "herblore",
+   "level": 34,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Toadflax potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Toadflax",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "irit_leaf",
+   "skill": "herblore",
+   "level": 40,
+   "xp": 8.8,
+   "members": true,
+   "product": {
+    "item": "Irit leaf",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy irit leaf",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "irit_potion_unf",
+   "skill": "herblore",
+   "level": 45,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Irit potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Irit leaf",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "avantoe",
+   "skill": "herblore",
+   "level": 48,
+   "xp": 10.0,
+   "members": true,
+   "product": {
+    "item": "Avantoe",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy avantoe",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "avantoe_potion_unf",
+   "skill": "herblore",
+   "level": 50,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Avantoe potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Avantoe",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "kwuarm",
+   "skill": "herblore",
+   "level": 54,
+   "xp": 11.3,
+   "members": true,
+   "product": {
+    "item": "Kwuarm",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy kwuarm",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "kwuarm_potion_unf",
+   "skill": "herblore",
+   "level": 55,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Kwuarm potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Kwuarm",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "huasca",
+   "skill": "herblore",
+   "level": 58,
+   "xp": 11.8,
+   "members": true,
+   "product": {
+    "item": "Huasca",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy huasca",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "huasca_potion_unf",
+   "skill": "herblore",
+   "level": 58,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Huasca potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Huasca",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snapdragon",
+   "skill": "herblore",
+   "level": 59,
+   "xp": 11.8,
+   "members": true,
+   "product": {
+    "item": "Snapdragon",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy snapdragon",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "snapdragon_potion_unf",
+   "skill": "herblore",
+   "level": 63,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Snapdragon potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Snapdragon",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "cadantine",
+   "skill": "herblore",
+   "level": 65,
+   "xp": 12.5,
+   "members": true,
+   "product": {
+    "item": "Cadantine",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy cadantine",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "cadantine_potion_unf",
+   "skill": "herblore",
+   "level": 66,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Cadantine potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cadantine",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "lantadyme",
+   "skill": "herblore",
+   "level": 67,
+   "xp": 13.1,
+   "members": true,
+   "product": {
+    "item": "Lantadyme",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy lantadyme",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "lantadyme_potion_unf",
+   "skill": "herblore",
+   "level": 69,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Lantadyme potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Lantadyme",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dwarf_weed",
+   "skill": "herblore",
+   "level": 70,
+   "xp": 13.8,
+   "members": true,
+   "product": {
+    "item": "Dwarf weed",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy dwarf weed",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dwarf_weed_potion_unf",
+   "skill": "herblore",
+   "level": 72,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Dwarf weed potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dwarf weed",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "torstol",
+   "skill": "herblore",
+   "level": 75,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Torstol",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Grimy torstol",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "torstol_potion_unf",
+   "skill": "herblore",
+   "level": 78,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Torstol potion (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Torstol",
+     "qty": 1
+    },
+    {
+     "item": "Vial of water",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "attack_potion_3",
+   "skill": "herblore",
+   "level": 3,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Attack potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Guam leaf",
+     "qty": 1
+    },
+    {
+     "item": "Eye of newt",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "antipoison_3",
+   "skill": "herblore",
+   "level": 5,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Antipoison(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Marrentill",
+     "qty": 1
+    },
+    {
+     "item": "Unicorn horn dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "strength_potion_3",
+   "skill": "herblore",
+   "level": 12,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Strength potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Tarromin",
+     "qty": 1
+    },
+    {
+     "item": "Limpwurt root",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "guthix_rest_3",
+   "skill": "herblore",
+   "level": 18,
+   "xp": 59.0,
+   "members": true,
+   "product": {
+    "item": "Guthix rest(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Cup of hot water",
+     "qty": 1
+    },
+    {
+     "item": "Harralander",
+     "qty": 1
+    },
+    {
+     "item": "Guam leaf",
+     "qty": 1
+    },
+    {
+     "item": "Marrentill",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "compost_potion_3",
+   "skill": "herblore",
+   "level": 22,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Compost potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Harralander",
+     "qty": 1
+    },
+    {
+     "item": "Volcanic ash",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "restore_potion_3",
+   "skill": "herblore",
+   "level": 22,
+   "xp": 62.5,
+   "members": true,
+   "product": {
+    "item": "Restore potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Harralander",
+     "qty": 1
+    },
+    {
+     "item": "Red spiders' eggs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "guthix_balance_3",
+   "skill": "herblore",
+   "level": 22,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Guthix balance(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Restore potion(3)",
+     "qty": 1
+    },
+    {
+     "item": "Garlic",
+     "qty": 1
+    },
+    {
+     "item": "Silver dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "energy_potion_3",
+   "skill": "herblore",
+   "level": 26,
+   "xp": 67.5,
+   "members": true,
+   "product": {
+    "item": "Energy potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Harralander",
+     "qty": 1
+    },
+    {
+     "item": "Chocolate dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "defence_potion_3",
+   "skill": "herblore",
+   "level": 30,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Defence potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Ranarr weed",
+     "qty": 1
+    },
+    {
+     "item": "White berries",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "agility_potion_3",
+   "skill": "herblore",
+   "level": 34,
+   "xp": 80.0,
+   "members": true,
+   "product": {
+    "item": "Agility potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Toadflax",
+     "qty": 1
+    },
+    {
+     "item": "Toad's legs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "combat_potion_3",
+   "skill": "herblore",
+   "level": 36,
+   "xp": 84.0,
+   "members": true,
+   "product": {
+    "item": "Combat potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Harralander",
+     "qty": 1
+    },
+    {
+     "item": "Goat horn dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "prayer_potion_3",
+   "skill": "herblore",
+   "level": 38,
+   "xp": 87.5,
+   "members": true,
+   "product": {
+    "item": "Prayer potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Ranarr weed",
+     "qty": 1
+    },
+    {
+     "item": "Snape grass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_attack_3",
+   "skill": "herblore",
+   "level": 45,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Super attack(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Irit leaf",
+     "qty": 1
+    },
+    {
+     "item": "Eye of newt",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "superantipoison_3",
+   "skill": "herblore",
+   "level": 48,
+   "xp": 106.3,
+   "members": true,
+   "product": {
+    "item": "Superantipoison(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Irit leaf",
+     "qty": 1
+    },
+    {
+     "item": "Unicorn horn dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "fishing_potion_3",
+   "skill": "herblore",
+   "level": 50,
+   "xp": 112.5,
+   "members": true,
+   "product": {
+    "item": "Fishing potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Avantoe",
+     "qty": 1
+    },
+    {
+     "item": "Snape grass",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_energy_3",
+   "skill": "herblore",
+   "level": 52,
+   "xp": 117.5,
+   "members": true,
+   "product": {
+    "item": "Super energy(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Avantoe",
+     "qty": 1
+    },
+    {
+     "item": "Mort myre fungus",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hunter_potion_3",
+   "skill": "herblore",
+   "level": 53,
+   "xp": 120.0,
+   "members": true,
+   "product": {
+    "item": "Hunter potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Avantoe",
+     "qty": 1
+    },
+    {
+     "item": "Kebbit teeth dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "goading_potion_3",
+   "skill": "herblore",
+   "level": 54,
+   "xp": 132.0,
+   "members": true,
+   "product": {
+    "item": "Goading potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Harralander",
+     "qty": 1
+    },
+    {
+     "item": "Aldarium",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_strength_3",
+   "skill": "herblore",
+   "level": 55,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Super strength(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Kwuarm",
+     "qty": 1
+    },
+    {
+     "item": "Limpwurt root",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "haemostatic_poultice",
+   "skill": "herblore",
+   "level": 56,
+   "xp": 27.0,
+   "members": true,
+   "product": {
+    "item": "Haemostatic poultice",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Elkhorn coral",
+     "qty": 1
+    },
+    {
+     "item": "Squid paste",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "prayer_regeneration_potion_3",
+   "skill": "herblore",
+   "level": 58,
+   "xp": 132.0,
+   "members": true,
+   "product": {
+    "item": "Prayer regeneration potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Huasca",
+     "qty": 1
+    },
+    {
+     "item": "Aldarium",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "weapon_poison",
+   "skill": "herblore",
+   "level": 60,
+   "xp": 137.5,
+   "members": true,
+   "product": {
+    "item": "Weapon poison",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Kwuarm",
+     "qty": 1
+    },
+    {
+     "item": "Dragon scale dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_fishing_potion_3",
+   "skill": "herblore",
+   "level": 62,
+   "xp": 140.5,
+   "members": true,
+   "product": {
+    "item": "Super fishing potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Pillar coral",
+     "qty": 1
+    },
+    {
+     "item": "Haddock eye",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_restore_3",
+   "skill": "herblore",
+   "level": 63,
+   "xp": 142.5,
+   "members": true,
+   "product": {
+    "item": "Super restore(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Snapdragon",
+     "qty": 1
+    },
+    {
+     "item": "Red spiders' eggs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "extreme_energy_potion_3",
+   "skill": "herblore",
+   "level": 66,
+   "xp": 63.0,
+   "members": true,
+   "product": {
+    "item": "Extreme energy potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Super energy(3)",
+     "qty": 1
+    },
+    {
+     "item": "Yellow fin",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_defence_3",
+   "skill": "herblore",
+   "level": 66,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Super defence(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Cadantine",
+     "qty": 1
+    },
+    {
+     "item": "White berries",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_hunter_potion_3",
+   "skill": "herblore",
+   "level": 67,
+   "xp": 154.0,
+   "members": true,
+   "product": {
+    "item": "Super hunter potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Pillar coral",
+     "qty": 1
+    },
+    {
+     "item": "Crab paste",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "antidote_3",
+   "skill": "herblore",
+   "level": 68,
+   "xp": 155.0,
+   "members": true,
+   "product": {
+    "item": "Antidote+(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Coconut milk",
+     "qty": 1
+    },
+    {
+     "item": "Toadflax",
+     "qty": 1
+    },
+    {
+     "item": "Yew roots",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "antifire_potion_3",
+   "skill": "herblore",
+   "level": 69,
+   "xp": 157.5,
+   "members": true,
+   "product": {
+    "item": "Antifire potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Lantadyme",
+     "qty": 1
+    },
+    {
+     "item": "Dragon scale dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ranging_potion_3",
+   "skill": "herblore",
+   "level": 72,
+   "xp": 162.5,
+   "members": true,
+   "product": {
+    "item": "Ranging potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Dwarf weed",
+     "qty": 1
+    },
+    {
+     "item": "Wine of Zamorak",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "magic_potion_3",
+   "skill": "herblore",
+   "level": 76,
+   "xp": 172.5,
+   "members": true,
+   "product": {
+    "item": "Magic potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Lantadyme",
+     "qty": 1
+    },
+    {
+     "item": "Potato cactus",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "stamina_potion_3",
+   "skill": "herblore",
+   "level": 77,
+   "xp": 76.5,
+   "members": true,
+   "product": {
+    "item": "Stamina potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Super energy(3)",
+     "qty": 1
+    },
+    {
+     "item": "Amylase crystal",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "zamorak_brew_3",
+   "skill": "herblore",
+   "level": 78,
+   "xp": 175.0,
+   "members": true,
+   "product": {
+    "item": "Zamorak brew(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Torstol",
+     "qty": 1
+    },
+    {
+     "item": "Jangerberries",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "antidote_3_2",
+   "skill": "herblore",
+   "level": 79,
+   "xp": 177.5,
+   "members": true,
+   "product": {
+    "item": "Antidote++(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Coconut milk",
+     "qty": 1
+    },
+    {
+     "item": "Irit leaf",
+     "qty": 1
+    },
+    {
+     "item": "Magic roots",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bastion_potion_3",
+   "skill": "herblore",
+   "level": 80,
+   "xp": 155.0,
+   "members": true,
+   "product": {
+    "item": "Bastion potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of blood",
+     "qty": 1
+    },
+    {
+     "item": "Cadantine",
+     "qty": 1
+    },
+    {
+     "item": "Wine of Zamorak",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "battlemage_potion_3",
+   "skill": "herblore",
+   "level": 80,
+   "xp": 155.0,
+   "members": true,
+   "product": {
+    "item": "Battlemage potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of blood",
+     "qty": 1
+    },
+    {
+     "item": "Cadantine",
+     "qty": 1
+    },
+    {
+     "item": "Potato cactus",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "saradomin_brew_3",
+   "skill": "herblore",
+   "level": 81,
+   "xp": 180.0,
+   "members": true,
+   "product": {
+    "item": "Saradomin brew(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Toadflax",
+     "qty": 1
+    },
+    {
+     "item": "Crushed nest",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "extended_antifire_3",
+   "skill": "herblore",
+   "level": 84,
+   "xp": 82.5,
+   "members": true,
+   "product": {
+    "item": "Extended antifire(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Antifire potion(3)",
+     "qty": 1
+    },
+    {
+     "item": "Lava scale shard",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ancient_brew_3",
+   "skill": "herblore",
+   "level": 85,
+   "xp": 190.0,
+   "members": true,
+   "product": {
+    "item": "Ancient brew(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Dwarf weed",
+     "qty": 1
+    },
+    {
+     "item": "Nihil dust",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "extended_stamina_potion_3",
+   "skill": "herblore",
+   "level": 85,
+   "xp": 82.5,
+   "members": true,
+   "product": {
+    "item": "Extended stamina potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Stamina potion(3)",
+     "qty": 1
+    },
+    {
+     "item": "Marlin scales",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "anti_venom_3",
+   "skill": "herblore",
+   "level": 87,
+   "xp": 90.0,
+   "members": true,
+   "product": {
+    "item": "Anti-venom(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Antidote++(3)",
+     "qty": 1
+    },
+    {
+     "item": "Zulrah's scales",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "menaphite_remedy_3",
+   "skill": "herblore",
+   "level": 88,
+   "xp": 200.0,
+   "members": true,
+   "product": {
+    "item": "Menaphite remedy(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Dwarf weed",
+     "qty": 1
+    },
+    {
+     "item": "Lily of the Sands",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "armadyl_brew_3",
+   "skill": "herblore",
+   "level": 89,
+   "xp": 205.0,
+   "members": true,
+   "product": {
+    "item": "Armadyl brew(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Vial of water",
+     "qty": 1
+    },
+    {
+     "item": "Umbral coral",
+     "qty": 1
+    },
+    {
+     "item": "Rainbow crab paste",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_combat_potion_3",
+   "skill": "herblore",
+   "level": 90,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Super combat potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Super attack(3)",
+     "qty": 1
+    },
+    {
+     "item": "Super strength(3)",
+     "qty": 1
+    },
+    {
+     "item": "Super defence(3)",
+     "qty": 1
+    },
+    {
+     "item": "Torstol",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "forgotten_brew_3",
+   "skill": "herblore",
+   "level": 91,
+   "xp": 108.0,
+   "members": true,
+   "product": {
+    "item": "Forgotten brew(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ancient brew(3)",
+     "qty": 1
+    },
+    {
+     "item": "Ancient essence",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "super_antifire_potion_3",
+   "skill": "herblore",
+   "level": 92,
+   "xp": 130.0,
+   "members": true,
+   "product": {
+    "item": "Super antifire potion(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Antifire potion(3)",
+     "qty": 1
+    },
+    {
+     "item": "Crushed superior dragon bones",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "anti_venom_3_2",
+   "skill": "herblore",
+   "level": 94,
+   "xp": 125.0,
+   "members": true,
+   "product": {
+    "item": "Anti-venom+(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Anti-venom(3)",
+     "qty": 1
+    },
+    {
+     "item": "Torstol",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "extended_anti_venom_3",
+   "skill": "herblore",
+   "level": 94,
+   "xp": 60.0,
+   "members": true,
+   "product": {
+    "item": "Extended anti-venom+(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Anti-venom+(3)",
+     "qty": 1
+    },
+    {
+     "item": "Araxyte venom sac",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "extended_super_antifire_3",
+   "skill": "herblore",
+   "level": 98,
+   "xp": 120.0,
+   "members": true,
+   "product": {
+    "item": "Extended super antifire(3)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Super antifire potion(3)",
+     "qty": 1
+    },
+    {
+     "item": "Lava scale shard",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "anti_odour_salt",
+   "skill": "herblore",
+   "level": 49,
+   "xp": 11.0,
+   "members": true,
+   "product": {
+    "item": "Anti-odour salt",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Elkhorn coral",
+     "qty": 1
+    },
+    {
+     "item": "Crab paste",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  }
+ ]
+}

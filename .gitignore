@@ -3,9 +3,11 @@ backend/.venv/
 __pycache__/
 *.pyc
 
-# SQLite
-var/
+# SQLite (DB) + scratch; wiki caches stay tracked
 backend/var/
+var/*
+!var/mapping.json
+!var/wiki_meta.json
 
 # Node
 node_modules/

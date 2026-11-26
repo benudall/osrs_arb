@@ -1,0 +1,2638 @@
+{
+ "skill": "fletching",
+ "recipes": [
+  {
+   "id": "arrow_shaft",
+   "skill": "fletching",
+   "level": 1,
+   "xp": 5.0,
+   "members": true,
+   "product": {
+    "item": "Arrow shaft",
+    "qty": 15
+   },
+   "materials": [
+    {
+     "item": "Logs",
+     "qty": 1
+    }
+   ],
+   "note": null
+  },
+  {
+   "id": "headless_arrow",
+   "skill": "fletching",
+   "level": 1,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Headless arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Arrow shaft",
+     "qty": 1
+    },
+    {
+     "item": "Feather",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "bronze_arrow",
+   "skill": "fletching",
+   "level": 1,
+   "xp": 19.5,
+   "members": true,
+   "product": {
+    "item": "Bronze arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Bronze arrowtips",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "iron_arrow",
+   "skill": "fletching",
+   "level": 15,
+   "xp": 37.5,
+   "members": true,
+   "product": {
+    "item": "Iron arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Iron arrowtips",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "steel_arrow",
+   "skill": "fletching",
+   "level": 30,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Steel arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Steel arrowtips",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "mithril_arrow",
+   "skill": "fletching",
+   "level": 45,
+   "xp": 112.5,
+   "members": true,
+   "product": {
+    "item": "Mithril arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Mithril arrowtips",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "adamant_arrow",
+   "skill": "fletching",
+   "level": 60,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Adamant arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Adamant arrowtips",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "rune_arrow",
+   "skill": "fletching",
+   "level": 75,
+   "xp": 187.5,
+   "members": true,
+   "product": {
+    "item": "Rune arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Rune arrowtips",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "shortbow_u",
+   "skill": "fletching",
+   "level": 5,
+   "xp": 5.0,
+   "members": true,
+   "product": {
+    "item": "Shortbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "longbow_u",
+   "skill": "fletching",
+   "level": 10,
+   "xp": 10.0,
+   "members": true,
+   "product": {
+    "item": "Longbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "oak_shortbow_u",
+   "skill": "fletching",
+   "level": 20,
+   "xp": 16.5,
+   "members": true,
+   "product": {
+    "item": "Oak shortbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Oak logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "oak_longbow_u",
+   "skill": "fletching",
+   "level": 25,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Oak longbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Oak logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "willow_shortbow_u",
+   "skill": "fletching",
+   "level": 35,
+   "xp": 33.3,
+   "members": true,
+   "product": {
+    "item": "Willow shortbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "willow_longbow_u",
+   "skill": "fletching",
+   "level": 40,
+   "xp": 41.5,
+   "members": true,
+   "product": {
+    "item": "Willow longbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "maple_shortbow_u",
+   "skill": "fletching",
+   "level": 50,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Maple shortbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Maple logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "maple_longbow_u",
+   "skill": "fletching",
+   "level": 55,
+   "xp": 58.3,
+   "members": true,
+   "product": {
+    "item": "Maple longbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Maple logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "yew_shortbow_u",
+   "skill": "fletching",
+   "level": 65,
+   "xp": 67.5,
+   "members": true,
+   "product": {
+    "item": "Yew shortbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Yew logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "yew_longbow_u",
+   "skill": "fletching",
+   "level": 70,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Yew longbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Yew logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "magic_shortbow_u",
+   "skill": "fletching",
+   "level": 80,
+   "xp": 83.3,
+   "members": true,
+   "product": {
+    "item": "Magic shortbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "magic_longbow_u",
+   "skill": "fletching",
+   "level": 85,
+   "xp": 91.5,
+   "members": true,
+   "product": {
+    "item": "Magic longbow (u)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic logs",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_shortbow",
+   "skill": "fletching",
+   "level": 5,
+   "xp": 5.0,
+   "members": true,
+   "product": {
+    "item": "Shortbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Shortbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_longbow",
+   "skill": "fletching",
+   "level": 10,
+   "xp": 10.0,
+   "members": true,
+   "product": {
+    "item": "Longbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Longbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_oak_shortbow",
+   "skill": "fletching",
+   "level": 20,
+   "xp": 16.5,
+   "members": true,
+   "product": {
+    "item": "Oak shortbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Oak shortbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_oak_longbow",
+   "skill": "fletching",
+   "level": 25,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Oak longbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Oak longbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_willow_shortbow",
+   "skill": "fletching",
+   "level": 35,
+   "xp": 33.2,
+   "members": true,
+   "product": {
+    "item": "Willow shortbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow shortbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_willow_longbow",
+   "skill": "fletching",
+   "level": 40,
+   "xp": 41.5,
+   "members": true,
+   "product": {
+    "item": "Willow longbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow longbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_maple_shortbow",
+   "skill": "fletching",
+   "level": 50,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Maple shortbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Maple shortbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_maple_longbow",
+   "skill": "fletching",
+   "level": 55,
+   "xp": 58.2,
+   "members": true,
+   "product": {
+    "item": "Maple longbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Maple longbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_yew_shortbow",
+   "skill": "fletching",
+   "level": 65,
+   "xp": 67.5,
+   "members": true,
+   "product": {
+    "item": "Yew shortbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Yew shortbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_yew_longbow",
+   "skill": "fletching",
+   "level": 70,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Yew longbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Yew longbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_magic_shortbow",
+   "skill": "fletching",
+   "level": 80,
+   "xp": 83.3,
+   "members": true,
+   "product": {
+    "item": "Magic shortbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic shortbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "string_magic_longbow",
+   "skill": "fletching",
+   "level": 85,
+   "xp": 91.5,
+   "members": true,
+   "product": {
+    "item": "Magic longbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic longbow (u)",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ]
+  },
+  {
+   "id": "unstrung_comp_bow",
+   "skill": "fletching",
+   "level": 30,
+   "xp": 45.0,
+   "members": true,
+   "product": {
+    "item": "Unstrung comp bow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Achey tree logs",
+     "qty": 1
+    },
+    {
+     "item": "Wolf bones",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "comp_ogre_bow",
+   "skill": "fletching",
+   "level": 30,
+   "xp": 45.0,
+   "members": true,
+   "product": {
+    "item": "Comp ogre bow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Unstrung comp bow",
+     "qty": 1
+    },
+    {
+     "item": "Bow string",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "wooden_stock",
+   "skill": "fletching",
+   "level": 9,
+   "xp": 6.0,
+   "members": true,
+   "product": {
+    "item": "Wooden stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "oak_stock",
+   "skill": "fletching",
+   "level": 24,
+   "xp": 16.0,
+   "members": true,
+   "product": {
+    "item": "Oak stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Oak logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "willow_stock",
+   "skill": "fletching",
+   "level": 39,
+   "xp": 22.0,
+   "members": true,
+   "product": {
+    "item": "Willow stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "teak_stock",
+   "skill": "fletching",
+   "level": 46,
+   "xp": 27.0,
+   "members": true,
+   "product": {
+    "item": "Teak stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Teak logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "maple_stock",
+   "skill": "fletching",
+   "level": 54,
+   "xp": 32.0,
+   "members": true,
+   "product": {
+    "item": "Maple stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Maple logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mahogany_stock",
+   "skill": "fletching",
+   "level": 61,
+   "xp": 41.0,
+   "members": true,
+   "product": {
+    "item": "Mahogany stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mahogany logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "yew_stock",
+   "skill": "fletching",
+   "level": 69,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Yew stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Yew logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "magic_stock",
+   "skill": "fletching",
+   "level": 78,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Magic stock",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hunters_sunlight_crossbow",
+   "skill": "fletching",
+   "level": 74,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Hunters' sunlight crossbow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Sunlight antelope antler",
+     "qty": 1
+    },
+    {
+     "item": "Hunters' crossbow",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "incomplete_light_ballista",
+   "skill": "fletching",
+   "level": 47,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Incomplete light ballista",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Light frame",
+     "qty": 1
+    },
+    {
+     "item": "Ballista limbs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "incomplete_heavy_ballista",
+   "skill": "fletching",
+   "level": 72,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Incomplete heavy ballista",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Heavy frame",
+     "qty": 1
+    },
+    {
+     "item": "Ballista limbs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "battlestaff",
+   "skill": "fletching",
+   "level": 40,
+   "xp": 80.0,
+   "members": true,
+   "product": {
+    "item": "Battlestaff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Celastrus bark",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "redwood_hiking_staff",
+   "skill": "fletching",
+   "level": 90,
+   "xp": 10.5,
+   "members": true,
+   "product": {
+    "item": "Redwood hiking staff",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Redwood logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "oak_shield",
+   "skill": "fletching",
+   "level": 27,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Oak shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Oak logs",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "willow_shield",
+   "skill": "fletching",
+   "level": 42,
+   "xp": 83.0,
+   "members": true,
+   "product": {
+    "item": "Willow shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Willow logs",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "maple_shield",
+   "skill": "fletching",
+   "level": 57,
+   "xp": 116.5,
+   "members": true,
+   "product": {
+    "item": "Maple shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Maple logs",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "yew_shield",
+   "skill": "fletching",
+   "level": 72,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Yew shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Yew logs",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "magic_shield",
+   "skill": "fletching",
+   "level": 87,
+   "xp": 183.0,
+   "members": true,
+   "product": {
+    "item": "Magic shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Magic logs",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "redwood_shield",
+   "skill": "fletching",
+   "level": 92,
+   "xp": 216.0,
+   "members": true,
+   "product": {
+    "item": "Redwood shield",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Redwood logs",
+     "qty": 2
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_arrow",
+   "skill": "fletching",
+   "level": 82,
+   "xp": 202.5,
+   "members": true,
+   "product": {
+    "item": "Amethyst arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Amethyst arrowtips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragon_arrow",
+   "skill": "fletching",
+   "level": 90,
+   "xp": 225.0,
+   "members": true,
+   "product": {
+    "item": "Dragon arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless arrow",
+     "qty": 1
+    },
+    {
+     "item": "Dragon arrowtips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ogre_arrow_shaft",
+   "skill": "fletching",
+   "level": 5,
+   "xp": 6.4,
+   "members": true,
+   "product": {
+    "item": "Ogre arrow shaft",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Achey tree logs",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "flighted_ogre_arrow",
+   "skill": "fletching",
+   "level": 5,
+   "xp": 5.4,
+   "members": true,
+   "product": {
+    "item": "Flighted ogre arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ogre arrow shaft",
+     "qty": 1
+    },
+    {
+     "item": "Feather",
+     "qty": 4
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "wolfbone_arrowtips",
+   "skill": "fletching",
+   "level": 5,
+   "xp": 10.0,
+   "members": true,
+   "product": {
+    "item": "Wolfbone arrowtips",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Wolf bones",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ogre_arrow",
+   "skill": "fletching",
+   "level": 5,
+   "xp": 6.0,
+   "members": true,
+   "product": {
+    "item": "Ogre arrow",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Wolfbone arrowtips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_brutal",
+   "skill": "fletching",
+   "level": 7,
+   "xp": 8.4,
+   "members": true,
+   "product": {
+    "item": "Bronze brutal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Bronze nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_brutal",
+   "skill": "fletching",
+   "level": 18,
+   "xp": 15.6,
+   "members": true,
+   "product": {
+    "item": "Iron brutal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Iron nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_brutal",
+   "skill": "fletching",
+   "level": 33,
+   "xp": 30.6,
+   "members": true,
+   "product": {
+    "item": "Steel brutal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Steel nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "black_brutal",
+   "skill": "fletching",
+   "level": 38,
+   "xp": 39.0,
+   "members": true,
+   "product": {
+    "item": "Black brutal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Black nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_brutal",
+   "skill": "fletching",
+   "level": 49,
+   "xp": 45.0,
+   "members": true,
+   "product": {
+    "item": "Mithril brutal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Mithril nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_brutal",
+   "skill": "fletching",
+   "level": 62,
+   "xp": 61.2,
+   "members": true,
+   "product": {
+    "item": "Adamant brutal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Adamantite nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_brutal",
+   "skill": "fletching",
+   "level": 77,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Rune brutal",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Flighted ogre arrow",
+     "qty": 1
+    },
+    {
+     "item": "Rune nails",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_bolts",
+   "skill": "fletching",
+   "level": 9,
+   "xp": 5.0,
+   "members": true,
+   "product": {
+    "item": "Bronze bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Bronze bolts (unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_bolts",
+   "skill": "fletching",
+   "level": 39,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Iron bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Iron bolts (unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "silver_bolts",
+   "skill": "fletching",
+   "level": 43,
+   "xp": 25.0,
+   "members": true,
+   "product": {
+    "item": "Silver bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Silver bolts (unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_bolts",
+   "skill": "fletching",
+   "level": 46,
+   "xp": 35.0,
+   "members": true,
+   "product": {
+    "item": "Steel bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Steel bolts (unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_bolts",
+   "skill": "fletching",
+   "level": 54,
+   "xp": 50.0,
+   "members": true,
+   "product": {
+    "item": "Mithril bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Mithril bolts (unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "broad_bolts",
+   "skill": "fletching",
+   "level": 55,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Broad bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Unfinished broad bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_bolts",
+   "skill": "fletching",
+   "level": 61,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Adamant bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Adamant bolts(unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "runite_bolts",
+   "skill": "fletching",
+   "level": 69,
+   "xp": 100.0,
+   "members": true,
+   "product": {
+    "item": "Runite bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Runite bolts (unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragon_bolts",
+   "skill": "fletching",
+   "level": 84,
+   "xp": 120.0,
+   "members": true,
+   "product": {
+    "item": "Dragon bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Dragon bolts (unf)",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_bolts",
+   "skill": "fletching",
+   "level": 11,
+   "xp": 16.0,
+   "members": true,
+   "product": {
+    "item": "Opal bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Opal bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Bronze bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "pearl_bolts",
+   "skill": "fletching",
+   "level": 41,
+   "xp": 32.0,
+   "members": true,
+   "product": {
+    "item": "Pearl bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Pearl bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Iron bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "topaz_bolts",
+   "skill": "fletching",
+   "level": 48,
+   "xp": 39.0,
+   "members": true,
+   "product": {
+    "item": "Topaz bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Topaz bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Steel bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "barbed_bolts",
+   "skill": "fletching",
+   "level": 51,
+   "xp": 95.0,
+   "members": true,
+   "product": {
+    "item": "Barbed bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Barb bolttips",
+     "qty": 1
+    },
+    {
+     "item": "Bronze bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "sapphire_bolts",
+   "skill": "fletching",
+   "level": 56,
+   "xp": 47.0,
+   "members": true,
+   "product": {
+    "item": "Sapphire bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Sapphire bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Mithril bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "emerald_bolts",
+   "skill": "fletching",
+   "level": 58,
+   "xp": 55.0,
+   "members": true,
+   "product": {
+    "item": "Emerald bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Emerald bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Mithril bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ruby_bolts",
+   "skill": "fletching",
+   "level": 63,
+   "xp": 63.0,
+   "members": true,
+   "product": {
+    "item": "Ruby bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Ruby bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Adamant bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "diamond_bolts",
+   "skill": "fletching",
+   "level": 65,
+   "xp": 70.0,
+   "members": true,
+   "product": {
+    "item": "Diamond bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Diamond bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Adamant bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragonstone_bolts",
+   "skill": "fletching",
+   "level": 71,
+   "xp": 82.0,
+   "members": true,
+   "product": {
+    "item": "Dragonstone bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Dragonstone bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Runite bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "onyx_bolts",
+   "skill": "fletching",
+   "level": 73,
+   "xp": 94.0,
+   "members": true,
+   "product": {
+    "item": "Onyx bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Onyx bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Runite bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_broad_bolts",
+   "skill": "fletching",
+   "level": 76,
+   "xp": 106.0,
+   "members": true,
+   "product": {
+    "item": "Amethyst broad bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Amethyst bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Broad bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_dragon_bolts",
+   "skill": "fletching",
+   "level": 84,
+   "xp": 16.0,
+   "members": true,
+   "product": {
+    "item": "Opal dragon bolts",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Opal bolt tips",
+     "qty": 1
+    },
+    {
+     "item": "Dragon bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "opal_bolt_tips",
+   "skill": "fletching",
+   "level": 11,
+   "xp": 1.5,
+   "members": true,
+   "product": {
+    "item": "Opal bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Opal",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "jade_bolt_tips",
+   "skill": "fletching",
+   "level": 26,
+   "xp": 2.0,
+   "members": true,
+   "product": {
+    "item": "Jade bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Jade",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "pearl_bolt_tips",
+   "skill": "fletching",
+   "level": 41,
+   "xp": 3.2,
+   "members": true,
+   "product": {
+    "item": "Pearl bolt tips",
+    "qty": 6
+   },
+   "materials": [
+    {
+     "item": "Oyster pearl",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "topaz_bolt_tips",
+   "skill": "fletching",
+   "level": 48,
+   "xp": 3.9,
+   "members": true,
+   "product": {
+    "item": "Topaz bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Red topaz",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "sapphire_bolt_tips",
+   "skill": "fletching",
+   "level": 56,
+   "xp": 4.0,
+   "members": true,
+   "product": {
+    "item": "Sapphire bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Sapphire",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "emerald_bolt_tips",
+   "skill": "fletching",
+   "level": 58,
+   "xp": 5.5,
+   "members": true,
+   "product": {
+    "item": "Emerald bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Emerald",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "ruby_bolt_tips",
+   "skill": "fletching",
+   "level": 63,
+   "xp": 6.3,
+   "members": true,
+   "product": {
+    "item": "Ruby bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Ruby",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "diamond_bolt_tips",
+   "skill": "fletching",
+   "level": 65,
+   "xp": 7.0,
+   "members": true,
+   "product": {
+    "item": "Diamond bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Diamond",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragonstone_bolt_tips",
+   "skill": "fletching",
+   "level": 71,
+   "xp": 8.2,
+   "members": true,
+   "product": {
+    "item": "Dragonstone bolt tips",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Dragonstone",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "onyx_bolt_tips",
+   "skill": "fletching",
+   "level": 73,
+   "xp": 9.4,
+   "members": true,
+   "product": {
+    "item": "Onyx bolt tips",
+    "qty": 24
+   },
+   "materials": [
+    {
+     "item": "Onyx",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "kebbit_bolts",
+   "skill": "fletching",
+   "level": 32,
+   "xp": 5.8,
+   "members": true,
+   "product": {
+    "item": "Kebbit bolts",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Kebbit spike",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "long_kebbit_bolts",
+   "skill": "fletching",
+   "level": 42,
+   "xp": 7.9,
+   "members": true,
+   "product": {
+    "item": "Long kebbit bolts",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Long kebbit spike",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "sunlight_antler_bolts",
+   "skill": "fletching",
+   "level": 62,
+   "xp": 10.0,
+   "members": true,
+   "product": {
+    "item": "Sunlight antler bolts",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Sunlight antelope antler",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "moonlight_antler_bolts",
+   "skill": "fletching",
+   "level": 72,
+   "xp": 12.1,
+   "members": true,
+   "product": {
+    "item": "Moonlight antler bolts",
+    "qty": 12
+   },
+   "materials": [
+    {
+     "item": "Moonlight antelope antler",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "atlatl_dart",
+   "skill": "fletching",
+   "level": 74,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Atlatl dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Headless atlatl dart",
+     "qty": 1
+    },
+    {
+     "item": "Atlatl dart tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mith_grapple_unf",
+   "skill": "fletching",
+   "level": 59,
+   "xp": 11.0,
+   "members": true,
+   "product": {
+    "item": "Mith grapple (unf)",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mith grapple tip",
+     "qty": 1
+    },
+    {
+     "item": "Mithril bolts",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mith_grapple",
+   "skill": "fletching",
+   "level": 1,
+   "xp": 0.0,
+   "members": true,
+   "product": {
+    "item": "Mith grapple",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Mith grapple (unf)",
+     "qty": 1
+    },
+    {
+     "item": "Rope",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_dart",
+   "skill": "fletching",
+   "level": 10,
+   "xp": 18.0,
+   "members": true,
+   "product": {
+    "item": "Bronze dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Bronze dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_dart",
+   "skill": "fletching",
+   "level": 22,
+   "xp": 38.0,
+   "members": true,
+   "product": {
+    "item": "Iron dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Iron dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_dart",
+   "skill": "fletching",
+   "level": 37,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Steel dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Steel dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_dart",
+   "skill": "fletching",
+   "level": 52,
+   "xp": 112.0,
+   "members": true,
+   "product": {
+    "item": "Mithril dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Mithril dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_dart",
+   "skill": "fletching",
+   "level": 67,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Adamant dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Adamant dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_dart",
+   "skill": "fletching",
+   "level": 81,
+   "xp": 188.0,
+   "members": true,
+   "product": {
+    "item": "Rune dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Rune dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_dart",
+   "skill": "fletching",
+   "level": 90,
+   "xp": 210.0,
+   "members": true,
+   "product": {
+    "item": "Amethyst dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Amethyst dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragon_dart",
+   "skill": "fletching",
+   "level": 95,
+   "xp": 250.0,
+   "members": true,
+   "product": {
+    "item": "Dragon dart",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Feather",
+     "qty": 1
+    },
+    {
+     "item": "Dragon dart tip",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "hunter_s_spear",
+   "skill": "fletching",
+   "level": 60,
+   "xp": 9.5,
+   "members": true,
+   "product": {
+    "item": "Hunter's spear",
+    "qty": 5
+   },
+   "materials": [
+    {
+     "item": "Teak logs",
+     "qty": 1
+    },
+    {
+     "item": "Jerboa tail",
+     "qty": 5
+    },
+    {
+     "item": "Hunter spear tips",
+     "qty": 5
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "bronze_javelin",
+   "skill": "fletching",
+   "level": 3,
+   "xp": 15.0,
+   "members": true,
+   "product": {
+    "item": "Bronze javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Bronze javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "iron_javelin",
+   "skill": "fletching",
+   "level": 17,
+   "xp": 30.0,
+   "members": true,
+   "product": {
+    "item": "Iron javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Iron javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "steel_javelin",
+   "skill": "fletching",
+   "level": 32,
+   "xp": 75.0,
+   "members": true,
+   "product": {
+    "item": "Steel javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Steel javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "mithril_javelin",
+   "skill": "fletching",
+   "level": 47,
+   "xp": 120.0,
+   "members": true,
+   "product": {
+    "item": "Mithril javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Mithril javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "adamant_javelin",
+   "skill": "fletching",
+   "level": 62,
+   "xp": 150.0,
+   "members": true,
+   "product": {
+    "item": "Adamant javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Adamant javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "rune_javelin",
+   "skill": "fletching",
+   "level": 77,
+   "xp": 187.5,
+   "members": true,
+   "product": {
+    "item": "Rune javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Rune javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "amethyst_javelin",
+   "skill": "fletching",
+   "level": 84,
+   "xp": 202.5,
+   "members": true,
+   "product": {
+    "item": "Amethyst javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Amethyst javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  },
+  {
+   "id": "dragon_javelin",
+   "skill": "fletching",
+   "level": 92,
+   "xp": 225.0,
+   "members": true,
+   "product": {
+    "item": "Dragon javelin",
+    "qty": 1
+   },
+   "materials": [
+    {
+     "item": "Javelin shaft",
+     "qty": 1
+    },
+    {
+     "item": "Dragon javelin tips",
+     "qty": 1
+    }
+   ],
+   "fee": 0,
+   "note": null,
+   "tools": []
+  }
+ ]
+}
