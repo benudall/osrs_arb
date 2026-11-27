@@ -50,9 +50,11 @@
           <input id="profitableOnly" type="checkbox" /> Profitable only
         </label>
       </div>
-      <label title="Show/hide acquisition columns: craft = Craft, buy = Buy (product buy price). The nets, Best Net and Return use only the visible acquisition values (cheaper of Craft vs Buy x qty); empty selection hides both and blanks the nets.">In
-        <select id="insFilter" multiple size="2">
-          <option value="craft">craft</option>
+      <label title="Show/hide acquisition columns: direct = Craft Direct (buy every material, craft only the main product), mix = Craft Mix (cheapest of buy vs craft per material), all = Craft All (buy root materials, craft everything), buy = Buy (product buy price). The nets, Best Net and Return use only the visible acquisition values (cheapest visible); empty selection hides all and blanks the nets.">In
+        <select id="insFilter" multiple size="4">
+          <option value="direct">craft direct</option>
+          <option value="mix">craft mix</option>
+          <option value="all">craft all</option>
           <option value="buy">buy</option>
         </select>
       </label>

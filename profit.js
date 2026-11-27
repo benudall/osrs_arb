@@ -49,7 +49,7 @@
    * itemMap: {item_id: {name, image, limit, value}}
    * store:   OSRSPriceStore instance (resolve(itemId) -> per-side arrays or null)
    */
-  function evaluateRecipe(recipe, itemMap, store, mode = 'conservative', craftCosts = null) {
+  function evaluateRecipe(recipe, itemMap, store, mode = 'conservative', craftCosts = null, allCosts = null) {
     const prodInfo = itemMap[recipe.product.id];
     if (!prodInfo) return null;
     const prodRes = store.resolve(recipe.product.id);
@@ -61,9 +61,12 @@
     }
 
     const materials = [];
-    let cost = recipe.fee || 0;
-    let costKnown = false;
-    let costIncomplete = false;
+    const fee = recipe.fee || 0;
+    let cost = fee;       // mix: cheapest of buy vs craft per material
+    let costDirect = fee;    // direct: buy every material, craft only the main product
+    let costAll = fee;    // all: buy roots, craft every intermediate
+    let costKnown = false, directKnown = false, allKnown = false;
+    let costIncomplete = false, directIncomplete = false, allIncomplete = false;
     let minMatVol = null;
     for (const m of recipe.materials) {
       const info = itemMap[m.id];
@@ -75,6 +78,14 @@
         [matSell] = side(res, mode, 'sell');
       }
       const craftUnit = craftCosts && (m.id in craftCosts) ? pyRound(craftCosts[m.id]) : null;
+      const allUnit = allCosts && (m.id in allCosts) ? pyRound(allCosts[m.id]) : null;
+      // direct: the material is always bought at the GE price
+      if (buyPrice !== null) {
+        costDirect += buyPrice * m.qty;
+        directKnown = true;
+      } else {
+        directIncomplete = true;
+      }
       // cheapest acquisition for this material: buy at GE price, or craft it if
       // that is cheaper; a material with neither leaves the cost incomplete
       let chosen;
@@ -89,6 +100,21 @@
       if (chosen !== null) {
         cost += chosen * m.qty;
         costKnown = true;
+      }
+      // craft-all: always craft craftable materials (even when buying is
+      // cheaper — that is the scenario being priced); buy the rest
+      let chosenAll;
+      if (allUnit !== null) {
+        chosenAll = allUnit;
+      } else if (buyPrice !== null) {
+        chosenAll = buyPrice;
+      } else {
+        chosenAll = null;
+        allIncomplete = true;
+      }
+      if (chosenAll !== null) {
+        costAll += chosenAll * m.qty;
+        allKnown = true;
       }
       materials.push({
         id: m.id,
@@ -111,6 +137,8 @@
     }
 
     if (!costKnown) cost = null;
+    if (!directKnown) costDirect = null;
+    if (!allKnown) costAll = null;
     const gross = sellPrice !== null ? sellPrice * recipe.product.qty : null;
     const taxTotal = sellPrice !== null ? geTax(sellPrice) * recipe.product.qty : null;
     const net = gross === null || cost === null ? null : gross - taxTotal - cost;
@@ -178,8 +206,12 @@
       },
       materials,
       fee: recipe.fee || 0,
+      cost_direct: costDirect === null ? null : pyRound(costDirect),
+      direct_incomplete: directIncomplete,
       cost: cost === null ? null : pyRound(cost),
       cost_incomplete: costIncomplete,
+      cost_all: costAll === null ? null : pyRound(costAll),
+      all_incomplete: allIncomplete,
       gross,
       tax: taxTotal,
       net: net === null ? null : pyRound(net),
@@ -196,30 +228,36 @@
 
   /* Evaluate every recipe (the old /api/recipes route logic, minus filters).
    * Craft costs are computed to a fixed point: repeated sweeps until no
-   * product's per-unit craft cost improves, so a material's ⚒ price always
-   * equals the fully recursive cheapest craft decomposition shown in its own
-   * row (and expanded in the detail table) — e.g. Uncooked pizza inside Plain
-   * pizza prices cheese via milk, not at the cheese GE price. Each sweep can
-   * only lower costs (materials gain cheaper options), so this converges; the
-   * sweep cap just bounds pathological recipe cycles. Keep in lockstep with
-   * backend/profit.py (parity_check.cjs verifies over fixtures).
+   * product's per-unit cost improves. craftCosts holds the cheapest mix (per
+   * material: buy or recursive craft), so a material's ⚒ price always equals
+   * the fully recursive cheapest craft decomposition shown in its own row (and
+   * expanded in the detail table) — e.g. Uncooked pizza inside Plain pizza
+   * prices cheese via milk, not at the cheese GE price. allCosts holds the
+   * craft-everything decomposition (roots bought, every intermediate crafted).
+   * Each sweep can only lower costs (materials gain cheaper options), so this
+   * converges; the sweep cap just bounds pathological recipe cycles. Keep in
+   * lockstep with backend/profit.py (parity_check.cjs verifies over fixtures).
    */
   function evaluateAll(recipes, itemMap, store, mode = 'conservative') {
     const materialIds = new Set();
     for (const r of recipes) for (const m of r.materials) materialIds.add(m.id);
     const craftCosts = {};
+    const allCosts = {};
     const MAX_SWEEPS = 10;
     for (let sweep = 0; sweep < MAX_SWEEPS; sweep++) {
       let changed = false;
       for (const r of recipes) {
         const pid = r.product.id;
         if (!materialIds.has(pid)) continue;
-        const row = evaluateRecipe(r, itemMap, store, mode, craftCosts);
-        if (!row || row.product.qty < 1 || row.cost === null) continue;
-        const perUnit = row.cost / row.product.qty;
-        if (!(pid in craftCosts) || perUnit < craftCosts[pid]) {
-          craftCosts[pid] = perUnit;
-          changed = true;
+        const row = evaluateRecipe(r, itemMap, store, mode, craftCosts, allCosts);
+        if (!row || row.product.qty < 1) continue;
+        for (const [key, costs] of [['cost', craftCosts], ['cost_all', allCosts]]) {
+          if (row[key] === null) continue;
+          const perUnit = row[key] / row.product.qty;
+          if (!(pid in costs) || perUnit < costs[pid]) {
+            costs[pid] = perUnit;
+            changed = true;
+          }
         }
       }
       if (!changed) break;
@@ -227,7 +265,7 @@
     const rows = [];
     let skippedNoPrice = 0;
     for (const r of recipes) {
-      const row = evaluateRecipe(r, itemMap, store, mode, craftCosts);
+      const row = evaluateRecipe(r, itemMap, store, mode, craftCosts, allCosts);
       if (!row) { skippedNoPrice++; continue; }
       rows.push(row);
     }

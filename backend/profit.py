@@ -34,12 +34,21 @@ def _side(price_resolved, mode: str, kind: str):
 
 
 def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservative",
-                    craft_costs: dict | None = None) -> dict | None:
+                    craft_costs: dict | None = None,
+                    all_costs: dict | None = None) -> dict | None:
     """Compute one recipe row. Returns None only if item metadata is missing.
 
     Missing GE prices are tolerated: unpriced sides become None and the row
-    still renders (partial craft cost + cost_incomplete flag; HA/LA payouts
-    come from the item's static value, so they need no live prices at all).
+    still renders (partial craft costs + per-cost incomplete flags; HA/LA
+    payouts come from the item's static value, so they need no live prices).
+
+    Three acquisition costs are priced per row:
+    - cost_direct: buy every material at the GE, craft only the main product.
+    - cost: cheapest mix — per material the cheaper of buying it or crafting
+      it (craft_costs: the recursive cheapest craft decomposition).
+    - cost_all: buy only the root materials at the deepest recursion level and
+      craft every intermediate (all_costs: recursive craft-everything cost;
+      materials without one are bought).
 
     recipe: {id, skill, level, members, product: {item_id, qty},
              materials: [{item_id, qty}], fee, note}
@@ -57,9 +66,12 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         prod_buy, prod_buy_stale, prod_buy_src, prod_buy_vol, _ = _side(prod_res, mode, "buy")
 
     materials = []
-    cost = float(recipe.get("fee", 0))
-    cost_known = False
-    cost_incomplete = False
+    fee = float(recipe.get("fee", 0))
+    cost = fee        # mix: cheapest of buy vs craft per material
+    cost_direct = fee    # direct: buy every material, craft only the main product
+    cost_all = fee    # all: buy roots, craft every intermediate
+    cost_known = direct_known = all_known = False
+    cost_incomplete = direct_incomplete = all_incomplete = False
     min_mat_vol = None
     for m in recipe["materials"]:
         info = item_map.get(m["item_id"])
@@ -72,6 +84,13 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
             buy_price, buy_stale, buy_src, buy_vol, _ = _side(res, mode, "buy")
             mat_sell, _, _, _, _ = _side(res, mode, "sell")
         craft_unit = round(craft_costs[m["item_id"]]) if craft_costs and m["item_id"] in craft_costs else None
+        all_unit = round(all_costs[m["item_id"]]) if all_costs and m["item_id"] in all_costs else None
+        # direct: the material is always bought at the GE price
+        if buy_price is not None:
+            cost_direct += buy_price * m["qty"]
+            direct_known = True
+        else:
+            direct_incomplete = True
         # cheapest acquisition for this material: buy at GE price, or craft it if
         # that is cheaper; a material with neither leaves the cost incomplete
         if craft_unit is not None and (buy_price is None or craft_unit < buy_price):
@@ -84,6 +103,18 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         if chosen is not None:
             cost += chosen * m["qty"]
             cost_known = True
+        # craft-all: always craft craftable materials (even when buying is
+        # cheaper — that is the scenario being priced); buy the rest
+        if all_unit is not None:
+            chosen_all = all_unit
+        elif buy_price is not None:
+            chosen_all = buy_price
+        else:
+            chosen_all = None
+            all_incomplete = True
+        if chosen_all is not None:
+            cost_all += chosen_all * m["qty"]
+            all_known = True
         materials.append({
             "id": m["item_id"],
             "name": info["name"],
@@ -104,6 +135,10 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
 
     if not cost_known:
         cost = None
+    if not direct_known:
+        cost_direct = None
+    if not all_known:
+        cost_all = None
     gross = sell_price * recipe["product"]["qty"] if sell_price is not None else None
     tax_total = ge_tax(sell_price) * recipe["product"]["qty"] if sell_price is not None else None
     net = None if (gross is None or cost is None) else gross - tax_total - cost
@@ -170,8 +205,12 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
         },
         "materials": materials,
         "fee": recipe.get("fee", 0),
+        "cost_direct": round(cost_direct) if cost_direct is not None else None,
+        "direct_incomplete": direct_incomplete,
         "cost": round(cost) if cost is not None else None,
         "cost_incomplete": cost_incomplete,
+        "cost_all": round(cost_all) if cost_all is not None else None,
+        "all_incomplete": all_incomplete,
         "gross": gross,
         "tax": tax_total,
         "net": round(net) if net is not None else None,
@@ -190,18 +229,22 @@ def evaluate_all(recipes: list[dict], item_map: dict, store, mode: str = "conser
     """Evaluate every recipe (the old /api/recipes route logic, minus filters).
 
     Craft costs are computed to a fixed point: repeated sweeps until no
-    product's per-unit craft cost improves, so a material's ⚒ price always
+    product's per-unit cost improves. craft_costs holds the cheapest mix
+    (per material: buy or recursive craft), so a material's ⚒ price always
     equals the fully recursive cheapest craft decomposition shown in its own
     row (and expanded in the detail table) — e.g. Uncooked pizza inside Plain
-    pizza prices cheese via milk, not at the cheese GE price. Each sweep can
-    only lower costs (materials gain cheaper options), so this converges; the
-    sweep cap just bounds pathological recipe cycles. Keep in lockstep with
-    ../profit.js (scripts/parity_check.cjs verifies over fixtures).
+    pizza prices cheese via milk, not at the cheese GE price. all_costs holds
+    the craft-everything decomposition (roots bought, every intermediate
+    crafted). Each sweep can only lower costs (materials gain cheaper
+    options), so this converges; the sweep cap just bounds pathological
+    recipe cycles. Keep in lockstep with ../profit.js (scripts/parity_check.cjs
+    verifies over fixtures).
 
     Returns (rows, skipped_no_price).
     """
     material_ids = {m["item_id"] for r in recipes for m in r["materials"]}
     craft_costs: dict[int, float] = {}
+    all_costs: dict[int, float] = {}
     max_sweeps = 10
     for _sweep in range(max_sweeps):
         changed = False
@@ -209,19 +252,24 @@ def evaluate_all(recipes: list[dict], item_map: dict, store, mode: str = "conser
             pid = r["product"]["item_id"]
             if pid not in material_ids:
                 continue
-            row = evaluate_recipe(r, item_map, store, mode=mode, craft_costs=craft_costs)
-            if row is None or row["product"]["qty"] < 1 or row["cost"] is None:
+            row = evaluate_recipe(r, item_map, store, mode=mode,
+                                  craft_costs=craft_costs, all_costs=all_costs)
+            if row is None or row["product"]["qty"] < 1:
                 continue
-            per_unit = row["cost"] / row["product"]["qty"]
-            if pid not in craft_costs or per_unit < craft_costs[pid]:
-                craft_costs[pid] = per_unit
-                changed = True
+            for key, costs in (("cost", craft_costs), ("cost_all", all_costs)):
+                if row[key] is None:
+                    continue
+                per_unit = row[key] / row["product"]["qty"]
+                if pid not in costs or per_unit < costs[pid]:
+                    costs[pid] = per_unit
+                    changed = True
         if not changed:
             break
 
     rows, skipped_no_price = [], 0
     for r in recipes:
-        row = evaluate_recipe(r, item_map, store, mode=mode, craft_costs=craft_costs)
+        row = evaluate_recipe(r, item_map, store, mode=mode,
+                              craft_costs=craft_costs, all_costs=all_costs)
         if row is None:
             skipped_no_price += 1
             continue

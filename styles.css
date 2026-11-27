@@ -37,16 +37,15 @@ h2 { font-size: 14px; margin: 0; }
   margin-bottom: 12px;
 }
 .panel-cols { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
-.levels-side { flex: 1 1 0; min-width: 0; }
+.levels-side { flex: 0 1 auto; min-width: 0; }
 .filters-side { flex: 1 1 0; min-width: 0; }
 .liquid-side { flex: 0 0 auto; min-width: 0; }
 @media (max-width: 800px) { .levels-side, .filters-side { flex-basis: 100%; } }
 
-.level-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 8px; }
-.level-input { display: flex; flex-direction: column; gap: 2px; font-size: 12px; color: var(--muted); }
+.level-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+.level-input { width: 72px; display: flex; flex-direction: column; gap: 2px; font-size: 12px; color: var(--muted); }
 .level-input > span { line-height: 16px; }
 .level-input input[type='number'] { width: 100%; }
-.player-cell { grid-column: span 2; }
 .player-cell input { width: 100%; }
 .level-input .badge { margin-right: 3px; }
 .show-toggle {
@@ -300,6 +299,7 @@ footer { margin-top: 12px; }
 
 /* gp amounts in gold; net stays pos/neg; counts/levels/volumes stay default */
 .gp { color: var(--gold); }
+.gp.small { font-size: 11px; }
 
 /* stock under a buy value: units traded at that price, white per request */
 .stock { color: #fff; font-size: 11px; }

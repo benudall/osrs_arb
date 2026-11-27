@@ -148,6 +148,64 @@ def test_unknown_item_returns_none():
     assert profit.evaluate_recipe(bad, ITEMS, store) is None
 
 
+def test_three_craft_costs():
+    # direct = buy every material; mix = cheaper of buy vs recursive
+    # craft per material; all = buy roots, craft every intermediate (even when
+    # buying an intermediate would be cheaper — that is the scenario priced)
+    items = {
+        10: {"id": 10, "name": "Bucket of milk", "members": False, "buy_limit": 1000},
+        11: {"id": 11, "name": "Cheese", "members": False, "buy_limit": 1000},
+        12: {"id": 12, "name": "Tomato", "members": False, "buy_limit": 1000},
+        13: {"id": 13, "name": "Uncooked pizza", "members": False, "buy_limit": 1000},
+        14: {"id": 14, "name": "Plain pizza", "members": False, "buy_limit": 1000},
+    }
+    recipes = [
+        {"id": "cheese", "skill": "cooking", "level": 1, "members": False,
+         "product": {"item_id": 11, "qty": 1},
+         "materials": [{"item_id": 10, "qty": 1}], "fee": 0, "note": None},
+        {"id": "uncooked_pizza", "skill": "cooking", "level": 1, "members": False,
+         "product": {"item_id": 13, "qty": 1},
+         "materials": [{"item_id": 11, "qty": 1}, {"item_id": 12, "qty": 1}],
+         "fee": 0, "note": None},
+        {"id": "plain_pizza", "skill": "cooking", "level": 1, "members": False,
+         "product": {"item_id": 14, "qty": 1},
+         "materials": [{"item_id": 13, "qty": 1}], "fee": 0, "note": None},
+    ]
+    # crafting cheese (milk 100) is dearer than buying it (62), so mix buys
+    # cheese while all must craft it from the root milk
+    store = FakeStore({
+        10: {"high": 100, "low": 90},  # milk
+        11: {"high": 62, "low": 55},    # cheese
+        12: {"high": 23, "low": 20},    # tomato
+        13: {"high": 90, "low": 80},    # uncooked pizza
+        14: {"high": 120, "low": 110},
+    })
+    rows, _ = profit.evaluate_all(recipes, items, store)
+    by_id = {r["recipe_id"]: r for r in rows}
+    cheese = by_id["cheese"]
+    # the row cost is the craft cost (buy milk 100); buying cheese itself only
+    # competes at the parent's material level
+    assert (cheese["cost_direct"], cheese["cost"], cheese["cost_all"]) == (100, 100, 100)
+    uncooked = by_id["uncooked_pizza"]
+    # direct = cheese 62 + tomato 23; mix = same (buying cheese wins);
+    # all = milk 100 + tomato 23
+    assert (uncooked["cost_direct"], uncooked["cost"], uncooked["cost_all"]) == (85, 85, 123)
+    plain = by_id["plain_pizza"]
+    # direct = buy uncooked pizza 90; mix = craft it at its mix cost 85;
+    # all = uncooked's all cost 123
+    assert (plain["cost_direct"], plain["cost"], plain["cost_all"]) == (90, 85, 123)
+    assert not plain["direct_incomplete"] and not plain["cost_incomplete"] and not plain["all_incomplete"]
+
+
+def test_craft_all_all_incomplete_without_prices():
+    # no prices at all: every cost variant is None, flags set
+    store = FakeStore({})
+    row = profit.evaluate_recipe(RECIPE, ITEMS, store)
+    assert row["cost_direct"] is None and row["direct_incomplete"]
+    assert row["cost"] is None and row["cost_incomplete"]
+    assert row["cost_all"] is None and row["all_incomplete"]
+
+
 def test_craft_costs_recursive():
     # milk -> cheese -> uncooked pizza -> plain pizza: a parent chain must price
     # each material at its fully recursive craft cost, not the buy-only one

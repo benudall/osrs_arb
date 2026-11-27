@@ -7,7 +7,7 @@ const state = {
   skillFilter: {},   // skill -> bool (include in table; default true)
   f2pOnly: false,
   profitableOnly: false,
-  ins: ['craft', 'buy'],       // visible acquisition column groups (craft = Craft, buy = Buy)
+  ins: ['direct', 'mix', 'all', 'buy'],  // visible acquisition columns (craft direct/mix/all + buy)
   routes: ['ge', 'ha', 'la'],  // visible route (sell) column groups
   filterLevels: true,
   liquidGp: '',
@@ -96,7 +96,13 @@ function loadState() {
   delete state.playerName;
   // old 'acq' was a row filter (better option); replaced by the In column toggle
   delete state.acq;
-  if (!Array.isArray(state.ins)) state.ins = ['craft', 'buy'];
+  if (!Array.isArray(state.ins)) state.ins = ['direct', 'mix', 'all', 'buy'];
+  // the old single 'craft' In option split into the direct/mix/all craft columns;
+  // 'imm' (briefly 'Craft Immediate') renamed to 'direct'
+  if (state.ins.some((v) => v === 'craft' || v === 'imm')) {
+    state.ins = [...new Set(state.ins.flatMap(
+      (v) => (v === 'craft' ? ['direct', 'mix', 'all'] : v === 'imm' ? ['direct'] : [v])))];
+  }
 }
 
 async function fetchJSON(path, opts) {
@@ -305,22 +311,26 @@ const COLS = [
     tip: 'Skill level required for this recipe. Struck = requirement is above your set player/filter level for that skill.' },
   { key: 'xp', label: 'XP', sortable: true,
     tip: 'Experience gained per craft, from the OSRS wiki (0 = service actions like tanning, or the (unf) step of a potion).' },
-  { key: 'cost', label: 'Craft', sortable: true,
-    tip: 'Cheapest acquisition cost per craft = for each material the cheaper of buying or crafting it, x qty, plus fees (e.g. tanning). * = some materials have no GE price — cost covers priced parts only.' },
+  { key: 'cost_direct', label: 'Direct', sortable: true,
+    tip: 'Craft Direct: buy every material at GE prices, craft only the main product = Σ material buy price x qty + fees (e.g. tanning). * = some materials have no GE price — covers priced parts only.' },
+  { key: 'cost', label: 'Mix', sortable: true,
+    tip: 'Craft Mix: cheapest combination of buying and crafting = for each material the cheaper of buying it or crafting it (recursive; ⚒ = crafted in the Materials column), x qty, plus fees (e.g. tanning). * = some materials have no GE price — covers priced parts only.' },
+  { key: 'cost_all', label: 'All', sortable: true,
+    tip: 'Craft All: buy only the root materials at the deepest recursion level and craft every intermediate. Craftable materials are always crafted — even when buying them would be cheaper, that is the scenario this column prices; non-craftable materials are bought. * = some root materials have no GE price — covers priced parts only.' },
   { key: 'buy', label: 'Buy', sortable: true,
     tip: 'Grand Exchange buy price of the product, per unit; (xN) below = units traded at that price in the 5m (or 1h) window. Craft/Buy comparisons use qty x this price vs Craft.' },
   { key: 'gross', label: 'Sell', sortable: true,
     tip: 'Grand Exchange sell revenue per craft = GE sell price x product qty; (xN) below = units traded at the sell price in the 5m (or 1h) window.' },
   { key: 'net', label: 'Sell Net', sortable: true,
-    tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <50 gp) - visible acquisition (Craft; or Buy x qty when the Craft column is hidden).' },
+    tip: 'GE sell-route profit per craft = gross - GE tax (2%, exempt <50 gp) - cheapest visible acquisition (In toggle).' },
   { key: 'ha', label: 'HA', sortable: true,
-    tip: 'High Level Alchemy payout per craft = product qty x floor(60% x static value).' },
+    tip: 'High Level Alchemy payout per craft = product qty x floor(60% x static value); (N) below = payout minus Nature rune instant-buy price (live).' },
   { key: 'ha_net', label: 'HA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = HA - cheapest visible acquisition (Craft vs Buy x qty, per the In toggle) - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = HA - cheapest visible acquisition (Craft Direct/Mix/All vs Buy x qty, per the In toggle) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'la', label: 'LA', sortable: true,
-    tip: 'Low Level Alchemy payout per craft = product qty x floor(40% x static value).' },
+    tip: 'Low Level Alchemy payout per craft = product qty x floor(40% x static value); (N) below = payout minus Nature rune instant-buy price (live).' },
   { key: 'la_net', label: 'LA Net', sortable: true,
-    tip: 'Alchemy-route profit per craft = LA - cheapest visible acquisition (Craft vs Buy x qty, per the In toggle) - alchemy cost (Nature rune instant-buy, live).' },
+    tip: 'Alchemy-route profit per craft = LA - cheapest visible acquisition (Craft Direct/Mix/All vs Buy x qty, per the In toggle) - alchemy cost (Nature rune instant-buy, live).' },
   { key: 'best_net', label: 'Best\nNet', sortable: true,
     tip: 'Best route per craft = max over the enabled routes (Sell Net, HA Net, LA Net), each using only the visible acquisition (In toggle).' },
   { key: 'return', label: 'Return', sortable: true,
@@ -332,19 +342,21 @@ const COLS = [
 ];
 
 const alch = (r, frac) => (r.product.value == null ? null : Math.floor(r.product.value * frac) * r.product.qty);
-// acquisition cost per craft from the visible In columns only:
-// both visible = cheaper of Craft vs Buy x qty; one visible = that one; none = null
+// all nets use the cheapest visible acquisition (In toggle): min of the visible
+// craft columns and Buy x qty; none visible = null
 const acqBase = (r) => {
-  const c = inOn('craft') ? r.cost : null;
+  const opts = [];
+  if (inOn('direct') && r.cost_direct != null) opts.push(r.cost_direct);
+  if (inOn('mix') && r.cost != null) opts.push(r.cost);
+  if (inOn('all') && r.cost_all != null) opts.push(r.cost_all);
   const b = inOn('buy') && r.product.buy != null ? r.product.buy * r.product.qty : null;
-  if (c != null && b != null) return Math.min(c, b);
-  return c ?? b;
+  if (b != null) opts.push(b);
+  return opts.length ? Math.min(...opts) : null;
 };
-// Sell Net is Craft-based (as before) when Craft is visible; falls back to Buy x qty if Craft is hidden
+// Sell Net = GE sell-route profit per craft = gross - tax - cheapest visible acquisition
 const sellNet = (r) => {
   if (r.gross == null) return null;
-  let base = inOn('craft') ? r.cost : null;
-  if (base == null) base = acqBase(r);
+  const base = acqBase(r);
   if (base == null) return null;
   return OSRSProfit.pyRound(r.gross - r.tax - base);
 };
@@ -437,25 +449,42 @@ function renderMeta() {
 
 // Two-row header: group th's span the (payout, net) leaf pairs below them.
 const HEAD_GROUPS = [
-  { id: 'ge', label: 'GE', keys: ['gross', 'net'] },
-  { id: 'ha', label: 'HA', keys: ['ha', 'ha_net'] },
-  { id: 'la', label: 'LA', keys: ['la', 'la_net'] },
+  { id: 'craft', label: 'Craft', keys: ['cost_direct', 'cost', 'cost_all'], toggle: 'ins' },
+  { id: 'ge', label: 'GE', keys: ['gross', 'net'], toggle: 'route' },
+  { id: 'ha', label: 'HA', keys: ['ha', 'ha_net'], toggle: 'route' },
+  { id: 'la', label: 'LA', keys: ['la', 'la_net'], toggle: 'route' },
 ];
-const routeOf = new Map(HEAD_GROUPS.flatMap((g) => g.keys.map((k) => [k, g.id])));
-const inOf = new Map([['cost', 'craft'], ['buy', 'buy']]); // column key -> In group id
+const groupOf = new Map(HEAD_GROUPS.flatMap((g) => g.keys.map((k) => [k, g])));
+const inOf = new Map([['cost_direct', 'direct'], ['cost', 'mix'], ['cost_all', 'all'], ['buy', 'buy']]); // column key -> In group id
 const routeOn = (id) => state.routes.includes(id);
 const inOn = (id) => state.ins.includes(id);
-const visibleCols = () => COLS.filter((c) =>
-  routeOf.has(c.key) ? routeOn(routeOf.get(c.key))
-  : inOf.has(c.key) ? inOn(inOf.get(c.key))
-  : true);
+// column visible? craft-group leaves toggle individually via In, route-group
+// leaves as a whole via Out, standalone In columns (buy) via their In option
+const visOf = (k) => {
+  const g = groupOf.get(k);
+  if (!g) return inOf.has(k) ? inOn(inOf.get(k)) : true;
+  return g.toggle === 'ins' ? inOn(inOf.get(k)) : routeOn(g.id);
+};
+const visibleCols = () => COLS.filter((c) => visOf(c.key));
 
 function renderHead() {
-  const startOfGroup = new Map(HEAD_GROUPS.map((g) => [g.keys[0], g]));
   const inGroup = new Set(HEAD_GROUPS.flatMap((g) => g.keys));
+  // group header goes above the group's first VISIBLE leaf (the first key may
+  // be toggled off); colSpan = count of the group's visible leaves
+  const firstVisible = new Map();
+  for (const g of HEAD_GROUPS) {
+    const vk = g.keys.filter(visOf);
+    if (vk.length) firstVisible.set(vk[0], { g, span: vk.length });
+  }
 
   const tr1 = document.createElement('tr');
   const tr2 = document.createElement('tr');
+  const anyCraft = inOn('direct') || inOn('mix') || inOn('all');
+  // does a group's left edge need its own separator? the XP column's right
+  // border already separates the info block from the acquisition block, so the
+  // craft group never does; GE sits next to Buy (or the XP border when Buy is
+  // hidden); HA/LA always sit next to another route group
+  const gsepL = (g) => (g.id === 'craft' ? false : g.id === 'ge' ? inOn('buy') : true);
   const leaf = (c) => {
     const th = document.createElement('th');
     th.textContent = c.key === 'product' ? `Products (x${rows.length})` : c.label;
@@ -469,24 +498,24 @@ function renderHead() {
     }
     return th;
   };
-  const GSEP_L = new Set(HEAD_GROUPS.map((g) => g.keys[0])); // left edge of each route group
   for (const c of visibleCols()) {
     if (inGroup.has(c.key)) {
-      const g = startOfGroup.get(c.key);
-      if (g) {
+      const fg = firstVisible.get(c.key);
+      if (fg) {
         const gh = document.createElement('th');
-        gh.textContent = g.label;
-        gh.colSpan = g.keys.length;
-        gh.className = 'gsep';
+        gh.textContent = fg.g.label;
+        gh.colSpan = fg.span;
+        if (gsepL(fg.g)) gh.className = 'gsep';
         tr1.append(gh);
       }
       const lth = leaf(c);
-      if (GSEP_L.has(c.key)) lth.classList.add('gsep');
+      if (fg && gsepL(fg.g)) lth.classList.add('gsep');
       tr2.append(lth);
     } else {
       const th = leaf(c);
       th.rowSpan = 2;
-      if (c.key === 'members' || c.key === 'cost' || (c.key === 'buy' && !inOn('craft'))) th.classList.add('gsep');
+      if (c.key === 'members' || (c.key === 'buy' && anyCraft)) th.classList.add('gsep');
+      if (c.key === 'xp') th.classList.add('gsep-r');
       if (c.key === 'best_net') th.classList.add('gsep');
       if (c.key === 'max_gp') th.classList.add('gsep-r');
       tr1.append(th);
@@ -587,7 +616,7 @@ function detailHtml(r) {
   }
   if (notes.length) lines.push(`<div class="hint">${notes.join(' · ')}</div>`);
 
-  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Craft each</th><th>Craft total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
+  lines.push('<table class="detail-table"><thead><tr><th>Name</th><th>Mix each</th><th>Mix total</th><th>Buy each</th><th>Buy total</th><th>Sell each</th><th>Sell total</th><th>Tax</th>' +
     `<th title="${stockTip}">Stock</th></tr></thead><tbody>`);
 
   const sect = (label) => `<tr class="sect"><td colspan="9">${label}</td></tr>`;
@@ -726,6 +755,18 @@ function renderTable() {
       }
       return td;
     };
+    // value with (value - Nature rune price) below it, gold text
+    const numNet = (v, cls) => {
+      const td = num(v, cls);
+      const fee = meta && meta.alchemy_cost;
+      if (v != null && fee != null) {
+        const s = document.createElement('div');
+        s.className = 'gp small';
+        s.textContent = `(${fmt(v - fee)})`;
+        td.append(s);
+      }
+      return td;
+    };
 
     const addSkillRow = (skillName, level, playerLevel) => {
       const sDiv = document.createElement('div');
@@ -758,28 +799,36 @@ function renderTable() {
     const netCls = (v) => `${v > 0 ? 'pos' : 'neg'}${v < bN ? ' strike' : ''}`;
     // payout struck when its route's net is not the best (matches the net cell)
     const payCls = (netV) => (netV != null && netV < bN ? 'gp strike' : 'gp');
-    // struck = the higher of Craft vs Buy (unpicked acquisition); buy x qty = per craft
-    // only when both In columns are visible — no comparison to show otherwise
+    // struck = a cheaper visible acquisition exists (any In column); buy x qty = per craft
     const pBuyTotal = r.product.buy != null ? r.product.buy * r.product.qty : null;
-    const bothIn = inOn('craft') && inOn('buy');
-    const craftCls = 'gp' + (bothIn && pBuyTotal != null && pBuyTotal < r.cost ? ' strike' : '');
-    const buyCls = 'gp' + (bothIn && pBuyTotal != null && pBuyTotal > r.cost ? ' strike' : '');
-    const cells = [num(r.xp)];
-    if (inOn('craft')) {
-      const costTd = num(r.cost, craftCls + ' gsep');
-      if (r.cost_incomplete) {
+    const acqVals = [];
+    if (inOn('direct') && r.cost_direct != null) acqVals.push(r.cost_direct);
+    if (inOn('mix') && r.cost != null) acqVals.push(r.cost);
+    if (inOn('all') && r.cost_all != null) acqVals.push(r.cost_all);
+    if (inOn('buy') && pBuyTotal != null) acqVals.push(pBuyTotal);
+    const bestAcq = acqVals.length ? Math.min(...acqVals) : null;
+    const acqCls = (v) => 'gp' + (bestAcq != null && v != null && v > bestAcq ? ' strike' : '');
+    const anyCraft = inOn('direct') || inOn('mix') || inOn('all');
+    // craft cost cell with the unpriced (*) marker when its variant is partial
+    const costCell = (v, incomplete, cls) => {
+      const td = num(v, cls);
+      if (incomplete) {
         const star = document.createElement('span');
         star.className = 'unpriced';
         star.textContent = '*';
         star.title = 'Some materials have no GE price — cost covers priced parts only.';
-        costTd.append(star);
+        td.append(star);
       }
-      cells.push(costTd);
-    }
-    if (inOn('buy')) cells.push(numStock(r.product.buy, r.product.buy_vol, buyCls + (inOn('craft') ? '' : ' gsep')));
-    if (routeOn('ge')) cells.push(numStock(r.gross, r.product.vol, payCls(sn) + ' gsep'), num(sn, sn == null ? null : netCls(sn)));
-    if (routeOn('ha')) cells.push(num(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
-    if (routeOn('la')) cells.push(num(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
+      return td;
+    };
+    const cells = [num(r.xp, 'gsep-r')];
+    if (inOn('direct')) cells.push(costCell(r.cost_direct, r.direct_incomplete, acqCls(r.cost_direct)));
+    if (inOn('mix')) cells.push(costCell(r.cost, r.cost_incomplete, acqCls(r.cost)));
+    if (inOn('all')) cells.push(costCell(r.cost_all, r.all_incomplete, acqCls(r.cost_all)));
+    if (inOn('buy')) cells.push(numStock(r.product.buy, r.product.buy_vol, acqCls(pBuyTotal) + (anyCraft ? ' gsep' : '')));
+    if (routeOn('ge')) cells.push(numStock(r.gross, r.product.vol, payCls(sn) + (inOn('buy') ? ' gsep' : '')), num(sn, sn == null ? null : netCls(sn)));
+    if (routeOn('ha')) cells.push(numNet(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));
+    if (routeOn('la')) cells.push(numNet(laP, payCls(laN) + ' gsep'), num(laN, laN == null ? null : netCls(laN)));
     const ret = returnMul(r);
     // Max Net: Best Net x crafts affordable with Liquid gp, (xN) count below
     const mgCell = () => {

@@ -94,10 +94,15 @@ whenever the math or the baked data changes, and commit the refreshed fixtures.
 
 - `high` = price buyers pay (you buy materials at `high`), `low` = price sellers get.
   Conservative pricing is baked in: buy `high` / sell `low` (all instant).
-- Cost/Net use the **cheapest acquisition** per material — buy it, or craft it if
-  that is cheaper (⚒ in the materials column), recursively (crafted materials
-  price their own materials the same way). `cost` = Σ cheapest-per-material ×
-  qty + fees, `net` = gross − tax − cost.
+- Three Craft cost variants (In toggle: direct / mix / all / buy; nets, Best Net and
+  Return use the cheapest visible acquisition):
+  - **Craft Direct** (`cost_direct`) — buy every material at the GE, craft only the main product.
+  - **Craft Mix** (`cost`) — cheapest combination: per material the cheaper of buying it
+    or crafting it (⚒ in the materials column), recursively (crafted materials price their
+    own materials the same way). `net` = gross − tax − cost.
+  - **Craft All** (`cost_all`) — buy only the root materials at the deepest recursion
+    level and craft every intermediate (craftable materials are always crafted, even when
+    buying them would be cheaper — that is the scenario priced).
 - GE tax 2% (exempt < 50 gp, cap 5 m/item) — `backend/config.py` and mirrored in `profit.js`.
 - Buy limits cap real profit: `count` column = max crafts per 4 h, `net_4h` in row detail.
 - Row detail expands materials that are themselves products of recipes: each
