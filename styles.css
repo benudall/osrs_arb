@@ -84,6 +84,7 @@ button:disabled { opacity: 0.5; cursor: default; }
 .check-stack { display: flex; flex-direction: column; gap: 4px; justify-content: center; }
 .controls input[type='number'] { width: 110px; }
 .liquid-label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--muted); }
+.liquid-hint { font-size: 11px; }
 .liquid-label input[type='number'] { width: 140px; }
 .controls input[type='text'], .controls input[type='search'] { width: 220px; }
 
