@@ -4380,7 +4380,7 @@
    "skill": "crafting",
    "level": 10,
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "item": "White toy horsey",
     "qty": 1
@@ -4398,7 +4398,7 @@
    "skill": "crafting",
    "level": 10,
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "item": "Brown toy horsey",
     "qty": 1
@@ -4416,7 +4416,7 @@
    "skill": "crafting",
    "level": 10,
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "item": "Grey toy horsey",
     "qty": 1
@@ -4434,7 +4434,7 @@
    "skill": "crafting",
    "level": 10,
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "item": "Black toy horsey",
     "qty": 1

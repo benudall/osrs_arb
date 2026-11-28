@@ -44,11 +44,13 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
 
     Three acquisition costs are priced per row:
     - cost_direct: buy every material at the GE, craft only the main product.
+      Unavailable (None) when any material has no GE price — it cannot be bought.
     - cost: cheapest mix — per material the cheaper of buying it or crafting
-      it (craft_costs: the recursive cheapest craft decomposition).
+      it (craft_costs: the recursive cheapest craft decomposition). Partial
+      when a material is neither buyable nor craftable: priced parts only.
     - cost_all: buy only the root materials at the deepest recursion level and
       craft every intermediate (all_costs: recursive craft-everything cost;
-      materials without one are bought).
+      materials without one are bought). Partial like cost.
 
     recipe: {id, skill, level, members, product: {item_id, qty},
              materials: [{item_id, qty}], fee, note}
@@ -85,7 +87,8 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
             mat_sell, _, _, _, _ = _side(res, mode, "sell")
         craft_unit = round(craft_costs[m["item_id"]]) if craft_costs and m["item_id"] in craft_costs else None
         all_unit = round(all_costs[m["item_id"]]) if all_costs and m["item_id"] in all_costs else None
-        # direct: the material is always bought at the GE price
+        # direct: the material is always bought at the GE price; a material
+        # with no price cannot be bought, killing the whole option
         if buy_price is not None:
             cost_direct += buy_price * m["qty"]
             direct_known = True
@@ -135,8 +138,8 @@ def evaluate_recipe(recipe: dict, item_map: dict, store, mode: str = "conservati
 
     if not cost_known:
         cost = None
-    if not direct_known:
-        cost_direct = None
+    if not direct_known or direct_incomplete:
+        cost_direct = None  # every material must be buyable for direct
     if not all_known:
         cost_all = None
     gross = sell_price * recipe["product"]["qty"] if sell_price is not None else None

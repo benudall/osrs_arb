@@ -5472,7 +5472,7 @@
   "level": 10,
   "extra_skills": [],
   "xp": 15.0,
-  "members": false,
+  "members": true,
   "product": {
    "id": 2522,
    "qty": 1
@@ -5494,7 +5494,7 @@
   "level": 10,
   "extra_skills": [],
   "xp": 15.0,
-  "members": false,
+  "members": true,
   "product": {
    "id": 2520,
    "qty": 1
@@ -5516,7 +5516,7 @@
   "level": 10,
   "extra_skills": [],
   "xp": 15.0,
-  "members": false,
+  "members": true,
   "product": {
    "id": 2526,
    "qty": 1
@@ -5538,7 +5538,7 @@
   "level": 10,
   "extra_skills": [],
   "xp": 15.0,
-  "members": false,
+  "members": true,
   "product": {
    "id": 2524,
    "qty": 1

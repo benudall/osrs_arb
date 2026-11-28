@@ -95,6 +95,10 @@ def test_missing_price_yields_partial_row():
     assert row2["cost_incomplete"] is True
     assert row2["gross"] == 880  # conservative: 4 x low 220
     assert row2["cost"] is None  # nothing priced at all -> no cost estimate
+    # an unbuyable material kills the direct option entirely (and all, since
+    # the material is not craftable either)
+    assert row2["cost_direct"] is None and row2["direct_incomplete"] is True
+    assert row2["cost_all"] is None and row2["all_incomplete"] is True
     # missing item metadata (not just prices) still returns None
     assert profit.evaluate_recipe(RECIPE, {}, store) is None
 
@@ -195,6 +199,35 @@ def test_three_craft_costs():
     # all = uncooked's all cost 123
     assert (plain["cost_direct"], plain["cost"], plain["cost_all"]) == (90, 85, 123)
     assert not plain["direct_incomplete"] and not plain["cost_incomplete"] and not plain["all_incomplete"]
+
+
+def test_direct_unavailable_when_material_unbuyable():
+    # Amulet of defence case: a material with no GE price but with its own
+    # (priced) recipe. Mix and all craft it fine; direct cannot buy it -> None
+    items = {
+        20: {"id": 20, "name": "Gold bar", "members": False, "buy_limit": 1000},
+        21: {"id": 21, "name": "Emerald amulet", "members": False, "buy_limit": 1000},
+        22: {"id": 22, "name": "Amulet of defence", "members": False, "buy_limit": 1000},
+    }
+    recipes = [
+        {"id": "emerald_amulet", "skill": "crafting", "level": 1, "members": False,
+         "product": {"item_id": 21, "qty": 1},
+         "materials": [{"item_id": 20, "qty": 1}], "fee": 0, "note": None},
+        {"id": "strung_amulet", "skill": "crafting", "level": 1, "members": False,
+         "product": {"item_id": 22, "qty": 1},
+         "materials": [{"item_id": 21, "qty": 1}], "fee": 0, "note": None},
+    ]
+    store = FakeStore({20: {"high": 200, "low": 180}})  # 21 unpriced on the GE
+    rows, _ = profit.evaluate_all(recipes, items, store)
+    by_id = {r["recipe_id"]: r for r in rows}
+    amulet = by_id["strung_amulet"]
+    assert amulet["cost_direct"] is None and amulet["direct_incomplete"] is True
+    # mix and all price the emerald amulet via its own recipe (gold bar 200)
+    assert amulet["cost"] == 200 and not amulet["cost_incomplete"]
+    assert amulet["cost_all"] == 200 and not amulet["all_incomplete"]
+    # the unstrung amulet row itself is fine: its material (gold bar) is buyable
+    unstrung = by_id["emerald_amulet"]
+    assert (unstrung["cost_direct"], unstrung["cost"], unstrung["cost_all"]) == (200, 200, 200)
 
 
 def test_craft_all_all_incomplete_without_prices():

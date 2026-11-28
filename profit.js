@@ -42,7 +42,8 @@
 
   /* Compute one recipe row. Returns null only if item metadata is missing.
    * Missing GE prices are tolerated: unpriced sides become null and the row
-   * still renders (partial craft cost + cost_incomplete flag; HA/LA payouts
+   * still renders (partial craft cost + cost_incomplete flag; cost_direct is
+   * null when any material cannot be bought; HA/LA payouts
    * come from the item's static value, so they need no live prices at all).
    * recipe: {id, skill, level, members, product: {id, qty},
    *          materials: [{id, qty}], fee, note}  (the baked site data shape)
@@ -79,7 +80,8 @@
       }
       const craftUnit = craftCosts && (m.id in craftCosts) ? pyRound(craftCosts[m.id]) : null;
       const allUnit = allCosts && (m.id in allCosts) ? pyRound(allCosts[m.id]) : null;
-      // direct: the material is always bought at the GE price
+      // direct: the material is always bought at the GE price; a material
+      // with no price cannot be bought, killing the whole option
       if (buyPrice !== null) {
         costDirect += buyPrice * m.qty;
         directKnown = true;
@@ -137,7 +139,7 @@
     }
 
     if (!costKnown) cost = null;
-    if (!directKnown) costDirect = null;
+    if (!directKnown || directIncomplete) costDirect = null; // every material must be buyable for direct
     if (!allKnown) costAll = null;
     const gross = sellPrice !== null ? sellPrice * recipe.product.qty : null;
     const taxTotal = sellPrice !== null ? geTax(sellPrice) * recipe.product.qty : null;

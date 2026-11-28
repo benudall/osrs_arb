@@ -809,22 +809,25 @@ function renderTable() {
     const bestAcq = acqVals.length ? Math.min(...acqVals) : null;
     const acqCls = (v) => 'gp' + (bestAcq != null && v != null && v > bestAcq ? ' strike' : '');
     const anyCraft = inOn('direct') || inOn('mix') || inOn('all');
-    // craft cost cell with the unpriced (*) marker when its variant is partial
-    const costCell = (v, incomplete, cls) => {
+    // craft cost cell with the unpriced (*) marker when its variant is partial/unavailable
+    const costCell = (v, incomplete, cls, why) => {
       const td = num(v, cls);
       if (incomplete) {
         const star = document.createElement('span');
         star.className = 'unpriced';
         star.textContent = '*';
-        star.title = 'Some materials have no GE price — cost covers priced parts only.';
+        star.title = why;
         td.append(star);
       }
       return td;
     };
     const cells = [num(r.xp, 'gsep-r')];
-    if (inOn('direct')) cells.push(costCell(r.cost_direct, r.direct_incomplete, acqCls(r.cost_direct)));
-    if (inOn('mix')) cells.push(costCell(r.cost, r.cost_incomplete, acqCls(r.cost)));
-    if (inOn('all')) cells.push(costCell(r.cost_all, r.all_incomplete, acqCls(r.cost_all)));
+    if (inOn('direct')) cells.push(costCell(r.cost_direct, r.direct_incomplete, acqCls(r.cost_direct),
+      'Some materials have no GE price — they cannot be bought, so Craft Direct is unavailable.'));
+    if (inOn('mix')) cells.push(costCell(r.cost, r.cost_incomplete, acqCls(r.cost),
+      'Some materials have no GE price — cost covers priced parts only.'));
+    if (inOn('all')) cells.push(costCell(r.cost_all, r.all_incomplete, acqCls(r.cost_all),
+      'Some materials have no GE price — cost covers priced parts only.'));
     if (inOn('buy')) cells.push(numStock(r.product.buy, r.product.buy_vol, acqCls(pBuyTotal) + (anyCraft ? ' gsep' : '')));
     if (routeOn('ge')) cells.push(numStock(r.gross, r.product.vol, payCls(sn) + (inOn('buy') ? ' gsep' : '')), num(sn, sn == null ? null : netCls(sn)));
     if (routeOn('ha')) cells.push(numNet(haP, payCls(haN) + ' gsep'), num(haN, haN == null ? null : netCls(haN)));

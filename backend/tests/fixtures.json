@@ -35452,7 +35452,7 @@
    "level": 10,
    "extra_skills": [],
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "id": 2522,
     "qty": 1
@@ -35474,7 +35474,7 @@
    "level": 10,
    "extra_skills": [],
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "id": 2520,
     "qty": 1
@@ -35496,7 +35496,7 @@
    "level": 10,
    "extra_skills": [],
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "id": 2526,
     "qty": 1
@@ -35518,7 +35518,7 @@
    "level": 10,
    "extra_skills": [],
    "xp": 15.0,
-   "members": false,
+   "members": true,
    "product": {
     "id": 2524,
     "qty": 1
@@ -71144,7 +71144,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 350,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 208,
     "cost_incomplete": false,
@@ -73349,7 +73349,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 23,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 63,
     "cost_incomplete": false,
@@ -73416,7 +73416,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 54,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 54,
     "cost_incomplete": true,
@@ -73483,7 +73483,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 45,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 92,
     "cost_incomplete": false,
@@ -73792,7 +73792,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 62,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 76,
     "cost_incomplete": false,
@@ -74127,7 +74127,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 391,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 427,
     "cost_incomplete": false,
@@ -74436,7 +74436,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 315,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 145,
     "cost_incomplete": true,
@@ -75225,7 +75225,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 3156,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 3060,
     "cost_incomplete": true,
@@ -75543,7 +75543,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 3156,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 3060,
     "cost_incomplete": true,
@@ -76704,7 +76704,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1280,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1876,
     "cost_incomplete": false,
@@ -77258,7 +77258,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2894,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2894,
     "cost_incomplete": true,
@@ -78305,7 +78305,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 651,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 651,
     "cost_incomplete": true,
@@ -78602,7 +78602,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2128,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2128,
     "cost_incomplete": true,
@@ -78718,7 +78718,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1510,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1510,
     "cost_incomplete": true,
@@ -78989,7 +78989,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 719,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 708,
     "cost_incomplete": true,
@@ -79170,7 +79170,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1453,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1453,
     "cost_incomplete": true,
@@ -83538,7 +83538,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 35,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 419,
     "cost_incomplete": false,
@@ -83615,7 +83615,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 11,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 395,
     "cost_incomplete": false,
@@ -83795,7 +83795,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2237,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2179,
     "cost_incomplete": false,
@@ -85546,7 +85546,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 7399,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7399,
     "cost_incomplete": true,
@@ -85613,7 +85613,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 7399,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7399,
     "cost_incomplete": true,
@@ -85680,7 +85680,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 14798,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 14798,
     "cost_incomplete": true,
@@ -85747,7 +85747,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 22197,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 22197,
     "cost_incomplete": true,
@@ -85814,7 +85814,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 29596,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 29596,
     "cost_incomplete": true,
@@ -86549,7 +86549,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 17,
     "cost_incomplete": false,
@@ -90261,7 +90261,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 92,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 92,
     "cost_incomplete": true,
@@ -90340,7 +90340,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 92,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 92,
     "cost_incomplete": true,
@@ -90419,7 +90419,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 92,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 92,
     "cost_incomplete": true,
@@ -90498,7 +90498,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 92,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 92,
     "cost_incomplete": true,
@@ -91984,7 +91984,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 153,
     "cost_incomplete": false,
@@ -92520,7 +92520,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1915861,
     "cost_incomplete": false,
@@ -92587,7 +92587,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 120,
     "cost_incomplete": false,
@@ -92654,7 +92654,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 81,
     "cost_incomplete": false,
@@ -92721,7 +92721,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 81,
     "cost_incomplete": false,
@@ -92855,7 +92855,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 20,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 20,
     "cost_incomplete": true,
@@ -92932,7 +92932,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1500,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1500,
     "cost_incomplete": true,
@@ -93001,7 +93001,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1490,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1490,
     "cost_incomplete": true,
@@ -93070,7 +93070,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1959,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1959,
     "cost_incomplete": true,
@@ -93139,7 +93139,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2147,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2147,
     "cost_incomplete": true,
@@ -93208,7 +93208,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 28,
     "cost_incomplete": true,
@@ -94379,7 +94379,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2522,
      "name": "White toy horsey",
@@ -94433,7 +94433,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2520,
      "name": "Brown toy horsey",
@@ -94487,7 +94487,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2526,
      "name": "Grey toy horsey",
@@ -94541,7 +94541,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2524,
      "name": "Black toy horsey",
@@ -94705,7 +94705,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 7,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7,
     "cost_incomplete": true,
@@ -94782,7 +94782,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 7,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7,
     "cost_incomplete": true,
@@ -94859,7 +94859,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 7,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7,
     "cost_incomplete": true,
@@ -94936,7 +94936,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 7,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7,
     "cost_incomplete": true,
@@ -95080,7 +95080,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 60,
     "cost_incomplete": true,
@@ -95160,7 +95160,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 60,
     "cost_incomplete": true,
@@ -95240,7 +95240,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 60,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 60,
     "cost_incomplete": true,
@@ -95536,7 +95536,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 162000,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 3772000,
     "cost_incomplete": true,
@@ -95616,7 +95616,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1022653,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 788963,
     "cost_incomplete": true,
@@ -95696,7 +95696,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 162000,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 207977,
     "cost_incomplete": true,
@@ -95776,7 +95776,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2358605,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2123472,
     "cost_incomplete": true,
@@ -95843,7 +95843,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 138450,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 3910450,
     "cost_incomplete": false,
@@ -95910,7 +95910,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 138450,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 927413,
     "cost_incomplete": false,
@@ -95977,7 +95977,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 138450,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 346427,
     "cost_incomplete": false,
@@ -96044,7 +96044,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 138450,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2261922,
     "cost_incomplete": false,
@@ -96273,7 +96273,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 53739999,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 88017447,
     "cost_incomplete": false,
@@ -96340,7 +96340,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 37311356,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 63019442,
     "cost_incomplete": false,
@@ -96407,7 +96407,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 15949000,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 24518362,
     "cost_incomplete": false,
@@ -96595,7 +96595,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2470037,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 4940074,
     "cost_incomplete": false,
@@ -96835,7 +96835,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 102050,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 101959,
     "cost_incomplete": true,
@@ -96902,7 +96902,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 15505263,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 250,
     "cost_incomplete": true,
@@ -97036,7 +97036,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 49998,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 49998,
     "cost_incomplete": true,
@@ -97116,7 +97116,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 17820449,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 17820449,
     "cost_incomplete": true,
@@ -97196,7 +97196,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 18385827,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 18385827,
     "cost_incomplete": true,
@@ -97276,7 +97276,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 19351994,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 19351994,
     "cost_incomplete": true,
@@ -97343,7 +97343,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 353463,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 353463,
     "cost_incomplete": true,
@@ -97410,7 +97410,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 353463,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 353463,
     "cost_incomplete": true,
@@ -97477,7 +97477,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 353463,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 353463,
     "cost_incomplete": true,
@@ -97544,7 +97544,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 4810999,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 4810999,
     "cost_incomplete": true,
@@ -97611,7 +97611,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 9621998,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 9621998,
     "cost_incomplete": true,
@@ -97678,7 +97678,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 14432997,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 14432997,
     "cost_incomplete": true,
@@ -97745,7 +97745,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 81901670,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 81901670,
     "cost_incomplete": true,
@@ -97812,7 +97812,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 81901670,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 81901670,
     "cost_incomplete": true,
@@ -97879,7 +97879,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 19308,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 19308,
     "cost_incomplete": true,
@@ -97946,7 +97946,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2739983,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2739983,
     "cost_incomplete": true,
@@ -100195,7 +100195,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 118,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 664,
     "cost_incomplete": false,
@@ -100774,7 +100774,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2300,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2300,
     "cost_incomplete": true,
@@ -100841,7 +100841,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 30800,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 30800,
     "cost_incomplete": true,
@@ -100908,7 +100908,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 30800,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 30800,
     "cost_incomplete": true,
@@ -101675,7 +101675,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 12,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 296,
     "cost_incomplete": false,
@@ -101796,7 +101796,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 122,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 499,
     "cost_incomplete": false,
@@ -102466,7 +102466,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 3,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 56,
     "cost_incomplete": false,
@@ -102935,7 +102935,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 4,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 10,
     "cost_incomplete": false,
@@ -103002,7 +103002,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 20,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 20,
     "cost_incomplete": true,
@@ -103136,7 +103136,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 4,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 4,
     "cost_incomplete": true,
@@ -103672,7 +103672,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2488,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2482,
     "cost_incomplete": false,
@@ -104495,7 +104495,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 100,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 100,
     "cost_incomplete": true,
@@ -104562,7 +104562,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 17,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 796,
     "cost_incomplete": false,
@@ -105245,7 +105245,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 779,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 779,
     "cost_incomplete": true,
@@ -105322,7 +105322,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 49,
     "cost_incomplete": false,
@@ -105389,7 +105389,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 56,
     "cost_incomplete": false,
@@ -105456,7 +105456,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 386,
     "cost_incomplete": false,
@@ -105590,7 +105590,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1572,
     "cost_incomplete": false,
@@ -108179,7 +108179,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 475,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 855,
     "cost_incomplete": false,
@@ -109219,7 +109219,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 517,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 517,
     "cost_incomplete": true,
@@ -109459,7 +109459,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2128,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2128,
     "cost_incomplete": true,
@@ -110700,7 +110700,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1377,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1264,
     "cost_incomplete": true,
@@ -110834,7 +110834,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 121,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 9884,
     "cost_incomplete": false,
@@ -110914,7 +110914,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1377,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1264,
     "cost_incomplete": true,
@@ -110994,7 +110994,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1237,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1237,
     "cost_incomplete": true,
@@ -111489,7 +111489,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 87,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 87,
     "cost_incomplete": true,
@@ -112092,7 +112092,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 255,
     "cost_incomplete": false,
@@ -112293,7 +112293,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 283,
     "cost_incomplete": false,
@@ -112494,7 +112494,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 277,
     "cost_incomplete": false,
@@ -112561,7 +112561,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 277,
     "cost_incomplete": false,
@@ -112896,7 +112896,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 925,
     "cost_incomplete": false,
@@ -113298,7 +113298,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1915963,
     "cost_incomplete": false,
@@ -113365,7 +113365,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1915963,
     "cost_incomplete": false,
@@ -113432,7 +113432,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1915963,
     "cost_incomplete": false,
@@ -113499,7 +113499,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1915991,
     "cost_incomplete": false,
@@ -113566,7 +113566,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 222,
     "cost_incomplete": false,
@@ -113633,7 +113633,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 222,
     "cost_incomplete": false,
@@ -113700,7 +113700,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 222,
     "cost_incomplete": false,
@@ -113767,7 +113767,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 130,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 250,
     "cost_incomplete": false,
@@ -131729,7 +131729,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 21,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 57,
     "cost_incomplete": false,
@@ -131863,7 +131863,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 42,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 37,
     "cost_incomplete": true,
@@ -132038,7 +132038,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 410,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 410,
     "cost_incomplete": true,
@@ -132172,7 +132172,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 61,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 72,
     "cost_incomplete": false,
@@ -132440,7 +132440,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 33,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 30,
     "cost_incomplete": true,
@@ -132507,7 +132507,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 295,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 74,
     "cost_incomplete": false,
@@ -132816,7 +132816,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 298,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 131,
     "cost_incomplete": true,
@@ -133326,7 +133326,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 430,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 160,
     "cost_incomplete": true,
@@ -133499,7 +133499,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2523,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2427,
     "cost_incomplete": true,
@@ -133605,7 +133605,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 923,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 827,
     "cost_incomplete": true,
@@ -133711,7 +133711,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2191,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1723,
     "cost_incomplete": true,
@@ -133817,7 +133817,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 3279,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 3183,
     "cost_incomplete": true,
@@ -133923,7 +133923,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 923,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 827,
     "cost_incomplete": true,
@@ -134029,7 +134029,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1663,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1567,
     "cost_incomplete": true,
@@ -134135,7 +134135,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1087,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 991,
     "cost_incomplete": true,
@@ -134241,7 +134241,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 923,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 827,
     "cost_incomplete": true,
@@ -134522,7 +134522,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 298,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 131,
     "cost_incomplete": true,
@@ -135084,7 +135084,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 871,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1431,
     "cost_incomplete": false,
@@ -135177,7 +135177,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 687,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 687,
     "cost_incomplete": true,
@@ -135276,7 +135276,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 111,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 111,
     "cost_incomplete": true,
@@ -135388,7 +135388,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 913,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 913,
     "cost_incomplete": true,
@@ -135638,7 +135638,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 111,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 111,
     "cost_incomplete": true,
@@ -135763,7 +135763,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 460,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 427,
     "cost_incomplete": true,
@@ -135888,7 +135888,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 573,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 540,
     "cost_incomplete": true,
@@ -136052,7 +136052,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 295,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 262,
     "cost_incomplete": true,
@@ -136168,7 +136168,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1773,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1773,
     "cost_incomplete": true,
@@ -136293,7 +136293,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 201,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 201,
     "cost_incomplete": true,
@@ -136431,7 +136431,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1409,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1343,
     "cost_incomplete": true,
@@ -136569,7 +136569,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 336,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 336,
     "cost_incomplete": true,
@@ -136685,7 +136685,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 390,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 390,
     "cost_incomplete": true,
@@ -136827,7 +136827,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 535,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 535,
     "cost_incomplete": true,
@@ -136982,7 +136982,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 645,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 645,
     "cost_incomplete": true,
@@ -137098,7 +137098,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 450,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 450,
     "cost_incomplete": true,
@@ -137227,7 +137227,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 302,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 302,
     "cost_incomplete": true,
@@ -137369,7 +137369,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 129,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 129,
     "cost_incomplete": true,
@@ -137550,7 +137550,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 589,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 589,
     "cost_incomplete": true,
@@ -137666,7 +137666,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 193,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 160,
     "cost_incomplete": true,
@@ -139244,7 +139244,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 82,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 160,
     "cost_incomplete": false,
@@ -141918,7 +141918,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 29,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 402,
     "cost_incomplete": false,
@@ -141995,7 +141995,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 10,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 383,
     "cost_incomplete": false,
@@ -142175,7 +142175,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2118,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2141,
     "cost_incomplete": false,
@@ -142393,7 +142393,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2602,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 5178,
     "cost_incomplete": false,
@@ -142675,7 +142675,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 4559,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7307,
     "cost_incomplete": false,
@@ -148641,7 +148641,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 88,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 88,
     "cost_incomplete": true,
@@ -148720,7 +148720,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 88,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 88,
     "cost_incomplete": true,
@@ -148799,7 +148799,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 88,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 88,
     "cost_incomplete": true,
@@ -148878,7 +148878,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 88,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 88,
     "cost_incomplete": true,
@@ -150364,7 +150364,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 56,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 143,
     "cost_incomplete": false,
@@ -150498,7 +150498,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 56,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 754,
     "cost_incomplete": false,
@@ -150900,7 +150900,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 56,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1876777,
     "cost_incomplete": false,
@@ -150967,7 +150967,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 56,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 115,
     "cost_incomplete": false,
@@ -151034,7 +151034,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 56,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 79,
     "cost_incomplete": false,
@@ -151101,7 +151101,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 56,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 79,
     "cost_incomplete": false,
@@ -151168,7 +151168,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 518,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 7853,
     "cost_incomplete": false,
@@ -151235,7 +151235,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 17,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 17,
     "cost_incomplete": true,
@@ -151312,7 +151312,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1300,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1300,
     "cost_incomplete": true,
@@ -151381,7 +151381,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1474,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1474,
     "cost_incomplete": true,
@@ -151450,7 +151450,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1660,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1660,
     "cost_incomplete": true,
@@ -151519,7 +151519,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2073,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2073,
     "cost_incomplete": true,
@@ -151588,7 +151588,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 56,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 27,
     "cost_incomplete": true,
@@ -152359,7 +152359,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 4,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 377,
     "cost_incomplete": false,
@@ -152759,7 +152759,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2522,
      "name": "White toy horsey",
@@ -152813,7 +152813,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2520,
      "name": "Brown toy horsey",
@@ -152867,7 +152867,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2526,
      "name": "Grey toy horsey",
@@ -152921,7 +152921,7 @@
     "level": 10,
     "extra_skills": [],
     "xp": 15.0,
-    "members": false,
+    "members": true,
     "product": {
      "id": 2524,
      "name": "Black toy horsey",
@@ -153085,7 +153085,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 6,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 6,
     "cost_incomplete": true,
@@ -153162,7 +153162,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 6,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 6,
     "cost_incomplete": true,
@@ -153239,7 +153239,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 6,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 6,
     "cost_incomplete": true,
@@ -153316,7 +153316,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 6,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 6,
     "cost_incomplete": true,
@@ -153916,7 +153916,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 159000,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 3684369,
     "cost_incomplete": true,
@@ -153996,7 +153996,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 159000,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 762678,
     "cost_incomplete": true,
@@ -154076,7 +154076,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 159000,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 203000,
     "cost_incomplete": true,
@@ -154156,7 +154156,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 159000,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2071771,
     "cost_incomplete": true,
@@ -154223,7 +154223,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 131373,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 3815742,
     "cost_incomplete": false,
@@ -154290,7 +154290,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 131373,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 894051,
     "cost_incomplete": false,
@@ -154357,7 +154357,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 131373,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 334373,
     "cost_incomplete": false,
@@ -154424,7 +154424,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 131373,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2203144,
     "cost_incomplete": false,
@@ -154653,7 +154653,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 52828009,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 85938237,
     "cost_incomplete": false,
@@ -154720,7 +154720,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 36758584,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 61591255,
     "cost_incomplete": false,
@@ -154787,7 +154787,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 15805180,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 24082737,
     "cost_incomplete": false,
@@ -154975,7 +154975,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2342611,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 4685222,
     "cost_incomplete": false,
@@ -155215,7 +155215,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 99983,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 99930,
     "cost_incomplete": true,
@@ -155496,7 +155496,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 17319399,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 17319399,
     "cost_incomplete": true,
@@ -155576,7 +155576,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 17868488,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 17868488,
     "cost_incomplete": true,
@@ -155656,7 +155656,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 18807277,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 18807277,
     "cost_incomplete": true,
@@ -155723,7 +155723,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 350368,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 350368,
     "cost_incomplete": true,
@@ -155790,7 +155790,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 350368,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 350368,
     "cost_incomplete": true,
@@ -155857,7 +155857,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 350368,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 350368,
     "cost_incomplete": true,
@@ -155924,7 +155924,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 4730897,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 4730897,
     "cost_incomplete": true,
@@ -155991,7 +155991,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 9461794,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 9461794,
     "cost_incomplete": true,
@@ -156058,7 +156058,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 14192691,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 14192691,
     "cost_incomplete": true,
@@ -156125,7 +156125,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 81175993,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 81175993,
     "cost_incomplete": true,
@@ -156192,7 +156192,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 81175993,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 81175993,
     "cost_incomplete": true,
@@ -156259,7 +156259,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 18543,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 18543,
     "cost_incomplete": true,
@@ -156326,7 +156326,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2726057,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2726057,
     "cost_incomplete": true,
@@ -158575,7 +158575,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 117,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2,
     "cost_incomplete": true,
@@ -159221,7 +159221,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 29100,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 29100,
     "cost_incomplete": true,
@@ -159288,7 +159288,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 29100,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 29100,
     "cost_incomplete": true,
@@ -160055,7 +160055,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 8,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 8,
     "cost_incomplete": true,
@@ -160712,7 +160712,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 46,
     "cost_incomplete": false,
@@ -160846,7 +160846,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 54,
     "cost_incomplete": false,
@@ -160913,7 +160913,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 375,
     "cost_incomplete": false,
@@ -162875,7 +162875,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 91,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 91,
     "cost_incomplete": true,
@@ -162942,7 +162942,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 16,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 774,
     "cost_incomplete": false,
@@ -163009,7 +163009,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 75,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 91,
     "cost_incomplete": false,
@@ -163702,7 +163702,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 45,
     "cost_incomplete": false,
@@ -163769,7 +163769,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 54,
     "cost_incomplete": false,
@@ -163836,7 +163836,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 374,
     "cost_incomplete": false,
@@ -163903,7 +163903,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 759,
     "cost_incomplete": false,
@@ -166559,7 +166559,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 30,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 30,
     "cost_incomplete": true,
@@ -167359,7 +167359,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1627,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1533,
     "cost_incomplete": true,
@@ -167599,7 +167599,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 723,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 723,
     "cost_incomplete": true,
@@ -167759,7 +167759,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2087,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1938,
     "cost_incomplete": true,
@@ -167839,7 +167839,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 2177,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 2177,
     "cost_incomplete": true,
@@ -168306,7 +168306,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1270,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1174,
     "cost_incomplete": true,
@@ -169080,7 +169080,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 1350,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1263,
     "cost_incomplete": true,
@@ -170539,7 +170539,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 241,
     "cost_incomplete": false,
@@ -170673,7 +170673,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 268,
     "cost_incomplete": false,
@@ -170874,7 +170874,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 257,
     "cost_incomplete": false,
@@ -171276,7 +171276,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 852,
     "cost_incomplete": false,
@@ -171678,7 +171678,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1876875,
     "cost_incomplete": false,
@@ -171745,7 +171745,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1876875,
     "cost_incomplete": false,
@@ -171812,7 +171812,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1876875,
     "cost_incomplete": false,
@@ -171879,7 +171879,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 1876902,
     "cost_incomplete": false,
@@ -171946,7 +171946,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 213,
     "cost_incomplete": false,
@@ -172013,7 +172013,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 213,
     "cost_incomplete": false,
@@ -172080,7 +172080,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 213,
     "cost_incomplete": false,
@@ -172147,7 +172147,7 @@
      }
     ],
     "fee": 0,
-    "cost_direct": 125,
+    "cost_direct": null,
     "direct_incomplete": true,
     "cost": 240,
     "cost_incomplete": false,

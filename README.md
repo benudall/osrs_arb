@@ -96,7 +96,8 @@ whenever the math or the baked data changes, and commit the refreshed fixtures.
   Conservative pricing is baked in: buy `high` / sell `low` (all instant).
 - Three Craft cost variants (In toggle: direct / mix / all / buy; nets, Best Net and
   Return use the cheapest visible acquisition):
-  - **Craft Direct** (`cost_direct`) — buy every material at the GE, craft only the main product.
+  - **Craft Direct** (`cost_direct`) — buy every material at the GE, craft only the main
+    product. Unavailable (—) when any material has no GE price, since it cannot be bought.
   - **Craft Mix** (`cost`) — cheapest combination: per material the cheaper of buying it
     or crafting it (⚒ in the materials column), recursively (crafted materials price their
     own materials the same way). `net` = gross − tax − cost.
